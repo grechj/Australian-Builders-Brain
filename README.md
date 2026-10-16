@@ -106,7 +106,10 @@ them against your actual contract and your state's legislation, and get
 advice from a lawyer or your industry association before relying on them in
 a dispute.
 
-## Attribution
+## Licence
+
+- **Content, skills and templates** (`brain/` pages, `skills/`, `templates/`, `examples/`, docs): [CC BY 4.0](LICENSE_CONTENT). Use, adapt and share them, including commercially, as long as you credit "Australian Builder's Brain by Joshua Grech".
+- **Code** (`tools/`, the Python in `brain/references/`): [MIT](LICENSE).
 
 NCC content: © Commonwealth of Australia and the States and Territories of
 Australia, published by the Australian Building Codes Board, licensed under
