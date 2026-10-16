@@ -37,10 +37,18 @@ lets this brain load the code itself, with attribution.
 | Edition | Status |
 |---|---|
 | [NCC 2025 (v1.2)](/ncc/2025/index.md) | Full text of all five datasets: every Part, clause, table, definition and state variation. Look up clauses with the [clause index](/ncc/2025/clause_index.md) or `tools/ncc_lookup.py`. |
-| NCC 2022 | Not loaded yet. The version in force for NCC 2022 jobs is **NCC 2022 Amendment 2** (adopted from 29 July 2025; Amendment 1 applied from 1 May 2025; NCC 2022 itself from 1 May 2023). The ABCB's 2022 XML download is an older, incomplete publishing export (clauses that share a code across volumes overwrote each other, and it predates both amendments), so it isn't used. Source for loading: the ABCB's NCC 2022 Amendment 2 PDFs. |
+| [NCC 2022](/ncc/2022/index.md) | Full text of Volumes One, Two and Three and the Housing Provisions **as published (1 May 2023)**, converted from the ABCB's PDFs: every Part, clause, table, definition and state variation ([clause index](/ncc/2022/clause_index.md)). **Not yet merged with Amendment 1 (from 1 May 2025) or Amendment 2 (from 29 July 2025)**, which change some clauses: every page says so. The ABCB's 2022 XML download isn't used (an older, incomplete export). |
 
 Figures are not reproduced. Each one is listed by its number and title, to
 be looked up on ncc.abcb.gov.au.
+
+# Choosing the edition for a job
+
+Set `ncc_edition` in the project file (2025 or 2022) and pass it to the
+tools (`--edition`). The edition is generally the one in force in that
+state when the permit or development application was lodged; the
+certifier can confirm it. For an NCC 2022 job, also check Amendments 1
+and 2 for the clauses you rely on.
 
 # Which edition applies
 

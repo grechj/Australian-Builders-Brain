@@ -63,13 +63,13 @@ def terms(text: str) -> list[str]:
     return [stem(w) for w in WORD.findall(text.lower()) if w not in STOP]
 
 
-def scope_filter(trade: str | None, state: str | None):
+def scope_filter(trade: str | None, state: str | None, edition: str = "2025"):
     """The set of in-scope page ids (volume/part) for a trade and state, or None for no filter."""
     if not trade and not state:
         return None
     sys.path.insert(0, str(Path(__file__).parent))
     from profile import resolve_profile
-    return set(resolve_profile(trade, state)["ncc_scope"])
+    return set(resolve_profile(trade, state, edition)["ncc_scope"])
 
 
 def only_state(text: str, state: str | None) -> str:
@@ -77,8 +77,13 @@ def only_state(text: str, state: str | None) -> str:
     if not state:
         return text
     paras = re.split(r"\n\s*\n", text)
-    keep = [p for p in paras if not (re.match(r"> \*\*([A-Z]{2,3}) variation", p.strip()) and not p.strip().startswith(f"> **{state} variation"))]
-    return "\n\n".join(keep)
+    def other_state(p: str) -> bool:
+        m = re.match(r"> \*\*?([A-Z]{2,3})[ \w().]*?(variation|applies here)", p.strip())
+        return bool(m) and m.group(1) != state
+    keep = [p for p in paras if not other_state(p)]
+    # Markers can also sit on their own line inside a paragraph.
+    keep = ["\n".join(l for l in p.split("\n") if not other_state(l)) for p in keep]
+    return "\n\n".join(k for k in keep if k.strip())
 
 
 def load(edition: str, volume: str | None, allowed: set | None = None, state: str | None = None) -> list[Block]:
@@ -167,7 +172,7 @@ def cmd_variations(args, _blocks) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--edition", default="2025")
+    parser.add_argument("--edition", default="2025", help="NCC edition: 2025 or 2022 (the edition in force when the permit application was lodged)")
     sub = parser.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("clause"); p.add_argument("code")
     p = sub.add_parser("define"); p.add_argument("term")
@@ -183,7 +188,7 @@ def main() -> None:
         blocks = []
     else:
         state = args.state.upper() if args.state else None
-        blocks = load(args.edition, args.volume, scope_filter(args.trade, state), state)
+        blocks = load(args.edition, args.volume, scope_filter(args.trade, state, args.edition), state)
     {"clause": cmd_clause, "define": cmd_define, "search": cmd_search, "variations": cmd_variations}[args.cmd](args, blocks)
 
 

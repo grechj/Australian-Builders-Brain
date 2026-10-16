@@ -1,6 +1,6 @@
 ---
 name: ncc
-description: Answer National Construction Code (NCC) questions for Australian builders, tradies and designers with exact clause citations, including state and territory variations. Covers NCC 2025 Volumes One, Two and Three, the ABCB Housing Provisions and the Livable Housing Design Standard. Use when someone asks what the code requires, mentions the NCC, BCA, building code, deemed-to-satisfy, a clause number like H2D2 or 10.2.1, or asks about compliance topics such as waterproofing, stairs, balustrades, fire separation, energy efficiency, termite management, framing, footings, ventilation, ceiling heights or plumbing.
+description: Answer National Construction Code (NCC) questions for Australian builders, tradies and designers with exact clause citations, including state and territory variations. Covers NCC 2025 and NCC 2022 Volumes One, Two and Three and the ABCB Housing Provisions (plus the 2025 Livable Housing Design Standard). Use when someone asks what the code requires, mentions the NCC, BCA, building code, deemed-to-satisfy, a clause number like H2D2 or 10.2.1, or asks about compliance topics such as waterproofing, stairs, balustrades, fire separation, energy efficiency, termite management, framing, footings, ventilation, ceiling heights or plumbing.
 ---
 
 # NCC
@@ -44,7 +44,7 @@ Before answering a code question, know (or ask, in one message):
 
 - **Building class.** Houses, townhouses, garages, sheds and pools are Class 1 and 10, so use Volume Two and the Housing Provisions. Apartments, offices, shops, factories and public buildings are Class 2 to 9, so use Volume One. Plumbing and drainage is Volume Three.
 - **State or territory**, because variations can replace, add or delete clauses.
-- **Edition.** This repo holds NCC 2025 (v1.2). If the permit application was lodged before NCC 2025 took effect in that state, NCC 2022 may apply. Say so and tell the user to confirm with their certifier.
+- **Edition.** This repo holds NCC 2025 (v1.2) and NCC 2022 as published (1 May 2023). Use the edition in force when the permit application was lodged (`ncc_edition` in the project file, or ask; the certifier can confirm). Pass it to every lookup with `--edition 2022` or `--edition 2025`. NCC 2022 pages are not yet merged with Amendments 1 and 2: when you cite NCC 2022, say so and tell the user to check the amendments for that clause.
 
 If the user only says "a house", assume Class 1a and say you have assumed it.
 

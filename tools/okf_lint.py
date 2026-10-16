@@ -47,13 +47,14 @@ FOLDERS = {
     "handouts": "Plain-English handouts for clients",
     "trades": "Trade profiles: each trade's NCC scope, skills, takeoff jobs, materials and suppliers (builder sees everything)",
     "2025": "NCC 2025 (v1.2), converted from the ABCB's CC BY 4.0 XML: every Part, clause, definition and state variation",
+    "2022": "NCC 2022 as published (1 May 2023), converted from the ABCB's PDFs; read with Amendments 1 and 2",
     "volume_one": "Class 2 to 9 buildings: apartments, commercial, industrial and public buildings",
     "volume_two": "Class 1 and 10 buildings: houses, townhouses, garages, sheds, pools",
     "volume_three": "Plumbing and drainage",
     "housing_provisions": "ABCB Housing Provisions: deemed-to-satisfy construction details for houses",
     "livable_housing_design": "ABCB Livable Housing Design Standard",
 }
-TITLES = {"ncc": "NCC", "2025": "NCC 2025"}
+TITLES = {"ncc": "NCC", "2025": "NCC 2025", "2022": "NCC 2022"}
 ROOT_INTRO = """The Australian Builder's Brain: knowledge for Australian builders and
 tradespeople, from quote to final account. Start with the job's
 [lifecycle stage](lifecycle/), then follow links. Concepts follow the

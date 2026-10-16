@@ -6,9 +6,9 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.5.** All eleven skills work end to end, covering all 53 templates, and the full
-> NCC 2025 text is loaded. Still to do: verified state-by-state rules and NCC 2022
-> (see the roadmap). Everything marked `status: draft` in `brain/` still needs
+> **Status: v0.6.** All eleven skills work end to end, covering all 53 templates. NCC 2025
+> and NCC 2022 (as published; Amendments 1 and 2 not yet merged) are loaded. Still to do:
+> verified state-by-state rules and the NCC 2022 amendments (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
 
 ## What's inside
@@ -127,9 +127,9 @@ personal use only) and never stores anyone's prices.
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
-| `ncc` | NCC 2025 lookups with clause citations and state variations (1,652 clauses, all five volumes) | **working** |
+| `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |
 
-Knowledge work still to do: load NCC 2022 for jobs lodged under it, verify and
+Knowledge work still to do: merge NCC 2022 Amendments 1 and 2 into the 2022 pages, verify and
 split the [state rules](brain/states/overview.md), verify the
 [HIA/MBA clause map](brain/contracts/hia_mba_clause_map.md) against current
 editions, and turn the PDF checklists into wiki playbooks.
@@ -156,5 +156,7 @@ a dispute.
 
 NCC content: © Commonwealth of Australia and the States and Territories of
 Australia, published by the Australian Building Codes Board, licensed under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The National
+Construction Code 2022 was provided by the Australian Building Codes Board under
+the CC BY 4.0 licence.
 Templates by Joshua Grech.

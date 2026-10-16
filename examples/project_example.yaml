@@ -21,6 +21,7 @@ project:
   project_address: 42 Banksia St, Merewether NSW 2291
   state: NSW
   region: metro                     # metro, regional or remote: guides freight and supplier notes
+  ncc_edition: "2025"               # 2025 or 2022: the edition in force when the permit application was lodged
   trade: builder                    # your trade profile (python3 tools/profile.py trades); builder sees everything
   project_type: extension
   start_date: 03/02/2027

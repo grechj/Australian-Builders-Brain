@@ -42,4 +42,12 @@ check("unfiltered clause shows several states' variations", "NSW variation" in o
 check("--state NSW shows only NSW's variation", "NSW variation" in out_nsw and "VIC variation" not in out_nsw)
 check("--state QLD hides other states' variations", "variation" not in out_qld)
 check("--trade keeps an electrician out of footings", "4.2.2" not in lookup("clause", "4.2.2", "--trade", "electrician"))
+# NCC 2022
+e22 = resolve_profile("electrician", "NSW", "2022")
+check("NCC 2022: electrician scope resolves", len(e22["ncc_scope"]) >= 10 and e22["ncc_edition"] == "2022")
+check("NCC 2022: VIC plumber gets VIC-only Volume Three Parts", any("vic_part_" in p for p in resolve_profile("plumber", "VIC", "2022")["ncc_scope"]))
+h22_sa, h22_nsw = lookup("--edition", "2022", "clause", "H2D4", "--state", "SA"), lookup("--edition", "2022", "clause", "H2D4", "--state", "NSW")
+check("NCC 2022: H2D4 shows SA's variations for SA", "SA variation" in h22_sa)
+check("NCC 2022: H2D4 hides SA's variations and markers for NSW", "SA" not in h22_nsw and "H2D4" in h22_nsw)
+check("NCC 2022 pages carry the amendment notice", "Amendment 2" in (ROOT / "brain/ncc/2022/volume_two/h2_damp_and_weatherproofing.md").read_text())
 sys.exit(1 if failures else 0)

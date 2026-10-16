@@ -30,7 +30,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 BRAIN = ROOT / "brain"
-NCC = BRAIN / "ncc" / "2025"
+EDITIONS = ("2025", "2022")
 STATES = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"]
 EVERYTHING = {"builder", "all"}
 
@@ -77,7 +77,14 @@ def find_state(name: str | None) -> str | None:
     return code
 
 
-def ncc_pages() -> list[str]:
+def ncc_dir(edition: str = "2025") -> Path:
+    if edition not in EDITIONS:
+        raise SystemExit(f"NCC edition must be one of {', '.join(EDITIONS)}")
+    return BRAIN / "ncc" / edition
+
+
+def ncc_pages(edition: str = "2025") -> list[str]:
+    NCC = ncc_dir(edition)
     return sorted(p.relative_to(NCC).with_suffix("").as_posix() for p in NCC.glob("*/*.md")
                   if p.name != "index.md" and not p.name.startswith(("definitions", "referenced", "state_var")))
 
@@ -92,9 +99,11 @@ def _bullets(body: str, heading: str) -> list[str]:
     return [l[2:].strip() for l in m.group(1).splitlines()] if m else []
 
 
-def resolve_profile(trade: str | None = None, state: str | None = None) -> dict:
+def resolve_profile(trade: str | None = None, state: str | None = None, edition: str = "2025") -> dict:
     tid, code = find_trade(trade), find_state(state)
-    pages = ncc_pages()
+    edition = str(edition or "2025")
+    NCC = ncc_dir(edition)
+    pages = ncc_pages(edition)
     if tid in EVERYTHING:
         patterns, meta = ["**"], trades().get("builder", {})
     else:
@@ -114,7 +123,7 @@ def resolve_profile(trade: str | None = None, state: str | None = None) -> dict:
             for line in vol.read_text().splitlines():
                 if not line.startswith(f"| {code} |"):
                     continue
-                m = re.search(r"\(/ncc/2025/([^#)]+)\.md", line)
+                m = re.search(r"\(/ncc/" + edition + r"/([^#)]+)\.md", line)
                 if m and m.group(1) in scope:
                     variations.append(line)
     skills = meta.get("skills", []) if tid not in EVERYTHING else trades()["builder"]["skills"]
@@ -122,6 +131,7 @@ def resolve_profile(trade: str | None = None, state: str | None = None) -> dict:
         "trade": tid,
         "trade_title": "All trades" if tid == "all" else meta.get("title", tid),
         "state": code,
+        "ncc_edition": edition,
         "ncc_scope": scope,
         "state_variations": variations,
         "skills": skills,
@@ -140,6 +150,7 @@ def main() -> None:
     sub.add_parser("trades")
     p = sub.add_parser("show")
     p.add_argument("--trade"); p.add_argument("--state"); p.add_argument("--project", type=Path)
+    p.add_argument("--edition", help="NCC edition: 2025 (default) or 2022")
     p.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
@@ -150,22 +161,23 @@ def main() -> None:
                 print(f"{tid}: {meta['title']} ({', '.join(meta.get('aliases', []))})")
         return
 
-    trade, state = args.trade, args.state
+    trade, state, edition = args.trade, args.state, args.edition
     if args.project:
         data = yaml.load(args.project.read_text(), Loader=yaml.BaseLoader) or {}
         flat = {k: v for section in data.values() if isinstance(section, dict) for k, v in section.items()}
         trade, state = trade or flat.get("trade"), state or flat.get("state")
-    prof = resolve_profile(trade, state)
+        edition = edition or flat.get("ncc_edition")
+    prof = resolve_profile(trade, state, edition or "2025")
     if args.json:
         print(json.dumps(prof, indent=2))
         return
-    print(f"Profile: {prof['trade_title']} in {prof['state'] or 'no state set (state-only Parts and variations hidden)'}")
+    print(f"Profile: {prof['trade_title']} in {prof['state'] or 'no state set (state-only Parts and variations hidden)'}, NCC {prof['ncc_edition']}")
     print(f"Trade page: {prof['trade_page']}   State page: {prof['state_page']}")
     print(f"\nSkills: {', '.join(prof['skills'])}")
     print(f"Takeoff jobs: {', '.join(prof['takeoff_jobs']) or 'none (use the typical materials as a checklist)'}")
     print(f"\nNCC pages in scope ({len(prof['ncc_scope'])}):")
     for p in prof["ncc_scope"][:60]:
-        print(f"  brain/ncc/2025/{p}.md")
+        print(f"  brain/ncc/{prof['ncc_edition']}/{p}.md")
     if len(prof["ncc_scope"]) > 60:
         print(f"  ... and {len(prof['ncc_scope']) - 60} more")
     if prof["state"]:
