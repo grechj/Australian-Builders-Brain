@@ -16,7 +16,8 @@ of contents and lists any that are missing.
 
 Why PDFs: the ABCB's NCC 2022 XML download is an older, incomplete export
 (see raw/ncc/README.md). The PDFs are the published text. They predate NCC
-2022 Amendments 1 and 2, which every page flags.
+2022 Amendments 1 and 2; a full run then merges those from
+tools/ncc2022_amendments.yaml (tools/apply_ncc_amendments.py).
 
 Needs pdfplumber (pip install pdfplumber).
 """
@@ -708,6 +709,7 @@ def write_volume(vol: str, data: dict, out: Path, now: str) -> dict:
 
 
 def main() -> None:
+    sys.path.insert(0, str(Path(__file__).parent))
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--pdf-dir", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=ROOT / "brain" / "ncc" / "2022")
@@ -742,6 +744,9 @@ def main() -> None:
                  "| Clause | Volume | Part | Page |", "|---|---|---|---|"]
         lines += [f"| {code} | {title} | {part} | [open]({page}#{anchor(code)}) |" for title, code, part, page in all_index]
         (args.out / "clause_index.md").write_text(front(meta) + "\n".join(lines) + "\n\n" + ATTRIBUTION + "\n")
+        # Merge Amendments 1 and 2 (tools/ncc2022_amendments.yaml).
+        import apply_ncc_amendments
+        apply_ncc_amendments.main()
 
 
 if __name__ == "__main__":

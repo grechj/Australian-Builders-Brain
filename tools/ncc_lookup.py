@@ -45,7 +45,11 @@ class Block:
 
     @property
     def code(self) -> str:
-        return self.heading.split(" ", 1)[0]
+        parts = self.heading.split(" ")
+        # State-only clauses are headed "WA H9D3 ...": the state is part of the code.
+        if parts[0] in ("ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA") and len(parts) > 1:
+            return f"{parts[0]} {parts[1]}"
+        return parts[0]
 
     def cite(self, edition: str) -> str:
         rel = self.page.relative_to(ROOT).as_posix()

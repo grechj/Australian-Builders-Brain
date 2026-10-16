@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume One**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 This Part contains *Deemed-to-Satisfy Provisions* for Part D1. It covers safety aspects of parts of a building including stairways, ramps, handrails, balustrades, fall prevention barriers and operation of doors that are part of an *exit*. It also covers fall prevention requirements for openable windows.
 
@@ -521,6 +521,12 @@ kg mass is suspended at mid-span for stainless steel wires
 
 ### D3D22 Handrails
 
+<!-- AMDT 2.1.volume_one -->
+> **Amended by NCC 2022 Amendment 2 (from 29 July 2025)**: Delete (1)(f) and insert (1)(f) as follows.
+>
+> (f) in a required exit serving an area required to be accessible, be designed and constructed to comply with clause 9 of AS 1428.1, except that clause 9(d) does not apply to a handrail required by (1)(c)(ii).
+<!-- /AMDT -->
+
 (1) Except for handrails referred to in D3D23, and subject to (2), handrails must—
 
 - (a) be located along at least one side of the ramp or *flight*; and
@@ -748,6 +754,16 @@ A fixed platform, walkway, stairway, ladder and any going and riser, landing, ha
 <a id="d3d28"></a>
 
 ### D3D28 Signs on doors
+
+<!-- AMDT 1.8.volume_one -->
+> **Amended by NCC 2022 Amendment 1 (from 1 May 2025)**: Delete (4)(b) and insert (4)(b) as follows.
+>
+> (b) For a self-closing door—
+>
+> FIRE SAFETY DOOR
+> DO NOT OBSTRUCT
+> DO NOT KEEP OPEN
+<!-- /AMDT -->
 
 (1) A sign, to alert persons that the operation of certain doors must not be impaired, must be installed where it can readily be seen on, or adjacent to—
 

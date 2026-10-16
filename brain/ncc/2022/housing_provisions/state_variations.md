@@ -13,10 +13,10 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 From the state and territory schedules of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
@@ -192,5 +192,14 @@ From the state and territory schedules of **NCC 2022 Housing Provisions**.[^abcb
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/housing_provisions/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/housing_provisions/referenced_documents.md) |
+| WA | (Amendment 1) Delete 7.4.3(a) and insert WA 7.4.3(a) as follows | [7.4.3](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_3) |
+| WA | (Amendment 1) Delete 7.4.4(1) and insert WA 7.4.4(1) as follows; replace the Explanatory Information for 7.4.4; delete Figure 7.4.4 (explanatory) | [7.4.4](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_4) |
+| WA | (Amendment 1) Delete 7.4.5(c) and insert WA 7.4.5(c) as follows; replace the Explanatory Information for 7.4.5 | [7.4.5](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_5) |
+| WA | (Amendment 1) Delete 8.2.2(b) and insert WA 8.2.2(b) as follows; insert a WA exemption; replace the Explanatory Information for 8.2.2 | [8.2.2](/ncc/2022/housing_provisions/8_2_windows_and_external_glazed_doors.md#8_2_2) |
+| WA | (Amendment 1) Insert WA 13.2.1(4) and Explanatory Information as follows | [13.2.1](/ncc/2022/housing_provisions/13_2_building_fabric.md#13_2_1) |
+| WA | (Amendment 1) Delete 13.2.7 and insert WA 13.2.7 as follows | [13.2.7](/ncc/2022/housing_provisions/13_2_building_fabric.md#13_2_7) |
+| WA | (Amendment 1) Insert WA 13.3.1(3) and Explanatory Information as follows | [13.3.1](/ncc/2022/housing_provisions/13_3_external_glazing.md#13_3_1) |
 
 [^abcb_ncc]: The National Construction Code 2022 was provided by the Australian Building Codes Board under the CC BY 4.0 licence. Converted to markdown from the ABCB's NCC 2022 PDFs (1 May 2023) by tools/ncc_pdf_ingest.py; figures not reproduced. Read with NCC 2022 Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025). The authoritative text is at https://ncc.abcb.gov.au/editions/ncc-2022

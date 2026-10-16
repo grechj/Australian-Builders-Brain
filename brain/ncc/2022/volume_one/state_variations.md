@@ -13,10 +13,10 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 From the state and territory schedules of **NCC 2022 Volume One**.[^abcb_ncc]
 
@@ -579,5 +579,9 @@ From the state and territory schedules of **NCC 2022 Volume One**.[^abcb_ncc]
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/volume_one/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/volume_one/referenced_documents.md) |
+| WA | (Amendment 1) Delete the Note to WA B1D3 | [B1D3](/ncc/2022/volume_one/b1_structural_provisions.md#b1d3) |
+| WA | (Amendment 1) Insert WA Part F9 Changes to AS/NZS 3500.3:2021 | [WA Part F9](/ncc/2022/volume_one/wa_part_f9_changes_to_as_nzs_3500_3_2021.md) |
 
 [^abcb_ncc]: The National Construction Code 2022 was provided by the Australian Building Codes Board under the CC BY 4.0 licence. Converted to markdown from the ABCB's NCC 2022 PDFs (1 May 2023) by tools/ncc_pdf_ingest.py; figures not reproduced. Read with NCC 2022 Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025). The authoritative text is at https://ncc.abcb.gov.au/editions/ncc-2022

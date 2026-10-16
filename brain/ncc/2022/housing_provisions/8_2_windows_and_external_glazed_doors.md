@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 <a id="8_2_1"></a>
 
@@ -37,6 +37,16 @@ From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*;
 <a id="8_2_2"></a>
 
 ### 8.2.2 Installation of windows
+
+<!-- AMDT 1.21.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete 8.2.2(b) and insert WA 8.2.2(b) as follows; insert a WA exemption; replace the Explanatory Information for 8.2.2.
+>
+> (b) A minimum 10 mm gap must be provided between the top of the window assembly and any loadbearing framing element.
+>
+> **Exemption.** 8.2.2(b) does not apply to windows in a masonry wall element.
+>
+> **WA Explanatory information (summary of the amendment's text).** Windows must be fixed so they don't buckle, distort or twist, and so they resist design wind pressures and transfer loads only to the framing beside the opening. Install them square and plumb. A gap above the assembly allows for settlement and prevents structural loads being transferred: generally at least 10 mm, except in masonry where it may be less if it still prevents load transfer. Packing must be compatible with the frame and window and fixed permanently. Isolate aluminium sills from masonry and mortar, and minimise gaps between sills and external skins. See Amendment 1 for the full text and Figure 8.2.2.
+<!-- /AMDT -->
 
 [New for 2022] *Windows* must be installed in accordance with the following:
 

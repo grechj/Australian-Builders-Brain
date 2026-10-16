@@ -16,12 +16,26 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume Two**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+<!-- AMDT 1.17.volume_two -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Insert WA Part H6 (a WA Note and Explanatory Information for the Introduction to this Part) as follows.
+>
+> **Notes.** For existing buildings that are undergoing alterations or an extension, or when installing a swimming pool associated with an existing building, Part 2.6 and Part 3.12.5 of NCC 2019 Volume Two Amendment 1 may apply instead of Part H6 of NCC 2022 Volume Two.
+>
+> **Explanatory information.** An existing building is an existing Class 1 building or an existing attached Class 10 part that was not required to comply with the energy efficiency requirements of NCC 2022 or any later edition. Examples of when buildings may be required to comply with the NCC include at the time of approval, such as when a building permit is required, or at the commencement of construction where no building permit is required.
+>
+> For existing buildings, Performance Solutions may be more appropriate for demonstrating compliance with energy efficiency requirements of the NCC; the industry developed WA Alterations & Additions Protocol for Energy Efficiency in Class 1 or attached Class 10 buildings being an example.
+>
+> The applicable Performance Requirements of Part 2.6 of NCC 2019 Amendment 1 includes the phrase "to the degree necessary". This enables practitioners undertaking Performance Solutions for alterations and additions to existing buildings to make reasonable allowance for the performance of the existing building.
+>
+> When installing a swimming pool associated with an existing building, an assessment can be made using the elemental provisions of NCC 2019 Amendment 1.
+<!-- /AMDT -->
+
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 This Part is intended to improve the efficient use of energy in building design and construction, as well as the energy usage by key equipment installed in a building. From 1 May 2023 to 30 September 2023 Part 2.6 and Part 3.12 of NCC 2019 Volume Two Amendment 1 may apply instead of Part H6 of NCC 2022 Volume Two. From 1 October 2023 Part H6 of NCC 2022 Volume Two applies.
 

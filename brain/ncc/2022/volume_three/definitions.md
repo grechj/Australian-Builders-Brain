@@ -13,10 +13,22 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume Three**.[^abcb_ncc]
+
+<!-- AMDT 1.13.volume_three -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows.
+>
+> **Existing building:** For the purposes of Part H6, an existing Class 1 building or an existing attached Class 10 part that was not required to comply with the energy efficiency requirements of NCC 2022 or any later edition.
+>
+> **Public building:** A Class 6 licensed premises or Class 9b building where persons may assemble for—
+> - (a) civic, theatrical, social, political or religious purposes; or
+> - (b) educational purposes; or
+> - (c) entertainment, recreational or sporting purposes; or
+> - (d) business purposes.
+<!-- /AMDT -->
 
 <a id="above_ground_rainwater_tank"></a>
 

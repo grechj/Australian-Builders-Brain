@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-17
+* **Update**: Merged [NCC 2022 Amendments 1 and 2](/ncc/2022/amendments.md) into the 2022 pages: 33 notices under the clauses they change (national corrections, AS 1428.1 2021, and WA variations) and new WA Parts F9 (Volume One) and H10 (Volume Two).
 * **Creation**: Loaded [NCC 2022](/ncc/2022/index.md) as published (1 May 2023) from the ABCB's PDFs with `tools/ncc_pdf_ingest.py`: Volumes One to Three and the Housing Provisions, 2,025 clauses, state variations quoted under their clauses, state-only Parts, definitions and a clause index. Every clause in each volume's contents was found. Pages flag that Amendments 1 and 2 are not yet merged. Profiles, the NCC lookup and the state pages now take an NCC edition.
 * **Update**: [Materials takeoff](/computations/materials_takeoff.md) now covers electrical rough-in (points to cable rolls, fittings and RCBOs), plumbing rough-in (fixtures to pipe, fittings and valves) and roofing (gable, hip or skillion; sheet or tile; with gutters and downpipes), with hand-checked tests.
 * **Creation**: Added profiles: 23 [trade profiles](/trades/index.md) (each trade's NCC scope, skills, takeoff jobs, typical materials and suppliers; `builder` sees everything) and 8 [state and territory pages](/states/index.md) with generated NCC variations and draft notes on rules, climate, materials and costs. `tools/profile.py` resolves a profile; the NCC lookup filters by trade and state; materials ROM takes a location loading.

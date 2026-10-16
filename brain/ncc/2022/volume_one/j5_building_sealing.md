@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume One**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 This Part contains *Deemed-to-Satisfy Provisions* for compliance with Part J1. It sets out provisions for the sealing of a building’s *glazing*, doors, exhaust fans and the like in order to increase thermal comfort for occupants and reduce the energy consumption of any installed *air-conditioning* systems. From 1 May 2023 to 30 September 2023 Section J of NCC 2019 Volume One Amendment 1 may apply instead of Section J of NCC 2022 Volume One. From 1 October 2023 Section J of NCC 2022 Volume One applies. Notes: New South Wales Section J Energy Efficiency (1) For a Class 2 building or a Class 4 part of a building, where a relevant *development consent* or an application for a complying development certificate requires compliance with a BASIX Single Dwelling or Multi Dwelling Certificate issued under Version 3.0 or earlier, NSW Section J of NCC 2019 Volume One Amendment 1 applies. (2) For a Class 2 building or a Class 4 part of a building, where a relevant *development consent* or an application for a complying development certificate requires compliance with a BASIX Single Dwelling or Multi Dwelling Certificate issued under Version 4.0 or later, Section J of NCC 2022 Volume One applies. (3) For a Class 2 building or a Class 4 part of a building, where a relevant *development consent* or an application for a complying development certificate requires compliance with a BASIX Alterations and Additions Certificate, NSW Section J of NCC 2019 Volume One Amendment 1 applies. (4) For a Class 3 building or Class 5 to 9 building: (i) From 1 May 2023 to 30 September 2023 NSW Section J of NCC 2019 Volume One Amendment 1 may apply instead of Section J of NCC 2022 Volume One. (ii) From 1 October 2023 Section J of NCC 2022 Volume One applies. Notes: Tasmania Section J Energy Efficiency In Tasmania, for a Class 2 building and Class 4 part of a building, Section J is replaced with Section J of BCA 2019 Amendment 1.
 

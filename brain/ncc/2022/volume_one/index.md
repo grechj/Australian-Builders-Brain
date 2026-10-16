@@ -125,6 +125,7 @@
 * [NCC 2022 Vol One, VIC Part I6 Class 9b children’s services](vic_part_i6_class_9b_children_s_services.md) - Clauses that apply only in VIC: NCC 2022 Volume One VIC Part I6 Class 9b children’s services.
 * [NCC 2022 Vol One, WA Part B2 Changes to AS/NZS 1170.2:2021](wa_part_b2_changes_to_as_nzs_1170_2_2021.md) - Clauses that apply only in WA: NCC 2022 Volume One WA Part B2 Changes to AS/NZS 1170.2:2021.
 * [NCC 2022 Vol One, WA Part I4 Public buildings](wa_part_i4_public_buildings.md) - Clauses that apply only in WA: NCC 2022 Volume One WA Part I4 Public buildings.
+* [NCC 2022 Vol One, WA Part F9 Changes to AS/NZS 3500.3:2021](wa_part_f9_changes_to_as_nzs_3500_3_2021.md) - This Part sets out changes for the application of AS/NZS 3500.3:2021 in Western Australia.
 * [NCC 2022 Vol One, Schedule 1 Definitions](definitions.md) - Defined terms used in NCC 2022 Volume One (the words shown in italics).
 * [NCC 2022 Vol One, Schedule 2 Referenced documents](referenced_documents.md) - Standards and documents NCC 2022 Volume One calls up.
 * [NCC 2022 Vol One, state and territory variations](state_variations.md) - Every state and territory variation in NCC 2022 Volume One, linked to the clause it changes.

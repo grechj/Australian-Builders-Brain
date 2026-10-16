@@ -16,16 +16,24 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 <a id="3_2_1"></a>
 
 ### 3.2.1 Un-retained bulk earthworks – site cut and fill
+
+<!-- AMDT 1.10.housing_provisions -->
+> **Amended by NCC 2022 Amendment 1 (from 1 May 2025)**: Delete the table row for 'Stable rock (Class A)' and insert the following row in lieu.
+>
+> | Soil class | Site cut (excavation) maximum embankment slope ratio, angle of site cut H:L | Compacted fill maximum embankment slope ratio, angle of batter H:L |
+> |---|---|---|
+> | Stable rock (Class A) | 8:1 | 2:3 |
+<!-- /AMDT -->
 
 (1) A *site* cut using an un-retained embankment must be—
 

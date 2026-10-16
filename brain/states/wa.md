@@ -122,7 +122,7 @@ Where Western Australia changes the national code. A variation can replace, add 
 
 Where Western Australia changes the national code. A variation can replace, add to or delete a clause; the varied text applies in WA. Clause pages show each variation beside the clause. NCC 2022 as published (1 May 2023); read it with Amendments 1 and 2.
 
-## Housing Provisions (18)
+## Housing Provisions (27)
 
 | State | Variation | Clause or Part |
 |---|---|---|
@@ -144,8 +144,17 @@ Where Western Australia changes the national code. A variation can replace, add 
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/housing_provisions/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/housing_provisions/referenced_documents.md) |
+| WA | (Amendment 1) Delete 7.4.3(a) and insert WA 7.4.3(a) as follows | [7.4.3](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_3) |
+| WA | (Amendment 1) Delete 7.4.4(1) and insert WA 7.4.4(1) as follows; replace the Explanatory Information for 7.4.4; delete Figure 7.4.4 (explanatory) | [7.4.4](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_4) |
+| WA | (Amendment 1) Delete 7.4.5(c) and insert WA 7.4.5(c) as follows; replace the Explanatory Information for 7.4.5 | [7.4.5](/ncc/2022/housing_provisions/7_4_gutters_and_downpipes.md#7_4_5) |
+| WA | (Amendment 1) Delete 8.2.2(b) and insert WA 8.2.2(b) as follows; insert a WA exemption; replace the Explanatory Information for 8.2.2 | [8.2.2](/ncc/2022/housing_provisions/8_2_windows_and_external_glazed_doors.md#8_2_2) |
+| WA | (Amendment 1) Insert WA 13.2.1(4) and Explanatory Information as follows | [13.2.1](/ncc/2022/housing_provisions/13_2_building_fabric.md#13_2_1) |
+| WA | (Amendment 1) Delete 13.2.7 and insert WA 13.2.7 as follows | [13.2.7](/ncc/2022/housing_provisions/13_2_building_fabric.md#13_2_7) |
+| WA | (Amendment 1) Insert WA 13.3.1(3) and Explanatory Information as follows | [13.3.1](/ncc/2022/housing_provisions/13_3_external_glazing.md#13_3_1) |
 
-## Volume One (24)
+## Volume One (28)
 
 | State | Variation | Clause or Part |
 |---|---|---|
@@ -173,16 +182,22 @@ Where Western Australia changes the national code. A variation can replace, add 
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/volume_one/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/volume_one/referenced_documents.md) |
+| WA | (Amendment 1) Delete the Note to WA B1D3 | [B1D3](/ncc/2022/volume_one/b1_structural_provisions.md#b1d3) |
+| WA | (Amendment 1) Insert WA Part F9 Changes to AS/NZS 3500.3:2021 | [WA Part F9](/ncc/2022/volume_one/wa_part_f9_changes_to_as_nzs_3500_3_2021.md) |
 
-## Volume Three (3)
+## Volume Three (5)
 
 | State | Variation | Clause or Part |
 |---|---|---|
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/volume_three/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/volume_three/referenced_documents.md) |
 
-## Volume Two (17)
+## Volume Two (22)
 
 | State | Variation | Clause or Part |
 |---|---|---|
@@ -203,12 +218,19 @@ Where Western Australia changes the national code. A variation can replace, add 
 | WA | WA definitions (additions to Schedule 1) | (see the state schedule) |
 | WA | Insert WA Table 4 as follows: | (see the state schedule) |
 | WA | WA referenced documents (additions to Schedule 2) Insert WA Table 1 as follows: | (see the state schedule) |
+| WA | (Amendment 1) In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows | [Part](/ncc/2022/volume_two/definitions.md) |
+| WA | (Amendment 1) In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2) | [Part](/ncc/2022/volume_two/referenced_documents.md) |
+| WA | (Amendment 1) Delete WA H9D3 and insert WA H9D3 as follows | [WA H9D3](/ncc/2022/volume_two/wa_part_h9_water_use.md#wa_h9d3) |
+| WA | (Amendment 1) Insert WA Part H6 (a WA Note and Explanatory Information for the Introduction to this Part) as follows | [Part](/ncc/2022/volume_two/h6_energy_efficiency.md) |
+| WA | (Amendment 1) Insert WA Part H10 Changes to AS/NZS 3500.3:2021 | [WA Part H10](/ncc/2022/volume_two/wa_part_h10_changes_to_as_nzs_3500_3_2021.md) |
 
 ## Parts that apply only in WA
 
 - [NCC 2022 Housing Provisions, WA Part 2.3 Changes to AS/NZS 1170.2:2021 and AS 4055:2021](/ncc/2022/housing_provisions/wa_part_2_3_changes_to_as_nzs_1170_2_2021_and_as_4055_2021.md)
 - [NCC 2022 Vol One, WA Part B2 Changes to AS/NZS 1170.2:2021](/ncc/2022/volume_one/wa_part_b2_changes_to_as_nzs_1170_2_2021.md)
+- [NCC 2022 Vol One, WA Part F9 Changes to AS/NZS 3500.3:2021](/ncc/2022/volume_one/wa_part_f9_changes_to_as_nzs_3500_3_2021.md)
 - [NCC 2022 Vol One, WA Part I4 Public buildings](/ncc/2022/volume_one/wa_part_i4_public_buildings.md)
+- [NCC 2022 Vol Two, WA Part H10 Changes to AS/NZS 3500.3:2021](/ncc/2022/volume_two/wa_part_h10_changes_to_as_nzs_3500_3_2021.md)
 - [NCC 2022 Vol Two, WA Part H9 Water use](/ncc/2022/volume_two/wa_part_h9_water_use.md)
 
 <!-- NCC2022:END -->

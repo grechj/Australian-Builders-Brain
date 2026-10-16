@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume One**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 This Part focuses on safeguarding people from injury caused by structural failure, loss of amenity caused by structural behaviour (deflections, creep, vibration, settlement and the like), protection of other property from physical damage caused by structural failure and safeguarding people from injury that may be caused by failure of, or impact with, glazing.
 
@@ -58,6 +58,10 @@ A building or structure is to withstand the combination of loads and other actio
 <a id="b1p1"></a>
 
 ### B1P1 Structural reliability
+
+<!-- AMDT 1.5.volume_one -->
+> **Amended by NCC 2022 Amendment 1 (from 1 May 2025)**: Delete the Note to B1P1.
+<!-- /AMDT -->
 
 (1) By resisting the actions to which it may reasonably be expected to be subjected, a building or structure, during construction and use, with appropriate degrees of reliability, must—
 
@@ -248,6 +252,14 @@ The resistance of a building or structure must be greater than the most critical
 <a id="b1d3"></a>
 
 ### B1D3 Determination of individual actions
+
+<!-- AMDT 1.15.volume_one -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete the Note to WA B1D3.
+<!-- /AMDT -->
+
+<!-- AMDT 1.6.volume_one -->
+> **Amended by NCC 2022 Amendment 1 (from 1 May 2025)**: Delete the Note to B1D3.
+<!-- /AMDT -->
 
 The magnitude of individual actions must be determined in accordance with the following:
 

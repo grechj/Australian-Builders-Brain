@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 <a id="7_4_1"></a>
 
@@ -77,6 +77,14 @@ Gutters, downpipes and *flashings* must—
 <a id="7_4_3"></a>
 
 ### 7.4.3 Selection of guttering
+
+<!-- AMDT 1.18.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete 7.4.3(a) and insert WA 7.4.3(a) as follows.
+>
+> (a) for eaves gutters, be in accordance with—
+> - (i) AS/NZS 3500.3; or
+> - (ii) Table 7.4.3a, Table 7.4.3b and Table 7.4.3c; and
+<!-- /AMDT -->
 
 The size of guttering must—
 
@@ -234,6 +242,21 @@ Explanatory Information: Worked example — determining appropriate overflow mea
 
 ### 7.4.4 Installation of gutters
 
+<!-- AMDT 1.19.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete 7.4.4(1) and insert WA 7.4.4(1) as follows; replace the Explanatory Information for 7.4.4; delete Figure 7.4.4 (explanatory).
+>
+> (1) Eaves gutters must be—
+> - (a) installed with a fall of not less than 1:500, unless designed in accordance with AS/NZS 3500.3; and
+> - (b) supported by brackets securely fixed at stop ends, corners and at not more than 1.2 m centres; and
+> - (c) fitted with overflow measures capable of removing the overflow volume specified in Table 7.4.4a and Table 7.4.4b.
+>
+> **WA Explanatory information: installation of valley gutters and eaves gutters**
+> - Where roofs have pitches less than 12.5 degrees, valley gutters may be designed as box gutters in accordance with AS/NZS 3500.3 or as a Performance Solution by a professional engineer or other appropriately qualified person.
+> - An example of a valley gutter profile is shown in Figure 3.6.1 of AS/NZS 3500.3.
+> - In Western Australia, where installing eaves gutters with a fall less than 1:500, eaves gutters and downpipes must be in accordance with AS/NZS 3500.3, except that eaves gutter overflow must be in accordance with Part 7.4 where complying with H2D6(1)(a), and may be in accordance with Part 7.4 where complying with H2D2(1)(b).
+> - Clause 3.5.1 of AS/NZS 3500.3:2021 is varied in Western Australia to permit that eaves gutter overflow measures may be in accordance with Part 7.4.
+<!-- /AMDT -->
+
 (1) Eaves gutters must be—
 
 - (a) installed with a fall of not less than 1:500; and
@@ -309,6 +332,16 @@ with AS/NZS 3500.3 or as a *Performance Solution* by a professional engineer or 
 <a id="7_4_5"></a>
 
 ### 7.4.5 Downpipes – size and installation
+
+<!-- AMDT 1.20.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete 7.4.5(c) and insert WA 7.4.5(c) as follows; replace the Explanatory Information for 7.4.5.
+>
+> (c) be selected in accordance with the appropriate eaves gutter section, and where—
+> - (i) 7.4.3(a)(i) applies, in accordance with AS/NZS 3500.3; and
+> - (ii) 7.4.3(a)(ii) applies, as shown in Table 7.4.3a, Table 7.4.3b and Table 7.4.3c.
+>
+> **WA Explanatory information.** A maximum 12 m gutter length served by each downpipe is to ensure effective fall and adequate capacity to discharge all water anticipated during a storm having an annual exceedance probability of 5%. Where a rainhead overflow device is incorporated in the top of the downpipe, its overflow discharge should be directed away from the building. In Western Australia, where installing eaves gutters with a fall less than 1:500, eaves gutters and downpipes must be in accordance with AS/NZS 3500.3 which requires that gutter outlets be fitted vertically to the sole of the eaves gutter. Also, Table 3.5.2 of AS/NZS 3500.3:2021 is varied in Western Australia to permit the use of a 95 mm x 45 mm rectangular downpipe.
+<!-- /AMDT -->
 
 Downpipes must—
 

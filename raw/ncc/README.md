@@ -29,7 +29,8 @@ Don't use the ABCB's NCC 2022 XML download. It's an older publishing export
 ("adopted from 1 September 2022") with one file per clause: clauses that
 share a code and title across volumes overwrote each other, the map and
 Part files are skeletons, and it predates Amendments 1 and 2. Use the
-ABCB's NCC 2022 Amendment 2 PDFs instead.
+ABCB's NCC 2022 PDFs instead (`python3 tools/ncc_pdf_ingest.py --pdf-dir <folder>`); the run also merges
+Amendments 1 and 2 from `tools/ncc2022_amendments.yaml`.
 
 NCC 2022 attribution (required): "The National Construction Code 2022 was
 provided by the Australian Building Codes Board under the CC BY 4.0

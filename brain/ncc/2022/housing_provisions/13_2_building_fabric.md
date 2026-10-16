@@ -16,16 +16,24 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 <a id="13_2_1"></a>
 
 ### 13.2.1 Application of Part 13.2
+
+<!-- AMDT 1.22.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Insert WA 13.2.1(4) and Explanatory Information as follows.
+>
+> (4) For the purposes of Part 13.2, references to climate zone 6 in Figure 2 and Table 3 under the definition for climate zone in Schedule 1 may be considered as climate zone 5.
+>
+> **Explanatory information.** The option to substitute climate zone 5 for climate zone 6 only applies to Parts 13.2 and 13.3 of the ABCB Housing Provisions. Provisions relating to the selection and installation of services and condensation management in buildings are unaffected by this variation.
+<!-- /AMDT -->
 
 > *NT Part 13.2 applies here: see the state variation below.*
 
@@ -1874,6 +1882,26 @@ bridging
 <a id="13_2_7"></a>
 
 ### 13.2.7 Attached Class 10a buildings
+
+<!-- AMDT 1.23.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete 13.2.7 and insert WA 13.2.7 as follows.
+>
+> **13.2.7 Attached Class 10a buildings, and floors of upper storeys of Class 1 buildings projecting beyond the external walls of the ground floor**
+>
+> (a) A Class 10a building attached to a Class 1 building must—
+> - (i) have an external fabric that achieves the required level of thermal performance for a Class 1 building; or
+> - (ii) be separated from the Class 1 building with construction having the required level of thermal performance for the Class 1 building.
+>
+> (b) Where the floor of a Class 1 building is providing separation for the purpose of 13.2.7(a)(ii), it must—
+> - (i) in climate zone 4 be insulated with reflective insulation facing down with a minimum R-Value of 2.0.
+> - (ii) in climate zone 5 be insulated with reflective insulation facing down with a minimum R-Value of 2.5.
+>
+> (c) The floor of an upper storey of a Class 1 building which has a conditioned space above and projects beyond external walls of the ground floor must, for the extent that it projects beyond the external walls—
+> - (i) in climate zone 4 be insulated with reflective insulation facing down with a minimum R-Value of 2.0.
+> - (ii) in climate zone 5 be insulated with reflective insulation facing down with a minimum R-Value of 2.5.
+>
+> *The amendment also replaces the Explanatory Information and adds explanatory Figures 13.2.7a and 13.2.7b: see Amendment 1.*
+<!-- /AMDT -->
 
 A Class 10a building attached to a Class 1 building must—
 

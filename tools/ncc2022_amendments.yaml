@@ -1,0 +1,343 @@
+# NCC 2022 Amendments 1 and 2, transcribed from the ABCB's amendment documents:
+#   Amendment 1, version 1.1, released 8 April 2025, effective 1 May 2025
+#     https://ncc.abcb.gov.au/sites/default/files/resources/2025/NCC%202022%20Amdt%201%20v1.1.pdf
+#   Amendment 2, version 1.0, released 28 July 2025, effective 29 July 2025
+#     https://www.abcb.gov.au/sites/default/files/resources/2025/NCC%202022%20Amdt%202_0.pdf
+#
+# tools/apply_ncc_amendments.py turns each entry into a notice under the clause
+# it changes (or a new page for a new Part). Text is the ABCB's, as amended
+# (CC BY 4.0). Preface-only changes (licence notice, history of adoption, list
+# of amendments, WA introductions) are listed on the amendments page only.
+#
+# Entry fields: amendment, volume, page (file in brain/ncc/2022/<volume>/),
+# anchor (clause code; omit for a Part-level notice), state (only for state
+# variations), instruction, text (markdown). new_page entries create a page.
+
+amendments:
+  "1":
+    title: NCC 2022 Amendment 1
+    effective: 1 May 2025
+    version: "1.1 (8 April 2025)"
+    url: https://ncc.abcb.gov.au/sites/default/files/resources/2025/NCC%202022%20Amdt%201%20v1.1.pdf
+    purpose: Update the copyright and licence notice (CC BY-ND to CC BY 4.0); amend variations and additions for Western Australia; amend the variation for Tasmania regarding Part H8; correct errors.
+  "2":
+    title: NCC 2022 Amendment 2
+    effective: 29 July 2025
+    version: "1.0 (28 July 2025)"
+    url: https://www.abcb.gov.au/sites/default/files/resources/2025/NCC%202022%20Amdt%202_0.pdf
+    purpose: Align the NCC with the Access Code in the Disability (Access to Premises — Buildings) Standards 2010 (AS 1428.1 updated to the 2021 edition).
+
+preface_only:
+  - amendment: "1"
+    note: "All volumes: copyright and licence notice replaced (now CC BY 4.0, excluding third-party material, trade marks, images and photographs); attribution wording replaced; Schedule 2 Table 1 Table Note (6) deleted and notes renumbered; Amendment 1 added to the history of adoption; 'List of amendments' section deleted."
+  - amendment: "1"
+    note: "WA Introduction (Volume One, Volume Two and Housing Provisions) replaced to list what the WA variations cover, with a note that the Building Regulations 2012, regulation 15C makes other modifications to the BCA."
+  - amendment: "2"
+    note: "Amendment 2 added to the history of adoption, and a List of amendments added to Volumes One and Three."
+
+changes:
+  # ---------------- Amendment 2 ----------------
+  - amendment: "2"
+    volume: volume_one
+    page: d3_construction_of_exits.md
+    anchor: D3D22
+    instruction: Delete (1)(f) and insert (1)(f) as follows
+    text: |
+      (f) in a required exit serving an area required to be accessible, be designed and constructed to comply with clause 9 of AS 1428.1, except that clause 9(d) does not apply to a handrail required by (1)(c)(ii).
+  - amendment: "2"
+    volume: volume_one
+    page: d4_access_for_people_with_a_disability.md
+    anchor: D4D4
+    instruction: Delete (a) and insert (a) as follows; delete (f) to (h) and insert (f) as follows
+    text: |
+      (a) every ramp and stairway, except for ramps and stairways in areas exempted by D4D5, must comply with—
+        - (i) for a ramp, except a fire-isolated ramp, clause 7 of AS 1428.1; and
+        - (ii) for a stairway, except a fire-isolated stairway, clause 8 of AS 1428.1; and
+        - (iii) for a fire-isolated stairway, clause 8.1(f) and (g) of AS 1428.1; and
+
+      (f) a ramp complying with AS 1428.1 or a passenger lift need not be provided to serve a storey or level other than the entrance storey in a Class 5, 6, 7b or 8 building—
+        - (i) containing not more than 3 storeys; and
+        - (ii) with a floor area for each storey, excluding the entrance storey, of not more than 200 m².
+
+      *ABCB commentary: (g) and (h) were deleted on account of amendments to AS 1428.1 regarding carpet and backing thickness; (f) amended editorially.*
+  - amendment: "2"
+    volume: volume_three
+    page: e1_facilities.md
+    anchor: E1D2
+    instruction: Delete (b) and insert (b) as follows
+    text: |
+      (b) AS 1428.1 (2021) for all other buildings.
+  - amendment: "2"
+    volume: [volume_one, volume_two, volume_three, housing_provisions]
+    page: referenced_documents.md
+    instruction: In Schedule 2 Table 1, delete the row for AS 1428 Part 1 2009 and insert a row for AS 1428 Part 1 2021
+    text: |
+      **AS 1428 Part 1 (2021)**, Design for access and mobility — General requirements for access — New building work. Referenced in Volume One D3D11, D3D16, D3D22, D4D2, D4D3, D4D4, D4D7, D4D10, D4D11, D4D13, Specification 16, E3D10, F4D5, G4D5 and Schedule 1; Volume Two Schedule 1; Housing Provisions Schedule 1; Volume Three E1D2 and Schedule 1.
+
+  # ---------------- Amendment 1: national corrections ----------------
+  - amendment: "1"
+    volume: volume_one
+    page: b1_structural_provisions.md
+    anchor: B1P1
+    instruction: Delete the Note to B1P1
+    text: ""
+  - amendment: "1"
+    volume: volume_one
+    page: b1_structural_provisions.md
+    anchor: B1D3
+    instruction: Delete the Note to B1D3
+    text: ""
+  - amendment: "1"
+    volume: volume_one
+    page: g7_livable_housing_design.md
+    instruction: Delete all notes to Introduction to this Part
+    text: ""
+  - amendment: "1"
+    volume: volume_one
+    page: d3_construction_of_exits.md
+    anchor: D3D28
+    instruction: Delete (4)(b) and insert (4)(b) as follows
+    text: |
+      (b) For a self-closing door—
+
+      FIRE SAFETY DOOR
+      DO NOT OBSTRUCT
+      DO NOT KEEP OPEN
+  - amendment: "1"
+    volume: volume_two
+    page: h8_livable_housing_design.md
+    instruction: Delete all notes to Introduction to this Part, and insert a Note to Part H8 as follows
+    text: |
+      **Notes: Tasmania Part H8 Livable housing design.** For Tasmania, refer to the Director's Determination regarding the application of Part H8 (Livable housing provisions) of the NCC – current version available at www.cbos.tas.gov.au.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 3_2_earthworks.md
+    anchor: 3.2.1
+    instruction: Delete the table row for 'Stable rock (Class A)' and insert the following row in lieu
+    text: |
+      | Soil class | Site cut (excavation) maximum embankment slope ratio, angle of site cut H:L | Compacted fill maximum embankment slope ratio, angle of batter H:L |
+      |---|---|---|
+      | Stable rock (Class A) | 8:1 | 2:3 |
+  - amendment: "1"
+    volume: housing_provisions
+    page: 6_3_structural_steel_members.md
+    anchor: 6.3.9
+    instruction: Delete the Note to 6.3.9 concerning transition
+    text: ""
+  - amendment: "1"
+    volume: housing_provisions
+    page: 13_3_external_glazing.md
+    anchor: 13.3.2
+    instruction: Delete the formula in (1)(b) and insert a corrected formula
+    text: |
+      The corrected winter glazing formula is printed in Amendment 1 (page 9). Its numerator sums (A × U × BC × OC × R<sub>W</sub> × L<sub>W</sub>) for each glazing element, and its denominator sums (A × SHGC × E × R<sub>W</sub> × BS × L<sub>W</sub> × F × H). Check the formula in the amendment before using it.
+
+  # ---------------- Amendment 1: Western Australia ----------------
+  - amendment: "1"
+    volume: [volume_one, volume_two, volume_three, housing_provisions]
+    page: definitions.md
+    state: WA
+    instruction: In WA Schedule 1, after 'design wind speed' insert a definition for 'existing building'; delete the definition for 'Public building' and insert as follows
+    text: |
+      **Existing building:** For the purposes of Part H6, an existing Class 1 building or an existing attached Class 10 part that was not required to comply with the energy efficiency requirements of NCC 2022 or any later edition.
+
+      **Public building:** A Class 6 licensed premises or Class 9b building where persons may assemble for—
+      - (a) civic, theatrical, social, political or religious purposes; or
+      - (b) educational purposes; or
+      - (c) entertainment, recreational or sporting purposes; or
+      - (d) business purposes.
+  - amendment: "1"
+    volume: [volume_one, volume_two, volume_three, housing_provisions]
+    page: referenced_documents.md
+    state: WA
+    instruction: In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2)
+    text: |
+      - **AS/NZS 3500.3 (2021)**, Plumbing and drainage – Stormwater drainage. Volume One F1D3; Volume Two H2D2 and H2D6; Housing Provisions 7.4.3. Note (2): for AS/NZS 3500.3, incorporate the changes set out in WA Part F9 of Volume One and WA Part H10 of Volume Two.
+      - **AS 5348 (2022)**, Pool covers. Volume Two WA H9D3.
+  - amendment: "1"
+    volume: volume_one
+    page: b1_structural_provisions.md
+    anchor: B1D3
+    state: WA
+    instruction: Delete the Note to WA B1D3
+    text: ""
+  - amendment: "1"
+    volume: volume_two
+    page: wa_part_h9_water_use.md
+    anchor: WA H9D3
+    state: WA
+    instruction: Delete WA H9D3 and insert WA H9D3 as follows
+    text: |
+      **WA H9D3 Swimming pool covers and blankets**
+
+      An outdoor private swimming pool or spa associated with a Class 1 building must be supplied with a cover, blanket or the like that—
+      - (a) is designed to reduce water evaporation; and
+      - (b) complies with AS 5348.
+  - amendment: "1"
+    volume: volume_two
+    page: h6_energy_efficiency.md
+    state: WA
+    instruction: Insert WA Part H6 (a WA Note and Explanatory Information for the Introduction to this Part) as follows
+    text: |
+      **Notes.** For existing buildings that are undergoing alterations or an extension, or when installing a swimming pool associated with an existing building, Part 2.6 and Part 3.12.5 of NCC 2019 Volume Two Amendment 1 may apply instead of Part H6 of NCC 2022 Volume Two.
+
+      **Explanatory information.** An existing building is an existing Class 1 building or an existing attached Class 10 part that was not required to comply with the energy efficiency requirements of NCC 2022 or any later edition. Examples of when buildings may be required to comply with the NCC include at the time of approval, such as when a building permit is required, or at the commencement of construction where no building permit is required.
+
+      For existing buildings, Performance Solutions may be more appropriate for demonstrating compliance with energy efficiency requirements of the NCC; the industry developed WA Alterations & Additions Protocol for Energy Efficiency in Class 1 or attached Class 10 buildings being an example.
+
+      The applicable Performance Requirements of Part 2.6 of NCC 2019 Amendment 1 includes the phrase "to the degree necessary". This enables practitioners undertaking Performance Solutions for alterations and additions to existing buildings to make reasonable allowance for the performance of the existing building.
+
+      When installing a swimming pool associated with an existing building, an assessment can be made using the elemental provisions of NCC 2019 Amendment 1.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 7_4_gutters_and_downpipes.md
+    anchor: 7.4.3
+    state: WA
+    instruction: Delete 7.4.3(a) and insert WA 7.4.3(a) as follows
+    text: |
+      (a) for eaves gutters, be in accordance with—
+      - (i) AS/NZS 3500.3; or
+      - (ii) Table 7.4.3a, Table 7.4.3b and Table 7.4.3c; and
+  - amendment: "1"
+    volume: housing_provisions
+    page: 7_4_gutters_and_downpipes.md
+    anchor: 7.4.4
+    state: WA
+    instruction: Delete 7.4.4(1) and insert WA 7.4.4(1) as follows; replace the Explanatory Information for 7.4.4; delete Figure 7.4.4 (explanatory)
+    text: |
+      (1) Eaves gutters must be—
+      - (a) installed with a fall of not less than 1:500, unless designed in accordance with AS/NZS 3500.3; and
+      - (b) supported by brackets securely fixed at stop ends, corners and at not more than 1.2 m centres; and
+      - (c) fitted with overflow measures capable of removing the overflow volume specified in Table 7.4.4a and Table 7.4.4b.
+
+      **WA Explanatory information: installation of valley gutters and eaves gutters**
+      - Where roofs have pitches less than 12.5 degrees, valley gutters may be designed as box gutters in accordance with AS/NZS 3500.3 or as a Performance Solution by a professional engineer or other appropriately qualified person.
+      - An example of a valley gutter profile is shown in Figure 3.6.1 of AS/NZS 3500.3.
+      - In Western Australia, where installing eaves gutters with a fall less than 1:500, eaves gutters and downpipes must be in accordance with AS/NZS 3500.3, except that eaves gutter overflow must be in accordance with Part 7.4 where complying with H2D6(1)(a), and may be in accordance with Part 7.4 where complying with H2D2(1)(b).
+      - Clause 3.5.1 of AS/NZS 3500.3:2021 is varied in Western Australia to permit that eaves gutter overflow measures may be in accordance with Part 7.4.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 7_4_gutters_and_downpipes.md
+    anchor: 7.4.5
+    state: WA
+    instruction: Delete 7.4.5(c) and insert WA 7.4.5(c) as follows; replace the Explanatory Information for 7.4.5
+    text: |
+      (c) be selected in accordance with the appropriate eaves gutter section, and where—
+      - (i) 7.4.3(a)(i) applies, in accordance with AS/NZS 3500.3; and
+      - (ii) 7.4.3(a)(ii) applies, as shown in Table 7.4.3a, Table 7.4.3b and Table 7.4.3c.
+
+      **WA Explanatory information.** A maximum 12 m gutter length served by each downpipe is to ensure effective fall and adequate capacity to discharge all water anticipated during a storm having an annual exceedance probability of 5%. Where a rainhead overflow device is incorporated in the top of the downpipe, its overflow discharge should be directed away from the building. In Western Australia, where installing eaves gutters with a fall less than 1:500, eaves gutters and downpipes must be in accordance with AS/NZS 3500.3 which requires that gutter outlets be fitted vertically to the sole of the eaves gutter. Also, Table 3.5.2 of AS/NZS 3500.3:2021 is varied in Western Australia to permit the use of a 95 mm x 45 mm rectangular downpipe.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 8_2_windows_and_external_glazed_doors.md
+    anchor: 8.2.2
+    state: WA
+    instruction: Delete 8.2.2(b) and insert WA 8.2.2(b) as follows; insert a WA exemption; replace the Explanatory Information for 8.2.2
+    text: |
+      (b) A minimum 10 mm gap must be provided between the top of the window assembly and any loadbearing framing element.
+
+      **Exemption.** 8.2.2(b) does not apply to windows in a masonry wall element.
+
+      **WA Explanatory information (summary of the amendment's text).** Windows must be fixed so they don't buckle, distort or twist, and so they resist design wind pressures and transfer loads only to the framing beside the opening. Install them square and plumb. A gap above the assembly allows for settlement and prevents structural loads being transferred: generally at least 10 mm, except in masonry where it may be less if it still prevents load transfer. Packing must be compatible with the frame and window and fixed permanently. Isolate aluminium sills from masonry and mortar, and minimise gaps between sills and external skins. See Amendment 1 for the full text and Figure 8.2.2.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 13_2_building_fabric.md
+    anchor: 13.2.1
+    state: WA
+    instruction: Insert WA 13.2.1(4) and Explanatory Information as follows
+    text: |
+      (4) For the purposes of Part 13.2, references to climate zone 6 in Figure 2 and Table 3 under the definition for climate zone in Schedule 1 may be considered as climate zone 5.
+
+      **Explanatory information.** The option to substitute climate zone 5 for climate zone 6 only applies to Parts 13.2 and 13.3 of the ABCB Housing Provisions. Provisions relating to the selection and installation of services and condensation management in buildings are unaffected by this variation.
+  - amendment: "1"
+    volume: housing_provisions
+    page: 13_2_building_fabric.md
+    anchor: 13.2.7
+    state: WA
+    instruction: Delete 13.2.7 and insert WA 13.2.7 as follows
+    text: |
+      **13.2.7 Attached Class 10a buildings, and floors of upper storeys of Class 1 buildings projecting beyond the external walls of the ground floor**
+
+      (a) A Class 10a building attached to a Class 1 building must—
+      - (i) have an external fabric that achieves the required level of thermal performance for a Class 1 building; or
+      - (ii) be separated from the Class 1 building with construction having the required level of thermal performance for the Class 1 building.
+
+      (b) Where the floor of a Class 1 building is providing separation for the purpose of 13.2.7(a)(ii), it must—
+      - (i) in climate zone 4 be insulated with reflective insulation facing down with a minimum R-Value of 2.0.
+      - (ii) in climate zone 5 be insulated with reflective insulation facing down with a minimum R-Value of 2.5.
+
+      (c) The floor of an upper storey of a Class 1 building which has a conditioned space above and projects beyond external walls of the ground floor must, for the extent that it projects beyond the external walls—
+      - (i) in climate zone 4 be insulated with reflective insulation facing down with a minimum R-Value of 2.0.
+      - (ii) in climate zone 5 be insulated with reflective insulation facing down with a minimum R-Value of 2.5.
+
+      *The amendment also replaces the Explanatory Information and adds explanatory Figures 13.2.7a and 13.2.7b: see Amendment 1.*
+  - amendment: "1"
+    volume: housing_provisions
+    page: 13_3_external_glazing.md
+    anchor: 13.3.1
+    state: WA
+    instruction: Insert WA 13.3.1(3) and Explanatory Information as follows
+    text: |
+      (3) For the purposes of Part 13.3, references to climate zone 6 in Figure 2 and Table 3 under the definition for climate zone in Schedule 1 may be considered as climate zone 5.
+
+      **Explanatory information.** The option to substitute climate zone 5 for climate zone 6 only applies to Parts 13.2 and 13.3 of the ABCB Housing Provisions. Provisions relating to the selection and installation of services and condensation management in buildings are unaffected by this variation.
+
+new_pages:
+  - amendment: "1"
+    volume: volume_one
+    state: WA
+    part: F9
+    title: Changes to AS/NZS 3500.3:2021
+    filename: wa_part_f9_changes_to_as_nzs_3500_3_2021.md
+    intro: This Part sets out changes for the application of AS/NZS 3500.3:2021 in Western Australia.
+    clauses: &wa_gutter_clauses
+      - code: "{p}D1"
+        title: Eaves gutter overflow
+        text: |
+          Delete clause 3.5.1 of AS/NZS 3500.3:2021 and replace with the following:
+
+          **3.5.1 General.** Eaves gutter systems, including downpipes, shall be designed and installed so that water will not flow back into the building. Overflow measures may be provided in accordance with Part 7.4 of the ABCB Housing Provisions Standard.
+
+          > **Explanatory information**
+          >
+          > For the purposes of this clause the applicable clauses from Part 7.4 are 7.4.3(b); 7.4.4(1)(c), (2), (3) and (5); 7.4.6; and 7.4.7.
+          >
+          > AS/NZS 3500.3:2021 provides a Deemed-to-Satisfy Solution for the design and installation of eaves gutters however, it is without normative clauses for selecting their overflow measures. Part 7.4 of ABCB Housing Provisions which also provides a Deemed-to-Satisfy Solution for the design and installation of eaves gutters includes overflow measures.
+          >
+          > Both AS/NZS 3500.3:2021 and Part 7.4 of the ABCB Housing Provisions require that eaves gutters are designed for a 5-minute duration rainfall intensity determined for an annual exceedance probability of 5%; Part 7.4 of the ABCB Housing Provisions requiring that eaves gutter overflow provisions are determined for annual exceedance probability of 1%.
+      - code: "{p}D2"
+        title: Required size of vertical downpipes
+        text: |
+          Delete Table 3.5.2 of AS/NZS 3500.3:2021 and replace with the following:
+
+          **Table 3.5.2 – Eaves gutter – Required size of vertical downpipe**
+
+          | Effective cross-sectional area of eaves gutter A<sub>e</sub> (mm²), gradient 1:500 and steeper | A<sub>e</sub> (mm²), gradient flatter than 1:500 | Downpipe, circular (mm) | Downpipe, rectangle or square (mm) |
+          |---|---|---|---|
+          | 3 500 | 4 700 | 65 | 65 x 50, or 95 x 45 |
+          | 4 200 | 5 600 | 75 | 65 x 50, or 95 x 45 |
+          | 4 600 | 6 200 | 75 | 75 x 50, or 95 x 45 |
+          | 4 800 | 6 400 | 80 | 75 x 50, or 95 x 45 |
+          | 5 200 | 7 000 | 80 | 100 x 50, or 95 x 45 |
+          | 5 900 | 7 900 | 85 | 100 x 50 |
+          | 6 400 | 8 600 | 90 | 100 x 50 |
+          | 6 600 | 8 900 | 90 | 75 x 70 |
+          | 6 700 | 9 000 | 100 | 75 x 70 |
+          | 8 200 | 11 000 | 100 | 100 x 75 |
+          | 9 600 | 12 900 | 125 | 100 x 75 |
+          | 12 800 | 17 100 | 125 | 100 x 100 |
+          | 12 800 | 17 200 | 150 | 100 x 100 |
+          | 16 000 | 21 500 | 150 | 125 x 100 |
+          | 18 400 | 24 700 | 150 | 150 x 100 |
+          | 19 200 | 25 800 | - | 150 x 100 |
+          | 20 000 | 26 800 | - | 125 x 125 |
+
+          Table notes: (a) The effective cross-sectional area shall be obtained from Figures 3.5.4(A) and 3.5.4(B) to the nearest 100 mm². (b) Refer to AS/NZS 2179.1.
+  - amendment: "1"
+    volume: volume_two
+    state: WA
+    part: H10
+    title: Changes to AS/NZS 3500.3:2021
+    filename: wa_part_h10_changes_to_as_nzs_3500_3_2021.md
+    intro: This Part sets out changes for the application of AS/NZS 3500.3:2021 in Western Australia.
+    clauses: *wa_gutter_clauses

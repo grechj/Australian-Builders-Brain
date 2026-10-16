@@ -10,10 +10,10 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 Look up a clause code here, then open its page.[^abcb_ncc]
 
@@ -2043,5 +2043,9 @@ Look up a clause code here, then open its page.[^abcb_ncc]
 | WA 2.3.3 | Housing Provisions | WA Part 2.3 Changes to AS/NZS 1170.2:2021 and AS 4055:2021 | [open](/ncc/2022/housing_provisions/wa_part_2_3_changes_to_as_nzs_1170_2_2021_and_as_4055_2021.md#wa_2_3_3) |
 | WA 2.3.4 | Housing Provisions | WA Part 2.3 Changes to AS/NZS 1170.2:2021 and AS 4055:2021 | [open](/ncc/2022/housing_provisions/wa_part_2_3_changes_to_as_nzs_1170_2_2021_and_as_4055_2021.md#wa_2_3_4) |
 | WA 2.3.5 | Housing Provisions | WA Part 2.3 Changes to AS/NZS 1170.2:2021 and AS 4055:2021 | [open](/ncc/2022/housing_provisions/wa_part_2_3_changes_to_as_nzs_1170_2_2021_and_as_4055_2021.md#wa_2_3_5) |
+| WA F9D1 | Volume One | WA Part F9 Changes to AS/NZS 3500.3:2021 | [open](/ncc/2022/volume_one/wa_part_f9_changes_to_as_nzs_3500_3_2021.md#wa_f9d1) |
+| WA F9D2 | Volume One | WA Part F9 Changes to AS/NZS 3500.3:2021 | [open](/ncc/2022/volume_one/wa_part_f9_changes_to_as_nzs_3500_3_2021.md#wa_f9d2) |
+| WA H10D1 | Volume Two | WA Part H10 Changes to AS/NZS 3500.3:2021 | [open](/ncc/2022/volume_two/wa_part_h10_changes_to_as_nzs_3500_3_2021.md#wa_h10d1) |
+| WA H10D2 | Volume Two | WA Part H10 Changes to AS/NZS 3500.3:2021 | [open](/ncc/2022/volume_two/wa_part_h10_changes_to_as_nzs_3500_3_2021.md#wa_h10d2) |
 
 [^abcb_ncc]: The National Construction Code 2022 was provided by the Australian Building Codes Board under the CC BY 4.0 licence. Converted to markdown from the ABCB's NCC 2022 PDFs (1 May 2023) by tools/ncc_pdf_ingest.py; figures not reproduced. Read with NCC 2022 Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025). The authoritative text is at https://ncc.abcb.gov.au/editions/ncc-2022

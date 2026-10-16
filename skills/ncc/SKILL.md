@@ -44,7 +44,7 @@ Before answering a code question, know (or ask, in one message):
 
 - **Building class.** Houses, townhouses, garages, sheds and pools are Class 1 and 10, so use Volume Two and the Housing Provisions. Apartments, offices, shops, factories and public buildings are Class 2 to 9, so use Volume One. Plumbing and drainage is Volume Three.
 - **State or territory**, because variations can replace, add or delete clauses.
-- **Edition.** This repo holds NCC 2025 (v1.2) and NCC 2022 as published (1 May 2023). Use the edition in force when the permit application was lodged (`ncc_edition` in the project file, or ask; the certifier can confirm). Pass it to every lookup with `--edition 2022` or `--edition 2025`. NCC 2022 pages are not yet merged with Amendments 1 and 2: when you cite NCC 2022, say so and tell the user to check the amendments for that clause.
+- **Edition.** This repo holds NCC 2025 (v1.2) and NCC 2022 with Amendments 1 and 2. Use the edition in force when the permit application was lodged (`ncc_edition` in the project file, or ask; the certifier can confirm). Pass it to every lookup with `--edition 2022` or `--edition 2025`. NCC 2022 pages include Amendments 1 and 2 as notices under each changed clause ("Amended by NCC 2022 Amendment 2 ..." or "WA variation, NCC 2022 Amendment 1 ..."). The amended text takes precedence: quote it, and say which amendment it comes from.
 
 If the user only says "a house", assume Class 1a and say you have assumed it.
 

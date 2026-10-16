@@ -16,16 +16,24 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 <a id="13_3_1"></a>
 
 ### 13.3.1 Application of Part 13.3
+
+<!-- AMDT 1.24.housing_provisions -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Insert WA 13.3.1(3) and Explanatory Information as follows.
+>
+> (3) For the purposes of Part 13.3, references to climate zone 6 in Figure 2 and Table 3 under the definition for climate zone in Schedule 1 may be considered as climate zone 5.
+>
+> **Explanatory information.** The option to substitute climate zone 5 for climate zone 6 only applies to Parts 13.2 and 13.3 of the ABCB Housing Provisions. Provisions relating to the selection and installation of services and condensation management in buildings are unaffected by this variation.
+<!-- /AMDT -->
 
 > *NSW Part 13.3 applies here: see the state variation below.*
 
@@ -49,6 +57,12 @@ From **NCC 2022 Housing Provisions**.[^abcb_ncc] Defined terms are in *italics*;
 <a id="13_3_2"></a>
 
 ### 13.3.2 External glazing — winter
+
+<!-- AMDT 1.12.housing_provisions -->
+> **Amended by NCC 2022 Amendment 1 (from 1 May 2025)**: Delete the formula in (1)(b) and insert a corrected formula.
+>
+> The corrected winter glazing formula is printed in Amendment 1 (page 9). Its numerator sums (A × U × BC × OC × R<sub>W</sub> × L<sub>W</sub>) for each glazing element, and its denominator sums (A × SHGC × E × R<sub>W</sub> × BS × L<sub>W</sub> × F × H). Check the formula in the amendment before using it.
+<!-- /AMDT -->
 
 (1) In *climate zones* 2 to 8, the ratio of the conductance (C ) and solar heat gain (C ) of the *glazing* in each *storey*, u SHGC including any *mezzanine*, must—
 

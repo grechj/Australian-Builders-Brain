@@ -13,10 +13,23 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume Three**.[^abcb_ncc]
+
+<!-- AMDT 1.14.volume_three -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: In WA Table 1 (Schedule of referenced documents), insert rows for AS/NZS 3500.3 and AS 5348 and a new table note (2).
+>
+> - **AS/NZS 3500.3 (2021)**, Plumbing and drainage – Stormwater drainage. Volume One F1D3; Volume Two H2D2 and H2D6; Housing Provisions 7.4.3. Note (2): for AS/NZS 3500.3, incorporate the changes set out in WA Part F9 of Volume One and WA Part H10 of Volume Two.
+> - **AS 5348 (2022)**, Pool covers. Volume Two WA H9D3.
+<!-- /AMDT -->
+
+<!-- AMDT 2.4.volume_three -->
+> **Amended by NCC 2022 Amendment 2 (from 29 July 2025)**: In Schedule 2 Table 1, delete the row for AS 1428 Part 1 2009 and insert a row for AS 1428 Part 1 2021.
+>
+> **AS 1428 Part 1 (2021)**, Design for access and mobility — General requirements for access — New building work. Referenced in Volume One D3D11, D3D16, D3D22, D4D2, D4D3, D4D4, D4D7, D4D10, D4D11, D4D13, Specification 16, E3D10, F4D5, G4D5 and Schedule 1; Volume Two Schedule 1; Housing Provisions Schedule 1; Volume Three E1D2 and Schedule 1.
+<!-- /AMDT -->
 
 The Standards and other documents listed in this Schedule are referenced in the NCC.
 | No. | Date | Title | Volume One | Volume Two | Housing Provisions | Volume Three |

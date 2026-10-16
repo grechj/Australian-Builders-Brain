@@ -7,8 +7,8 @@ completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
 > **Status: v0.6.** All eleven skills work end to end, covering all 53 templates. NCC 2025
-> and NCC 2022 (as published; Amendments 1 and 2 not yet merged) are loaded. Still to do:
-> verified state-by-state rules and the NCC 2022 amendments (see the roadmap). Everything marked `status: draft` in `brain/` still needs
+> and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
+> rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
 
 ## What's inside
@@ -129,7 +129,7 @@ personal use only) and never stores anyone's prices.
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
 | `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |
 
-Knowledge work still to do: merge NCC 2022 Amendments 1 and 2 into the 2022 pages, verify and
+Knowledge work still to do: verify and
 split the [state rules](brain/states/overview.md), verify the
 [HIA/MBA clause map](brain/contracts/hia_mba_clause_map.md) against current
 editions, and turn the PDF checklists into wiki playbooks.

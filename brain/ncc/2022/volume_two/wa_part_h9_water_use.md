@@ -16,10 +16,10 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 Clauses that apply only in WA, from the WA schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
@@ -110,6 +110,16 @@ Deemed-to-Satisfy Provisions
 <a id="wa_h9d3"></a>
 
 ### WA H9D3 Swimming pool covers and blankets
+
+<!-- AMDT 1.16.volume_two -->
+> **WA variation, NCC 2022 Amendment 1 (from 1 May 2025)**: Delete WA H9D3 and insert WA H9D3 as follows.
+>
+> **WA H9D3 Swimming pool covers and blankets**
+>
+> An outdoor private swimming pool or spa associated with a Class 1 building must be supplied with a cover, blanket or the like that—
+> - (a) is designed to reduce water evaporation; and
+> - (b) complies with AS 5348.
+<!-- /AMDT -->
 
 An outdoor private *swimming pool* or spa associated with a Class 1 building must be supplied with a cover, blanket or the like that—
 

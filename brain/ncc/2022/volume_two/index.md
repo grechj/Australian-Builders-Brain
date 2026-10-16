@@ -25,6 +25,7 @@
 * [NCC 2022 Vol Two, SA Part H5 additions](sa_part_h5_additions.md) - Clauses that apply only in SA: NCC 2022 Volume Two SA Part H5 additions.
 * [NCC 2022 Vol Two, SA Part H9 Water efficiency](sa_part_h9_water_efficiency.md) - Clauses that apply only in SA: NCC 2022 Volume Two SA Part H9 Water efficiency.
 * [NCC 2022 Vol Two, WA Part H9 Water use](wa_part_h9_water_use.md) - Clauses that apply only in WA: NCC 2022 Volume Two WA Part H9 Water use.
+* [NCC 2022 Vol Two, WA Part H10 Changes to AS/NZS 3500.3:2021](wa_part_h10_changes_to_as_nzs_3500_3_2021.md) - This Part sets out changes for the application of AS/NZS 3500.3:2021 in Western Australia.
 * [NCC 2022 Vol Two, Schedule 1 Definitions](definitions.md) - Defined terms used in NCC 2022 Volume Two (the words shown in italics).
 * [NCC 2022 Vol Two, Schedule 2 Referenced documents](referenced_documents.md) - Standards and documents NCC 2022 Volume Two calls up.
 * [NCC 2022 Vol Two, state and territory variations](state_variations.md) - Every state and territory variation in NCC 2022 Volume Two, linked to the clause it changes.

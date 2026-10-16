@@ -16,12 +16,12 @@ sources:
     resource: https://ncc.abcb.gov.au/editions/ncc-2022
     title: NCC 2022 (1 May 2023), Australian Building Codes Board (CC BY 4.0)
     author: org:abcb
-generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:14:11Z }
+generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 ---
 
 From **NCC 2022 Volume Two**.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md).
 
-> **NCC 2022 as published (1 May 2023).** For work under NCC 2022 it must be read with Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025), which change some clauses. See [NCC editions](/ncc/editions.md).
+> **NCC 2022 with Amendments 1 and 2.** The text is NCC 2022 as published (1 May 2023). Changes made by Amendment 1 (from 1 May 2025) and Amendment 2 (from 29 July 2025) are shown as notices under the clause they change; the amended text takes precedence. See [NCC 2022 amendments](/ncc/2022/amendments.md).
 
 The NCC groups buildings and structures by the purpose for which they are designed, constructed or adapted to be used, assigning each type of building or structure with a classification. This Part explains how each building classification is defined and used in the NCC. The building classifications are labelled “Class 1” through to “Class 10”. Some classifications also have sub-classifications, referred to by a letter after the number (e.g. Class 1a). The technical building requirements for Class 2 to 9 buildings are mostly covered by Volume One of the NCC and those for Class 1 and 10 are mostly covered by Volume Two of the NCC. Volume Three of the NCC covers *plumbing* and *drainage* requirements for all building classifications. A building may have parts that have been designed, constructed or adapted for different purposes. In most cases, each of these parts is a separate classification. A building (or part of a building) may also have more than one such purpose and may be assigned more than one classification.
 
