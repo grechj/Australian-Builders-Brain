@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-17
+* **Creation**: Added profiles: 23 [trade profiles](/trades/index.md) (each trade's NCC scope, skills, takeoff jobs, typical materials and suppliers; `builder` sees everything) and 8 [state and territory pages](/states/index.md) with generated NCC variations and draft notes on rules, climate, materials and costs. `tools/profile.py` resolves a profile; the NCC lookup filters by trade and state; materials ROM takes a location loading.
 * **Update**: Materials pricing is now per user: each user keeps a personal price list (`tools/price_list.py`, strict size/grade/treatment matching), adds lookups for their own job to it, and can optionally use their own Bunnings API keys. No shared credentials, and no prices stored in the brain.
 * **Creation**: Added [materials estimating](/contracts/materials_estimating.md), the [materials takeoff](/computations/materials_takeoff.md) and [materials ROM](/computations/materials_rom.md) computations, the [Materials Estimate](/documents/materials_estimate.md) workbook, and a Bunnings API client (`tools/bunnings.py`, official APIs only).
 * **Update**: Removed the retired BEAM branding from every template, page and PDF. Corrected outdated names: the Building and Plumbing Commission (Victoria's regulator since 2025, replacing the VBA), Before You Dig Australia (formerly Dial Before You Dig), and NCC (formerly BCA). The incident report now says "WHS regulator", and the estimate workbook's quote terms no longer suggest a 50% deposit.

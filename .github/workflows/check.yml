@@ -15,3 +15,5 @@ jobs:
         run: python tools/test_examples.py
       - name: Price list matching
         run: python tools/test_price_list.py
+      - name: Trade and location profiles
+        run: python tools/test_profile.py

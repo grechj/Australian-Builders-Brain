@@ -19,4 +19,5 @@ tradespeople, from quote to final account. Start with the job's
 * [Phases](phases/) - Construction phases by project type: activities, inspections, materials, weather risk, next trades
 * [Playbooks](playbooks/) - Step-by-step checklists: PC inspection, claim support pack, pre-construction, hold points, safety inspection
 * [References](references/) - Playbooks, sanctioned code and attesters that other concepts point to
-* [States](states/) - State and territory rules: regulators, home building and security-of-payment laws
+* [States](states/) - State and territory pages: NCC variations, regulator and licensing, climate, materials and costs
+* [Trades](trades/) - Trade profiles: each trade's NCC scope, skills, takeoff jobs, materials and suppliers (builder sees everything)

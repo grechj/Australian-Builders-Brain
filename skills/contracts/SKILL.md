@@ -22,6 +22,21 @@ from there.
 If `python3 -c "import docx, openpyxl, yaml"` fails, run
 `python3 -m pip install -r requirements.txt`.
 
+
+## Profile: trade and location
+
+Before anything else, know who you're helping and where:
+
+```bash
+python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+```
+
+Ask for the trade and state if the project file doesn't have them
+(`python3 tools/profile.py trades` lists every trade; `builder` sees
+everything). Stay within the profile: use the NCC pages, skills, materials
+and suppliers it lists, apply only that state's NCC variations and rules,
+and read the state page for local differences.
+
 ## Pick the document
 
 | The user says | Do this |

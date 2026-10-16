@@ -24,6 +24,21 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Everything here is ex GST. If the user gives inc-GST invoice totals,
 convert them with `python3 tools/compute.py ex_gst --param amount_inc_gst=...`.
 
+
+## Profile: trade and location
+
+Before anything else, know who you're helping and where:
+
+```bash
+python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+```
+
+Ask for the trade and state if the project file doesn't have them
+(`python3 tools/profile.py trades` lists every trade; `builder` sees
+everything). Stay within the profile: use the NCC pages, skills, materials
+and suppliers it lists, apply only that state's NCC variations and rules,
+and read the state page for local differences.
+
 ## How's the job tracking?
 
 1. Get each trade's budget (from the estimate), committed (orders and subcontracts let) and spent (invoices), and whether it's finished.

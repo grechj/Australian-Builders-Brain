@@ -21,6 +21,21 @@ from there.
 - `brain/ncc/2025/clause_index.md`: every clause code and its page
 - `tools/ncc_lookup.py`: search and lookup (standard library only)
 
+
+## Profile: trade and location
+
+Before anything else, know who you're helping and where:
+
+```bash
+python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+```
+
+Ask for the trade and state if the project file doesn't have them
+(`python3 tools/profile.py trades` lists every trade; `builder` sees
+everything). Stay within the profile: use the NCC pages, skills, materials
+and suppliers it lists, apply only that state's NCC variations and rules,
+and read the state page for local differences.
+
 ## Steps
 
 ### 1. Pin down the job
@@ -35,7 +50,11 @@ If the user only says "a house", assume Class 1a and say you have assumed it.
 
 ### 2. Find the clauses
 
+Always pass the profile, so results stay within the trade's NCC scope and
+show only the user's state's variations:
+
 ```bash
+python3 tools/ncc_lookup.py search "smoke alarm location" --trade electrician --state QLD
 python3 tools/ncc_lookup.py search "balustrade height deck" --volume volume_two
 python3 tools/ncc_lookup.py search "balustrade height deck" --volume housing_provisions
 python3 tools/ncc_lookup.py clause H5D2
@@ -50,6 +69,10 @@ detail (Part 10.2). Follow the links in the clause text and read each one.
 
 Look up every *italic* term that changes the meaning. For example "*wet
 area*" excludes kitchens, which matters.
+
+If a needed clause is outside the trade's scope (the lookup says so),
+widen it with `--trade builder` and tell the user the clause is outside
+their usual scope.
 
 ### 3. Check the state
 

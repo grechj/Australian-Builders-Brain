@@ -61,6 +61,22 @@ python3 tools/ncc_lookup.py search "wet area waterproofing shower" --volume hous
 Or ask Claude: *"What's the minimum balustrade height on a deck in Queensland?"* or *"Price a variation for rock in the footings: $1,200 labour,
 $1,450 tip fees, $150 excavator, 2 days delay."*
 
+## Profiles: trade and location
+
+Everyone sets a **trade** and a **state or territory** (in the project file,
+or when asking), and the brain shows only what applies:
+
+- **Trade** ([`brain/trades/`](brain/trades/index.md)): 22 trades, from electrician to roofer to tiler, plus `builder`, which sees everything. An electrician sees 13 NCC parts (smoke alarms, energy, lighting); a builder sees all 230. Each trade also gets its own skills, takeoff jobs, typical materials and supplier types.
+- **Location** ([`brain/states/`](brain/states/index.md)): each state's NCC variations (generated from the code), state-only Parts (for example Victoria's plumbing Parts for HVAC and stormwater), regulator and licensing, climate and materials (cyclonic regions, H2S vs H2F treated framing, BASIX in NSW), and freight and cost notes.
+
+```bash
+python3 tools/profile.py trades
+```
+
+```bash
+python3 tools/profile.py show --trade sparky --state QLD
+```
+
 ## Using the templates
 
 The 53 templates in `templates/` are references for producing your own

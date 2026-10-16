@@ -6,6 +6,12 @@ Usage:
     python tools/ncc_lookup.py search "wet area waterproofing shower" --volume housing_provisions
     python tools/ncc_lookup.py define "wet area" --volume volume_two
     python tools/ncc_lookup.py variations --state NSW --volume volume_two
+    python tools/ncc_lookup.py search "smoke alarm location" --trade electrician --state QLD
+
+--trade limits clause and search results to that trade's NCC scope
+(brain/trades/<trade>.md; `builder` or `all` = everything). --state shows
+only that state's variations beside each clause and hides other states'
+state-only Parts. See tools/profile.py.
 
 Volumes: volume_one, volume_two, volume_three, housing_provisions,
 livable_housing_design. Output is markdown, with the page path to cite.
@@ -17,6 +23,7 @@ from __future__ import annotations
 import argparse
 import math
 import re
+import sys
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
@@ -56,7 +63,25 @@ def terms(text: str) -> list[str]:
     return [stem(w) for w in WORD.findall(text.lower()) if w not in STOP]
 
 
-def load(edition: str, volume: str | None) -> list[Block]:
+def scope_filter(trade: str | None, state: str | None):
+    """The set of in-scope page ids (volume/part) for a trade and state, or None for no filter."""
+    if not trade and not state:
+        return None
+    sys.path.insert(0, str(Path(__file__).parent))
+    from profile import resolve_profile
+    return set(resolve_profile(trade, state)["ncc_scope"])
+
+
+def only_state(text: str, state: str | None) -> str:
+    """Drop other states' variation quotes; keep the user's state's."""
+    if not state:
+        return text
+    paras = re.split(r"\n\s*\n", text)
+    keep = [p for p in paras if not (re.match(r"> \*\*([A-Z]{2,3}) variation", p.strip()) and not p.strip().startswith(f"> **{state} variation"))]
+    return "\n\n".join(keep)
+
+
+def load(edition: str, volume: str | None, allowed: set | None = None, state: str | None = None) -> list[Block]:
     base = ROOT / "brain" / "ncc" / edition
     if not base.is_dir():
         raise SystemExit(f"No NCC {edition} pages at {base.relative_to(ROOT)}. Run tools/ncc_ingest.py first.")
@@ -66,6 +91,8 @@ def load(edition: str, volume: str | None) -> list[Block]:
         if volume and vol != volume:
             continue
         if page.name in ("index.md", "log.md", "state_variations.md", "referenced_documents.md"):
+            continue
+        if allowed is not None and page.name != "definitions.md" and f"{vol}/{page.stem}" not in allowed:
             continue
         text = page.read_text()
         body = text.split("---", 2)[2] if text.startswith("---") else text
@@ -79,7 +106,7 @@ def load(edition: str, volume: str | None) -> list[Block]:
             nxt = re.search(rf"\n#{{2,{len(m.group(2))}}} ", chunk)
             if nxt:
                 chunk = chunk[: nxt.start()]
-            blocks.append(Block(vol, page, m.group(1), m.group(3).strip(), chunk.strip(), kind))
+            blocks.append(Block(vol, page, m.group(1), m.group(3).strip(), only_state(chunk.strip(), state), kind))
     return blocks
 
 
@@ -92,7 +119,8 @@ def cmd_clause(args, blocks: list[Block]) -> None:
     hits = [b for b in blocks if b.kind == "clause" and b.code.upper() == want]
     if not hits:
         near = sorted({b.code for b in blocks if b.kind == "clause" and b.code.upper().startswith(want[:3])})[:15]
-        raise SystemExit(f"No clause {want}." + (f" Nearby codes: {', '.join(near)}" if near else ""))
+        scoped = " (outside this trade's scope; try --trade builder)" if args.trade else ""
+        raise SystemExit(f"No clause {want}{scoped}." + (f" Nearby codes: {', '.join(near)}" if near else ""))
     print("\n---\n\n".join(show(b, args.edition) for b in hits))
 
 
@@ -147,8 +175,15 @@ def main() -> None:
     p = sub.add_parser("variations"); p.add_argument("--state", required=True)
     for name in ("clause", "define", "search", "variations"):
         sub.choices[name].add_argument("--volume")
+    for name in ("clause", "define", "search"):
+        sub.choices[name].add_argument("--trade", help="limit to this trade's NCC scope")
+        sub.choices[name].add_argument("--state", help="show only this state's variations")
     args = parser.parse_args()
-    blocks = [] if args.cmd == "variations" else load(args.edition, args.volume)
+    if args.cmd == "variations":
+        blocks = []
+    else:
+        state = args.state.upper() if args.state else None
+        blocks = load(args.edition, args.volume, scope_filter(args.trade, state), state)
     {"clause": cmd_clause, "define": cmd_define, "search": cmd_search, "variations": cmd_variations}[args.cmd](args, blocks)
 
 

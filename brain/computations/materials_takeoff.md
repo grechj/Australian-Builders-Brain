@@ -7,7 +7,7 @@ status: draft
 runtime: python
 computation: /references/computations/materials.py
 entry_point: materials_takeoff
-computation_sha256: 11c90ecedca08a612db3acfff06f635d138941f1627e925c6550b3cd5dc37d4c
+computation_sha256: 080e3348b6045f79396620d58abde95cec6d7dd22436bf6f0fb35bf5f11fd31e
 parameters:
   - { name: job, type: json, required: true }
 executor:

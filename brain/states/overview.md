@@ -9,11 +9,11 @@ generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 stale_after: 2027-04-16T00:00:00Z
 ---
 
-> **Draft, to verify.** Regulators and acts get renamed and amended. Check
-> each row against the official legislation site before relying on it, then
-> split it into its own page (`states/nsw.md` and so on) with the verified
-> rules: deposit caps, cooling-off, home warranty insurance thresholds,
-> contract requirements and payment claim requirements.
+> **Draft, to verify.** Regulators and acts get renamed and amended. Check each row
+> against the official legislation site before relying on it. Each state's own page
+> ([NSW](/states/nsw.md), [VIC](/states/vic.md), [QLD](/states/qld.md), [WA](/states/wa.md),
+> [SA](/states/sa.md), [TAS](/states/tas.md), [ACT](/states/act.md), [NT](/states/nt.md)) has its NCC variations
+> and local notes.
 
 Always ask which state the job is in before drafting a contract document.
 These rules differ between states:

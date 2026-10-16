@@ -7,11 +7,12 @@ status: stable
 runtime: python
 computation: /references/computations/materials.py
 entry_point: materials_rom
-computation_sha256: 11c90ecedca08a612db3acfff06f635d138941f1627e925c6550b3cd5dc37d4c
+computation_sha256: 080e3348b6045f79396620d58abde95cec6d7dd22436bf6f0fb35bf5f11fd31e
 parameters:
   - { name: lines, type: json, required: true }
   - { name: low_pct, type: decimal, required: false, default: 15 }
   - { name: high_pct, type: decimal, required: false, default: 30 }
+  - { name: location_loading_pct, type: decimal, required: false, default: 0 }
 executor:
   resource: /references/run_computation.md
   receipt: [computation, computation_sha256, parameters, result, fields]
@@ -28,7 +29,8 @@ total = packs × unit price inc GST. Lines with no price are listed in
 `unpriced` and left out of the total. Say so, and don't present the total
 as complete.
 
-- Total inc GST, its GST (1/11), and ex GST
+- **Location loading**: `location_loading_pct` adds freight or remoteness on top of the priced lines, for regional and remote jobs priced from metro retail. Take the figure from local suppliers or the user, never guess it, and leave it at 0 when prices are already local. The [state pages](/states/index.md) say where loadings are typical.
+- Total inc GST (priced lines plus any loading), its GST (1/11), and ex GST
 - **Rough order of magnitude range**: total − `low_pct` to total + `high_pct` (default −15% / +30%). The range is skewed upwards because takeoffs usually miss items and retail prices move.
 
 A ROM is for deciding whether a job is worth pursuing and for budgeting.

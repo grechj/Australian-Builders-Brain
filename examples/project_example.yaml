@@ -20,6 +20,8 @@ project:
   project_name: Banksia St extension
   project_address: 42 Banksia St, Merewether NSW 2291
   state: NSW
+  region: metro                     # metro, regional or remote: guides freight and supplier notes
+  trade: builder                    # your trade profile (python3 tools/profile.py trades); builder sees everything
   project_type: extension
   start_date: 03/02/2027
   end_date: 30/09/2027

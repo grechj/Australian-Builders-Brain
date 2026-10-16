@@ -89,6 +89,19 @@ Actors follow OKF §7: `human:<github_id>` for people,
 - After changing a Word or Excel template, run `python tools/describe_templates.py` to refresh the Structure outline on its document page.
 - PDFs in `templates/pdf/` are generated: edit the brain page named in their `pdf:` frontmatter key, then run `python tools/build_pdfs.py`. Never edit a PDF directly.
 
+## Profiles: trade and location
+
+Every answer is for one person's profile: a trade (`brain/trades/`, or
+`builder` / `all` for everything) and a state or territory
+(`brain/states/`). Resolve it with `python tools/profile.py show` and keep to
+it:
+
+- NCC: only the trade's `ncc_scope` pages, and only that state's variations and state-only Parts (`tools/ncc_lookup.py --trade --state`)
+- Skills, takeoff jobs, materials and suppliers: as listed for the trade
+- Location: the state page's regulator, licensing, climate, materials and cost notes
+
+When a trade needs something outside its scope, widen deliberately (`--trade builder`) and say so.
+
 ## Content rules
 
 1. **Australian English and Australian practice.** GST is 10%. Say "ex GST" or "inc GST" next to every dollar figure.

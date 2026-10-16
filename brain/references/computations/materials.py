@@ -293,7 +293,7 @@ def materials_takeoff(job: dict) -> dict:
     return {"result": {"type": kind, "items": t.items, "assumptions": t.assumptions, "notes": t.notes}, "fields": {}}
 
 
-def materials_rom(lines: list, low_pct: Decimal, high_pct: Decimal) -> dict:
+def materials_rom(lines: list, low_pct: Decimal, high_pct: Decimal, location_loading_pct: Decimal = Decimal("0")) -> dict:
     """Price a materials list and give a rough order of magnitude range.
 
     lines: [{"item", "quantity", "pack_size", "unit_price_inc_gst", "product", "source", "priced_on"}, ...]
@@ -302,7 +302,10 @@ def materials_rom(lines: list, low_pct: Decimal, high_pct: Decimal) -> dict:
     4 L tin): packs to buy = quantity / pack_size, rounded up. Leave
     pack_size as 1 when the price is per unit. Lines without a price are
     listed as unpriced and left out of the total.
-    Range = total x (1 - low_pct%) to total x (1 + high_pct%).
+    location_loading_pct adds a freight or remoteness loading to the priced
+    total (for regional or remote jobs priced from metro retail). It must come
+    from local suppliers or the user, never be guessed; 0 means none.
+    Range = loaded total x (1 - low_pct%) to loaded total x (1 + high_pct%).
     """
     priced, unpriced, total = [], [], Decimal("0")
     for line in lines:
@@ -320,10 +323,15 @@ def materials_rom(lines: list, low_pct: Decimal, high_pct: Decimal) -> dict:
                        "unit_price_inc_gst": str(_money(Decimal(str(price)))),
                        "line_total_inc_gst": str(line_total), "source": str(line.get("source", "")),
                        "priced_on": str(line.get("priced_on", ""))})
+    priced_total = total
+    loading = _money(total * location_loading_pct / 100)
+    total = total + loading
     gst_part = _money(total / 11)
     low = _money(total * (1 - low_pct / 100))
     high = _money(total * (1 + high_pct / 100))
-    return {"result": {"lines": priced, "unpriced": unpriced, "total_inc_gst": str(total),
+    return {"result": {"lines": priced, "unpriced": unpriced, "priced_total_inc_gst": str(priced_total),
+                       "location_loading_pct": str(location_loading_pct), "location_loading_inc_gst": str(loading),
+                       "total_inc_gst": str(total),
                        "gst": str(gst_part), "total_ex_gst": str(total - gst_part),
                        "rom_low_inc_gst": str(low), "rom_high_inc_gst": str(high),
                        "rom_range": f"-{low_pct}% / +{high_pct}%"}, "fields": {}}

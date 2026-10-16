@@ -24,7 +24,32 @@ from there.
 If `python3 -c "import docx, openpyxl, yaml"` fails, run
 `python3 -m pip install -r requirements.txt`.
 
+
+## Profile: trade and location
+
+Before anything else, know who you're helping and where:
+
+```bash
+python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+```
+
+Ask for the trade and state if the project file doesn't have them
+(`python3 tools/profile.py trades` lists every trade; `builder` sees
+everything). Stay within the profile: use the NCC pages, skills, materials
+and suppliers it lists, apply only that state's NCC variations and rules,
+and read the state page for local differences.
+
 ## 1. Understand the job
+
+Use the profile: offer the trade's **takeoff jobs**, and use its **typical
+materials** as the checklist for trades without a takeoff (electricians,
+plumbers and others list their quantities from the drawings). Suggest the
+trade's **suppliers** alongside Bunnings, and read the state page for local
+materials (for example H2S treated framing north of the Tropic of
+Capricorn, cyclone-rated fixings in cyclonic regions) and freight. For
+`region: regional` or `remote`, ask local suppliers for a freight or
+remoteness loading and pass it as `location_loading_pct`; never guess one.
+
 
 Get the job type and dimensions. Ask only for what the takeoff needs, then
 check the assumptions with the user. For structural members (joists,
@@ -100,7 +125,8 @@ manual lookups, and results still go into their price list.
 **3d. Price the list:**
 
 ```bash
-python3 tools/compute.py materials_rom --param "lines=$(cat out/materials_lines.json)" > out/materials_rom.json
+python3 tools/compute.py materials_rom --param "lines=$(cat out/materials_lines.json)" \
+    --param location_loading_pct=<from local suppliers, or 0> > out/materials_rom.json
 python3 brain/references/attesters/check_receipt.py out/materials_rom.json
 ```
 
