@@ -6,9 +6,9 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: early scaffold (v0.1).** The `variations` skill works end to end.
-> The other skills, the NCC ingest and the state-by-state rules are on the
-> roadmap below. Everything marked `status: draft` in `brain/` still needs
+> **Status: early (v0.2).** The `variations` and `ncc` skills work end to end, and
+> the full NCC 2025 text is loaded. The other skills and the state-by-state
+> rules are on the roadmap below. Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
 
 ## What's inside
@@ -54,7 +54,11 @@ python3 tools/compute.py variation_price --param labour=1200 --param materials=1
 python3 tools/fill_template.py templates/word/Priced_Variation_Notice_TEMPLATE.docx --project examples/project_example.yaml --spec examples/var_001_spec.yaml --out out/VAR-001_Priced_Variation_Notice.docx
 ```
 
-Or ask Claude: *"Price a variation for rock in the footings: $1,200 labour,
+```bash
+python3 tools/ncc_lookup.py search "wet area waterproofing shower" --volume housing_provisions
+```
+
+Or ask Claude: *"What's the minimum balustrade height on a deck in Queensland?"* or *"Price a variation for rock in the footings: $1,200 labour,
 $1,450 tip fees, $150 excavator, 2 days delay."*
 
 ## How it stays trustworthy
@@ -84,9 +88,9 @@ $1,450 tip fees, $150 excavator, 2 days delay."*
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | planned |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | planned |
 | `financials` | budget vs actual, job P&L, lessons learned | planned |
-| `ncc` | code lookups with clause citations, by edition and state | planned (needs NCC ingest) |
+| `ncc` | NCC 2025 lookups with clause citations and state variations (1,652 clauses, all five volumes) | **working** |
 
-Knowledge work still to do: ingest the NCC 2022 and 2025 XML, verify and
+Knowledge work still to do: load NCC 2022 for jobs lodged under it, verify and
 split the [state rules](brain/states/overview.md), verify the
 [HIA/MBA clause map](brain/contracts/hia_mba_clause_map.md) against current
 editions, and turn the PDF checklists into wiki playbooks.

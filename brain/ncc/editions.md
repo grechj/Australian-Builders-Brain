@@ -3,7 +3,7 @@ type: Code Reference
 title: NCC editions and how to cite them
 description: Which NCC edition applies to a job, what each volume covers, and the citation format the brain uses.
 tags: [ncc, building_code, citations]
-status: draft
+status: stable
 resource: https://ncc.abcb.gov.au/
 sources:
   - id: abcb_ncc
@@ -26,6 +26,16 @@ Building Codes Board (ABCB) at [ncc.abcb.gov.au](https://ncc.abcb.gov.au/).[^abc
 The ABCB also publishes it as structured XML under a Creative Commons
 Attribution 4.0 licence,[^datagov_ncc2022][^datagov_ncc2025] which is what
 lets this brain load the code itself, with attribution.
+
+# What's in this brain
+
+| Edition | Status |
+|---|---|
+| [NCC 2025 (v1.2)](/ncc/2025/index.md) | Full text of all five datasets: every Part, clause, table, definition and state variation. Look up clauses with the [clause index](/ncc/2025/clause_index.md) or `tools/ncc_lookup.py`. |
+| NCC 2022 | Not loaded yet. Run `tools/ncc_ingest.py --edition 2022` once the 2022 zips are in `raw/ncc/`. |
+
+Figures are not reproduced. Each one is listed by its number and title, to
+be looked up on ncc.abcb.gov.au.
 
 # Which edition applies
 
@@ -50,9 +60,9 @@ Cite every code statement as edition, volume and clause, with a link:
 
 > NCC 2022 Vol Two, H2D2 ([ncc.abcb.gov.au](https://ncc.abcb.gov.au/))
 
-Never cite a clause from memory. Look it up in the ingested XML (see
-`raw/ncc/README.md`) or on the ABCB site, and note the state variation if
-there is one.
+Never cite a clause from memory. Look it up with `tools/ncc_lookup.py`
+or in the [NCC 2025 pages](/ncc/2025/index.md), and note the state
+variation if there is one.
 
 # What's not in the NCC
 

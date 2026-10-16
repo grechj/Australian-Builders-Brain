@@ -43,8 +43,14 @@ FOLDERS = {
     "extension": "Extension construction phases",
     "commercial": "Commercial construction phases",
     "attesters": "Deterministic checks for computation receipts",
+    "2025": "NCC 2025 (v1.2), converted from the ABCB's CC BY 4.0 XML: every Part, clause, definition and state variation",
+    "volume_one": "Class 2 to 9 buildings: apartments, commercial, industrial and public buildings",
+    "volume_two": "Class 1 and 10 buildings: houses, townhouses, garages, sheds, pools",
+    "volume_three": "Plumbing and drainage",
+    "housing_provisions": "ABCB Housing Provisions: deemed-to-satisfy construction details for houses",
+    "livable_housing_design": "ABCB Livable Housing Design Standard",
 }
-TITLES = {"ncc": "NCC"}
+TITLES = {"ncc": "NCC", "2025": "NCC 2025"}
 ROOT_INTRO = """The Australian Builder's Brain: knowledge for Australian builders and
 tradespeople, from quote to final account. Start with the job's
 [lifecycle stage](lifecycle/), then follow links. Concepts follow the
@@ -154,7 +160,7 @@ def write_indexes() -> None:
             for x in docs:
                 meta, _ = split_front(x.read_text())
                 meta = meta or {}
-                order = meta.get("phase_order") or meta.get("stage_order") or 0
+                order = meta.get("phase_order") or meta.get("stage_order") or meta.get("order") or 0
                 entries.append((order, meta.get("title", x.stem), x.name, meta.get("description", "")))
             lines += ["# Concepts", ""]
             lines += [f"* [{t}]({n}) - {desc}" for _, t, n, desc in sorted(entries)]
