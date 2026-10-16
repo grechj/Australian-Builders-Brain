@@ -11,7 +11,7 @@ skill: whs
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/word/Incident_Near_Miss_Report_TEMPLATE.docx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/word/Incident_Near_Miss_Report_TEMPLATE.docx)
+Template: [`templates/word/Incident_Near_Miss_Report_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Incident_Near_Miss_Report_TEMPLATE.docx)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `whs`
 

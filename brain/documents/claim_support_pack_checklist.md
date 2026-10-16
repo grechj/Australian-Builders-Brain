@@ -11,7 +11,7 @@ skill: claims_payments
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/pdf/Claim_Support_Pack_Checklist.pdf`](https://github.com/grechj/australian_builders_brain/blob/main/templates/pdf/Claim_Support_Pack_Checklist.pdf)
+Template: [`templates/pdf/Claim_Support_Pack_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Claim_Support_Pack_Checklist.pdf)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `claims_payments`
 

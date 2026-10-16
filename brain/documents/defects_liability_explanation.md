@@ -11,7 +11,7 @@ skill: completion_handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/pdf/Defects_Liability_Explanation.pdf`](https://github.com/grechj/australian_builders_brain/blob/main/templates/pdf/Defects_Liability_Explanation.pdf)
+Template: [`templates/pdf/Defects_Liability_Explanation.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Defects_Liability_Explanation.pdf)
 
 Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `completion_handover`
 

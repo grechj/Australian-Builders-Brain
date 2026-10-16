@@ -11,7 +11,7 @@ skill: contract_setup
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/pdf/Pre_Construction_Checklist.pdf`](https://github.com/grechj/australian_builders_brain/blob/main/templates/pdf/Pre_Construction_Checklist.pdf)
+Template: [`templates/pdf/Pre_Construction_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Pre_Construction_Checklist.pdf)
 
 Lifecycle stage: [contract and pre construction](/lifecycle/contract_and_pre_construction.md) · Skill: `contract_setup`
 

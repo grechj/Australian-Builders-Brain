@@ -11,7 +11,7 @@ skill: estimating_quoting
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Quote_Comparison_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Quote_Comparison_TEMPLATE.xlsx)
+Template: [`templates/excel/Quote_Comparison_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Quote_Comparison_TEMPLATE.xlsx)
 
 Lifecycle stage: [estimating and quoting](/lifecycle/estimating_and_quoting.md) · Skill: `estimating_quoting`
 

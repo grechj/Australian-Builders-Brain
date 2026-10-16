@@ -11,7 +11,7 @@ skill: variations
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Variation_Register.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Variation_Register.xlsx)
+Template: [`templates/excel/Variation_Register.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Variation_Register.xlsx)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `variations`
 

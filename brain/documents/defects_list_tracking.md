@@ -11,7 +11,7 @@ skill: completion_handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Defects_List_Tracking_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Defects_List_Tracking_TEMPLATE.xlsx)
+Template: [`templates/excel/Defects_List_Tracking_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Defects_List_Tracking_TEMPLATE.xlsx)
 
 Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `completion_handover`
 

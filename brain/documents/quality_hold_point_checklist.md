@@ -11,7 +11,7 @@ skill: site_management
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/pdf/Quality_Hold_Point_Checklist.pdf`](https://github.com/grechj/australian_builders_brain/blob/main/templates/pdf/Quality_Hold_Point_Checklist.pdf)
+Template: [`templates/pdf/Quality_Hold_Point_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Quality_Hold_Point_Checklist.pdf)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `site_management`
 

@@ -11,7 +11,7 @@ skill: site_management
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Site_Diary_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Site_Diary_TEMPLATE.xlsx)
+Template: [`templates/excel/Site_Diary_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Site_Diary_TEMPLATE.xlsx)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `site_management`
 

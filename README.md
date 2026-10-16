@@ -26,7 +26,7 @@ and the National Construction Code.
 **Claude Code**, as a plugin:
 
 ```bash
-claude plugin marketplace add grechj/australian_builders_brain
+claude plugin marketplace add grechj/Australian-Builders-Brain
 ```
 
 ```bash

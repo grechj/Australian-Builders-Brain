@@ -11,7 +11,7 @@ skill: completion_handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Warranties_Manuals_Index_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Warranties_Manuals_Index_TEMPLATE.xlsx)
+Template: [`templates/excel/Warranties_Manuals_Index_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Warranties_Manuals_Index_TEMPLATE.xlsx)
 
 Lifecycle stage: [completion and handover](/lifecycle/completion_and_handover.md) · Skill: `completion_handover`
 

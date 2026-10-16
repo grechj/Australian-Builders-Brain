@@ -11,7 +11,7 @@ skill: job_financials
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Budget_vs_Actual_Tracker_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Budget_vs_Actual_Tracker_TEMPLATE.xlsx)
+Template: [`templates/excel/Budget_vs_Actual_Tracker_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Budget_vs_Actual_Tracker_TEMPLATE.xlsx)
 
 Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `job_financials`
 

@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "description": "Knowledge and document skills for Australian builders and tradies: variations, progress claims, delay notices, handover and the NCC.",
   "author": { "name": "Joshua Grech" },
-  "repository": "https://github.com/grechj/australian_builders_brain",
+  "repository": "https://github.com/grechj/Australian-Builders-Brain",
   "keywords": ["construction", "australia", "builder", "ncc", "variations", "tradie"]
 }

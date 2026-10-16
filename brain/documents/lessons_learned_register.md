@@ -11,7 +11,7 @@ skill: job_financials
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Template: [`templates/excel/Lessons_Learned_Register_TEMPLATE.xlsx`](https://github.com/grechj/australian_builders_brain/blob/main/templates/excel/Lessons_Learned_Register_TEMPLATE.xlsx)
+Template: [`templates/excel/Lessons_Learned_Register_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Lessons_Learned_Register_TEMPLATE.xlsx)
 
 Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `job_financials`
 

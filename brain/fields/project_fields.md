@@ -8,7 +8,7 @@ generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 All templates draw on one project file (see
-[`examples/project_example.yaml`](https://github.com/grechj/australian_builders_brain/blob/main/examples/project_example.yaml)).
+[`examples/project_example.yaml`](https://github.com/grechj/Australian-Builders-Brain/blob/main/examples/project_example.yaml)).
 The file is grouped into sections for readability, but every key is unique,
 and the placeholder is simply the key in upper case: `client_name` fills
 `[CLIENT_NAME]`.
