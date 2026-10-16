@@ -10,12 +10,12 @@ day_range: [96, 120]
 sources:
   - id: beam_phase_engine
     resource: beam_agent/prompts/phase_engine.py
-    title: BEAM phase engine (Joshua Grech, private)
+    title: Construction sequence by Joshua Grech
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Typical timing: days 96 to 120 from site start (a rough guide from BEAM's phase engine, not a program).[^beam_phase_engine]
+Typical timing: days 96 to 120 from site start (a rough guide, not a program).[^beam_phase_engine]
 
 # Typical activities
 - Floor finishes
@@ -32,4 +32,4 @@ Typical timing: days 96 to 120 from site start (a rough guide from BEAM's phase 
 
 Previous: [Services & Fit-out](/phases/commercial/services_and_fit_out.md) · Next: [Commissioning](/phases/commercial/commissioning.md)
 
-[^beam_phase_engine]: BEAM phase engine (Joshua Grech, private)
+[^beam_phase_engine]: Construction sequence by Joshua Grech

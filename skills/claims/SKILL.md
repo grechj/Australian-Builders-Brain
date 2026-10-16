@@ -127,3 +127,12 @@ Use the Payment Tracking Register (days outstanding). Before suggesting
 interest, suspension or termination, read the contract clauses
 (`brain/contracts/hia_mba_clause_map.md`, marked unverified). Suspension and
 termination have strict notice steps. Recommend advice before taking either.
+
+## Your own format
+
+The templates are references, not a straitjacket. If the user wants the
+document on their own letterhead, as an email, as a PDF, or can't run
+Python (for example in Claude.ai):
+
+- Write it from the **Structure** section of `brain/documents/<name>.md`, which lists every section, field, table and prompt in order. Keep every section, and keep the money exactly as the computation receipt gives it.
+- If they have their own branded Word template, `tools/fill_template.py` fills any `.docx` that uses the same `[PLACEHOLDERS]`.

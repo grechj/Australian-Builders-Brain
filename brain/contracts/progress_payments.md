@@ -12,7 +12,7 @@ sources:
     author: org:ato
   - id: beam_claim_pack
     resource: /documents/claim_support_pack_checklist.md
-    title: Claim Support Pack Checklist (BEAM Builder Template Pack)
+    title: Claim Support Pack Checklist (Australian Builder's Brain template pack)
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 stale_after: 2027-04-16T00:00:00Z
@@ -81,4 +81,4 @@ Suspending work has strict notice requirements, and getting it wrong can
 put the builder in breach.
 
 [^ato_tax_invoice]: ATO, Tax invoices
-[^beam_claim_pack]: Claim Support Pack Checklist (BEAM Builder Template Pack)
+[^beam_claim_pack]: Claim Support Pack Checklist (Australian Builder's Brain template pack)

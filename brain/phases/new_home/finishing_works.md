@@ -10,12 +10,12 @@ day_range: [116, 145]
 sources:
   - id: beam_phase_engine
     resource: beam_agent/prompts/phase_engine.py
-    title: BEAM phase engine (Joshua Grech, private)
+    title: Construction sequence by Joshua Grech
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Typical timing: days 116 to 145 from site start (a rough guide from BEAM's phase engine, not a program).[^beam_phase_engine]
+Typical timing: days 116 to 145 from site start (a rough guide, not a program).[^beam_phase_engine]
 
 # Typical activities
 - Internal door install & hardware
@@ -55,4 +55,4 @@ Landscaper, electrician. See [trade sequence](/phases/trade_sequence.md).
 
 Previous: [Internal Fit-Out](/phases/new_home/internal_fit_out.md) · Next: [Handover & Completion](/phases/new_home/handover_and_completion.md)
 
-[^beam_phase_engine]: BEAM phase engine (Joshua Grech, private)
+[^beam_phase_engine]: Construction sequence by Joshua Grech

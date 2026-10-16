@@ -1,14 +1,15 @@
 ---
 type: Playbook
 title: Pre-construction checklist
-description: "Everything to have in place before breaking ground (contracts, approvals, insurance, documents, site set-up and safety), from the BEAM pre-construction checklist."
+description: "Everything to have in place before breaking ground (contracts, approvals, insurance, documents, site set-up and safety), from the template pack's pre-construction checklist."
 tags: [playbooks, contracts, pre_construction, approvals, insurance]
 status: stable
 sources:
   - id: beam_precon
     resource: /documents/pre_construction_checklist.md
-    title: Pre-Construction Checklist (BEAM Builder Template Pack)
+    title: Pre-Construction Checklist (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/Pre_Construction_Checklist.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
@@ -16,8 +17,6 @@ Work through this before the first trade arrives.[^beam_precon] Approval
 and insurance names follow NSW usage (development consent or CDC,
 construction certificate, BASIX, home building compensation). Other states
 use different names for the same steps: see the [state rules](/states/overview.md).
-"Dial Before You Dig" is now Before You Dig Australia (BYDA), and this list
-uses the new name.
 
 ## Contracts & Approvals
 
@@ -78,6 +77,6 @@ uses the new name.
 - [ ] Construction program prepared
 - [ ] Key trades booked with start dates confirmed
 - [ ] Long-lead items identified and ordered
-- [ ] Client selections required before lock-up identified BEAM Builder Template Pack | beam-it.com.au
+- [ ] Client selections required before lock-up identified
 
-[^beam_precon]: Pre-Construction Checklist (BEAM Builder Template Pack)
+[^beam_precon]: Pre-Construction Checklist (Australian Builder's Brain template pack)

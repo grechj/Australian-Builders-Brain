@@ -7,8 +7,9 @@ status: draft
 sources:
   - id: beam_quick_ref
     resource: /documents/hia_mba_clause_quick_reference.md
-    title: HIA / MBA Clause Quick Reference (BEAM Builder Template Pack)
+    title: HIA / MBA Clause Quick Reference (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/HIA_MBA_Clause_Quick_Reference.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 stale_after: 2027-04-16T00:00:00Z
 ---
@@ -41,4 +42,4 @@ contract wording, which is copyright.[^beam_quick_ref]
 | Disputes | 27 | 42 | Dispute process, then tribunal or court |
 | Notices | 28 | 44 | How formal notices must be given |
 
-[^beam_quick_ref]: HIA / MBA Clause Quick Reference (BEAM Builder Template Pack)
+[^beam_quick_ref]: HIA / MBA Clause Quick Reference (Australian Builder's Brain template pack)

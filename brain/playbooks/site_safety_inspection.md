@@ -7,8 +7,9 @@ status: stable
 sources:
   - id: beam_safety_inspection
     resource: /documents/site_safety_inspection_checklist.md
-    title: Site Safety Inspection Checklist (BEAM Builder Template Pack)
+    title: Site Safety Inspection Checklist (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/Site_Safety_Inspection_Checklist.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
@@ -58,7 +59,7 @@ See [work health and safety](/contracts/work_health_and_safety.md).
 
 - [ ] Excavations benched, battered, or shored (if > 1.5m)
 - [ ] Barriers around open excavations
-- [ ] Services located and marked (DBYD)
+- [ ] Services located and marked (Before You Dig Australia, BYDA)
 - [ ] Soil stockpiles stable and clear of edge
 
 ## Fire Prevention
@@ -73,6 +74,6 @@ See [work health and safety](/contracts/work_health_and_safety.md).
 - [ ] First aid kit stocked and accessible
 - [ ] Emergency contact list displayed
 - [ ] Emergency evacuation plan and assembly point known
-- [ ] Trained first aider on site ACTIONS REQUIRED: BEAM Builder Template Pack | beam-it.com.au
+- [ ] Trained first aider on site
 
-[^beam_safety_inspection]: Site Safety Inspection Checklist (BEAM Builder Template Pack)
+[^beam_safety_inspection]: Site Safety Inspection Checklist (Australian Builder's Brain template pack)

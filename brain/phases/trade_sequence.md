@@ -7,7 +7,7 @@ status: draft
 sources:
   - id: beam_phase_engine
     resource: beam_agent/prompts/phase_engine.py
-    title: BEAM phase engine (Joshua Grech, private)
+    title: Construction sequence by Joshua Grech
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
@@ -41,4 +41,4 @@ Consultants who aren't on this list but gate progress: architect, engineer, cert
 
 Track bookings in the [Trade Booking and Lead Time Tracker](/documents/trade_booking_lead_time_tracker.md).
 
-[^beam_phase_engine]: BEAM phase engine (Joshua Grech, private)
+[^beam_phase_engine]: Construction sequence by Joshua Grech

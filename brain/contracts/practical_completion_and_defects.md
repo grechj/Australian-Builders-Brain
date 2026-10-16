@@ -8,7 +8,7 @@ jurisdiction: [NSW, VIC, QLD, WA, SA, TAS, ACT, NT]
 sources:
   - id: beam_dlp
     resource: /documents/defects_liability_explanation.md
-    title: Defects Liability Period, a guide for homeowners (BEAM Builder Template Pack)
+    title: Defects Liability Period, a guide for homeowners (Australian Builder's Brain template pack)
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 stale_after: 2027-04-16T00:00:00Z
@@ -54,7 +54,7 @@ Work out the end date with [add period](/computations/add_period.md).
 - Log every reported item in the [Defects List](/documents/defects_list_tracking.md): date reported, location, trade, priority, date fixed and verified.
 - Assess each item. Normal shrinkage cracking, wear and tear, owner damage and lack of maintenance are generally not defects.
 - Fix genuine defects within a reasonable time and get the client to sign off each item.
-- Give clients the [defects liability explainer](/documents/defects_liability_explanation.md) at handover. Its regulator list needs updating: in Victoria the Building and Plumbing Commission replaced the VBA in 2025.
+- Give clients the [defects liability guide](/references/handouts/defects_liability_guide.md) at handover (it is also the [Defects Liability Explanation](/documents/defects_liability_explanation.md) PDF).
 
 # Statutory warranties
 
@@ -93,4 +93,4 @@ and keep the [Final Account Summary](/documents/final_account_summary.md)
 workbook. The release does not end the builder's warranty or defects
 obligations.
 
-[^beam_dlp]: Defects Liability Period, a guide for homeowners (BEAM Builder Template Pack)
+[^beam_dlp]: Defects Liability Period, a guide for homeowners (Australian Builder's Brain template pack)

@@ -71,9 +71,9 @@ except `[LOGO]`.
 ## 4. Handover pack
 
 Give the client the documents from step 2, keys and remotes, and the
-Defects Liability Explanation PDF. That PDF lists the VBA as Victoria's
-regulator; tell Victorian clients it is now the Building and Plumbing
-Commission. Don't quote statutory warranty periods without checking the
+Defects Liability Explanation PDF (built from
+`brain/references/handouts/defects_liability_guide.md`; fill in its key
+dates for the client). Don't quote statutory warranty periods without checking the
 state (`brain/contracts/practical_completion_and_defects.md`). Use
 `add_period` (years) for warranty end dates once the period is confirmed.
 
@@ -108,3 +108,12 @@ the claims skill for the invoice.
 Keep the Defects List current: date fixed, and verified (Yes or No). Near
 the DLP end date, remind the user to inspect again, close out the list,
 get the client's sign-off, and release any remaining retention.
+
+## Your own format
+
+The templates are references, not a straitjacket. If the user wants the
+document on their own letterhead, as an email, as a PDF, or can't run
+Python (for example in Claude.ai):
+
+- Write it from the **Structure** section of `brain/documents/<name>.md`, which lists every section, field, table and prompt in order. Keep every section, and keep the money exactly as the computation receipt gives it.
+- If they have their own branded Word template, `tools/fill_template.py` fills any `.docx` that uses the same `[PLACEHOLDERS]`.

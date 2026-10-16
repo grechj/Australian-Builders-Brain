@@ -70,7 +70,7 @@ a 5% or 10% overrun does to profit.
 ### 5. The quote
 
 - The workbook's Quote Output sheet is the client-facing summary, with markup built into each line.
-- Its standard terms say "50% deposit". For residential building work that is likely over the state's deposit cap. Tell the user to change it to the contract deposit, and check `brain/states/overview.md`.
+- Its standard terms say any deposit stays within the state's legal limit. Set the actual deposit in the contract, within the cap for the state (`brain/states/overview.md`).
 - Put a validity period on it, and list inclusions, exclusions and allowances.
 
 ### 6. Acceptance
@@ -91,3 +91,12 @@ For residential work, remind the user that acceptance is not the contract.
 They need the state-compliant written contract and, above the threshold,
 home warranty insurance before taking the deposit. The contracts skill
 covers that.
+
+## Your own format
+
+The templates are references, not a straitjacket. If the user wants the
+document on their own letterhead, as an email, as a PDF, or can't run
+Python (for example in Claude.ai):
+
+- Write it from the **Structure** section of `brain/documents/<name>.md`, which lists every section, field, table and prompt in order. Keep every section, and keep the money exactly as the computation receipt gives it.
+- If they have their own branded Word template, `tools/fill_template.py` fills any `.docx` that uses the same `[PLACEHOLDERS]`.

@@ -1,14 +1,15 @@
 ---
 type: Playbook
 title: Practical completion inspection
-description: Room-by-room checklist to work through before issuing a practical completion notice, from the BEAM PC checklist.
+description: Room-by-room checklist to work through before issuing a practical completion notice, from the template pack's PC checklist.
 tags: [playbooks, handover, practical_completion, inspection]
 status: stable
 sources:
   - id: beam_pc_checklist
     resource: /documents/practical_completion_checklist.md
-    title: Practical Completion Checklist (BEAM Builder Template Pack)
+    title: Practical Completion Checklist (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/Practical_Completion_Checklist.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
@@ -113,4 +114,4 @@ state requires one, before telling the client the works are complete
 - [ ] TV / data points — functional
 - [ ] NBN / communications — connected (if in scope)
 
-[^beam_pc_checklist]: Practical Completion Checklist (BEAM Builder Template Pack)
+[^beam_pc_checklist]: Practical Completion Checklist (Australian Builder's Brain template pack)

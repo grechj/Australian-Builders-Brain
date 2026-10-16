@@ -7,8 +7,9 @@ status: stable
 sources:
   - id: beam_hold_points
     resource: /documents/quality_hold_point_checklist.md
-    title: Quality Hold Point Checklist (BEAM Builder Template Pack)
+    title: Quality Hold Point Checklist (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/Quality_Hold_Point_Checklist.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
@@ -51,7 +52,7 @@ approval conditions; see each [construction phase](/phases/index.md).
 | Windows and external doors installed | Builder | ☐ |
 | Plumbing rough-in (top-out) complete | Plumber | ☐ |
 | Electrical rough-in complete | Electrician | ☐ |
-| Insulation installed to BCA requirements Insulation / | Builder | ☐ |
+| Insulation installed to NCC requirements Insulation / | Builder | ☐ |
 | Waterproofing to wet areas (PCA hold point) | PCA / Certifier | ☐ |
 | Pre-lining / pre-plaster inspection | PCA / Certifier | ☐ |
 
@@ -79,4 +80,4 @@ approval conditions; see each [construction phase](/phases/index.md).
 | Occupation certificate issued | PCA / Certifier | ☐ |
 | Client handover inspection completed | Builder / Client | ☐ |
 
-[^beam_hold_points]: Quality Hold Point Checklist (BEAM Builder Template Pack)
+[^beam_hold_points]: Quality Hold Point Checklist (Australian Builder's Brain template pack)

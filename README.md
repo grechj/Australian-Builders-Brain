@@ -61,6 +61,16 @@ python3 tools/ncc_lookup.py search "wet area waterproofing shower" --volume hous
 Or ask Claude: *"What's the minimum balustrade height on a deck in Queensland?"* or *"Price a variation for rock in the footings: $1,200 labour,
 $1,450 tip fees, $150 excavator, 2 days delay."*
 
+## Using the templates
+
+The 52 templates in `templates/` are references for producing your own
+documents quickly:
+
+- **Fill them as they are.** `tools/fill_template.py` fills the Word and Excel templates from your project file, and the skills do this for you.
+- **Use your own branding.** Put the same `[PLACEHOLDERS]` (listed in [project fields](brain/fields/project_fields.md)) in your own letterhead `.docx` and fill that instead.
+- **Use any format.** Each template's page in [`brain/documents/`](brain/documents/index.md) has a **Structure** outline: every section, field, table and prompt in order. Claude can write the document from it as an email, a PDF or anything else, without opening the template.
+- **The PDF checklists and handouts are built from brain pages** (`tools/build_pdfs.py`). Edit the page, rebuild, and the PDF follows.
+
 ## How it stays trustworthy
 
 - **Money is never guessed.** GST, variation prices and margins come from
@@ -118,4 +128,4 @@ a dispute.
 NCC content: © Commonwealth of Australia and the States and Territories of
 Australia, published by the Australian Building Codes Board, licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Templates are adapted from the BEAM Builder Template Pack by Joshua Grech.
+Templates by Joshua Grech.

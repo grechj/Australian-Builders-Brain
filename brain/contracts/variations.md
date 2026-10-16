@@ -7,7 +7,7 @@ status: draft
 sources:
   - id: beam_templates
     resource: /documents/index.md
-    title: BEAM Builder Template Pack
+    title: Australian Builder's Brain template pack
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---

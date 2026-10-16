@@ -10,12 +10,12 @@ day_range: [71, null]
 sources:
   - id: beam_phase_engine
     resource: beam_agent/prompts/phase_engine.py
-    title: BEAM phase engine (Joshua Grech, private)
+    title: Construction sequence by Joshua Grech
     author: human:grechj
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
-Typical timing: day 71 onwards from site start (a rough guide from BEAM's phase engine, not a program).[^beam_phase_engine]
+Typical timing: day 71 onwards from site start (a rough guide, not a program).[^beam_phase_engine]
 
 # Typical activities
 - Building inspection
@@ -35,4 +35,4 @@ Your certifier or council sets the inspection stages that actually apply. Check 
 
 Previous: [Finishing](/phases/renovation/finishing.md)
 
-[^beam_phase_engine]: BEAM phase engine (Joshua Grech, private)
+[^beam_phase_engine]: Construction sequence by Joshua Grech

@@ -112,3 +112,12 @@ Read the JSON report from `fill_template.py`. Anything in `remaining`
 before handing over. Then give the user the file path, a two-line summary
 of the notice, and how to send it under the contract's notices clause (for
 example email to the address in the contract). Keep proof that it was sent.
+
+## Your own format
+
+The templates are references, not a straitjacket. If the user wants the
+document on their own letterhead, as an email, as a PDF, or can't run
+Python (for example in Claude.ai):
+
+- Write it from the **Structure** section of `brain/documents/<name>.md`, which lists every section, field, table and prompt in order. Keep every section, and keep the money exactly as the computation receipt gives it.
+- If they have their own branded Word template, `tools/fill_template.py` fills any `.docx` that uses the same `[PLACEHOLDERS]`.

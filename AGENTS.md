@@ -84,6 +84,11 @@ Types in use: `Lifecycle Stage`, `Construction Phase`, `Document Template`,
 Actors follow OKF §7: `human:<github_id>` for people,
 `claude/<model>` or `<tool>/<version>` for agents.
 
+## Templates and PDFs
+
+- After changing a Word or Excel template, run `python tools/describe_templates.py` to refresh the Structure outline on its document page.
+- PDFs in `templates/pdf/` are generated: edit the brain page named in their `pdf:` frontmatter key, then run `python tools/build_pdfs.py`. Never edit a PDF directly.
+
 ## Content rules
 
 1. **Australian English and Australian practice.** GST is 10%. Say "ex GST" or "inc GST" next to every dollar figure.

@@ -1,14 +1,15 @@
 ---
 type: Playbook
 title: Claim support pack
-description: What to attach to a progress claim so it gets paid, from the BEAM claim support pack checklist.
+description: What to attach to a progress claim so it gets paid, from the template pack's claim support pack checklist.
 tags: [playbooks, claims, evidence]
 status: stable
 sources:
   - id: beam_claim_pack
     resource: /documents/claim_support_pack_checklist.md
-    title: Claim Support Pack Checklist (BEAM Builder Template Pack)
+    title: Claim Support Pack Checklist (Australian Builder's Brain template pack)
     author: human:grechj
+pdf: templates/pdf/Claim_Support_Pack_Checklist.pdf
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
@@ -56,4 +57,4 @@ well-documented claim gets paid faster and is harder to dispute.
 - [ ] Delay cause documentation
 - [ ] Updated program showing impact
 
-[^beam_claim_pack]: Claim Support Pack Checklist (BEAM Builder Template Pack)
+[^beam_claim_pack]: Claim Support Pack Checklist (Australian Builder's Brain template pack)

@@ -47,7 +47,7 @@ Every unclear item at quote time becomes a variation argument later.
 # From quote to contract
 
 - For residential building work, most states require a written contract (above a threshold value) with prescribed content. A signed quote alone may not be enough. Check the [state rules](/states/overview.md) and use an industry standard-form contract where one is required.
-- **Deposits are capped** for residential building work in most states, often at 5% to 10% depending on the contract value. A quote that asks for 50% up front can be unlawful for residential work. The estimate workbook's quote terms suggest "50% deposit"; change them for residential jobs.
+- **Deposits are capped** for residential building work in most states, often at 5% to 10% depending on the contract value. A quote that asks for 50% up front can be unlawful for residential work. The estimate workbook's quote terms say any deposit stays within the state's legal limit.
 - Home warranty or domestic building insurance usually has to be in place before taking a deposit or starting work, above the state threshold.
 - The [Quote Acceptance Form](/documents/quote_acceptance_form.md) records the client's authority to proceed. For residential work, use it alongside the proper contract, not instead of it.
 
