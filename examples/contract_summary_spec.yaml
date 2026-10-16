@@ -1,0 +1,32 @@
+# Example Contract Data Summary (fictional). Payment schedule from:
+#   python3 tools/compute.py payment_schedule --param contract_sum_inc_gst=485000 --param deposit_cap_pct=10 \
+#     --param 'stages=[{"name":"Deposit","pct":5},{"name":"Base / Slab","pct":15},{"name":"Frame","pct":20},
+#                      {"name":"Lock-Up","pct":25},{"name":"Fixing","pct":20},{"name":"Practical Completion","pct":15}]'
+template: templates/word/Contract_Data_Summary_TEMPLATE.docx
+set:
+  DATE: 20/01/2027
+replace:
+  "[SELECT: HIA / MBA / Custom]": "HIA (NSW Residential Building Contract for New Dwellings, check edition)"
+  "[SELECT: 6 / 12 / 13] weeks": "13 weeks"
+  "[NUMBER] working days": "160 working days"
+  "[Certificate No]": "HBCF 0123456 (icare)"
+row:
+  "Deposit Amount:": "$24,250.00 (5%)"
+  "Lot / DP:": "Lot 12 DP 34567"
+  "Council:": "City of Newcastle"
+  "DA/CDC Number:": "CDC 2026/0456"
+  "Contract Signed:": "20/01/2027"
+  "Commencement Date:": "03/02/2027"
+  "Estimated Completion:": "30/09/2027"
+  "Deposit": "5%|$24,250.00|☒"
+  "Base/Slab": "15%|$72,750.00|☐"
+  "Frame": "20%|$97,000.00|☐"
+  "Lock-Up": "25%|$121,250.00|☐"
+  "Fixing": "20%|$97,000.00|☐"
+  "Practical Completion": "15%|$72,750.00|☐"
+  "Public Liability:": "PL-778899 (Insurer Co, $20M)"
+  "Workers Comp:": "WC-112233 (icare)"
+  "Construction Certificate:": "Included in CDC 2026/0456"
+  "PCA / Certifier:": "Hunter Certifiers, Jane Doe (BDC0001)"
+cell:
+  "[Any additional contract notes": "Builder's margin on variations 20% (contract schedule). Liquidated damages $250 per week. Client to supply kitchen appliances (PC allowance removed)."

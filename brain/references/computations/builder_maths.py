@@ -137,7 +137,9 @@ def progress_claim(stages: list, retention_pct: Decimal, retention_cap_pct: Deci
         retention = max(Decimal("0.00"), min(retention, room))
     net = gross - retention
     priced = gst(net)
-    if contract_sum_ex_gst and base_total != _money(contract_sum_ex_gst):
+    # Splitting each inc-GST stage into ex GST can lose a cent per stage.
+    tolerance = CENT * len(stages)
+    if contract_sum_ex_gst and abs(base_total - _money(contract_sum_ex_gst)) > tolerance:
         warnings.append(f"stage values (excluding variations) add up to {base_total}, "
                         f"not the contract sum {_money(contract_sum_ex_gst)}")
     result = {
@@ -292,3 +294,29 @@ def estimate_price(labour: Decimal, materials: Decimal, subcontract: Decimal,
               "quote_ex_gst": priced["result"]["amount_ex_gst"], "gst": priced["result"]["gst"],
               "quote_inc_gst": priced["result"]["amount_inc_gst"]}
     return {"result": result, "fields": priced["fields"]}
+
+
+def payment_schedule(contract_sum_inc_gst: Decimal, stages: list, deposit_cap_pct: Decimal) -> dict:
+    """Turn stage percentages into stage amounts, inc and ex GST.
+
+    stages: [{"name": "Deposit", "pct": 10}, ...], percentages of the contract
+    sum that must add up to 100. Rounding cents go on the last stage so the
+    amounts add up exactly. If deposit_cap_pct is above 0, a first stage named
+    "Deposit" over the cap is flagged.
+    """
+    total = _money(contract_sum_inc_gst)
+    pct_total = sum((Decimal(str(s["pct"])) for s in stages), Decimal("0"))
+    if pct_total != 100:
+        raise ValueError(f"stage percentages add up to {pct_total}, not 100")
+    rows, running, warnings = [], Decimal("0"), []
+    for i, s in enumerate(stages):
+        pct = Decimal(str(s["pct"]))
+        amount = total - running if i == len(stages) - 1 else _money(total * pct / 100)
+        running += amount
+        split = ex_gst(amount)["result"]
+        rows.append({"name": str(s["name"]), "pct": str(pct), "amount_inc_gst": str(amount),
+                     "amount_ex_gst": split["amount_ex_gst"], "gst": split["gst"]})
+    first = stages[0] if stages else {}
+    if deposit_cap_pct > 0 and "deposit" in str(first.get("name", "")).lower() and Decimal(str(first["pct"])) > deposit_cap_pct:
+        warnings.append(f"deposit of {first['pct']}% is over the {deposit_cap_pct}% cap given")
+    return {"result": {"contract_sum_inc_gst": str(total), "stages": rows, "warnings": warnings}, "fields": {}}

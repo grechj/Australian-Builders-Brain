@@ -1,0 +1,19 @@
+# Example Subcontractor Agreement (fictional). Money from:
+#   python3 tools/compute.py gst --param amount_ex_gst=14800
+template: templates/word/Subcontractor_Agreement_TEMPLATE.docx
+set:
+  SUBBIE_NAME: Hunter Sparks Pty Ltd
+  SUBBIE_ABN: 98 765 432 109
+  SUBBIE_LICENCE: 654321C
+  SUBBIE_PHONE: 0422 222 222
+  SUBBIE_EMAIL: office@huntersparks.com.au
+  TRADE: Electrician
+  DESCRIPTION: Electrical rough-in and fit-off for the extension per electrical plan E-01 rev A and quote HS-2291, including smoke alarm interconnection and the certificate of compliance.
+row:
+  "Start Date:": "07/04/2027"
+  "Completion Date:": "21/07/2027"
+  "Agreed Price (excl. GST):": "$14,800.00"
+  "GST (10%):": "$1,480.00"
+  "TOTAL (incl. GST):": "$16,280.00"
+replace:
+  "[SELECT: 7 / 14 / 30] days from claim": "14 days from claim"

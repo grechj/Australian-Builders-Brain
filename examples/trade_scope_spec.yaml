@@ -1,0 +1,21 @@
+# Example Trade Scope Confirmation (fictional). AMOUNT_TOTAL from the gst computation.
+template: templates/word/Trade_Scope_Confirmation_TEMPLATE.docx
+set:
+  DATE: 01/04/2027
+  SUBBIE_NAME: Hunter Sparks Pty Ltd
+  TRADE: Electrician
+  QUOTE_REF: HS-2291
+  AMOUNT_TOTAL: 16,280.00
+cell:
+  "[Detail exactly what is included": "Rough-in and fit-off of 14 power points, 12 LED downlights, 2 exterior lights, 2 data points and a ceiling fan point to the extension, per plan E-01 rev A. New circuits from the existing board, with RCD protection. Interconnect new smoke alarms with the existing ones. Certificate of compliance on completion."
+  "[List items specifically NOT included": "Light fittings (client PC item, install only). Switchboard upgrade (not required per site inspection). Air conditioning."
+row:
+  "Materials": "☐|☒"
+  "Fixings/Fasteners": "☐|☒"
+  "Plant/Equipment": "☐|☒"
+  "Scaffolding": "☒|☐"
+  "Skip Bin / Waste": "☒|☐"
+  "Power / Water": "☒|☐"
+  "Start Date:": "07/04/2027|"
+  "Duration:": "6 days (rough-in 3, fit-off 3)|"
+  "Completion Date:": "21/07/2027|"

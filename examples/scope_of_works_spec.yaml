@@ -1,0 +1,38 @@
+# Example Scope of Works (fictional extension).
+template: templates/word/Scope_of_Works_TEMPLATE.docx
+set:
+  DATE: 20/01/2027
+cell:
+  "[Provide a brief overview of the project": "Single-storey rear extension to an existing brick-veneer house: new family room (about 38 m²) and covered timber deck, opening into the existing kitchen. Built to drawings A-01 to A-06 rev B and engineering S-101 rev C."
+  "[List any works NOT included in this scope": "Landscaping and turf; floor coverings to the family room; window furnishings; painting of existing rooms; relocation of the existing hot water system; asbestos removal (none identified at quote; any found is a latent condition)."
+  "[Reference applicable standards": "Work to comply with NCC 2025 Volume Two and the ABCB Housing Provisions, the CDC conditions, the engineer's details and manufacturers' installation instructions."
+row:
+  "Demolition / Site Prep": "Remove existing rear pergola and paving; protect existing house; site fencing and amenities"
+  "Excavation & Earthworks": "Excavate for footings and set-down; remove spoil"
+  "Concrete & Footings": "Strip footings and slab to engineer's design"
+  "Framing / Structural Steel": "Wall and roof framing, trusses, steel lintel over kitchen opening"
+  "Roofing": "Colorbond roof, gutters and downpipes connected to stormwater"
+  "Brickwork / Cladding": "Fibre cement cladding to new walls"
+  "Windows & Doors": "Aluminium windows and stacking door as per window schedule"
+  "Plumbing (Rough-In)": "Stormwater only"
+  "Electrical (Rough-In)": "Power, lighting and data rough-in as per electrical plan"
+  "Insulation": "R2.7 wall batts, R4.0 ceiling batts, sarking"
+  "Plasterboard / Plastering": "10 mm plasterboard walls and ceilings, cornices"
+  "Tiling": "Not in scope"
+  "Joinery & Cabinetry": "Not in scope"
+  "Painting": "Two coats to new walls, ceilings and trim"
+  "Plumbing (Fit-Off)": "Not in scope"
+  "Electrical (Fit-Off)": "Fit-off of all new points and lights; smoke alarm interconnection"
+  "Flooring": "Not in scope (floor coverings excluded)"
+  "Landscaping": "Not in scope"
+  "Final Clean & Handover": "Builder's clean, handover documents"
+  "Commencement": "03/02/2027|"
+  "Slab / Foundations": "03/03/2027|Subject to weather"
+  "Frame Stage": "07/04/2027|"
+  "Lock-Up": "26/05/2027|"
+  "Fixing Stage": "21/07/2027|"
+  "Practical Completion": "30/09/2027|"
+fill_table:
+  "Item":
+    - "Stacking door upgrade|PS|$3,500.00|Final cost on selection"
+    - "Light fittings|PC|$1,800.00|Supply only, client selection"

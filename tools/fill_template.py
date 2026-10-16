@@ -23,6 +23,8 @@ Two more keys work in a --spec file only (Word):
   add_row     insert new rows after the row whose first cell starts with a label,
               copying its formatting: {"Description": ["Deposit|$22,045.45|100%|$22,045.45|$0.00"]}
   delete_row  remove rows by label: ["Fixing Stage"]
+  fill_table  fill a table named by its header row's first cell, adding or removing
+              blank rows as needed: {"Item": ["Appliances|PC|$4,500.00|Supply only"]}
   tick        tick check boxes by their label: ["Inclement weather"] turns "☐ Inclement weather" into "☒ ..."
 
 A --spec file is YAML with the same four keys:
@@ -117,7 +119,8 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
               cells: dict[str, str], rows: dict[str, str],
               add_rows: dict[str, list[str]] | None = None,
               delete_rows: list[str] | None = None,
-              ticks: list[str] | None = None) -> dict:
+              ticks: list[str] | None = None,
+              tables: dict[str, list[str]] | None = None) -> dict:
     from docx import Document
     from copy import deepcopy
 
@@ -130,15 +133,27 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
     filled: set[str] = set()
     unmatched: list[str] = []
 
-    def find_row(spec: str):
+    def find_row(spec: str, need_cells: int = 1):
+        """The row whose first cell matches a label.
+
+        "Label#2" picks the second row starting with the label, in document
+        order. Without #n, a row whose label is exactly the label (ignoring a
+        trailing colon) wins over rows that only start with it, so "Deposit"
+        finds the Deposit row, not "Deposit Amount:". Several prefix matches
+        and no exact one is reported as ambiguous.
+        """
         label, _, nth = spec.partition("#")
-        want, seen = int(nth or 1), 0
-        for row in iter_cells(doc):
-            if cell_text(row[0]).strip().startswith(label):
-                seen += 1
-                if seen == want:
-                    return row
-        return None
+        rows_ = [r for r in iter_cells(doc) if len(r) >= need_cells]
+        prefix = [r for r in rows_ if cell_text(r[0]).strip().startswith(label)]
+        if nth:
+            n = int(nth)
+            return prefix[n - 1] if len(prefix) >= n else None
+        exact = [r for r in prefix if cell_text(r[0]).strip().rstrip(":").strip() == label.rstrip(":").strip()]
+        if exact:
+            return exact[0]
+        if len(prefix) > 1:
+            unmatched.append(f"ambiguous: {spec!r} starts {len(prefix)} rows; use the exact label or #n")
+        return prefix[0] if prefix else None
 
     # New rows first: copy the matched row (keeping its formatting) and fill
     # the copy, so a 7-stage schedule fits a template drawn with 5 stages.
@@ -157,6 +172,39 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
                 new_cells.append(_Cell(tc, anchor[0]._parent))
             for cell, val in zip(new_cells, str(text).split("|")):
                 set_cell_text(cell, val)
+
+    # Tables named by their header row: fill the rows under the header in
+    # order, copy the last row when more are needed, and drop unused rows
+    # that are still blank (only "", "$" or "☐" in them).
+    for header, new_rows in (tables or {}).items():
+        head = find_row(header)
+        if head is None:
+            unmatched.append(f"fill_table: {header}")
+            continue
+        head_tr = head[0]._tc.getparent()
+        tbl = head_tr.getparent()
+        data = [tr for tr in tbl.findall(qn("w:tr")) if tbl.index(tr) > tbl.index(head_tr)]
+        blank = lambda tr: all("".join(t.text or "" for t in tc.iter(qn("w:t"))).strip() in ("", "$", "☐")
+                               for tc in tr.findall(qn("w:tc")))
+        fillable = [tr for tr in data if blank(tr)]
+        if not fillable and data:
+            fillable = data
+        if not fillable:
+            unmatched.append(f"fill_table: {header} has no rows under it")
+            continue
+        last = fillable[-1]
+        for i, text in enumerate(new_rows):
+            if i < len(fillable):
+                tr = fillable[i]
+            else:
+                tr = deepcopy(last)
+                last.addnext(tr)
+            last = tr if i >= len(fillable) - 1 else last
+            for tc, val in zip(tr.findall(qn("w:tc")), str(text).split("|")):
+                set_cell_text(_Cell(tc, head[0]._parent), val)
+        for tr in fillable[len(new_rows):]:
+            if blank(tr):
+                tbl.remove(tr)
 
     for spec in delete_rows or []:
         row = find_row(spec)
@@ -182,21 +230,15 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
             unmatched.append(f"replace: {old}")
 
     for spec, text in rows.items():
-        label, _, nth = spec.partition("#")
-        want = int(nth or 1)
-        seen = 0
-        for row in iter_cells(doc):
-            if len(row) > 1 and cell_text(row[0]).strip().startswith(label):
-                seen += 1
-                if seen == want:
-                    for cell, val in zip(row[1:], text.split("|")):
-                        set_cell_text(cell, val)
-                    break
-        else:
+        row = find_row(spec, need_cells=2)
+        if row is None:
             unmatched.append(f"row: {spec}")
+            continue
+        for cell, val in zip(row[1:], text.split("|")):
+            set_cell_text(cell, val)
 
     for option in ticks or []:
-        if not replace_in_document(doc, lambda _m: "☒ " + option, re.compile("☐ " + re.escape(option))):
+        if not replace_in_document(doc, lambda _m, option=option: "☒ " + option, re.compile("☐ " + re.escape(option))):
             unmatched.append(f"tick: {option}")
 
     def placeholder(token: str) -> str | None:
@@ -325,7 +367,9 @@ def main() -> None:
                     for k, v in (spec.get("add_row") or {}).items()}
         delete_rows = [str(x) for x in (spec.get("delete_row") or [])]
         ticks = [str(x) for x in (spec.get("tick") or [])]
-        report = fill_docx(args.template, args.out, values, replaces, cells, rows, add_rows, delete_rows, ticks)
+        tables = {str(k): [str(x) for x in (v if isinstance(v, list) else [v])]
+                  for k, v in (spec.get("fill_table") or {}).items()}
+        report = fill_docx(args.template, args.out, values, replaces, cells, rows, add_rows, delete_rows, ticks, tables)
     elif suffix == ".xlsx":
         report = fill_xlsx(args.template, args.out, values, cells)
     else:

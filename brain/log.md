@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-16
+* **Creation**: Added the [payment schedule](/computations/payment_schedule.md) computation, [contract and job setup](/contracts/contract_setup.md) and the [pre-construction playbook](/playbooks/pre_construction.md), which uses BYDA in place of the old Dial Before You Dig name.
 * **Creation**: Added the [estimate price](/computations/estimate_price.md) computation and [estimating and quoting](/contracts/estimating_and_quoting.md).
 * **Update**: Quote Acceptance Form now uses the client's phone and email (it printed the builder's). Estimate, quote converter and sensitivity workbooks now say "markup" where they calculate markup, and the sensitivity sheet shows the margin on price.
 * **Creation**: Added the [final account](/computations/final_account.md) and [add period](/computations/add_period.md) computations, [practical completion, defects and handover](/contracts/practical_completion_and_defects.md), and two [playbooks](/playbooks/index.md) built from the BEAM PDF checklists.
