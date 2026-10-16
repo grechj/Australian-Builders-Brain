@@ -10,16 +10,26 @@ that stops disputes, and keep track of what is owed both ways.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/progress_payments.md` (read it first), `brain/contracts/variations.md`, `brain/states/overview.md`
 - Maths: `brain/computations/progress_claim.md`, `ex_gst.md`, `gst.md`
 - Templates: `templates/word/Progress_Claim_Invoice_TEMPLATE.docx`, `templates/excel/Progress_Claim_Calculator_TEMPLATE.xlsx`, `Payment_Tracking_Register_TEMPLATE.xlsx`, `Subbie_Payment_Schedule_TEMPLATE.xlsx`, `Retention_Release_Tracker_TEMPLATE.xlsx`, `templates/pdf/Claim_Support_Pack_Checklist.pdf`
 - Examples: `examples/claim_003_spec.yaml` (invoice), `examples/claim_003_calculator_spec.yaml` (calculator)
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -27,11 +37,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -56,7 +66,7 @@ there isn't one). You need `state`, `contract_type`, `contract_sum` and
 `contract_sum_ex_gst`, plus `retention_pct` if the contract has retention.
 
 If only the inc-GST contract sum is known, run
-`python3 tools/compute.py ex_gst --param amount_inc_gst=<sum>`.
+`python3 $ABB/tools/compute.py ex_gst --param amount_inc_gst=<sum>`.
 
 ### 2. The payment schedule and progress
 
@@ -71,10 +81,10 @@ it (for example frame inspection passed). If it isn't, say so.
 ### 3. Compute and check
 
 ```bash
-python3 tools/compute.py progress_claim --param contract_sum_ex_gst=... \
+python3 $ABB/tools/compute.py progress_claim --param contract_sum_ex_gst=... \
     --param retention_pct=0 --param 'stages=[{"name": "...", "contract_value": ..., "pct_complete": ..., "previously_claimed": ...}, ...]' \
     > out/claim_N_receipt.json
-python3 brain/references/attesters/check_receipt.py out/claim_N_receipt.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/claim_N_receipt.json
 ```
 
 For retention, also pass `retention_cap_pct` and `retention_held_to_date`.
@@ -100,7 +110,7 @@ Write `out/claim_N_spec.yaml` following `examples/claim_003_spec.yaml`:
 | TOTAL AMOUNT DUE | `total_inc_gst` |
 
 ```bash
-python3 tools/fill_template.py templates/word/Progress_Claim_Invoice_TEMPLATE.docx \
+python3 $ABB/tools/fill_template.py $ABB/templates/word/Progress_Claim_Invoice_TEMPLATE.docx \
     --project my_project.yaml --spec out/claim_N_spec.yaml --out out/INV-00N_Progress_Claim.docx
 ```
 

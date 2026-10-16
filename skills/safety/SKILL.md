@@ -11,16 +11,26 @@ work, recommend a qualified safety professional.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/work_health_and_safety.md` (read it first), `brain/playbooks/site_safety_inspection.md`, `brain/phases/` (weather risks per phase)
 - Maths: `brain/computations/expiry_status.md`
 - Templates: `templates/word/SWMS_TEMPLATE.docx`, `Site_Safety_Management_Plan_TEMPLATE.docx`, `Trade_Induction_Form_TEMPLATE.docx`, `Toolbox_Talk_Record_TEMPLATE.docx`, `Incident_Near_Miss_Report_TEMPLATE.docx`; `templates/excel/Subbie_Insurance_Licence_Tracker_TEMPLATE.xlsx`; `templates/pdf/Site_Safety_Inspection_Checklist.pdf`
 - Examples: `examples/swms_spec.yaml`, `safety_plan_spec.yaml`, `induction_spec.yaml`, `toolbox_talk_spec.yaml`, `incident_spec.yaml`, `subbie_compliance_spec.yaml`
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -28,11 +38,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -76,7 +86,7 @@ emergency details; `tick` the review triggers.
 ## Inspections and subbie compliance
 
 - Walk `brain/playbooks/site_safety_inspection.md` weekly. Unsafe items get fixed or isolated before work continues. Record the inspection in the site diary.
-- Subbie compliance: for each subbie, work out the status with `python3 tools/compute.py expiry_status --param on_date=<today> --param 'items={"Licence": "...", "PL": "...", "WC": "..."}'`, then write the row and the computed status (`examples/subbie_compliance_spec.yaml`). Anyone Expired or Incomplete doesn't start until it's fixed.
+- Subbie compliance: for each subbie, work out the status with `python3 $ABB/tools/compute.py expiry_status --param on_date=<today> --param 'items={"Licence": "...", "PL": "...", "WC": "..."}'`, then write the row and the computed status (`examples/subbie_compliance_spec.yaml`). Anyone Expired or Incomplete doesn't start until it's fixed.
 
 ## Checks
 

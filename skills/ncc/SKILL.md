@@ -11,8 +11,21 @@ memory.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
+
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 - `brain/ncc/editions.md`: which edition applies, what each volume covers, the citation format
 - `brain/ncc/2025/<volume>/<part>.md`: the code text, one page per Part, each clause under its own heading
@@ -27,11 +40,11 @@ from there.
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -54,12 +67,12 @@ Always pass the profile, so results stay within the trade's NCC scope and
 show only the user's state's variations:
 
 ```bash
-python3 tools/ncc_lookup.py search "smoke alarm location" --trade electrician --state QLD
-python3 tools/ncc_lookup.py search "balustrade height deck" --volume volume_two
-python3 tools/ncc_lookup.py search "balustrade height deck" --volume housing_provisions
-python3 tools/ncc_lookup.py clause H5D2
-python3 tools/ncc_lookup.py define "habitable room" --volume volume_two
-python3 tools/ncc_lookup.py variations --state QLD --volume volume_two
+python3 $ABB/tools/ncc_lookup.py search "smoke alarm location" --trade electrician --state QLD
+python3 $ABB/tools/ncc_lookup.py search "balustrade height deck" --volume volume_two
+python3 $ABB/tools/ncc_lookup.py search "balustrade height deck" --volume housing_provisions
+python3 $ABB/tools/ncc_lookup.py clause H5D2
+python3 $ABB/tools/ncc_lookup.py define "habitable room" --volume volume_two
+python3 $ABB/tools/ncc_lookup.py variations --state QLD --volume volume_two
 ```
 
 For a house, the usual chain is: Volume Two Performance Requirement (for

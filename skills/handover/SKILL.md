@@ -11,16 +11,26 @@ settle the final account.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/practical_completion_and_defects.md` (read it first), `brain/playbooks/practical_completion_inspection.md`, `brain/contracts/extension_of_time.md`
 - Maths: `brain/computations/final_account.md`, `add_period.md`, `add_days.md`
 - Templates: `templates/word/Practical_Completion_Notice_TEMPLATE.docx`, `Final_Claim_Release_TEMPLATE.docx`; `templates/excel/Defects_List_Tracking_TEMPLATE.xlsx`, `As_Built_Documentation_Register_TEMPLATE.xlsx`, `Warranties_Manuals_Index_TEMPLATE.xlsx`, `Final_Account_Summary_TEMPLATE.xlsx`; `templates/pdf/Practical_Completion_Checklist.pdf`, `Defects_Liability_Explanation.pdf`
 - Examples: `examples/pc_notice_spec.yaml`, `final_claim_spec.yaml`, `final_account_spec.yaml`, `defects_list_spec.yaml`
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -28,11 +38,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -74,7 +84,7 @@ and Manuals Index as items are collected.
 - DLP length from the contract, then the end date:
 
   ```bash
-  python3 tools/compute.py add_period --param start_date=<PC date> --param weeks=13
+  python3 $ABB/tools/compute.py add_period --param start_date=<PC date> --param weeks=13
   ```
 
 - A proposed handover inspection date and time
@@ -102,10 +112,10 @@ Collect, all ex GST:
 - Retention held, and how much is released now (the rest usually waits for the end of the DLP)
 
 ```bash
-python3 tools/compute.py final_account --param contract_sum_ex_gst=... --param variations_additions=... \
+python3 $ABB/tools/compute.py final_account --param contract_sum_ex_gst=... --param variations_additions=... \
     --param variations_omissions=... --param pc_ps_adjustments=... --param claimed_to_date=... \
     --param retention_held=... --param retention_released=... > out/final_account_receipt.json
-python3 brain/references/attesters/check_receipt.py out/final_account_receipt.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/final_account_receipt.json
 ```
 
 Read any warnings. A negative final claim means the client is owed a credit.

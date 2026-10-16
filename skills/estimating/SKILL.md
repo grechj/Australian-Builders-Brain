@@ -10,16 +10,26 @@ without leaving money or risk on the table.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/estimating_and_quoting.md` (read it first), `brain/contracts/variations.md` (PC and provisional sums), `brain/states/overview.md`
 - Maths: `brain/computations/estimate_price.md`, `margin.md`, `gst.md`
 - Templates: `templates/excel/Trade_Based_Estimate_Workbook.xlsx`, `Estimate_to_Quote_Converter_TEMPLATE.xlsx`, `Quote_Comparison_TEMPLATE.xlsx`, `Margin_Sensitivity_Calculator_TEMPLATE.xlsx`, `Pre_Contract_Clarifications_TEMPLATE.xlsx`; `templates/word/Quote_Acceptance_Form_TEMPLATE.docx`
 - Examples: `examples/estimate_spec.yaml`, `examples/quote_acceptance_spec.yaml`
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -27,11 +37,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -70,10 +80,10 @@ job.
 ### 4. Price it, then check the price
 
 ```bash
-python3 tools/compute.py estimate_price --param labour=<labour subtotal> --param materials=<materials subtotal> \
+python3 $ABB/tools/compute.py estimate_price --param labour=<labour subtotal> --param materials=<materials subtotal> \
     --param subcontract=<subcontract subtotal> --param contingency_pct=5 --param markup_pct=20 \
     > out/estimate_receipt.json
-python3 brain/references/attesters/check_receipt.py out/estimate_receipt.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/estimate_receipt.json
 ```
 
 The workbook's totals must match the receipt. Tell the user both the markup
@@ -96,7 +106,7 @@ from the receipt, a scope summary (`cell`), the deposit (within the state
 cap) and the payment method (`replace` "[  ] EFT" with "☒ EFT").
 
 ```bash
-python3 tools/fill_template.py templates/word/Quote_Acceptance_Form_TEMPLATE.docx \
+python3 $ABB/tools/fill_template.py $ABB/templates/word/Quote_Acceptance_Form_TEMPLATE.docx \
     --project my_project.yaml --spec out/quote_acceptance_spec.yaml --out out/Q-00N_Acceptance.docx
 ```
 

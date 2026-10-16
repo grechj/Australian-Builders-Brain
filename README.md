@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.6.** All eleven skills work end to end, covering all 53 templates. NCC 2025
+> **Status: v0.6.1.** All eleven skills work end to end, covering all 53 templates. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -33,12 +33,20 @@ claude plugin marketplace add grechj/Australian-Builders-Brain
 claude plugin install australian_builders_brain
 ```
 
+The plugin's skills run from your own project folder and write their
+documents there; the brain itself stays read-only. The first time a session
+starts, a setup hook builds a private Python environment for the tools
+(python-docx, openpyxl, PyYAML) in the plugin's data folder. You need Python
+3.9 or later installed.
+
 **Claude.ai or Claude Desktop:** zip a folder from `skills/` and upload it
-under Settings → Capabilities → Skills.
+under Settings → Capabilities → Skills. An uploaded skill doesn't include the
+brain, templates or tools, so it works in its "your own format" mode. For the
+full brain, use Claude Code.
 
 **Any other agent:** clone the repo and point the agent at `AGENTS.md`.
 
-The Python tools need Python 3.9 or later:
+Working in a clone, install the Python tools' dependencies yourself:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -152,7 +160,7 @@ a dispute.
 ## Licence
 
 - **Content, skills and templates** (`brain/` pages, `skills/`, `templates/`, `examples/`, docs): [CC BY 4.0](LICENSE_CONTENT). Use, adapt and share them, including commercially, as long as you credit "Australian Builder's Brain by Joshua Grech".
-- **Code** (`tools/`, the Python in `brain/references/`): [MIT](LICENSE).
+- **Code** (`tools/`, the Python in `brain/references/`): [MIT](LICENSE). The MIT licence covers only this code; everything else is CC BY 4.0.
 
 NCC content: © Commonwealth of Australia and the States and Territories of
 Australia, published by the Australian Building Codes Board, licensed under

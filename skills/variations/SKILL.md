@@ -10,8 +10,16 @@ variation that will get paid.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. All paths
-below are relative to it, and all commands run from it.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/variations.md` (read it first), `brain/contracts/hia_mba_clause_map.md`, `brain/states/overview.md`
 - Document pages: `brain/documents/<name>.md` (fields and purpose of each template)
@@ -19,8 +27,10 @@ below are relative to it, and all commands run from it.
 - Tools: `tools/compute.py`, `tools/fill_template.py`, `brain/references/attesters/check_receipt.py`
 - Example inputs: `examples/project_example.yaml`, `examples/var_001_spec.yaml`
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt` first.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -28,11 +38,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -77,10 +87,10 @@ cost line.
 ### 3. Price it, then check the price
 
 ```bash
-python3 tools/compute.py variation_price --param labour=... --param materials=... \
+python3 $ABB/tools/compute.py variation_price --param labour=... --param materials=... \
     --param subcontractor=... --param plant=... --param other=... \
     --param margin_pct=... > out/VAR-00N_receipt.json
-python3 brain/references/attesters/check_receipt.py out/VAR-00N_receipt.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/VAR-00N_receipt.json
 ```
 
 If the attester fails, stop and tell the user. Take every figure from the
@@ -114,7 +124,7 @@ pattern:
 - `row`: the cost lines from step 3, and the time impact rows (current and revised completion dates)
 
 ```bash
-python3 tools/fill_template.py templates/word/Priced_Variation_Notice_TEMPLATE.docx \
+python3 $ABB/tools/fill_template.py $ABB/templates/word/Priced_Variation_Notice_TEMPLATE.docx \
     --project my_project.yaml --spec out/VAR-00N_spec.yaml \
     --out out/VAR-00N_Priced_Variation_Notice.docx
 ```

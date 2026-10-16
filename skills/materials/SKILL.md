@@ -11,8 +11,16 @@ qualifications that make clear what the number is and isn't.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/materials_estimating.md` (read it first: price sources, Bunnings terms, qualifications)
 - Maths: `brain/computations/materials_takeoff.md`, `materials_rom.md`
@@ -21,8 +29,10 @@ from there.
 - Template: `templates/excel/Materials_Estimate_TEMPLATE.xlsx`
 - Examples: `examples/price_list_example.csv`, `examples/deck_materials_lines.json`, `examples/materials_estimate_spec.yaml` (all prices in them are illustrative, not real)
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -30,11 +40,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -66,9 +76,9 @@ missing.
 ## 2. Take off quantities
 
 ```bash
-python3 tools/compute.py materials_takeoff --param 'job={"type": "timber_deck", "length_m": 4.8, "width_m": 3.6, "joist_size": "140x45 H3 treated pine", ...}' \
+python3 $ABB/tools/compute.py materials_takeoff --param 'job={"type": "timber_deck", "length_m": 4.8, "width_m": 3.6, "joist_size": "140x45 H3 treated pine", ...}' \
     > out/takeoff_<element>.json
-python3 brain/references/attesters/check_receipt.py out/takeoff_<element>.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/takeoff_<element>.json
 ```
 
 Show the user the list, with each line's `basis` available, plus the
@@ -82,11 +92,11 @@ date. Nothing is shared between users, and nothing goes in this repository.
 
 **3a. Start from the user's price list.** Ask where it is (for example
 `my_prices.csv` in their job folder; `my_prices*.csv` is git-ignored). If
-they don't have one, create it: `python3 tools/price_list.py new my_prices.csv`.
+they don't have one, create it: `python3 $ABB/tools/price_list.py new my_prices.csv`.
 Then match it against the takeoff:
 
 ```bash
-python3 tools/price_list.py match out/takeoff_<element>.json --prices my_prices.csv --out out/materials_lines.json
+python3 $ABB/tools/price_list.py match out/takeoff_<element>.json --prices my_prices.csv --out out/materials_lines.json
 ```
 
 A product only matches if every size, length, grade and treatment token
@@ -107,7 +117,7 @@ leave the line unpriced and say why.
 Then save every price to **their** list, so the next job needs fewer lookups:
 
 ```bash
-python3 tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each> \
+python3 $ABB/tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each> \
     --pack-size <takeoff units per item> --price <inc GST> --supplier "Bunnings <store>" \
     --item-number <I/N if shown> --url <page> --checked-on <DD/MM/YYYY>
 ```
@@ -118,16 +128,16 @@ be (ready-mix concrete, items to quote separately).
 **3c. Optional: the Bunnings API.** Only if the user has their own approved
 Bunnings developer credentials in `BUNNINGS_CLIENT_ID` and
 `BUNNINGS_CLIENT_SECRET`. Credentials are personal: never ask for them in
-chat, write them to a file, or use anyone else's. `python3 tools/bunnings.py check`
+chat, write them to a file, or use anyone else's. `python3 $ABB/tools/bunnings.py check`
 confirms them; then `search` and `price` (see the tool's help) replace the
 manual lookups, and results still go into their price list.
 
 **3d. Price the list:**
 
 ```bash
-python3 tools/compute.py materials_rom --param "lines=$(cat out/materials_lines.json)" \
+python3 $ABB/tools/compute.py materials_rom --param "lines=$(cat out/materials_lines.json)" \
     --param location_loading_pct=<from local suppliers, or 0> > out/materials_rom.json
-python3 brain/references/attesters/check_receipt.py out/materials_rom.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/materials_rom.json
 ```
 
 `pack_size` turns takeoff units into what's sold (a box of 500 screws is
@@ -142,7 +152,7 @@ Fill the Materials Estimate workbook following
 - `cell`: one Materials row per line from row 5. A item, B spec, C quantity, D unit, E pack size (blank for 1), G product or item number, H unit price inc GST, J source, K date.
 
 ```bash
-python3 tools/fill_template.py templates/excel/Materials_Estimate_TEMPLATE.xlsx \
+python3 $ABB/tools/fill_template.py $ABB/templates/excel/Materials_Estimate_TEMPLATE.xlsx \
     --project my_project.yaml --spec out/materials_estimate_spec.yaml --out out/Materials_Estimate.xlsx
 ```
 

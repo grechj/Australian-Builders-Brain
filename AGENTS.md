@@ -13,6 +13,7 @@ this repo follows these rules.
 | `skills/` | Claude skills that turn brain knowledge plus project facts into documents. | Humans and agents |
 | `templates/` | The Word, Excel and PDF templates the skills fill. | Humans |
 | `tools/` | Deterministic Python: template filling, computations, wiki linting. | Humans and agents |
+| `hooks/` | Plugin setup hook: builds the tools' Python environment when the plugin is installed. | Humans |
 | `examples/` | Sample project files for testing. | Anyone |
 
 ## Naming
@@ -122,3 +123,6 @@ Each skill in `skills/<name>/SKILL.md` reads from `brain/`, collects the
 missing facts from the user, runs the computations, fills a template with
 `tools/fill_template.py`, and lists anything left unfilled.
 `skills/variations` is the reference pattern for every new skill.
+Skills must work when installed as a plugin: write brain paths in commands as
+`$ABB/tools/...` (the skill's "Where things are" section defines `$ABB`), run
+from the user's project folder, and never write into the brain's folder.

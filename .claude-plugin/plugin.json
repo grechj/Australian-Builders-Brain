@@ -1,8 +1,11 @@
 {
   "name": "australian_builders_brain",
-  "version": "0.1.0",
+  "displayName": "Australian Builder's Brain",
+  "version": "0.6.1",
   "description": "Knowledge and document skills for Australian builders and tradies: variations, progress claims, delay notices, handover and the NCC.",
   "author": { "name": "Joshua Grech" },
+  "homepage": "https://github.com/grechj/Australian-Builders-Brain",
   "repository": "https://github.com/grechj/Australian-Builders-Brain",
+  "license": "MIT AND CC-BY-4.0",
   "keywords": ["construction", "australia", "builder", "ncc", "variations", "tradie"]
 }

@@ -10,16 +10,26 @@ builder's time, money and position.
 
 ## Where things are
 
-The repository root is two levels up from this skill's folder. Run commands
-from there.
+The brain (this repository) is at `${CLAUDE_PLUGIN_ROOT}`. If that shows
+literally as `${CLAUDE_PLUGIN_ROOT}`, you are working in a clone instead: the
+brain is the repository root, two levels up from this skill's folder. `$ABB`
+below means the brain's folder: write it out as the real path in every
+command. Paths starting `brain/`, `templates/`, `tools/` and `examples/` are
+inside it.
+
+Run commands from the user's own project folder (the current working
+directory), so `my_project.yaml` and `out/` are theirs. Never write into the
+brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/extension_of_time.md`, `brain/contracts/site_instructions_and_back_charges.md`, `brain/contracts/hia_mba_clause_map.md` (unverified)
 - Maths: `brain/computations/add_days.md` (dates), `brain/computations/variation_price.md` (back charge costs)
 - Templates: `templates/word/Delay_Notification_Letter_TEMPLATE.docx`, `Site_Instruction_Form_TEMPLATE.docx`, `Back_Charge_Notice_TEMPLATE.docx`
 - Examples: `examples/delay_001_spec.yaml`, `examples/site_instruction_001_spec.yaml`, `examples/back_charge_001_spec.yaml`
 
-If `python3 -c "import docx, openpyxl, yaml"` fails, run
-`python3 -m pip install -r requirements.txt`.
+For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
+plugin's setup hook creates it). Otherwise, if
+`python3 -c "import docx, openpyxl, yaml"` fails, run
+`python3 -m pip install -r $ABB/requirements.txt` first.
 
 
 ## Profile: trade and location
@@ -27,11 +37,11 @@ If `python3 -c "import docx, openpyxl, yaml"` fails, run
 Before anything else, know who you're helping and where:
 
 ```bash
-python3 tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
+python3 $ABB/tools/profile.py show --project my_project.yaml      # or: --trade <trade> --state <STATE>
 ```
 
 Ask for the trade and state if the project file doesn't have them
-(`python3 tools/profile.py trades` lists every trade; `builder` sees
+(`python3 $ABB/tools/profile.py trades` lists every trade; `builder` sees
 everything). Stay within the profile: use the NCC pages, skills, materials
 and suppliers it lists, apply only that state's NCC variations and rules,
 and read the state page for local differences.
@@ -57,7 +67,7 @@ Contracts set a notice period from that point. Find it in the contract (or
 ask), then work out the deadline:
 
 ```bash
-python3 tools/compute.py add_days --param start_date=<aware date> --param days=<notice period> \
+python3 $ABB/tools/compute.py add_days --param start_date=<aware date> --param days=<notice period> \
     --param day_type=<calendar|working> --param 'non_working_days=[...]'
 ```
 
@@ -75,10 +85,10 @@ sending the notice today and getting advice.
 ### 3. Revised completion date
 
 ```bash
-python3 tools/compute.py add_days --param start_date=<current completion> --param days=<days claimed> \
+python3 $ABB/tools/compute.py add_days --param start_date=<current completion> --param days=<days claimed> \
     --param day_type=working --param 'non_working_days=["DD/MM/YYYY", "DD/MM/YYYY-DD/MM/YYYY"]' \
     > out/DELAY-00N_receipt.json
-python3 brain/references/attesters/check_receipt.py out/DELAY-00N_receipt.json
+python3 $ABB/brain/references/attesters/check_receipt.py out/DELAY-00N_receipt.json
 ```
 
 ### 4. Fill
@@ -90,7 +100,7 @@ evidence is attached); `row` the current completion date, days of delay
 Set `NAME` to the person signing.
 
 ```bash
-python3 tools/fill_template.py templates/word/Delay_Notification_Letter_TEMPLATE.docx \
+python3 $ABB/tools/fill_template.py $ABB/templates/word/Delay_Notification_Letter_TEMPLATE.docx \
     --project my_project.yaml --spec out/DELAY-00N_spec.yaml --out out/DELAY-00N_Delay_Notification.docx
 ```
 
@@ -112,7 +122,7 @@ Remind the user to get the receiver's signature.
 2. Get the cost lines ex GST and price them:
 
    ```bash
-   python3 tools/compute.py variation_price --param labour=<rectification labour> --param materials=<replacement materials> \
+   python3 $ABB/tools/compute.py variation_price --param labour=<rectification labour> --param materials=<replacement materials> \
        --param subcontractor=<third-party costs> --param plant=0 --param other=<other> --param margin_pct=0
    ```
 
