@@ -17,5 +17,6 @@ tradespeople, from quote to final account. Start with the job's
 * [Lifecycle](lifecycle/) - The five stages of a job, from quote to final account, with the documents used at each
 * [NCC](ncc/) - National Construction Code: editions, volumes, how to cite
 * [Phases](phases/) - Construction phases by project type: activities, inspections, materials, weather risk, next trades
+* [Playbooks](playbooks/) - Step-by-step checklists: PC inspection, claim support pack
 * [References](references/) - Playbooks, sanctioned code and attesters that other concepts point to
 * [States](states/) - State and territory rules: regulators, home building and security-of-payment laws

@@ -1,4 +1,5 @@
 # Example values for a Back Charge Notice (fictional).
+template: templates/word/Back_Charge_Notice_TEMPLATE.docx
 # Money from:
 #   python3 tools/compute.py variation_price --param labour=320 --param materials=185 \
 #       --param subcontractor=0 --param plant=0 --param other=60 --param margin_pct=0

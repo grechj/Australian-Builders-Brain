@@ -1,6 +1,8 @@
 # Directory Update Log
 
 ## 2026-10-16
+* **Creation**: Added the [final account](/computations/final_account.md) and [add period](/computations/add_period.md) computations, [practical completion, defects and handover](/contracts/practical_completion_and_defects.md), and two [playbooks](/playbooks/index.md) built from the BEAM PDF checklists.
+* **Update**: Fixed the Final Account Summary workbook, which counted retention twice, and gave the Final Claim and Release an ex-GST contract sum field.
 * **Creation**: Added the [progress claim](/computations/progress_claim.md), [ex GST](/computations/ex_gst.md) and [add days](/computations/add_days.md) computations.
 * **Creation**: Drafted [progress payments and claims](/contracts/progress_payments.md) and [site instructions and back charges](/contracts/site_instructions_and_back_charges.md).
 * **Update**: Fixed the off-by-one Setup sheet references in 21 Excel templates (blank project names, contract number shown as contract sum, retention calculated from the contract sum). The linter now checks every Setup reference.

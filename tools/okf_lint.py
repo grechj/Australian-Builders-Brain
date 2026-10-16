@@ -43,6 +43,7 @@ FOLDERS = {
     "extension": "Extension construction phases",
     "commercial": "Commercial construction phases",
     "attesters": "Deterministic checks for computation receipts",
+    "playbooks": "Step-by-step checklists: PC inspection, claim support pack",
     "2025": "NCC 2025 (v1.2), converted from the ABCB's CC BY 4.0 XML: every Part, clause, definition and state variation",
     "volume_one": "Class 2 to 9 buildings: apartments, commercial, industrial and public buildings",
     "volume_two": "Class 1 and 10 buildings: houses, townhouses, garages, sheds, pools",

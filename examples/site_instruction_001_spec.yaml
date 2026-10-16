@@ -1,4 +1,5 @@
 # Example values for a Site Instruction (fictional).
+template: templates/word/Site_Instruction_Form_TEMPLATE.docx
 set:
   SITE_INSTRUCTION_NUMBER: SI-001
   DATE: 16/10/2026

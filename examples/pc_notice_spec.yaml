@@ -1,0 +1,16 @@
+# Example values for a Practical Completion Notice (fictional).
+template: templates/word/Practical_Completion_Notice_TEMPLATE.docx
+# DLP end date from:
+#   python3 tools/compute.py add_period --param start_date=08/10/2027 --param weeks=13
+set:
+  DATE: 08/10/2027
+  NAME: Chris Smith, Director
+  TIME: 9:00 am
+row:
+  "Date of Practical Completion:": "08/10/2027"
+  "Contract Completion Date:": "30/09/2027"
+  "Total Approved EOTs:": "5 working days (DELAY-001)"
+  "DLP End Date:": "07/01/2028"
+  "Proposed Inspection Date:": "11/10/2027"
+replace:
+  "[SELECT: 6 / 12 / 13] weeks from PC date": "13 weeks from PC date"

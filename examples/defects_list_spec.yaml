@@ -1,0 +1,17 @@
+# Example Defects List (fictional): two items from the PC inspection.
+# PC and DLP end dates are document values, so they are set here.
+template: templates/excel/Defects_List_Tracking_TEMPLATE.xlsx
+set:
+  PC_DATE: 08/10/2027
+  DLP_END_DATE: 07/01/2028
+cell:
+  "Defects!B5": 08/10/2027
+  "Defects!C5": Ensuite
+  "Defects!D5": Shower screen seal missing on the return panel; water escaping onto the floor
+  "Defects!E5": Glazier
+  "Defects!F5": High
+  "Defects!B6": 08/10/2027
+  "Defects!C6": Bed 2
+  "Defects!D6": Nail pops in the ceiling near the window, about 6 places
+  "Defects!E6": Plasterer
+  "Defects!F6": Low

@@ -1,4 +1,5 @@
 # Example inputs for the Progress Claim Calculator (fictional): claim 3.
+template: templates/excel/Progress_Claim_Calculator_TEMPLATE.xlsx
 # Rows 5 to 11 are Deposit, Base / Slab, Frame, Lock-Up, Fixing,
 # Practical Completion and Approved Variations. Columns: B contract value,
 # C % complete, E previously claimed (all ex GST). Formula cells are protected.

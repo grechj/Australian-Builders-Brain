@@ -66,6 +66,7 @@ construction phases.
 |---|---|---|
 | `[CONTRACT_NUMBER]` | Builder's contract or job number | SB-2027-014 |
 | `[CONTRACT_SUM]` | Original contract sum, inc GST, no `$` sign | 485,000.00 |
+| `[CONTRACT_SUM_EX_GST]` | Original contract sum, ex GST, from the [ex GST](/computations/ex_gst.md) computation | 440,909.09 |
 | `[CONTRACT_CLAUSE]` | The clause a notice relies on, from the [clause map](/contracts/hia_mba_clause_map.md) or the user's contract | Clause 17 |
 
 The project file also carries `contract_type` (HIA, MBA, other),

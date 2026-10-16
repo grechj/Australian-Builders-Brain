@@ -96,6 +96,10 @@ Actors follow OKF §7: `human:<github_id>` for people,
 
 ## Skills
 
+Every example in `examples/*_spec.yaml` names its template and must fill
+cleanly: run `python tools/test_examples.py` after changing a template, a
+spec or the fill tool.
+
 Each skill in `skills/<name>/SKILL.md` reads from `brain/`, collects the
 missing facts from the user, runs the computations, fills a template with
 `tools/fill_template.py`, and lists anything left unfilled.

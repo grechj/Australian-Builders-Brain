@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: early (v0.3).** The `variations`, `claims`, `notices` and `ncc` skills work
+> **Status: early (v0.3).** The `variations`, `claims`, `notices`, `handover` and `ncc` skills work
 > end to end, and the full NCC 2025 text is loaded. The other skills and the state-by-state
 > rules are on the roadmap below. Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -86,7 +86,7 @@ $1,450 tip fees, $150 excavator, 2 days delay."*
 | `notices` | delay notification, site instruction, back charge | **working** |
 | `site` | site diary, progress email, material orders, trade bookings, hold points | planned |
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | planned |
-| `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | planned |
+| `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | planned |
 | `ncc` | NCC 2025 lookups with clause citations and state variations (1,652 clauses, all five volumes) | **working** |
 
@@ -99,7 +99,7 @@ editions, and turn the PDF checklists into wiki playbooks.
 
 Read [`AGENTS.md`](AGENTS.md). In short: use `_` in names, put
 `[UPPER_SNAKE_CASE]` placeholders in templates, give every brain page OKF
-frontmatter, and run `python3 tools/okf_lint.py` before opening a PR.
+frontmatter, and run `python3 tools/okf_lint.py` and `python3 tools/test_examples.py` before opening a PR.
 Builders who check a draft page against the source can add themselves to its
 `verified` list. That is the most useful contribution of all.
 

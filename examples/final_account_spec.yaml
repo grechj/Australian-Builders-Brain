@@ -1,0 +1,9 @@
+# Example inputs for the Final Account Summary workbook (fictional). Matches final_claim_spec.yaml.
+template: templates/excel/Final_Account_Summary_TEMPLATE.xlsx
+# Net variations here include the PC/PS adjustment (-1,200) as an omission.
+cell:
+  "Final Account!B6": 3360
+  "Final Account!B7": 1700
+  "Final Account!B12": 376000
+  "Final Account!B13": 5000
+  "Final Account!B19": 2500

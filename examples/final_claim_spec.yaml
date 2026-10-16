@@ -1,0 +1,19 @@
+# Example values for a Final Claim and Release (fictional). Money from:
+template: templates/word/Final_Claim_Release_TEMPLATE.docx
+#   python3 tools/compute.py final_account --param contract_sum_ex_gst=440909.09 \
+#       --param variations_additions=3360 --param variations_omissions=500 --param pc_ps_adjustments=-1200 \
+#       --param claimed_to_date=376000 --param retention_held=5000 --param retention_released=2500
+set:
+  DATE: 15/10/2027
+replace:
+  "Approved Variations (net):": "Approved Variations and PC/PS Adjustments (net):"
+  "Total Previously Claimed:": "Less: Total Previously Claimed:"
+  "Retention Held:": "Add: Retention Released:"
+row:
+  "Approved Variations": "$1,660.00"
+  "Adjusted Contract Sum": "$442,569.09"
+  "Less: Total Previously Claimed": "$376,000.00"
+  "Add: Retention Released": "$2,500.00"
+  "Final Claim Amount": "$69,069.09"
+  "GST (10%)": "$6,906.91"
+  "TOTAL FINAL AMOUNT DUE": "$75,976.00"

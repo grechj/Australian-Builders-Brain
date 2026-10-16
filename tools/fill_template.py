@@ -176,6 +176,11 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
         else:
             unmatched.append(f"cell: {prefix}")
 
+    # Replacements before rows, so a row can be found by its new label.
+    for old, new in replaces.items():
+        if not replace_in_document(doc, lambda _m, new=new: new, re.compile(re.escape(old))):
+            unmatched.append(f"replace: {old}")
+
     for spec, text in rows.items():
         label, _, nth = spec.partition("#")
         want = int(nth or 1)
@@ -189,10 +194,6 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
                     break
         else:
             unmatched.append(f"row: {spec}")
-
-    for old, new in replaces.items():
-        if not replace_in_document(doc, lambda _m, new=new: new, re.compile(re.escape(old))):
-            unmatched.append(f"replace: {old}")
 
     for option in ticks or []:
         if not replace_in_document(doc, lambda _m: "☒ " + option, re.compile("☐ " + re.escape(option))):
@@ -219,6 +220,28 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
             "instructions_left": sorted(instructions), "unmatched": unmatched}
 
 
+def excel_value(cell, text: str) -> None:
+    """Write text into a cell as a date, percentage, number or text, in that order."""
+    from datetime import datetime
+
+    text = str(text).strip()
+    if re.fullmatch(r"\d{2}/\d{2}/\d{4}", text):
+        cell.value = datetime.strptime(text, "%d/%m/%Y")
+        cell.number_format = "DD/MM/YYYY"
+        return
+    number = text.replace(",", "").replace("$", "")
+    if text.endswith("%"):
+        try:
+            cell.value = float(number[:-1]) / 100
+            return
+        except ValueError:
+            pass
+    try:
+        cell.value = float(number) if number else None
+    except ValueError:
+        cell.value = text
+
+
 def fill_xlsx(src: Path, out: Path, values: dict[str, str], cells: dict[str, str]) -> dict:
     import openpyxl
 
@@ -234,15 +257,7 @@ def fill_xlsx(src: Path, out: Path, values: dict[str, str], cells: dict[str, str
         if isinstance(cell.value, str) and cell.value.startswith("="):
             unmatched.append(f"cell: {address} is a formula, not an input")
             continue
-        text = str(raw).strip()
-        number = text.replace(",", "").replace("$", "")
-        if text.endswith("%"):
-            cell.value = float(number[:-1]) / 100
-        else:
-            try:
-                cell.value = float(number) if number else None
-            except ValueError:
-                cell.value = text
+        excel_value(cell, raw)
         filled.append(address)
     if "Setup" in wb.sheetnames:
         ws = wb["Setup"]
@@ -257,10 +272,13 @@ def fill_xlsx(src: Path, out: Path, values: dict[str, str], cells: dict[str, str
                 unmatched.append(label_cell.value.strip())
                 continue
             if field in NUMERIC_FIELDS:
-                val = float(val.replace(",", "").replace("$", ""))
+                value_cell.value = float(val.replace(",", "").replace("$", ""))
             elif field in PERCENT_FIELDS:
-                val = float(val.replace("%", "")) / 100
-            value_cell.value = val
+                value_cell.value = float(val.replace("%", "")) / 100
+            elif re.fullmatch(r"\d{2}/\d{2}/\d{4}", val.strip()):
+                excel_value(value_cell, val)
+            else:
+                value_cell.value = val  # ABNs and phone numbers stay text
             filled.append(label_cell.value.strip())
     wb.save(out)
     return {"filled": filled, "remaining": unmatched}

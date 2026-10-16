@@ -197,3 +197,64 @@ def add_days(start_date: str, days: Decimal, day_type: str, non_working_days: li
                    "calendar_days_elapsed": str((current - start).days), "non_working_days_skipped": str(skipped)},
         "fields": {},
     }
+
+
+def add_period(start_date: str, years: Decimal, months: Decimal, weeks: Decimal, days: Decimal) -> dict:
+    """Add a calendar period to a date (DD/MM/YYYY): defects liability periods, warranty end dates.
+
+    Years and months are added first, landing on the same day of the month
+    (or the month's last day if it is shorter, so 29/02 + 1 year = 28/02),
+    then weeks and days.
+    """
+    for name, value in (("years", years), ("months", months), ("weeks", weeks), ("days", days)):
+        if value != value.to_integral_value() or value < 0:
+            raise ValueError(f"{name} must be a whole number, 0 or more")
+    start = _parse_date(start_date)
+    total_months = start.month - 1 + int(years) * 12 + int(months)
+    year, month = start.year + total_months // 12, total_months % 12 + 1
+    next_month = date(year + (month == 12), month % 12 + 1, 1)
+    last_day = (next_month - timedelta(days=1)).day
+    end = date(year, month, min(start.day, last_day)) + timedelta(weeks=int(weeks), days=int(days))
+    return {
+        "result": {"start_date": start.strftime("%d/%m/%Y"), "end_date": end.strftime("%d/%m/%Y"),
+                   "end_weekday": end.strftime("%A"), "calendar_days": str((end - start).days)},
+        "fields": {},
+    }
+
+
+def final_account(contract_sum_ex_gst: Decimal, variations_additions: Decimal, variations_omissions: Decimal,
+                  pc_ps_adjustments: Decimal, claimed_to_date: Decimal, retention_held: Decimal,
+                  retention_released: Decimal) -> dict:
+    """The final account and final claim, ex GST.
+
+    Adjusted contract sum = contract sum + additions - omissions + PC/PS adjustments
+    (adjustments may be negative). claimed_to_date is the gross total of all
+    previous claims; the client has withheld retention_held from them.
+    Final claim = adjusted contract sum - claimed to date + retention released now.
+    """
+    contract = _money(contract_sum_ex_gst)
+    additions, omissions = _money(variations_additions), _money(abs(variations_omissions))
+    adjustments = _money(pc_ps_adjustments)
+    net_variations = additions - omissions
+    adjusted = contract + net_variations + adjustments
+    claimed, held, released = _money(claimed_to_date), _money(abs(retention_held)), _money(retention_released)
+    warnings = []
+    if released > held:
+        raise ValueError(f"retention_released ({released}) is more than retention_held ({held})")
+    net_received = claimed - held
+    final = adjusted - claimed + released
+    if final < 0:
+        warnings.append(f"claims to date exceed the adjusted contract sum by {-final}: a credit is owed to the client")
+    priced = gst(final) if final >= 0 else {"result": {"amount_ex_gst": str(final), "gst": str(_money(final * GST_RATE)),
+                                                       "amount_inc_gst": str(final + _money(final * GST_RATE))}, "fields": {}}
+    result = {
+        "contract_sum_ex_gst": str(contract), "variations_additions_ex_gst": str(additions),
+        "variations_omissions_ex_gst": str(omissions), "net_variations_ex_gst": str(net_variations),
+        "pc_ps_adjustments_ex_gst": str(adjustments), "adjusted_contract_sum_ex_gst": str(adjusted),
+        "claimed_to_date_ex_gst": str(claimed), "retention_held_ex_gst": str(held),
+        "net_received_ex_gst": str(net_received), "retention_released_ex_gst": str(released),
+        "retention_kept_ex_gst": str(held - released),
+        "final_claim_ex_gst": priced["result"]["amount_ex_gst"], "gst": priced["result"]["gst"],
+        "total_inc_gst": priced["result"]["amount_inc_gst"], "warnings": warnings,
+    }
+    return {"result": result, "fields": priced["fields"]}

@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: variation_price
-computation_sha256: a62cf6c70b0a35aaacd50f45a02a3c936804495aa9b44124ab1d8e93f4e1219f
+computation_sha256: b6f19cc356118580f48815dea77a7777ff2d76264e6cf690208875f67f469d8f
 parameters:
   - { name: labour, type: decimal, required: true }
   - { name: materials, type: decimal, required: true }

@@ -1,4 +1,5 @@
 # Example document values for a Priced Variation Notice (fictional).
+template: templates/word/Priced_Variation_Notice_TEMPLATE.docx
 # Money figures come from the receipt of:
 #   python tools/compute.py variation_price --param labour=1200 --param materials=1450 \
 #       --param plant=150 --param margin_pct=20

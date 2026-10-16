@@ -1,4 +1,5 @@
 # Example values for a Progress Claim Invoice (fictional): claim 3, frame stage.
+template: templates/word/Progress_Claim_Invoice_TEMPLATE.docx
 # Money comes from the receipt of:
 #   python3 tools/compute.py progress_claim --param contract_sum_ex_gst=440909.09 --param 'stages=[
 #     {"name":"Deposit","contract_value":22045.45,"pct_complete":100,"previously_claimed":22045.45},
