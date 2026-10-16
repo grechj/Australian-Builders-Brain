@@ -14,6 +14,11 @@ sources:
     resource: https://data.gov.au/data/dataset/national-construction-code-ncc-2022
     title: NCC 2022 dataset (CC BY 4.0)
     author: org:abcb
+  - id: abcb_ncc2022
+    resource: https://ncc.abcb.gov.au/editions/ncc-2022
+    title: NCC 2022 edition page, Australian Building Codes Board
+    author: org:abcb
+    last_modified: 2026-10-17T00:00:00Z
   - id: datagov_ncc2025
     resource: https://data.gov.au/data/dataset/national-construction-code-2025-version-1-2
     title: NCC 2025 v1.2 dataset (CC BY 4.0)
@@ -32,7 +37,7 @@ lets this brain load the code itself, with attribution.
 | Edition | Status |
 |---|---|
 | [NCC 2025 (v1.2)](/ncc/2025/index.md) | Full text of all five datasets: every Part, clause, table, definition and state variation. Look up clauses with the [clause index](/ncc/2025/clause_index.md) or `tools/ncc_lookup.py`. |
-| NCC 2022 | Not loaded yet. Run `tools/ncc_ingest.py --edition 2022` once the 2022 zips are in `raw/ncc/`. |
+| NCC 2022 | Not loaded yet. The version in force for NCC 2022 jobs is **NCC 2022 Amendment 2** (adopted from 29 July 2025; Amendment 1 applied from 1 May 2025; NCC 2022 itself from 1 May 2023). The ABCB's 2022 XML download is an older, incomplete publishing export (clauses that share a code across volumes overwrote each other, and it predates both amendments), so it isn't used. Source for loading: the ABCB's NCC 2022 Amendment 2 PDFs. |
 
 Figures are not reproduced. Each one is listed by its number and title, to
 be looked up on ncc.abcb.gov.au.
@@ -41,7 +46,7 @@ be looked up on ncc.abcb.gov.au.
 
 The edition that applies is generally the one in force in that state when
 the building permit or development application was lodged. NCC 2022 and
-NCC 2025 can both be live for a while. Record the applicable edition in the
+NCC 2025 can both be live for a while. For NCC 2022 jobs, read the code with its amendments (Amendment 2 from 29 July 2025).[^abcb_ncc2022] Record the applicable edition in the
 project file before answering any code question.
 
 # Volumes
@@ -73,3 +78,4 @@ the standard and what it covers but never reproduces its content.
 [^abcb_ncc]: National Construction Code, Australian Building Codes Board
 [^datagov_ncc2022]: NCC 2022 dataset (CC BY 4.0)
 [^datagov_ncc2025]: NCC 2025 v1.2 dataset (CC BY 4.0)
+[^abcb_ncc2022]: NCC 2022 edition page, Australian Building Codes Board
