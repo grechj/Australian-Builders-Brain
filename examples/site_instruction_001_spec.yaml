@@ -1,0 +1,15 @@
+# Example values for a Site Instruction (fictional).
+set:
+  SITE_INSTRUCTION_NUMBER: SI-001
+  DATE: 16/10/2026
+  NAME: Chris Smith, Site Supervisor
+  TRADE_NAME: "Concreter: Hunter Concrete Pty Ltd"
+  DD/MM/YYYY: 20/10/2026
+tick:
+  - Clarification of drawings/specs
+cell:
+  "[Describe the instruction in detail": "Deepen the north-east footings (grid C3 to D4) to 900 mm below natural ground to reach the founding material, as directed by the engineer in ENG-SI-02 dated 14/10/2026. Reinforcement as per drawing S-101 rev C. Do not pour until the engineer has inspected the deepened trenches."
+replace:
+  "[SELECT: Nil / TBC / Variation Required]": "Variation Required"
+  "[SELECT: Nil / TBC / EOT Required]": "EOT Required"
+  "[VAR_NUMBER or N/A]": "VAR-001"

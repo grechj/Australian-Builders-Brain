@@ -68,8 +68,11 @@ construction phases.
 | `[CONTRACT_SUM]` | Original contract sum, inc GST, no `$` sign | 485,000.00 |
 | `[CONTRACT_CLAUSE]` | The clause a notice relies on, from the [clause map](/contracts/hia_mba_clause_map.md) or the user's contract | Clause 17 |
 
-The project file also carries `contract_type` (HIA, MBA, other), the
-contract edition and the contract date.
+The project file also carries `contract_type` (HIA, MBA, other),
+`contract_edition`, `contract_date`, `contract_sum_ex_gst` (from the
+[ex GST](/computations/ex_gst.md) computation), `builders_margin_pct` (the
+margin on variations), `retention_pct` and `site_supervisor`. Excel
+templates read these through their Setup sheets.
 
 ## Subcontractor
 

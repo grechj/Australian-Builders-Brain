@@ -36,5 +36,8 @@ contract:
   contract_type: HIA
   contract_edition: HIA NSW Residential Building Contract for New Dwellings (check edition)
   contract_date: 20/01/2027
-  contract_sum: 485,000.00
-  builders_margin_pct: 20
+  contract_sum: 485,000.00          # inc GST, as signed
+  contract_sum_ex_gst: 440,909.09   # from: python3 tools/compute.py ex_gst --param amount_inc_gst=485000
+  builders_margin_pct: 20           # margin on variations, from the contract schedule
+  retention_pct: 0                  # retention held by the client, if the contract has any
+  site_supervisor: Chris Smith

@@ -1,0 +1,22 @@
+# Example values for a Back Charge Notice (fictional).
+# Money from:
+#   python3 tools/compute.py variation_price --param labour=320 --param materials=185 \
+#       --param subcontractor=0 --param plant=0 --param other=60 --param margin_pct=0
+set:
+  BACK_CHARGE_NUMBER: BC-001
+  DATE: 16/10/2026
+  SUBBIE_NAME: Hunter Sparks Pty Ltd
+  SUBBIE_ABN: 98 765 432 109
+  TRADE: Electrician
+  AMOUNT: 565.00
+  AMOUNT_GST: 56.50
+  AMOUNT_TOTAL: 621.50
+tick:
+  - Damage to other trades' work
+cell:
+  "[Describe the issue in detail": "During cable rough-in on 13/10/2026 the electrician cut through the installed sarking and battens on the north roof plane (above bed 2) to run a cable, and left the opening uncovered. Rain on 14/10/2026 wet the bed 2 ceiling insulation, which had to be replaced. Verbal notice was given to the leading hand on 14/10/2026. Photos attached."
+row:
+  "Rectification Labour": "$320.00"
+  "Replacement Materials": "$185.00"
+  "Third-Party Costs": "$0.00"
+  "Other": "$60.00"

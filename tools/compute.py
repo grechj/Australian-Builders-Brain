@@ -17,6 +17,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
@@ -62,11 +63,36 @@ def parse_params(meta: dict, raw: list[str]) -> dict:
             if spec.get("required", True):
                 raise SystemExit(f"Missing required parameter: {name}")
             given[name] = str(spec.get("default", "0"))
+        if spec.get("type") in ("string", "date"):
+            params[name] = given[name]
+            continue
+        if spec.get("type") == "json":
+            try:
+                params[name] = json.loads(given[name])
+            except json.JSONDecodeError as e:
+                raise SystemExit(f"{name} must be JSON: {e}")
+            continue
         try:
             params[name] = Decimal(given[name].replace(",", "").replace("$", ""))
         except InvalidOperation:
             raise SystemExit(f"{name} must be a number, got {given[name]!r}")
     return params
+
+
+def display(value):
+    """Format every money-like string for a document: "1413.5" -> "1,413.50"."""
+    if isinstance(value, dict):
+        return {k: display(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [display(v) for v in value]
+    if isinstance(value, str):
+        if not re.fullmatch(r"-?[0-9]+(\.[0-9]+)?", value):
+            return value
+        try:
+            return f"{Decimal(value):,.2f}"
+        except InvalidOperation:
+            return value
+    return value
 
 
 def run(name: str, raw_params: list[str]) -> dict:
@@ -78,11 +104,11 @@ def run(name: str, raw_params: list[str]) -> dict:
         "computation": f"computations/{name}",
         "entry_point": meta["entry_point"],
         "computation_sha256": hashlib.sha256(code_path.read_bytes()).hexdigest(),
-        "parameters": {k: str(v) for k, v in params.items()},
+        "parameters": {k: (json.dumps(v) if isinstance(v, (list, dict)) else str(v)) for k, v in params.items()},
         "result": output["result"],
         "fields": output["fields"],
         # Every result figure formatted for a document, e.g. "1,413.53".
-        "display": {k: f"{Decimal(v):,.2f}" for k, v in output["result"].items()},
+        "display": display(output["result"]),
     }
 
 

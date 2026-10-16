@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: gst
-computation_sha256: 0081a7682ee41db849cf52598db8d32efcfcc02479741936d45d60b94f497818
+computation_sha256: a62cf6c70b0a35aaacd50f45a02a3c936804495aa9b44124ab1d8e93f4e1219f
 parameters:
   - { name: amount_ex_gst, type: decimal, required: true }
 executor:

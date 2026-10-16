@@ -1,0 +1,26 @@
+# Example inputs for the Progress Claim Calculator (fictional): claim 3.
+# Rows 5 to 11 are Deposit, Base / Slab, Frame, Lock-Up, Fixing,
+# Practical Completion and Approved Variations. Columns: B contract value,
+# C % complete, E previously claimed (all ex GST). Formula cells are protected.
+cell:
+  "Claims!B5": 22045.45
+  "Claims!C5": "100%"
+  "Claims!E5": 22045.45
+  "Claims!B6": 66136.36
+  "Claims!C6": "100%"
+  "Claims!E6": 66136.36
+  "Claims!B7": 88181.82
+  "Claims!C7": "100%"
+  "Claims!E7": 0
+  "Claims!B8": 110227.27
+  "Claims!C8": "0%"
+  "Claims!E8": 0
+  "Claims!B9": 88181.82
+  "Claims!C9": "0%"
+  "Claims!E9": 0
+  "Claims!B10": 66136.37
+  "Claims!C10": "0%"
+  "Claims!E10": 0
+  "Claims!B11": 3360
+  "Claims!C11": "100%"
+  "Claims!E11": 0

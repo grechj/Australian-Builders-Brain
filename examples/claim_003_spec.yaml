@@ -1,0 +1,44 @@
+# Example values for a Progress Claim Invoice (fictional): claim 3, frame stage.
+# Money comes from the receipt of:
+#   python3 tools/compute.py progress_claim --param contract_sum_ex_gst=440909.09 --param 'stages=[
+#     {"name":"Deposit","contract_value":22045.45,"pct_complete":100,"previously_claimed":22045.45},
+#     {"name":"Base / Slab","contract_value":66136.36,"pct_complete":100,"previously_claimed":66136.36},
+#     {"name":"Frame","contract_value":88181.82,"pct_complete":100,"previously_claimed":0},
+#     {"name":"Lock-Up","contract_value":110227.27,"pct_complete":0,"previously_claimed":0},
+#     {"name":"Fixing","contract_value":88181.82,"pct_complete":0,"previously_claimed":0},
+#     {"name":"Practical Completion","contract_value":66136.37,"pct_complete":0,"previously_claimed":0},
+#     {"name":"Approved Variations","contract_value":3360,"pct_complete":100,"previously_claimed":0}]'
+set:
+  INVOICE_NUMBER: INV-003
+  CLAIM_NUMBER: "3"
+  DATE: 16/10/2026
+  DD/MM/YYYY: 30/10/2026          # due date under the contract's payment terms
+replace:
+  "PROGRESS CLAIM INVOICE": "TAX INVOICE: PROGRESS CLAIM"
+# The template's stage rows don't match this contract's schedule, so the
+# job's stages are inserted after the first stage row (copying its format)
+# and the template's own rows are removed. Inserted rows come first, so a
+# label that appears twice is deleted with #2.
+add_row:
+  "Base / Slab Stage":
+    - "Deposit (5%)|$22,045.45|100%|$22,045.45|$0.00"
+    - "Base / Slab (15%)|$66,136.36|100%|$66,136.36|$0.00"
+    - "Frame (20%)|$88,181.82|100%|$88,181.82|$88,181.82"
+    - "Lock-Up (25%)|$110,227.27|0%|$0.00|$0.00"
+    - "Fixing (20%)|$88,181.82|0%|$0.00|$0.00"
+    - "Practical Completion (15%)|$66,136.37|0%|$0.00|$0.00"
+    - "Approved Variations (VAR-001)|$3,360.00|100%|$3,360.00|$3,360.00"
+delete_row:
+  - "Base / Slab Stage"
+  - "Frame Stage"
+  - "Lock-Up Stage"
+  - "Fixing Stage"
+  - "Practical Completion#2"
+  - "Approved Variations#2"
+row:
+  "Subtotal Claimed (excl. GST)": "$179,723.63"
+  "Less: Previous Claims": "$88,181.81"
+  "Less: Retention": "$0.00"
+  "Net Amount This Claim": "$91,541.82"
+  "GST (10%)": "$9,154.18"
+  "TOTAL AMOUNT DUE": "$100,696.00"

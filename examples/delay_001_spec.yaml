@@ -1,0 +1,18 @@
+# Example values for a Delay Notification Letter (fictional).
+# Revised completion date from:
+#   python3 tools/compute.py add_days --param start_date=30/09/2027 --param days=5 \
+#       --param day_type=working --param 'non_working_days=["04/10/2027"]'
+set:
+  DELAY_NUMBER: DELAY-001
+  DATE: 16/10/2026
+  NAME: Chris Smith, Site Supervisor
+tick:
+  - Inclement weather
+cell:
+  "[Describe the cause and nature of the delay": "Heavy rain from 12 to 15 October 2026 (68 mm recorded at the nearest BOM station, Nobbys Head) saturated the footing trenches and made excavation unsafe. Work stopped for four working days, and a further day was needed for the trenches to drain and be cleaned out before the footing inspection could be rebooked.\nSite diary entries for 12 to 16 October and BOM daily rainfall records are attached."
+row:
+  "Current Completion Date:": "30/09/2027"
+  "Days of Delay:": "5 working days"
+  "Revised Completion Date:": "08/10/2027"
+replace:
+  "[SELECT: There is no additional cost / A variation will be issued separately for additional costs of $____]": "There is no additional cost for this delay."

@@ -143,6 +143,27 @@ def check_placeholders(errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)}: {ph} is not in brain/fields/project_fields.md")
 
 
+def check_workbooks(errors: list[str]) -> None:
+    """Every formula that reads the Setup sheet must point at a labelled row."""
+    import openpyxl
+
+    for path in sorted((ROOT / "templates" / "excel").glob("*.xlsx")):
+        wb = openpyxl.load_workbook(path)
+        if "Setup" not in wb.sheetnames:
+            continue
+        setup = wb["Setup"]
+        for ws in wb:
+            if ws.title == "Setup":
+                continue
+            for row in ws.iter_rows():
+                for cell in row:
+                    if not (isinstance(cell.value, str) and "Setup!" in cell.value):
+                        continue
+                    for ref in re.findall(r"Setup!\$?B\$?(\d+)", cell.value):
+                        if not setup.cell(row=int(ref), column=1).value:
+                            errors.append(f"{path.relative_to(ROOT)}: {ws.title}!{cell.coordinate} reads Setup!B{ref}, which has no label")
+
+
 def write_indexes() -> None:
     dirs = sorted({p.parent for p in BRAIN.rglob("*.md")} | {BRAIN}, key=lambda d: len(d.parts), reverse=True)
     for d in dirs:
@@ -182,6 +203,7 @@ def main() -> None:
     check_indexes(errors)
     check_links(warnings)
     check_placeholders(errors)
+    check_workbooks(errors)
 
     for w in warnings:
         print(f"warning: {w}")

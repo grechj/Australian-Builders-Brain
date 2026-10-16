@@ -6,8 +6,8 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: early (v0.2).** The `variations` and `ncc` skills work end to end, and
-> the full NCC 2025 text is loaded. The other skills and the state-by-state
+> **Status: early (v0.3).** The `variations`, `claims`, `notices` and `ncc` skills work
+> end to end, and the full NCC 2025 text is loaded. The other skills and the state-by-state
 > rules are on the roadmap below. Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
 
@@ -82,8 +82,8 @@ $1,450 tip fees, $150 excavator, 2 days delay."*
 | `variations` | change request, builder variation, priced notice, approval, explanation, register, allowances, selections | **working** |
 | `estimating` | estimate workbook, estimate to quote, quote comparison, margin sensitivity, clarifications, quote acceptance | planned |
 | `contracts` | contract summary, scope of works, subcontract, trade scope, pre-construction checklist | planned |
-| `claims` | progress claim calculator and invoice, payment register, subbie payments, retention, claim pack | planned |
-| `notices` | delay notification, site instruction, back charge | planned |
+| `claims` | progress claim calculator and invoice, payment register, subbie payments, retention, claim pack | **working** |
+| `notices` | delay notification, site instruction, back charge | **working** |
 | `site` | site diary, progress email, material orders, trade bookings, hold points | planned |
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | planned |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | planned |
