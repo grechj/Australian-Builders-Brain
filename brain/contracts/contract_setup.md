@@ -1,7 +1,7 @@
 ---
 type: Contract Topic
 title: Contract and job setup
-description: Setting up a job after signing: the contract summary, payment schedule, scope of works, subcontracts and trade scope confirmations, insurance and approvals.
+description: "Setting up a job after signing: the contract summary, payment schedule, scope of works, subcontracts and trade scope confirmations, insurance and approvals."
 tags: [contracts, setup, scope, subcontracts, insurance, approvals]
 status: draft
 jurisdiction: [NSW, VIC, QLD, WA, SA, TAS, ACT, NT]
