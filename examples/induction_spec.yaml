@@ -1,0 +1,25 @@
+# Example site induction (fictional).
+template: templates/word/Trade_Induction_Form_TEMPLATE.docx
+set:
+  DATE: 06/04/2027
+row:
+  "Name:": "Alex Lee"
+  "Company:": "Hunter Sparks Pty Ltd"
+  "Trade:": "Electrician"
+  "Phone:": "0444 444 444"
+  "Emergency Contact:": "Jordan Lee 0455 555 555"
+  "White Card No:": "CGI 1234567"
+  "Site boundaries and access points": "☒"
+  "Emergency procedures and assembly point": "☒"
+  "First aid kit and fire extinguisher locations": "☒"
+  "PPE requirements": "☒"
+  "Hazardous areas and exclusion zones": "☒"
+  "Electrical safety (RCDs, tested leads)": "☒"
+  "Fall prevention and working at heights": "☒"
+  "Manual handling requirements": "☒"
+  "Housekeeping and waste management": "☒"
+  "Reporting incidents and near misses": "☒"
+  "Sign in/out procedures": "☒"
+  "Amenities (toilet, lunch area, parking)": "☒"
+  "Current SWMS for high-risk work": "☒"
+  "Environmental controls (dust, noise, stormwater)": "☒"

@@ -1,0 +1,25 @@
+# Example Site Safety Management Plan (fictional extension).
+template: templates/word/Site_Safety_Management_Plan_TEMPLATE.docx
+set:
+  NAME: Chris Smith
+replace:
+  "First aid kit located at: [LOCATION].": "First aid kit located at: site shed, left of the door."
+  "Fire extinguisher located at: [LOCATION].": "Fire extinguisher located at: site shed and rear deck."
+  "Site toilet facilities provided at: [LOCATION].": "Site toilet facilities provided at: front driveway, beside the skip."
+row:
+  "Work at height (>2m)": "☒ Y  ☐ N|☒ Y  ☐ N"
+  "Demolition": "☒ Y  ☐ N|☐ Y  ☒ N"
+  "Excavation (>1.5m)": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Working near overhead lines": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Confined space entry": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Working with asbestos": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Hot works (welding/cutting)": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Working near traffic": "☐ Y  ☒ N|☐ Y  ☒ N"
+  "Crane / lifting operations": "☒ Y  ☐ N|☒ Y  ☐ N"
+  "Working with hazardous chemicals": "☒ Y  ☐ N|☐ Y  ☒ N"
+  "Assembly Point:": "Front footpath, 42 Banksia St"
+  "First Aid Officer:": "Chris Smith (0400 000 000)"
+  "First Aid Kit Location:": "Site shed, left of the door"
+tick:
+  - Monthly
+  - After any incident

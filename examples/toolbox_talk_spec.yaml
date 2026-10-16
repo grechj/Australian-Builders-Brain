@@ -1,0 +1,15 @@
+# Example toolbox talk (fictional).
+template: templates/word/Toolbox_Talk_Record_TEMPLATE.docx
+set:
+  DATE: 05/04/2027
+  NAME: Chris Smith
+  TIME: 7:00 am
+cell:
+  "[Topic of discussion": "Working at heights during roof framing"
+  "[Summarise the key safety points": "Scaffold edge protection must be complete and tagged before anyone works above 2 m. No working from top plates or trusses without it. Stop roof work in gusty wind. Keep the area below the roof clear during truss installation. Report damaged scaffold immediately; don't adjust it yourself."
+fill_table:
+  "Action Required":
+    - "Scaffolder to add a loading bay on the north side|Chris Smith|06/04/2027"
+  "Name":
+    - "Alex Lee|Smith Building|Signed|05/04/2027"
+    - "Sam Taylor|Smith Building|Signed|05/04/2027"

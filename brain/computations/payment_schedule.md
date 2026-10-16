@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: payment_schedule
-computation_sha256: e5db695c6b28e18cfc851be46cd897eac3acdd435d6b6528cfe7b362f28c4917
+computation_sha256: 146109d8e347ef9f027a3d6fa3bf877aec54fb55635dcc4b5ce367987494f7a7
 parameters:
   - { name: contract_sum_inc_gst, type: decimal, required: true }
   - { name: stages, type: json, required: true }

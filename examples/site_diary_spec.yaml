@@ -1,0 +1,24 @@
+# Example site diary week (fictional). Weather values must match the sheet's dropdown:
+# Fine, Overcast, Light Rain, Heavy Rain, Storm, Hot >35, Cold <10, Windy.
+template: templates/excel/Site_Diary_TEMPLATE.xlsx
+cell:
+  "Site Diary!A5": 12/10/2026
+  "Site Diary!C5": Heavy Rain
+  "Site Diary!D5": Heavy Rain
+  "Site Diary!E5": None (site closed)
+  "Site Diary!F5": Nil, rain all day
+  "Site Diary!G5": Footing trenches flooded; excavation unsafe. Weather delay day 1.
+  "Site Diary!A6": 13/10/2026
+  "Site Diary!C6": Storm
+  "Site Diary!D6": Light Rain
+  "Site Diary!E6": None
+  "Site Diary!F6": Pumped out trenches (supervisor)
+  "Site Diary!G6": Trenches saturated. Weather delay day 2.
+  "Site Diary!A7": 16/10/2026
+  "Site Diary!C7": Fine
+  "Site Diary!D7": Fine
+  "Site Diary!E7": Excavator (Hunter Earthworks), concreter
+  "Site Diary!F7": Trenches cleaned out and deepened at grid C3 to D4
+  "Site Diary!G7": Sandstone floater found NE corner; engineer notified
+  "Site Diary!H7": SI-001 issued to concreter (deepen footings to 900 mm)
+  "Site Diary!I7": Engineer (J. Lee) 2 pm

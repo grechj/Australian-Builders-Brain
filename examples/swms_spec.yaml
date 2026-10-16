@@ -1,0 +1,30 @@
+# Example SWMS (fictional): roof framing with a fall risk over 2 m.
+# Hazard rows: the step number is the label; the values are hazard|risk|control|residual risk|responsible.
+template: templates/word/SWMS_TEMPLATE.docx
+set:
+  HIGH_RISK_ACTIVITY: Roof framing and truss installation (fall risk over 2 m)
+  DATE: 05/04/2027
+  SWMS_NUMBER: SWMS-003
+row:
+  "Prepared By:": "Chris Smith, Site Supervisor"
+  "Review Date:": "05/05/2027 or when the method changes"
+  "1.": "Lifting trusses: struck by load, crane contact with power lines|H|Licensed crane operator and dogger; exclusion zone; spotter; check line clearance before the lift|L|Crane operator"
+  "2.": "Work on top plates: fall from height over 2 m|H|Perimeter scaffold with edge protection installed and tagged before roof work; no work from top plates without it|L|Supervisor"
+  "3.": "Standing trusses: truss collapse, struck by falling timber|M|Temporary bracing per manufacturer's guide; install in sequence; nobody below during installation|L|Lead carpenter"
+  "4.": "Nail guns and saws: penetration injury, cuts, noise|M|Tools tested and tagged; sequential trigger on nail guns; hearing and eye protection|L|All workers"
+  "5.": "Weather: wind gusts on roof members|M|Stop roof work in winds over 40 km/h or when gusty; check BOM forecast each morning|L|Supervisor"
+  "First Aid Officer:": "Chris Smith (0400 000 000)"
+  "Assembly Point:": "Front footpath, 42 Banksia St"
+tick:
+  - Work at height (>2m)
+  - Crane/lifting operations
+  - Hard Hat
+  - Safety Glasses
+  - Hi-Vis Vest
+  - Steel Cap Boots
+  - Gloves
+  - Hearing Protection
+delete_row:
+  - "6."
+  - "7."
+  - "8."

@@ -1,0 +1,16 @@
+# Example subbie compliance rows (fictional). Status from:
+#   python3 tools/compute.py expiry_status --param on_date=16/10/2026 \
+#       --param 'items={"Licence": "30/06/2027", "PL": "01/11/2026", "WC": "31/03/2027"}'
+template: templates/excel/Subbie_Insurance_Licence_Tracker_TEMPLATE.xlsx
+cell:
+  "Compliance!A5": Hunter Sparks Pty Ltd
+  "Compliance!B5": Electrician
+  "Compliance!C5": 98 765 432 109
+  "Compliance!D5": 654321C
+  "Compliance!E5": 30/06/2027
+  "Compliance!F5": PL-5566 ($20M)
+  "Compliance!G5": 01/11/2026
+  "Compliance!H5": WC-7788
+  "Compliance!I5": 31/03/2027
+  "Compliance!J5": "Yes"
+  "Compliance!K5": Expiring Soon

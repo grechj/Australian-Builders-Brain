@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: estimate_price
-computation_sha256: e5db695c6b28e18cfc851be46cd897eac3acdd435d6b6528cfe7b362f28c4917
+computation_sha256: 146109d8e347ef9f027a3d6fa3bf877aec54fb55635dcc4b5ce367987494f7a7
 parameters:
   - { name: labour, type: decimal, required: true }
   - { name: materials, type: decimal, required: true }

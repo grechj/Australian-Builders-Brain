@@ -86,7 +86,7 @@ def display(value):
     if isinstance(value, list):
         return [display(v) for v in value]
     if isinstance(value, str):
-        if not re.fullmatch(r"-?[0-9]+(\.[0-9]+)?", value):
+        if not re.fullmatch(r"-?[0-9]+\.[0-9]+", value):  # money has decimals; counts and days stay as they are
             return value
         try:
             return f"{Decimal(value):,.2f}"

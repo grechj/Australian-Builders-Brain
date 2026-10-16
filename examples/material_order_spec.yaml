@@ -1,0 +1,20 @@
+# Example material orders (fictional).
+template: templates/excel/Material_Order_Tracker_TEMPLATE.xlsx
+cell:
+  "Orders!B5": 20/03/2027
+  "Orders!C5": Coastal Timber Supplies
+  "Orders!D5": Wall frames and roof trusses (prefabricated)
+  "Orders!E5": 1
+  "Orders!F5": 18500
+  "Orders!G5": 01/04/2027
+  "Orders!H5": "Yes"
+  "Orders!I5": PO-0141
+  "Orders!B6": 05/04/2027
+  "Orders!C6": Aluminium Windows Co
+  "Orders!D6": Windows and stacking door per schedule W-01
+  "Orders!E6": 1
+  "Orders!F6": 9200
+  "Orders!G6": 14/04/2027
+  "Orders!H6": Partial
+  "Orders!I6": PO-0147
+  "Orders!J6": Stacking door on back order; ETA 28/04/2027

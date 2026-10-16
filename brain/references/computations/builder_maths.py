@@ -320,3 +320,37 @@ def payment_schedule(contract_sum_inc_gst: Decimal, stages: list, deposit_cap_pc
     if deposit_cap_pct > 0 and "deposit" in str(first.get("name", "")).lower() and Decimal(str(first["pct"])) > deposit_cap_pct:
         warnings.append(f"deposit of {first['pct']}% is over the {deposit_cap_pct}% cap given")
     return {"result": {"contract_sum_inc_gst": str(total), "stages": rows, "warnings": warnings}, "fields": {}}
+
+
+def site_week(start_date: str, on_date: str) -> dict:
+    """Construction week number of a date, counting the site start date's week as week 1."""
+    start, day = _parse_date(start_date), _parse_date(on_date)
+    if day < start:
+        raise ValueError("on_date is before the start date")
+    elapsed = (day - start).days
+    return {"result": {"start_date": start.strftime("%d/%m/%Y"), "on_date": day.strftime("%d/%m/%Y"),
+                       "days_since_start": str(elapsed), "week_number": str(elapsed // 7 + 1)},
+            "fields": {"WEEK_NUMBER": str(elapsed // 7 + 1)}}
+
+
+def expiry_status(items: dict, on_date: str, warn_days: Decimal) -> dict:
+    """Status of licences and insurances from their expiry dates (DD/MM/YYYY).
+
+    items: {"Licence": "30/06/2027", "PL": "", ...}. An empty date is
+    Incomplete. Each item is Expired, Expiring Soon (within warn_days) or
+    Compliant; the overall status is the worst of them, using the Subbie
+    Insurance and Licence Tracker's dropdown values.
+    """
+    today = _parse_date(on_date)
+    rank = {"Compliant": 0, "Expiring Soon": 1, "Incomplete": 2, "Expired": 3}
+    out = {}
+    for name, value in items.items():
+        if not str(value).strip():
+            out[name] = {"expiry": "", "days_left": "", "status": "Incomplete"}
+            continue
+        d = _parse_date(str(value))
+        left = (d - today).days
+        status = "Expired" if left < 0 else "Expiring Soon" if left <= int(warn_days) else "Compliant"
+        out[name] = {"expiry": d.strftime("%d/%m/%Y"), "days_left": str(left), "status": status}
+    overall = max((v["status"] for v in out.values()), key=rank.get, default="Incomplete")
+    return {"result": {"on_date": today.strftime("%d/%m/%Y"), "items": out, "overall_status": overall}, "fields": {}}

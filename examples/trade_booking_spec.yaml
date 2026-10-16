@@ -1,0 +1,18 @@
+# Example trade bookings (fictional). Expected finish works from the expected start until an actual start is entered.
+template: templates/excel/Trade_Booking_Lead_Time_Tracker_TEMPLATE.xlsx
+cell:
+  "Bookings!A5": Concreter
+  "Bookings!B5": Hunter Concrete Pty Ltd
+  "Bookings!C5": 0433 333 333
+  "Bookings!D5": 10
+  "Bookings!E5": 15/10/2026
+  "Bookings!F5": 27/10/2026
+  "Bookings!H5": 3
+  "Bookings!J5": Booked
+  "Bookings!A6": Carpenter
+  "Bookings!B6": Smith Building (own crew)
+  "Bookings!D6": 0
+  "Bookings!F6": 03/11/2026
+  "Bookings!G6": 04/11/2026
+  "Bookings!H6": 15
+  "Bookings!J6": On Site

@@ -7,4 +7,6 @@
 * [Practical completion, defects and handover](practical_completion_and_defects.md) - What practical completion means, the defects liability period, statutory warranties, handover documents and the final account.
 * [Progress payments and claims](progress_payments.md) - How builders claim stage payments from clients, what a valid claim needs, retention, and how subcontractor claims differ.
 * [Site instructions and back charges](site_instructions_and_back_charges.md) - Recording instructions given on site, and charging subcontractors for rework, damage or clean-up, so neither turns into a dispute.
+* [Site management and records](site_management.md) - Running the site day to day so the paperwork backs you up: the site diary, client progress updates, materials, trade bookings and quality hold points.
 * [Variations](variations.md) - How a residential variation moves from request to price, approval, invoice and payment, and which templates cover each step.
+* [Work health and safety on site](work_health_and_safety.md) - The builder's core WHS duties on a residential site: high-risk construction work and SWMS, the site safety plan, inductions, toolbox talks, inspections, incidents and subcontractor compliance.

@@ -1,0 +1,19 @@
+# Example weekly progress update (fictional). Week number from:
+#   python3 tools/compute.py site_week --param start_date=03/02/2027 --param on_date=16/04/2027
+template: templates/word/Progress_Update_Email_TEMPLATE.docx
+set:
+  DATE: 16/04/2027
+  WEEK_NUMBER: "11"
+  NAME: Chris Smith, Site Supervisor
+cell:
+  "[Summarise the work completed this week": "Frame inspection passed on Tuesday. Roof trusses installed and braced. Window frames delivered and stored on site."
+  "[Outline the work planned for next week": "Roof sheeting and gutters (Newcastle Roofing, Mon to Wed). Window installation from Thursday. Electrical rough-in booked for the following week."
+  "[List any selections needed": "Please confirm the stacking door colour (Monument or Surfmist) by 23/04/2027 so it can be ordered without delaying lock-up."
+replace:
+  "[SELECT: Slab / Frame / Lock-Up / Fixing / PC]": "Frame"
+  "[__]% complete": "40% complete"
+  "[SELECT: Yes / Behind [X] days / Ahead [X] days]": "Behind 5 working days (rain in October, EOT DELAY-001 notified)"
+row:
+  "Weather Delays:": "0 days this period"
+  "Pending Variations:": "1 (VAR-002 stacking door upgrade, awaiting your approval)"
+  "Next Claim Expected:": "26/05/2027 (lock-up)"

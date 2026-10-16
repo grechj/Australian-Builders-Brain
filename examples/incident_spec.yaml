@@ -1,0 +1,21 @@
+# Example near miss report (fictional).
+template: templates/word/Incident_Near_Miss_Report_TEMPLATE.docx
+set:
+  TIME: 10:40 am
+  DD/MM/YYYY: 13/04/2027
+row:
+  "Location on Site:": "North side, below the roof line"
+tick:
+  - Near Miss
+  - Moderate
+  - Client notified
+cell:
+  "[Describe exactly what happened": "A bundle of roof battens slid off the scaffold platform during roof sheeting and fell about 3 m to the ground, landing about 2 m from a labourer moving materials. Nobody was hurt."
+  "[What was done immediately after": "Work stopped. The area below was barricaded as an exclusion zone, and the scaffold platform was checked."
+  "[What caused or contributed": "Battens were stacked on the platform without a toe board on that bay (it had been removed for loading and not refitted). There was no exclusion zone below active roof work."
+fill_table:
+  "Name":
+    - "Sam Taylor|Smith Building|Labourer|No injury"
+  "Action":
+    - "Refit the toe board; loading bay with gate|Scaffolder|14/04/2027"
+    - "Exclusion zone below all roof work, covered in a toolbox talk|Chris Smith|14/04/2027"

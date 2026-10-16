@@ -170,7 +170,10 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
             new_cells = []
             for tc in copy.findall(qn("w:tc")):
                 new_cells.append(_Cell(tc, anchor[0]._parent))
-            for cell, val in zip(new_cells, str(text).split("|")):
+            vals = str(text).split("|")
+            if len(vals) > len(new_cells):
+                unmatched.append(f"add_row: {spec} row has {len(vals)} values but {len(new_cells)} cells")
+            for cell, val in zip(new_cells, vals):
                 set_cell_text(cell, val)
 
     # Tables named by their header row: fill the rows under the header in
@@ -200,7 +203,10 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
                 tr = deepcopy(last)
                 last.addnext(tr)
             last = tr if i >= len(fillable) - 1 else last
-            for tc, val in zip(tr.findall(qn("w:tc")), str(text).split("|")):
+            tcs, vals = tr.findall(qn("w:tc")), str(text).split("|")
+            if len(vals) > len(tcs):
+                unmatched.append(f"fill_table: {header} row has {len(vals)} values but {len(tcs)} cells")
+            for tc, val in zip(tcs, vals):
                 set_cell_text(_Cell(tc, head[0]._parent), val)
         for tr in fillable[len(new_rows):]:
             if blank(tr):
@@ -234,7 +240,10 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
         if row is None:
             unmatched.append(f"row: {spec}")
             continue
-        for cell, val in zip(row[1:], text.split("|")):
+        vals = text.split("|")
+        if len(vals) > len(row) - 1:
+            unmatched.append(f"row: {spec} has {len(vals)} values but only {len(row) - 1} cells after the label")
+        for cell, val in zip(row[1:], vals):
             set_cell_text(cell, val)
 
     for option in ticks or []:
@@ -256,7 +265,7 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
     # "[VAR_NUMBER or N/A]"): anything in brackets with a lower-case letter.
     instructions = set()
     for p in iter_paragraphs(doc):
-        for m in re.finditer(r"\[[^\[\]]*[a-z][^\[\]]*\]?", p.text):
+        for m in re.finditer(r"\[[^\[\]]*[a-z][^\[\]]*\]?|\[_+\]", p.text):
             instructions.add(m.group(0)[:60])
     return {"filled": sorted(filled), "remaining": sorted(find_placeholders(doc)),
             "instructions_left": sorted(instructions), "unmatched": unmatched}

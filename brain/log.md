@@ -1,6 +1,8 @@
 # Directory Update Log
 
 ## 2026-10-16
+* **Creation**: Added [site management](/contracts/site_management.md), [work health and safety](/contracts/work_health_and_safety.md), the [quality hold points](/playbooks/quality_hold_points.md) and [site safety inspection](/playbooks/site_safety_inspection.md) playbooks, and the [site week](/computations/site_week.md) and [expiry status](/computations/expiry_status.md) computations.
+* **Update**: Site diary rain days no longer count a day twice when it rained morning and afternoon. Trade booking Expected Finish now works from the expected start until there is an actual start.
 * **Creation**: Added the [payment schedule](/computations/payment_schedule.md) computation, [contract and job setup](/contracts/contract_setup.md) and the [pre-construction playbook](/playbooks/pre_construction.md), which uses BYDA in place of the old Dial Before You Dig name.
 * **Creation**: Added the [estimate price](/computations/estimate_price.md) computation and [estimating and quoting](/contracts/estimating_and_quoting.md).
 * **Update**: Quote Acceptance Form now uses the client's phone and email (it printed the builder's). Estimate, quote converter and sensitivity workbooks now say "markup" where they calculate markup, and the sensitivity sheet shows the margin on price.
