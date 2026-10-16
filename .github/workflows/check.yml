@@ -17,3 +17,5 @@ jobs:
         run: python tools/test_price_list.py
       - name: Trade and location profiles
         run: python tools/test_profile.py
+      - name: Materials takeoff (hand-checked)
+        run: python tools/test_takeoff.py

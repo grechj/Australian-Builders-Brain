@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-17
+* **Update**: [Materials takeoff](/computations/materials_takeoff.md) now covers electrical rough-in (points to cable rolls, fittings and RCBOs), plumbing rough-in (fixtures to pipe, fittings and valves) and roofing (gable, hip or skillion; sheet or tile; with gutters and downpipes), with hand-checked tests.
 * **Creation**: Added profiles: 23 [trade profiles](/trades/index.md) (each trade's NCC scope, skills, takeoff jobs, typical materials and suppliers; `builder` sees everything) and 8 [state and territory pages](/states/index.md) with generated NCC variations and draft notes on rules, climate, materials and costs. `tools/profile.py` resolves a profile; the NCC lookup filters by trade and state; materials ROM takes a location loading.
 * **Update**: Materials pricing is now per user: each user keeps a personal price list (`tools/price_list.py`, strict size/grade/treatment matching), adds lookups for their own job to it, and can optionally use their own Bunnings API keys. No shared credentials, and no prices stored in the brain.
 * **Creation**: Added [materials estimating](/contracts/materials_estimating.md), the [materials takeoff](/computations/materials_takeoff.md) and [materials ROM](/computations/materials_rom.md) computations, the [Materials Estimate](/documents/materials_estimate.md) workbook, and a Bunnings API client (`tools/bunnings.py`, official APIs only).

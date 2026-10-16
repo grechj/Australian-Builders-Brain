@@ -37,7 +37,8 @@ skills:
 - safety
 - financials
 - ncc
-takeoff_jobs: []
+takeoff_jobs:
+- electrical_rough_in
 generated:
   by: claude/opus-5.5
   at: '2026-10-17T00:00:00Z'
@@ -71,7 +72,7 @@ State and territory variations to these parts are shown for the user's state onl
 
 # Materials
 
-Takeoff jobs: none yet; use the typical materials below as the checklist, with quantities from the drawings ([materials takeoff](/computations/materials_takeoff.md)).
+Takeoff jobs: `electrical_rough_in` ([materials takeoff](/computations/materials_takeoff.md)).
 
 Typical materials:
 

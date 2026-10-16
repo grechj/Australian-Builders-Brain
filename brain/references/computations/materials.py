@@ -279,8 +279,183 @@ def _painting(t: Takeoff) -> None:
     t.add("sundries", "Painting sundries", "roller covers, brushes, tape, drop sheets, filler", 1, "lot", "allowance", "painting sundries")
 
 
+
+def _electrical(t: Takeoff) -> None:
+    gpo = int(t.get("power_points", "0", "double power points"))
+    lights = int(t.get("light_points", "0", "light points (downlights, oyster lights, pendants)"))
+    switches = int(t.get("switch_locations", str(max(1, _ceil(Decimal(lights) / 3))) if lights else "0", "1 switch location per 3 lights"))
+    smoke = int(t.get("smoke_alarms", "0", "hardwired, interconnected"))
+    data = int(t.get("data_points", "0"))
+    fans = int(t.get("fan_points", "0", "ceiling or exhaust fan points"))
+    if gpo + lights + smoke + data + fans == 0:
+        raise ValueError("electrical_rough_in: give at least one of power_points, light_points, smoke_alarms, data_points, fan_points")
+    p_circ = int(t.get("power_circuits", str(max(1, _ceil(Decimal(gpo) / 8))) if gpo else "0", "about 8 double power points per circuit; the electrician designs the circuits"))
+    l_circ = int(t.get("lighting_circuits", str(max(1, _ceil(Decimal(lights + fans) / 15))) if lights + fans else "0", "about 15 lights per circuit"))
+    run_p = t.get("power_run_m", "7", "average cable between power points")
+    run_l = t.get("light_run_m", "5", "average cable between light points")
+    drop = t.get("switch_drop_m", "4", "ceiling to switch")
+    home = t.get("board_distance_m", "15", "home run from switchboard to the first point of each circuit")
+    run_d = t.get("data_run_m", "25", "average data run back to the hub")
+    run_s = t.get("smoke_run_m", "6", "average interconnect run between alarms")
+    waste = t.get("waste_pct", "10", "offcuts and tails")
+    roll = t.get("cable_roll_m", "100", "TPS sold in 100 m rolls")
+    pcable = t.text("power_cable", "2.5 mm² twin and earth TPS (cable size by the electrician to AS/NZS 3000 and 3008)")
+    lcable = t.text("lighting_cable", "1.5 mm² twin and earth TPS")
+    f = 1 + waste / 100
+    if gpo:
+        metres = (gpo * run_p + p_circ * home) * f
+        t.add("power_cable", "Power circuit cable", pcable, _ceil(metres / roll), f"rolls of {roll} m",
+              f"({gpo} points x {run_p} m + {p_circ} circuits x {home} m home run) + {waste}% = {_money(metres)} m", "TPS cable 2.5mm 100m")
+        t.add("gpo", "Double power points", "to suit, with mounting brackets", gpo, "each", "as counted", "double power point")
+    if lights + fans:
+        metres = ((lights + fans) * run_l + switches * drop + l_circ * home) * f
+        t.add("lighting_cable", "Lighting circuit cable", lcable, _ceil(metres / roll), f"rolls of {roll} m",
+              f"({lights + fans} points x {run_l} m + {switches} switch drops x {drop} m + {l_circ} circuits x {home} m) + {waste}% = {_money(metres)} m", "TPS cable 1.5mm 100m")
+    if lights:
+        t.add("lights", "Light fittings", t.text("light_fitting", "LED downlight, IC-4 rated where insulation will abut"), lights, "each", "as counted", "LED downlight IC4")
+        t.add("switches", "Switch mechanisms and plates", "gangs to suit each location", switches, "locations", "as counted or 1 per 3 lights", "light switch plate")
+        t.add("plugs", "Plug bases or connectors for lights", "to suit fittings", lights, "each", "1 per light", "plug base 3 pin")
+    if fans:
+        t.add("fans", "Fan points", "fan and controller (supply or fit-off)", fans, "each", "as counted", "exhaust fan")
+    if smoke:
+        metres = smoke * run_s * f
+        t.add("smoke_alarms", "Smoke alarms", "240 V, interconnected, to AS 3786", smoke, "each", "as counted; locations per NCC Housing Provisions Part 9.5", "smoke alarm 240v interconnected")
+        t.add("smoke_cable", "Smoke alarm interconnect cable", "to suit the alarm (or wireless interconnect)", _ceil(metres), "metres",
+              f"{smoke} alarms x {run_s} m + {waste}%", "TPS cable 1.5mm 3 core")
+    if data:
+        metres = data * run_d * f
+        t.add("data_cable", "Data cable", "Cat 6, 305 m box", _ceil(metres / 305), "boxes of 305 m", f"{data} points x {run_d} m + {waste}% = {_money(metres)} m", "cat6 cable 305m")
+        t.add("data_outlets", "Data outlets and plates", "Cat 6 RJ45", data, "each", "as counted", "cat6 wall plate")
+    smoke_circ = int(t.get("smoke_alarm_circuits", "0", "alarms usually go on a lighting circuit; set 1 for a dedicated circuit"))
+    circuits = p_circ + l_circ + smoke_circ
+    t.add("rcbos", "RCBOs (combined RCD and circuit breaker)", "one per final subcircuit, rating by the electrician", circuits, "each",
+          f"{p_circ} power + {l_circ} lighting" + (f" + {smoke_circ} smoke alarm" if smoke_circ else "") + " circuits", "RCBO")
+    points = gpo + lights + switches + smoke + data + fans
+    t.add("sundries", "Brackets, clips, conduit and connectors", "allowance", points, "points", "1 allowance per point", "electrical sundries")
+    t.notes.append("Quantities only. Circuit design, cable sizing, switchboard capacity and compliance are the licensed electrician's call (AS/NZS 3000 and state electrical safety law). Check whether the switchboard needs an upgrade.")
+
+
+def _plumbing(t: Takeoff) -> None:
+    kinds = {  # fixture: (hot outlets, cold outlets, drain size mm)
+        "toilets": (0, 1, 100), "basins": (1, 1, 50), "showers": (1, 1, 50), "baths": (1, 1, 50),
+        "kitchen_sinks": (1, 1, 50), "laundry_tubs": (1, 1, 50), "washing_machines": (1, 1, 50),
+        "dishwashers": (0, 1, 50), "external_taps": (0, 1, 0)}
+    counts = {k: int(t.get(k, "0")) for k in kinds}
+    if sum(counts.values()) == 0:
+        raise ValueError("plumbing_rough_in: give a count for at least one of " + ", ".join(kinds))
+    hot = sum(counts[k] * kinds[k][0] for k in kinds)
+    cold = sum(counts[k] * kinds[k][1] for k in kinds)
+    run = t.get("water_run_m", "6", "average branch per outlet")
+    main_c = t.get("cold_main_m", "15", "cold main from the meter through the house")
+    main_h = t.get("hot_main_m", "10" if hot else "0", "hot flow from the water heater")
+    drain_run = t.get("drain_branch_m", "3", "average fixture branch to the drain")
+    drain_main = t.get("drain_main_m", "15", "100 mm drain to the sewer connection")
+    fittings = t.get("fittings_per_outlet", "3", "wall elbow plus joiners and tees")
+    waste = t.get("waste_pct", "10")
+    coil = t.get("water_coil_m", "50")
+    pipe = t.text("water_pipe", "16 mm PEX-b (or copper, to suit)")
+    f = 1 + waste / 100
+    water_m = ((hot + cold) * run + main_c + main_h) * f
+    t.add("water_pipe", "Water pipe", pipe, _ceil(water_m / coil), f"coils of {coil} m",
+          f"({hot} hot + {cold} cold outlets) x {run} m + mains {main_c + main_h} m + {waste}% = {_money(water_m)} m", "PEX pipe 16mm")
+    t.add("water_fittings", "Water fittings", "wall elbows, tees, joiners to suit the pipe system", _ceil((hot + cold) * fittings), "each",
+          f"{hot + cold} outlets x {fittings}", "PEX fittings 16mm")
+    if hot:
+        t.add("lagging", "Pipe lagging", "for hot water lines", _ceil((hot * run + main_h) * f), "metres", "hot pipe length + waste", "pipe lagging")
+        t.add("tempering_valve", "Tempering valve", "to AS/NZS 3500.4 for personal hygiene outlets", 1, "each",
+              "1 per water heater serving bathrooms (confirm with the plumber)", "tempering valve")
+    d100 = counts["toilets"] * drain_run + drain_main
+    d50 = sum(counts[k] * drain_run for k in kinds if kinds[k][2] == 50)
+    if d100:
+        t.add("drain_100", "Drainage pipe 100 mm", "PVC DWV, 6 m lengths", _ceil(d100 * f / 6), "lengths of 6 m",
+              f"{counts['toilets']} toilets x {drain_run} m + {drain_main} m main + {waste}%", "PVC DWV pipe 100mm 6m")
+    if d50:
+        t.add("drain_50", "Drainage pipe 50 mm", "PVC DWV, 6 m lengths", _ceil(d50 * f / 6), "lengths of 6 m",
+              f"{sum(counts[k] for k in kinds if kinds[k][2] == 50)} fixtures x {drain_run} m + {waste}%", "PVC DWV pipe 50mm 6m")
+    drained = sum(v for k, v in counts.items() if kinds[k][2])
+    if drained:
+        t.add("drain_fittings", "Drainage fittings", "junctions, bends, traps and floor wastes to suit", drained * 3, "each", f"{drained} fixtures x 3", "PVC DWV fittings")
+        t.add("solvent", "PVC priming fluid and solvent cement", "500 mL each", max(1, _ceil(Decimal(drained) / 8)), "sets", "1 set per 8 fixtures", "PVC solvent cement priming fluid")
+    t.add("valves", "Isolation valves", "one per fixture connection", hot + cold, "each", "1 per outlet", "isolation valve")
+    t.notes.append("Rough-in quantities only: fixtures, tapware and the water heater are priced separately. Pipe sizing, gradients, venting and compliance are the licensed plumber's call (AS/NZS 3500). The sewer connection and any stormwater are extra.")
+
+
+def _roofing(t: Takeoff) -> None:
+    L, W = t.get("building_length_m"), t.get("building_width_m")
+    kind = t.text("roof_type", "gable")
+    if kind not in ("gable", "hip", "skillion"):
+        raise ValueError("roofing: roof_type must be gable, hip or skillion")
+    pitch = t.get("pitch_deg", "22.5" if kind != "skillion" else "5")
+    eave = t.get("eave_overhang_m", "0.45")
+    gable_o = t.get("gable_overhang_m", "0.3" if kind != "hip" else "0", "barge overhang at the gable ends")
+    material = t.text("material", "sheet")
+    waste = t.get("waste_pct", "10")
+    rad = math.radians(float(pitch))
+    cos, tan = Decimal(str(math.cos(rad))), Decimal(str(math.tan(rad)))
+    length = L + 2 * gable_o
+    width = W + 2 * eave
+    plan = length * width
+    area = plan / cos
+    f = 1 + waste / 100
+    if kind == "skillion":
+        slope = width / cos
+        sides, eaves_len, ridge = 1, length, Decimal("0")
+    else:
+        slope = (width / 2) / cos
+        sides = 2
+        eaves_len = 2 * length if kind == "gable" else 2 * (length + width)
+        ridge = length if kind == "gable" else max(Decimal("0"), length - width)
+    t.add("roof_area", "Roof area (for reference)", f"{kind}, {pitch}° pitch", _money(area), "m²",
+          f"plan {_money(length)} x {_money(width)} m (with overhangs) / cos {pitch}°", "roof")
+    if material == "sheet":
+        cover = t.get("sheet_cover_m", "0.762", "corrugated profile; trapezoidal is about 0.700")
+        batten_sp = t.get("batten_spacing_m", "0.9", "check the manufacturer's span tables and wind classification")
+        screws_per = t.get("screws_per_sheet_per_batten", "3", "depends on profile and wind region")
+        if kind == "hip":
+            sheet_m = area / cover * f
+            sheets = _ceil(sheet_m / slope)
+            basis = f"{_money(area)} m² / {cover} m cover + {waste}% (hip ends cut from full sheets)"
+        else:
+            sheets = sides * _ceil(length / cover)
+            sheet_m = sheets * slope * f
+            basis = f"{sides} side(s) x ceil({_money(length)} m / {cover} m) = {sheets} sheets x {_money(slope)} m + {waste}%"
+        t.add("sheets", "Roof sheeting", t.text("sheet", "Colorbond corrugated, 0.42 BMT"), _money(sheet_m), "lineal metres (cut to length)", basis, "roof sheet corrugated colorbond")
+        rows = _ceil(slope / batten_sp) + 1
+        batten_m = rows * sides * length * f if kind != "hip" else area / batten_sp * f
+        t.add("battens", "Roof battens", t.text("batten", "steel top-hat battens to suit the span"), _ceil(batten_m / Decimal("6")), "lengths of 6 m",
+              f"{rows} rows per side at {batten_sp} m x {sides} side(s) x {_money(length)} m + {waste}%", "roof batten top hat")
+        screws = _ceil(Decimal(sheets) * rows * screws_per * f)
+        t.add("screws", "Roofing screws", "class 3 or 4 to suit the environment", screws, "each", f"{sheets} sheets x {rows} battens x {screws_per} + {waste}%", "roofing screws")
+        cap_len = ridge + (4 * (((width / 2) ** 2 * 2 + ((width / 2) * tan) ** 2).sqrt()) if kind == "hip" else 0)
+        if cap_len:
+            t.add("capping", "Ridge and hip capping", "to match", _ceil(cap_len * f / Decimal("3")) if cap_len else 0, "lengths of 3 m",
+                  f"ridge {_money(ridge)} m" + (" + 4 hips" if kind == "hip" else "") + f" + {waste}% laps", "ridge capping colorbond")
+        if kind == "gable":
+            t.add("barge", "Barge flashing", "to match", _ceil(4 * slope * f / Decimal("3")), "lengths of 3 m", f"4 gable edges x {_money(slope)} m + {waste}%", "barge capping")
+    else:
+        per_m2 = t.get("tiles_per_m2", "10.5", "concrete tiles; check the tile")
+        batten_sp = t.get("batten_spacing_m", "0.33", "tile gauge")
+        t.add("tiles", "Roof tiles", t.text("tile", "concrete roof tile"), _ceil(area * per_m2 * f), "each", f"{_money(area)} m² x {per_m2} per m² + {waste}%", "concrete roof tile")
+        batten_m = area / batten_sp * f
+        t.add("battens", "Tile battens", "timber, to suit the span", _ceil(batten_m / Decimal("6")), "lengths of 6 m", f"{_money(area)} m² / {batten_sp} m gauge + {waste}%", "tile batten 6m")
+        cap_len = ridge + (4 * (((width / 2) ** 2 * 2 + ((width / 2) * tan) ** 2).sqrt()) if kind == "hip" else 0)
+        if cap_len:
+            t.add("ridge_tiles", "Ridge and hip tiles", "to match", _ceil(cap_len * 3 * f), "each", f"{_money(cap_len)} m x 3 per m + {waste}%", "ridge tile")
+    t.add("sarking", "Sarking or roof blanket", t.text("sarking", "foil-faced blanket or sarking to suit"), _money(area * Decimal("1.15")), "m²", f"{_money(area)} m² + 15% laps", "roof blanket sarking")
+    t.add("gutter", "Gutter", t.text("gutter", "quad or half-round, Colorbond"), _money(eaves_len * f), "lineal metres", f"eaves {_money(eaves_len)} m + {waste}%", "gutter colorbond")
+    dp_spacing = t.get("downpipe_spacing_m", "12", "rule of thumb; size and space downpipes to AS/NZS 3500.3 for the rainfall")
+    dp_h = t.get("downpipe_height_m", "2.7")
+    runs = 1 if kind == "skillion" else (2 if kind == "gable" else 4)
+    dps = max(runs, _ceil(eaves_len / dp_spacing))
+    t.add("downpipes", "Downpipes", "90 mm round or 100x50 rectangular, to match", _ceil(dps * dp_h / Decimal("3")), "lengths of 3 m",
+          f"{dps} downpipes (1 per {dp_spacing} m of gutter, at least 1 per gutter run) x {dp_h} m", "downpipe 90mm")
+    t.add("gutter_brackets", "Gutter brackets", "at about 1.2 m centres", _ceil(eaves_len / Decimal("1.2")) + runs, "each", f"{_money(eaves_len)} m / 1.2 m", "gutter bracket")
+    t.add("gutter_fittings", "Stop ends, outlets and corners", "to match", (2 * runs if kind != "hip" else 4) + dps, "each", "2 stop ends per run (corners on hips) + 1 outlet per downpipe", "gutter stop end")
+    t.notes.append("Fixing densities, batten spacing and product ratings depend on the site's wind classification (AS 4055) and the manufacturer. Cyclonic regions need cyclone-rated systems. Valleys, box gutters, flashings to walls and penetrations are measured from the drawings and added separately.")
+
 JOBS = {"timber_deck": _deck, "stud_wall": _stud_wall, "plasterboard": _plasterboard, "concrete_slab": _slab,
-        "paling_fence": _fence, "tiling": _tiling, "painting": _painting}
+        "paling_fence": _fence, "tiling": _tiling, "painting": _painting,
+        "electrical_rough_in": _electrical, "plumbing_rough_in": _plumbing, "roofing": _roofing}
 
 
 def materials_takeoff(job: dict) -> dict:

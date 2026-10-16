@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/materials.py
 entry_point: materials_rom
-computation_sha256: 080e3348b6045f79396620d58abde95cec6d7dd22436bf6f0fb35bf5f11fd31e
+computation_sha256: b4456331c0e09e517064fa29ec70801d162d197bf3df106ae407e750328a1a95
 parameters:
   - { name: lines, type: json, required: true }
   - { name: low_pct, type: decimal, required: false, default: 15 }

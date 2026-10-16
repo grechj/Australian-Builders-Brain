@@ -33,6 +33,9 @@ takeoff_jobs:
 - paling_fence
 - tiling
 - painting
+- electrical_rough_in
+- plumbing_rough_in
+- roofing
 generated:
   by: claude/opus-5.5
   at: '2026-10-17T00:00:00Z'
@@ -54,7 +57,7 @@ State and territory variations to these parts are shown for the user's state onl
 
 # Materials
 
-Takeoff jobs: `timber_deck`, `stud_wall`, `plasterboard`, `concrete_slab`, `paling_fence`, `tiling`, `painting` ([materials takeoff](/computations/materials_takeoff.md)).
+Takeoff jobs: `timber_deck`, `stud_wall`, `plasterboard`, `concrete_slab`, `paling_fence`, `tiling`, `painting`, `electrical_rough_in`, `plumbing_rough_in`, `roofing` ([materials takeoff](/computations/materials_takeoff.md)).
 
 Typical materials:
 

@@ -1,6 +1,6 @@
 ---
 name: materials
-description: Produce a materials list and a rough order of magnitude (ROM) materials price for a construction job, using Bunnings retail prices as a guide. Takes off quantities for decks, stud walls, plasterboard, concrete slabs and paths, paling fences, tiling and painting (or from a list), matches Bunnings products, prices them from the user's own price list and their Bunnings lookups (or the Bunnings API if they have their own keys), and fills the Materials Estimate workbook with the qualifications. Use when someone asks what materials they need, for a materials list or takeoff, how much timber, sheets, bags or paint to buy, what the materials will roughly cost, or for Bunnings prices for a job.
+description: Produce a materials list and a rough order of magnitude (ROM) materials price for a construction job, using Bunnings retail prices as a guide. Takes off quantities for decks, stud walls, plasterboard, concrete slabs and paths, paling fences, tiling, painting, electrical rough-in, plumbing rough-in and roofing (or from a list), matches Bunnings products, prices them from the user's own price list and their Bunnings lookups (or the Bunnings API if they have their own keys), and fills the Materials Estimate workbook with the qualifications. Use when someone asks what materials they need, for a materials list or takeoff, how much timber, sheets, bags or paint to buy, what the materials will roughly cost, or for Bunnings prices for a job.
 ---
 
 # Materials
