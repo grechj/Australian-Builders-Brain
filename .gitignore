@@ -10,3 +10,4 @@ my_project*.yaml
 .env
 *.env
 out/
+my_prices*.csv

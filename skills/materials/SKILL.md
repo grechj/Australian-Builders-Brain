@@ -1,6 +1,6 @@
 ---
 name: materials
-description: Produce a materials list and a rough order of magnitude (ROM) materials price for a construction job, using Bunnings retail prices as a guide. Takes off quantities for decks, stud walls, plasterboard, concrete slabs and paths, paling fences, tiling and painting (or from a list), matches Bunnings products, prices them through the official Bunnings API, and fills the Materials Estimate workbook with the qualifications. Use when someone asks what materials they need, for a materials list or takeoff, how much timber, sheets, bags or paint to buy, what the materials will roughly cost, or for Bunnings prices for a job.
+description: Produce a materials list and a rough order of magnitude (ROM) materials price for a construction job, using Bunnings retail prices as a guide. Takes off quantities for decks, stud walls, plasterboard, concrete slabs and paths, paling fences, tiling and painting (or from a list), matches Bunnings products, prices them from the user's own price list and their Bunnings lookups (or the Bunnings API if they have their own keys), and fills the Materials Estimate workbook with the qualifications. Use when someone asks what materials they need, for a materials list or takeoff, how much timber, sheets, bags or paint to buy, what the materials will roughly cost, or for Bunnings prices for a job.
 ---
 
 # Materials
@@ -16,9 +16,10 @@ from there.
 
 - Knowledge: `brain/contracts/materials_estimating.md` (read it first: price sources, Bunnings terms, qualifications)
 - Maths: `brain/computations/materials_takeoff.md`, `materials_rom.md`
-- Bunnings API client: `tools/bunnings.py`
+- Personal price list: `tools/price_list.py` (each user keeps their own, e.g. `my_prices.csv`)
+- Optional Bunnings API client: `tools/bunnings.py` (needs the user's own approved keys)
 - Template: `templates/excel/Materials_Estimate_TEMPLATE.xlsx`
-- Examples: `examples/deck_materials_lines.json`, `examples/materials_estimate_spec.yaml` (the prices in them are illustrative, not real)
+- Examples: `examples/price_list_example.csv`, `examples/deck_materials_lines.json`, `examples/materials_estimate_spec.yaml` (all prices in them are illustrative, not real)
 
 If `python3 -c "import docx, openpyxl, yaml"` fails, run
 `python3 -m pip install -r requirements.txt`.
@@ -49,46 +50,63 @@ Show the user the list, with each line's `basis` available, plus the
 `assumptions` and `notes` (ready-mix advice, approvals, waterproofing
 licensing). Let them adjust before pricing.
 
-## 3. Price it
+## 3. Price it (per user, no keys needed)
 
-Pick the price source with the user (see the brain page):
+Prices belong to the user: their own lookups, their trade prices, their
+date. Nothing is shared between users, and nothing goes in this repository.
 
-**A. Bunnings API** (when `BUNNINGS_CLIENT_ID` and `BUNNINGS_CLIENT_SECRET` are set; `python3 tools/bunnings.py check` confirms):
+**3a. Start from the user's price list.** Ask where it is (for example
+`my_prices.csv` in their job folder; `my_prices*.csv` is git-ignored). If
+they don't have one, create it: `python3 tools/price_list.py new my_prices.csv`.
+Then match it against the takeoff:
 
 ```bash
-python3 tools/bunnings.py stores "Newcastle" --json                 # find the store's location code
-python3 tools/bunnings.py search "<item search phrase>" --store <code> --limit 5 --json
-python3 tools/bunnings.py price <item numbers...> --store <code> --json
+python3 tools/price_list.py match out/takeoff_<element>.json --prices my_prices.csv --out out/materials_lines.json
 ```
 
-For each line, search with its `search` phrase and choose the result that
-matches the spec exactly: size, treatment class (H3 or H4), grade, length,
-pack size. If nothing matches, leave it unpriced and say why; don't
-substitute a different spec silently. Then price all the chosen item
-numbers in one call. Space out calls; on a rate-limit error, wait.
+A product only matches if every size, length, grade and treatment token
+agrees (140x45 vs 140x45, 3.6m vs 3.6m, H4 vs H4). Prices older than 90 days
+aren't used. Everything else is listed in `to_look_up`.
 
-**B. No API access.** Explain that Bunnings' API needs approved
-credentials (register at developer.sandbox.bunnings.com.au). Then, with the
-user's go-ahead, either they give you the shelf prices, or you open
-individual product pages for this job only (find them with a normal web
-search; never use bunnings.com.au/search, and never collect prices in
-bulk), recording each page's URL and the date. The site's terms allow
-personal use only.
+**3b. Look up the rest, for this user's job.** For each `to_look_up` line,
+ask the user how they want to price it:
 
-**C. Their own price list** or supplier quote.
+- **They tell you the price** (shelf price, trade account or quote), or
+- **With their go-ahead, you look it up for them.** Run a normal web search with the `suggested_search` (for example `site:bunnings.com.au 90x90 H4 treated pine 2.4m`), open the matching Bunnings product page (its address contains `_p`), and read the price on the page. Rules: only for this job's lines; one page at a time; never use bunnings.com.au/search or any automated bulk collection (the site's terms allow personal use only); if the page doesn't show a price for their area, ask the user.
+  - The page shows the product name, its item number (I/N, 7 digits) and the price for the item. Some timber also shows a per-metre price: use the item price, and check the length option matches.
+  - Until a store is chosen, Bunnings shows a default price that may differ from the user's local store. Record the supplier as "Bunnings (no store selected)", or ask for their store and note it.
 
-Build the lines file: for each item, `quantity` (from the takeoff),
-`pack_size` (how many takeoff units one priced item holds: a box of 500
-screws is 500, a 4 L tin is 4, a length priced each is 1),
-`unit_price_inc_gst`, `product` (name and item number), `source` (for
-example "Bunnings API, store 6401") and `priced_on`. Ready-mix concrete in
-m³ is not a Bunnings item: leave it unpriced and say to get a concrete
-supplier's price.
+Choose a product only if it matches the spec exactly. If nothing matches,
+leave the line unpriced and say why.
+
+Then save every price to **their** list, so the next job needs fewer lookups:
+
+```bash
+python3 tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each> \
+    --pack-size <takeoff units per item> --price <inc GST> --supplier "Bunnings <store>" \
+    --item-number <I/N if shown> --url <page> --checked-on <DD/MM/YYYY>
+```
+
+Re-run `match` until the remaining unpriced lines are the ones that should
+be (ready-mix concrete, items to quote separately).
+
+**3c. Optional: the Bunnings API.** Only if the user has their own approved
+Bunnings developer credentials in `BUNNINGS_CLIENT_ID` and
+`BUNNINGS_CLIENT_SECRET`. Credentials are personal: never ask for them in
+chat, write them to a file, or use anyone else's. `python3 tools/bunnings.py check`
+confirms them; then `search` and `price` (see the tool's help) replace the
+manual lookups, and results still go into their price list.
+
+**3d. Price the list:**
 
 ```bash
 python3 tools/compute.py materials_rom --param "lines=$(cat out/materials_lines.json)" > out/materials_rom.json
 python3 brain/references/attesters/check_receipt.py out/materials_rom.json
 ```
+
+`pack_size` turns takeoff units into what's sold (a box of 500 screws is
+500, a 4 L tin is 4). Check each matched product's pack size against its
+line before trusting the total.
 
 ## 4. The estimate
 

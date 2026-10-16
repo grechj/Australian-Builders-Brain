@@ -13,3 +13,5 @@ jobs:
         run: python tools/okf_lint.py
       - name: Fill every example template
         run: python tools/test_examples.py
+      - name: Price list matching
+        run: python tools/test_price_list.py

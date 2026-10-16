@@ -19,10 +19,9 @@ generated: { by: claude/opus-5.5, at: 2026-10-17T00:00:00Z }
 stale_after: 2027-04-17T00:00:00Z
 ---
 
-> **Draft.** The takeoff rules are estimating rules of thumb. The
-> Bunnings API client is built from the published specs and needs
-> Bunnings-approved credentials, which haven't been tested against the
-> live API yet.
+> **Draft.** The takeoff rules are estimating rules of thumb. The optional
+> Bunnings API client is built from the published specs and hasn't been
+> tested against the live API.
 
 A materials estimate answers two questions early: **what do I need to
 buy**, and **roughly what will it cost**. It is a rough order of magnitude
@@ -42,17 +41,18 @@ The takeoff never sizes structural members. Joists, bearers, posts, studs
 and lintels come from AS 1684 span tables, the supplier's span tables or the
 engineer. Ask the user for them, or mark them as assumed.
 
-# 2. Prices: Bunnings as the guide
+# 2. Prices: per user, Bunnings as the guide
 
 Bunnings is a convenient, widely recognised retail reference with prices
-for most common building materials. Three ways to get its prices, best first:
+for most common building materials. Pricing is done **by each user, for
+their own job**, so it needs no shared accounts or keys:
 
-1. **The official Bunnings APIs**[^bunnings_api] via `tools/bunnings.py`: search items by keyword at a store, then price them. Prices include GST. The user registers on the Bunnings developer portal, creates an app, and Bunnings approves access to the Query Item, Query Pricing and Query Location products (sandbox, then test, then live). Credentials go in the `BUNNINGS_CLIENT_ID` and `BUNNINGS_CLIENT_SECRET` environment variables, never in the repo.
-2. **The user's own lookups.** The Bunnings website terms allow use for your own personal purposes only,[^bunnings_terms] and its robots.txt disallows automated access to `/search` and `/api/`. So no scraping or bulk collection. With the user's go-ahead, an agent may open individual product pages for this one job (found through a normal web search) and read the shelf price, recording the URL and date. Or the user reads the prices out.
-3. **A price list or quote the user already has**: a trade account price list, or a supplier's quote.
+1. **The user's own price list** (`tools/price_list.py`): a CSV the user keeps (for example `my_prices.csv` in their job folder, git-ignored here) with product, unit, pack size, price inc GST, supplier, link and date checked. It grows with every job and can hold trade account prices that beat retail. Prices older than 90 days are re-checked.
+2. **Lookups for this job.** The user reads out shelf prices, or with their go-ahead an agent opens individual Bunnings product pages for this job's lines (found through a normal web search) and reads the price. Each price is saved to the user's list with its link and date. The Bunnings website terms allow use for your own personal purposes only,[^bunnings_terms] and its robots.txt disallows automated access to `/search` and `/api/`, so there is no scraping and no bulk collection.
+3. **Optional: the official Bunnings APIs**[^bunnings_api] via `tools/bunnings.py`, for users with their own Bunnings-approved developer credentials in the `BUNNINGS_CLIENT_ID` and `BUNNINGS_CLIENT_SECRET` environment variables. Credentials are personal: they are never shared, written to files or committed.
 
-Don't commit Bunnings prices to this repository. Prices are for the user's
-job, dated, and kept with the job's files.
+Never commit anyone's prices to this repository. Prices are for the user's
+job, dated, and kept with the user.
 
 ## Matching products
 

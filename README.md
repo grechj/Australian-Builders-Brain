@@ -71,24 +71,17 @@ documents quickly:
 - **Use any format.** Each template's page in [`brain/documents/`](brain/documents/index.md) has a **Structure** outline: every section, field, table and prompt in order. Claude can write the document from it as an email, a PDF or anything else, without opening the template.
 - **The PDF checklists and handouts are built from brain pages** (`tools/build_pdfs.py`). Edit the page, rebuild, and the PDF follows.
 
-## Bunnings prices (materials skill)
+## Pricing materials (materials skill)
 
-The `materials` skill can price a takeoff from Bunnings through the
-[official Bunnings APIs](https://developer.live.bunnings.com.au/explore).
-Register on the developer portal, create an app, get Bunnings' approval for
-the Query Item, Query Pricing and Query Location products, then:
+Each user prices their own job; no accounts or keys are needed:
 
-```bash
-export BUNNINGS_CLIENT_ID=your_key BUNNINGS_CLIENT_SECRET=your_secret
-```
-
-```bash
-python3 tools/bunnings.py check
-```
+- Keep your own price list (`python3 tools/price_list.py new my_prices.csv`). It is matched to each takeoff, only on an exact size, length, grade and treatment.
+- For anything missing, give Claude the shelf price, or let it look up the Bunnings product page for that item. Each price is saved to your list with its link and date, so the next job needs fewer lookups.
+- If you have your own approved [Bunnings API](https://developer.live.bunnings.com.au/explore) credentials, set `BUNNINGS_CLIENT_ID` and `BUNNINGS_CLIENT_SECRET` and the skill uses them. They stay on your machine.
 
 Bunnings prices are a retail guide only; specialist suppliers often price
-better. The tool uses only the API: the Bunnings website's terms allow
-personal use only, so the brain never scrapes it.
+better. The brain never scrapes the Bunnings website (its terms allow
+personal use only) and never stores anyone's prices.
 
 ## How it stays trustworthy
 
@@ -117,7 +110,7 @@ personal use only, so the brain never scrapes it.
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
-| `materials` | materials list and rough order of magnitude price for common jobs, using Bunnings retail prices (via the official API) as a guide | **working** (API client untested against live) |
+| `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
 | `ncc` | NCC 2025 lookups with clause citations and state variations (1,652 clauses, all five volumes) | **working** |
 
 Knowledge work still to do: load NCC 2022 for jobs lodged under it, verify and
