@@ -1,0 +1,14 @@
+# Example values for a Notice of Breach (fictional).
+template: templates/word/Breach_Notice_TEMPLATE.docx
+set:
+  DATE: 13/11/2026
+  CONTRACT_CLAUSE: Clause 26
+  NUMBER: "10"
+  DD/MM/YYYY: 27/11/2026
+replace:
+  "[SELECT: Hand / Registered post / Email, as the contract requires]": "Registered post and email"
+  "[SELECT: working days / days]": "working days"
+  "[SELECT: terminate the contract / suspend work / terminate the contract or suspend work]": "terminate the contract"
+cell:
+  "[Describe each breach precisely": "Failure to pay a progress claim by its due date (clause 9). Progress claim 3, invoice INV-003, issued 16/10/2026 for the frame stage, was due on 30/10/2026 for $100,696.00 (incl. GST). It has not been paid, and no payment schedule or reason for non-payment has been received."
+  "[State exactly what must be done": "Pay $100,696.00 (incl. GST) into the account shown on invoice INV-003, quoting INV-003."

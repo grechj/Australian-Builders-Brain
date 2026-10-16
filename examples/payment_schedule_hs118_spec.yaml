@@ -1,0 +1,22 @@
+# Example values for a Payment Schedule answering a subcontractor's payment claim (fictional).
+template: templates/word/Payment_Schedule_TEMPLATE.docx
+# GST from: python3 tools/compute.py gst --param amount_ex_gst=11200
+set:
+  DATE: 20/10/2026
+  CLAIM_REF: HS-118
+  SUBBIE_NAME: Hunter Sparks Pty Ltd
+  SUBBIE_ABN: 98 765 432 109
+  DD/MM/YYYY: 13/10/2026          # the date the claim was received
+replace:
+  "The scheduled amount will be paid by [DD/MM/YYYY].": "The scheduled amount will be paid by 10/11/2026."
+fill_table:
+  "Item":
+    - "Rough-in, ground floor|$9,800.00|$8,600.00|$1,200.00|Not complete: see reason 1"
+    - "Switchboard supply|$2,600.00|$2,600.00|$0.00|"
+row:
+  "Total Claimed (excl. GST)": "$12,400.00"
+  "Total Scheduled (excl. GST)": "$11,200.00"
+  "GST (10%) on Scheduled Amount": "$1,120.00"
+  "SCHEDULED AMOUNT (incl. GST)": "$12,320.00"
+cell:
+  "[Set out each reason for withholding": "1. Rough-in, ground floor: the claim is for 100% of this item ($9,800.00). At the pre-plaster inspection on 14/10/2026 the kitchen and laundry circuits were not roughed in, about 12% of the item by the subcontract's schedule of rates. $1,200.00 is withheld until that work is complete; it can be claimed in the next payment claim.\n2. No other amounts are withheld."

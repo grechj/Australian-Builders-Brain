@@ -3,6 +3,14 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.7.0 (2026-10-17)
+
+- 11 new templates (64 in all): Payment Claim and Payment Schedule under the security of payment acts, a trade Tax Invoice, Trade Quote, Request for Information, Meeting Minutes, Suspension, Breach and Termination notices, a Construction Program (linked working-day dates and a bar chart) and Timesheets and Day Work Dockets.
+- New brain page `contracts/security_of_payment.md`: each state's Act, home owner coverage, claim wording and payment schedule deadlines (draft, with sources). Corrects the progress payments page: NSW and WA do cover home owners.
+- New fields `[SOPA_ACT]`, `[CLAIM_REF]`, `[RFI_NUMBER]`, `[MEETING_NUMBER]`; `sopa_act` in the project file.
+- The claims, notices, site and estimating skills use the new templates; 11 new examples (42 in all).
+- `tools/build_templates.py` builds the new templates in the pack's house style; the fill tool stores HH:MM as an Excel time.
+
 ## 0.6.1 (2026-10-17)
 
 - Skills work when installed as a plugin: they find the brain at the plugin's folder, run from the user's own project folder, and never write into the plugin.

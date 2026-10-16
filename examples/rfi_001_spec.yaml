@@ -1,0 +1,20 @@
+# Example values for a Request for Information (fictional).
+template: templates/word/RFI_TEMPLATE.docx
+set:
+  RFI_NUMBER: RFI-001
+  DATE: 16/10/2026
+  NAME: Chris Smith, Site Supervisor
+replace:
+  "[SELECT: Architect / Engineer / Client / Certifier / Supplier]": "Engineer"
+row:
+  "To:": "Pat Nguyen, Hunter Structural|Response Needed By:|21/10/2026"
+cell:
+  "[State the question clearly": "Drawing S-03 rev C shows the new beam B2 over the family room opening as a 360 x 63 LVL. The existing ceiling joists found on site run parallel to the opening, not across it as drawn, so B2 picks up no ceiling load but the roof strut above it lands 400 mm off the beam's centreline. Please confirm the beam size and the strut detail for the actual framing."
+  "[If you have a suggested answer": "Keep the 360 x 63 LVL and add a 90 x 45 strutting beam under the strut, bearing on B2 within 100 mm of its centreline."
+  "[Response from the designer": "Response pending."
+fill_table:
+  "Drawing / Document":
+    - "S-03 Structural framing plan|C|Beam B2"
+    - "A-11 Section A|B|Roof framing"
+tick:
+  - Delay to the program

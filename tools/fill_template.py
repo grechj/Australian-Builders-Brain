@@ -16,7 +16,8 @@ Word templates take four kinds of value, from the command line or a --spec file:
            next cells, split on |. #2 picks the second matching row.
 
 For Excel templates, `cell` keys are cell addresses and values go into input
-cells only: --cell "Claims!C6=>100%" (a trailing % is stored as a fraction).
+cells only: --cell "Claims!C6=>100%" (a trailing % is stored as a fraction,
+DD/MM/YYYY as a date and HH:MM as a time).
 
 Two more keys work in a --spec file only (Word):
 
@@ -278,13 +279,18 @@ def fill_docx(src: Path, out: Path, values: dict[str, str], replaces: dict[str, 
 
 
 def excel_value(cell, text: str) -> None:
-    """Write text into a cell as a date, percentage, number or text, in that order."""
-    from datetime import datetime
+    """Write text into a cell as a date, time, percentage, number or text, in that order."""
+    from datetime import datetime, time
 
     text = str(text).strip()
     if re.fullmatch(r"\d{2}/\d{2}/\d{4}", text):
         cell.value = datetime.strptime(text, "%d/%m/%Y")
         cell.number_format = "DD/MM/YYYY"
+        return
+    if re.fullmatch(r"\d{1,2}:\d{2}", text):
+        hours, minutes = map(int, text.split(":"))
+        cell.value = time(hours, minutes)
+        cell.number_format = "hh:mm"
         return
     number = text.replace(",", "").replace("$", "")
     if text.endswith("%"):

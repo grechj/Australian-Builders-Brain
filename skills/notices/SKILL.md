@@ -1,6 +1,6 @@
 ---
 name: notices
-description: Write formal construction notices for Australian builders. Produces Delay Notification Letters (extension of time claims), Site Instruction Forms and Back Charge Notices to subcontractors as filled Word documents, with revised completion dates and costs calculated. Use when someone mentions a delay, rain days, an EOT or extension of time, pushing out the completion date, instructing a trade, a site instruction, a subbie who damaged something or left a mess, a back charge, or deducting from a subbie's payment.
+description: Write formal construction notices for Australian builders. Produces Delay Notification Letters (extension of time claims), Site Instruction Forms, Back Charge Notices to subcontractors, and Suspension, Breach and Termination notices for non-payment or default, as filled Word documents, with revised completion dates and costs calculated. Use when someone mentions a delay, rain days, an EOT or extension of time, pushing out the completion date, instructing a trade, a site instruction, a subbie who damaged something or left a mess, a back charge, or deducting from a subbie's payment.
 ---
 
 # Notices
@@ -23,7 +23,7 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/extension_of_time.md`, `brain/contracts/site_instructions_and_back_charges.md`, `brain/contracts/hia_mba_clause_map.md` (unverified)
 - Maths: `brain/computations/add_days.md` (dates), `brain/computations/variation_price.md` (back charge costs)
-- Templates: `templates/word/Delay_Notification_Letter_TEMPLATE.docx`, `Site_Instruction_Form_TEMPLATE.docx`, `Back_Charge_Notice_TEMPLATE.docx`
+- Templates: `templates/word/Delay_Notification_Letter_TEMPLATE.docx`, `Site_Instruction_Form_TEMPLATE.docx`, `Back_Charge_Notice_TEMPLATE.docx`, `Suspension_Notice_TEMPLATE.docx`, `Breach_Notice_TEMPLATE.docx`, `Termination_Notice_TEMPLATE.docx`
 - Examples: `examples/delay_001_spec.yaml`, `examples/site_instruction_001_spec.yaml`, `examples/back_charge_001_spec.yaml`
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
@@ -53,6 +53,8 @@ and read the state page for local differences.
 | Rain / council hold-up / waiting on the client / we're going to be late | Delay Notification Letter | Client |
 | Tell the concreter to... / the engineer changed... / I told the sparky to... | Site Instruction | Trade (or client) |
 | The subbie wrecked / didn't clean up / did it wrong and I fixed it | Back Charge Notice | Subcontractor |
+| They haven't paid, I'm stopping work | Suspension Notice | Client (or builder, for a trade) |
+| They're in breach / I want to get out of this job | Breach Notice, then (only if not remedied) Termination Notice | The other party |
 
 One event can need more than one: an engineer's change might mean a site
 instruction to the trade, a variation to the client and a delay notice.
@@ -129,6 +131,21 @@ Remind the user to get the receiver's signature.
    Use the admin margin instead of 0 only if the subcontract allows one.
 3. Fill it following `examples/back_charge_001_spec.yaml`: the subbie's details, `tick` the reason, the description (location, what went wrong, what was done to fix it, earlier warnings with dates), the four cost `row`s, and AMOUNT, AMOUNT_GST and AMOUNT_TOTAL from the receipt's `fields`.
 4. Tell the user: attach photos and invoices. Record the deduction in the Subbie Payment Schedule. If the subbie's claim falls under security-of-payment law, the withheld amount and the reasons must be in the payment schedule sent to them on time (see the claims skill).
+
+## Suspension, breach and termination
+
+These are the most dangerous documents in the brain: a builder who suspends
+or terminates without the right to can end up in breach themselves. Always:
+
+1. Read the contract's suspension, default and termination clauses (`brain/contracts/hia_mba_clause_map.md`, unverified, or the user's contract) and, for non-payment, `brain/contracts/security_of_payment.md`. Find the notice period, whether it is business, working or calendar days, the required wording and how the notice must be served.
+2. Check the money is really overdue: the claim, its due date and whether a payment schedule disputed it (Payment Tracking Register).
+3. Tell the user plainly to get legal advice before sending, and that termination affects home warranty insurance.
+
+Then fill:
+
+- **Suspension Notice** (`examples/suspension_notice_spec.yaml`): `set` INVOICE_NUMBER, CONTRACT_CLAUSE and NUMBER (the notice period), `row` "[INVOICE_NUMBER]" for the dates and amount, `replace` the basis and the suspension date. Work out the date with `compute.py add_days`.
+- **Breach Notice** (`examples/breach_notice_spec.yaml`): the breach in detail (clause, what was required, what didn't happen, dates and amounts), exactly what must be done to remedy it, and the remedy period from the contract.
+- **Termination Notice** (`examples/termination_notice_spec.yaml`): only after the breach notice's period has passed unremedied. The breach notice's date goes in `[DD/MM/YYYY]`; amounts claimed come from the claims and the contract.
 
 ## For every notice
 

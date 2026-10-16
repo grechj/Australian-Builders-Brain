@@ -1,0 +1,28 @@
+# Example values for a Payment Claim under the NSW security of payment act (fictional).
+# The builder claims stage 3 from an owner occupier, which NSW covers.
+template: templates/word/Payment_Claim_TEMPLATE.docx
+# Money comes from the same progress_claim receipt as claim_003_spec.yaml:
+#   python3 tools/compute.py progress_claim --param contract_sum_ex_gst=440909.09 --param 'stages=[...]'
+set:
+  CLAIM_NUMBER: "3"
+  DATE: 16/10/2026
+fill_table:
+  "Item":
+    - "1|Deposit (5%)|$22,045.45|$22,045.45|$0.00"
+    - "2|Base / Slab (15%)|$66,136.36|$66,136.36|$0.00"
+    - "3|Frame (20%): frame complete, frame inspection passed 14/10/2026|$88,181.82|$88,181.82|$88,181.82"
+    - "4|Lock-Up (25%)|$110,227.27|$0.00|$0.00"
+    - "5|Fixing (20%)|$88,181.82|$0.00|$0.00"
+    - "6|Practical Completion (15%)|$66,136.37|$0.00|$0.00"
+    - "VAR-001|Approved variation: additional power points|$3,360.00|$3,360.00|$3,360.00"
+row:
+  "Work Up To:": "16/10/2026|Payment Due:|30/10/2026"
+  "Total Completed to Date (excl. GST)": "$179,723.63"
+  "Less: Previously Claimed": "$88,181.81"
+  "Less: Retention": "$0.00"
+  "Amount Claimed This Claim (excl. GST)": "$91,541.82"
+  "GST (10%)": "$9,154.18"
+  "AMOUNT CLAIMED (incl. GST)": "$100,696.00"
+replace:
+  "[SELECT: If you do not intend to pay this claim in full, you must provide a payment schedule stating the amount you propose to pay and your reasons for paying less, within the time set by the security of payment act or the contract, whichever is earlier. / Delete this paragraph if your state's notice to a home owner is attached instead.]": "If you do not intend to pay this claim in full, you must provide a payment schedule stating the amount you propose to pay and your reasons for paying less, within 10 business days of receiving this claim or any earlier time the contract sets."
+  "[SELECT: progress photos / site diary extracts / signed variations / inspection certificates / supporting statement (NSW head contractors)]": "progress photos, frame inspection certificate, signed VAR-001, supporting statement for owner-occupier contract"

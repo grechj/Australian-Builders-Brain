@@ -1,0 +1,20 @@
+# Example values for a trade's Tax Invoice (fictional).
+template: templates/word/Tax_Invoice_TEMPLATE.docx
+# GST from: python3 tools/compute.py gst --param amount_ex_gst=2140
+set:
+  INVOICE_NUMBER: INV-041
+  DATE: 16/10/2026
+  DD/MM/YYYY: 30/10/2026
+  QUOTE_NUMBER: Q-017
+fill_table:
+  "Description":
+    - "Supply and install 6 double power points, kitchen and family|6|ea|$145.00|$870.00"
+    - "Supply and install LED downlights, family room|10|ea|$95.00|$950.00"
+    - "Test and tag, certificate of compliance|1|item|$320.00|$320.00"
+row:
+  "Subtotal (excl. GST)": "$2,140.00"
+  "GST (10%)": "$214.00"
+  "TOTAL (incl. GST)": "$2,354.00"
+replace:
+  "[SELECT: Payment terms: 7 / 14 / 30 days from the invoice date. / Payment is due as set out in our agreement.]": "Payment terms: 14 days from the invoice date."
+  "[SELECT: This is a payment claim made under the security of payment act (name the Act). / Delete this line if you are not claiming under the security of payment act.]": "This is a payment claim made under the Building and Construction Industry Security of Payment Act 1999 (NSW)."

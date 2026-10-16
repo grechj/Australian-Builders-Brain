@@ -1,6 +1,6 @@
 ---
 name: claims
-description: Prepare progress claims and track payments for Australian builders and trades. Produces the Progress Claim Invoice (tax invoice) and Progress Claim Calculator, works out retention, assembles the claim support pack, and keeps the Payment Tracking Register, Subbie Payment Schedule and Retention Release Tracker up to date. Use when someone mentions a progress claim, stage payment, invoicing the client, frame or lock-up claim, deposit invoice, retention, a client not paying, or paying or receiving subcontractor claims.
+description: Prepare progress claims, security of payment claims and invoices, and track payments, for Australian builders and trades. Produces the Progress Claim Invoice and Progress Claim Calculator, SOPA Payment Claims and Payment Schedules, a simple trade Tax Invoice, works out retention, assembles the claim support pack, and keeps the Payment Tracking Register, Subbie Payment Schedule and Retention Release Tracker up to date. Use when someone mentions a progress claim, stage payment, invoicing the client, frame or lock-up claim, deposit invoice, retention, a client not paying, or paying or receiving subcontractor claims.
 ---
 
 # Claims
@@ -23,7 +23,8 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/progress_payments.md` (read it first), `brain/contracts/variations.md`, `brain/states/overview.md`
 - Maths: `brain/computations/progress_claim.md`, `ex_gst.md`, `gst.md`
-- Templates: `templates/word/Progress_Claim_Invoice_TEMPLATE.docx`, `templates/excel/Progress_Claim_Calculator_TEMPLATE.xlsx`, `Payment_Tracking_Register_TEMPLATE.xlsx`, `Subbie_Payment_Schedule_TEMPLATE.xlsx`, `Retention_Release_Tracker_TEMPLATE.xlsx`, `templates/pdf/Claim_Support_Pack_Checklist.pdf`
+- Templates: `templates/word/Progress_Claim_Invoice_TEMPLATE.docx`, `templates/excel/Progress_Claim_Calculator_TEMPLATE.xlsx`, `Payment_Tracking_Register_TEMPLATE.xlsx`, `Subbie_Payment_Schedule_TEMPLATE.xlsx`, `Retention_Release_Tracker_TEMPLATE.xlsx`, `templates/pdf/Claim_Support_Pack_Checklist.pdf`; `templates/word/Payment_Claim_TEMPLATE.docx`, `Payment_Schedule_TEMPLATE.docx`, `Tax_Invoice_TEMPLATE.docx`
+- Security of payment, state by state: `brain/contracts/security_of_payment.md` (draft: confirm time limits with the regulator)
 - Examples: `examples/claim_003_spec.yaml` (invoice), `examples/claim_003_calculator_spec.yaml` (calculator)
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
@@ -53,7 +54,9 @@ and read the state page for local differences.
 | Invoice the frame stage / do claim 3 | Progress claim: steps 1 to 6 |
 | Deposit invoice | Progress claim with only the deposit stage; check the state's deposit cap first |
 | What's the client owe / who hasn't paid | Read or update the Payment Tracking Register |
-| A subbie sent me a claim | Subbie claim: see "Claims from subcontractors" below |
+| Claim under the Act / SOPA claim / the client won't pay | Payment Claim: see "Security of payment claim" below |
+| A subbie sent me a claim | Payment Schedule: see "Claims from subcontractors" below |
+| Invoice this job / I'm a sparky, invoice the builder | Tax Invoice: see "Trade tax invoice" below |
 | Pay the subbies / what do I owe trades | Subbie Payment Schedule |
 | Retention | Retention Release Tracker, plus the retention parameters in step 3 |
 
@@ -134,24 +137,46 @@ variations and current insurance certificates. Then tell them:
 - The due date, and to log it in the Payment Tracking Register
 - Any warnings from step 3, and anything you assumed
 
+## Security of payment claim
+
+Use the Payment Claim when the user wants the statutory process behind a
+claim: a subbie or trade claiming from a builder, or a builder claiming from
+a client where the state's Act covers home owners (read
+`brain/contracts/security_of_payment.md`; NSW and WA do, VIC, QLD and ACT
+don't for an owner occupier's home).
+
+1. Run the progress claim steps 1 to 3 above for the numbers.
+2. Set `sopa_act` in the project file to the Act's full name from the state table.
+3. Fill it following `examples/payment_claim_003_spec.yaml`: `fill_table` "Item" for the work lines, `row` for "Work Up To:" and the totals, and `replace` the two `[SELECT: ...]` prompts. The "what happens next" paragraph states the schedule deadline: use the state table's figure, and say it's draft if the table marks it to check.
+4. NSW head contractors claiming from a principal must attach the approved supporting statement. WA claims for home building work need the prescribed notice to the home owner. Tell the user.
+5. Record the date the claim was served: the respondent's clock starts then.
+
+## Trade tax invoice
+
+For trades and small jobs, use the Tax Invoice (`examples/tax_invoice_spec.yaml`):
+`fill_table` "Description" for the lines (qty, unit, rate and amount ex GST),
+the totals from `compute.py gst`, and the payment terms. If the trade wants
+the invoice to count as a payment claim, replace the security of payment
+prompt with the statement naming the Act; otherwise replace it with nothing.
+
 ## Claims from subcontractors
 
 A subbie's payment claim to the builder is usually covered by the state's
 security-of-payment act. The builder may have to reply with a **payment
 schedule** within a short statutory time, or owe the full amount claimed.
 
-- Note the date the claim arrived and tell the user the response deadline is short and fixed by statute. Don't state a number of days unless the state page has a verified figure.
+- Note the date the claim arrived. Give the deadline from the state table in `brain/contracts/security_of_payment.md`, say it is draft, and work out the date with `compute.py add_days` (business days). Where the table says "check", tell the user to confirm with the regulator today.
 - Compare the claim with the Subbie Payment Schedule (agreed amount, previous claims, balance) and with work actually done.
 - Check their licence and insurance are current (Subbie Insurance and Licence Tracker).
 - Deduct back charges only if a Back Charge Notice was issued.
-- If the user plans to pay less than claimed, recommend a written payment schedule with reasons, and suggest legal or industry association advice.
+- If the user plans to pay less than claimed, fill the Payment Schedule (`examples/payment_schedule_hs118_spec.yaml`): `set` CLAIM_REF and the subbie's details, `fill_table` "Item" (claimed, scheduled, difference, short reason), the totals `row`s from `compute.py gst`, and every reason in full in the reasons `cell`. Reasons left out may not be usable later. Suggest legal or industry association advice for anything disputed.
 
 ## Overdue payments
 
 Use the Payment Tracking Register (days outstanding). Before suggesting
 interest, suspension or termination, read the contract clauses
 (`brain/contracts/hia_mba_clause_map.md`, marked unverified). Suspension and
-termination have strict notice steps. Recommend advice before taking either.
+termination have strict notice steps. Recommend advice before taking either; the notices skill drafts the Suspension, Breach and Termination notices.
 
 ## Your own format
 

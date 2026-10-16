@@ -23,7 +23,7 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/estimating_and_quoting.md` (read it first), `brain/contracts/variations.md` (PC and provisional sums), `brain/states/overview.md`
 - Maths: `brain/computations/estimate_price.md`, `margin.md`, `gst.md`
-- Templates: `templates/excel/Trade_Based_Estimate_Workbook.xlsx`, `Estimate_to_Quote_Converter_TEMPLATE.xlsx`, `Quote_Comparison_TEMPLATE.xlsx`, `Margin_Sensitivity_Calculator_TEMPLATE.xlsx`, `Pre_Contract_Clarifications_TEMPLATE.xlsx`; `templates/word/Quote_Acceptance_Form_TEMPLATE.docx`
+- Templates: `templates/excel/Trade_Based_Estimate_Workbook.xlsx`, `Estimate_to_Quote_Converter_TEMPLATE.xlsx`, `Quote_Comparison_TEMPLATE.xlsx`, `Margin_Sensitivity_Calculator_TEMPLATE.xlsx`, `Pre_Contract_Clarifications_TEMPLATE.xlsx`; `templates/word/Quote_Acceptance_Form_TEMPLATE.docx`, `Trade_Quote_TEMPLATE.docx`
 - Examples: `examples/estimate_spec.yaml`, `examples/quote_acceptance_spec.yaml`
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
@@ -97,6 +97,17 @@ a 5% or 10% overrun does to profit.
 - The workbook's Quote Output sheet is the client-facing summary, with markup built into each line.
 - Its standard terms say any deposit stays within the state's legal limit. Set the actual deposit in the contract, within the cap for the state (`brain/states/overview.md`).
 - Put a validity period on it, and list inclusions, exclusions and allowances.
+
+### 5a. A trade's own quote
+
+A trade quoting a client or a builder for one trade package doesn't need the
+workbook. Use the Trade Quote (`examples/trade_quote_spec.yaml`): the scope,
+inclusions and exclusions as `cell`s, price lines with `fill_table` "Item",
+totals from `compute.py gst`, the valid-until date and the payment and start
+terms (`replace` the two `[SELECT: ...]` prompts). The trade's typical
+materials and exclusions are on its trade page (`brain/trades/`). Remind the
+user that some states require a written contract for residential work above
+a value: check the state page before work starts.
 
 ### 6. Acceptance
 

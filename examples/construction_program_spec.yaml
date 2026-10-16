@@ -1,0 +1,12 @@
+# Example values for a Construction Program (fictional). Setup comes from the project file.
+template: templates/excel/Construction_Program_TEMPLATE.xlsx
+cell:
+  "Program!C5": "Builder"
+  "Program!E5": "3"
+  "Program!E6": "4"
+  "Program!E7": "6"
+  "Program!E8": "10"
+  "Holidays!A4": "26/01/2027"
+  "Holidays!B4": "Australia Day"
+  "Holidays!A5": "26/03/2027"
+  "Holidays!B5": "Good Friday"

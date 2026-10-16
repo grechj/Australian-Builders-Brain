@@ -59,11 +59,11 @@ practical completion and at the end of the defects liability period.
 
 # Security of payment
 
-Each state has a security-of-payment act (listed in the [state rules](/states/overview.md))
+Each state has a security-of-payment act ([security of payment](/contracts/security_of_payment.md))
 that gives a fast statutory process for payment claims, schedules and
 adjudication.
 
-- **Builder to homeowner.** Most states exclude residential building work for an owner-occupier from their security-of-payment act, so the contract and the state's home building law govern these claims. Verify for the state.
+- **Builder to homeowner.** Several states (VIC, QLD, ACT and probably SA) exclude an owner occupier's home from their security-of-payment act, so the contract and the state's home building law govern those claims. NSW and WA do cover home owners, with extra steps. See [security of payment](/contracts/security_of_payment.md) for the state table.
 - **Subcontractor to builder.** These claims are usually covered. The builder must answer a payment claim with a payment schedule within the statutory time, or risk owing the full claimed amount. Diarise every subbie claim the day it arrives.
 
 # Paying subcontractors

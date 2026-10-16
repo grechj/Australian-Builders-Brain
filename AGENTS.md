@@ -88,6 +88,7 @@ Actors follow OKF §7: `human:<github_id>` for people,
 ## Templates and PDFs
 
 - After changing a Word or Excel template, run `python tools/describe_templates.py` to refresh the Structure outline on its document page.
+- New templates are built in the pack's house style by `python tools/build_templates.py` (it never overwrites an existing template without `--force`). Add the template there, then a document page, an example spec and the skill step.
 - PDFs in `templates/pdf/` are generated: edit the brain page named in their `pdf:` frontmatter key, then run `python tools/build_pdfs.py`. Never edit a PDF directly.
 
 ## Profiles: trade and location

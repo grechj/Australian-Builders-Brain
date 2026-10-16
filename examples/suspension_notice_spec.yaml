@@ -1,0 +1,13 @@
+# Example values for a Notice of Intention to Suspend Work (fictional).
+template: templates/word/Suspension_Notice_TEMPLATE.docx
+set:
+  DATE: 06/11/2026
+  INVOICE_NUMBER: INV-003
+  CONTRACT_CLAUSE: Clause 25
+  NUMBER: "2"
+replace:
+  "[SELECT: Hand / Post / Email, as the contract allows]": "Email and post"
+  "[SELECT: The contract / The security of payment act / Both the contract and the security of payment act]": "Both the contract and the security of payment act"
+  "on [DD/MM/YYYY].": "on 10/11/2026."
+row:
+  "[INVOICE_NUMBER]": "16/10/2026|30/10/2026|$100,696.00"

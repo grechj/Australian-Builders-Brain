@@ -1,0 +1,16 @@
+# Example values for Timesheets and Day Work Dockets (fictional).
+template: templates/excel/Timesheet_Docket_TEMPLATE.xlsx
+cell:
+  "Setup!B8": "85"
+  "Dockets!A5": "15/10/2026"
+  "Dockets!B5": "DW-001"
+  "Dockets!C5": "Chris Smith"
+  "Dockets!D5": "Carpenter"
+  "Dockets!E5": "07:00"
+  "Dockets!F5": "11:30"
+  "Dockets!G5": "15"
+  "Dockets!K5": "240"
+  "Dockets!M5": "Remove and replace rotten bearer under laundry found when floor lifted"
+  "Dockets!N5": "VAR-002"
+  "Dockets!O5": "Jo Citizen"
+  "Summary!A4": "VAR-002"

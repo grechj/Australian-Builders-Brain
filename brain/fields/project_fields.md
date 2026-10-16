@@ -68,6 +68,7 @@ construction phases.
 | `[CONTRACT_SUM]` | Original contract sum, inc GST, no `$` sign | 485,000.00 |
 | `[CONTRACT_SUM_EX_GST]` | Original contract sum, ex GST, from the [ex GST](/computations/ex_gst.md) computation | 440,909.09 |
 | `[CONTRACT_CLAUSE]` | The clause a notice relies on, from the [clause map](/contracts/hia_mba_clause_map.md) or the user's contract | Clause 17 |
+| `[SOPA_ACT]` | Full name of the state's security of payment act, from [security of payment](/contracts/security_of_payment.md) | Building and Construction Industry Security of Payment Act 1999 (NSW) |
 
 The project file also carries `contract_type` (HIA, MBA, other),
 `contract_edition`, `contract_date`, `contract_sum_ex_gst` (from the
@@ -102,6 +103,9 @@ Numbers run per project, zero-padded to three digits.
 | `[SITE_INSTRUCTION_NUMBER]` | SI-001 |
 | `[QUOTE_NUMBER]` | Q-001 |
 | `[QUOTE_REF]` | Subcontractor's own quote reference |
+| `[CLAIM_REF]` | The claimant's own number for a payment claim you are answering, as written on their claim |
+| `[RFI_NUMBER]` | RFI-001 |
+| `[MEETING_NUMBER]` | 1, 2, 3... (meeting sequence) |
 | `[WEEK_NUMBER]` | Construction week number, from the start date |
 
 ## Money and time

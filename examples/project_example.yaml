@@ -43,4 +43,5 @@ contract:
   contract_sum_ex_gst: 440,909.09   # from: python3 tools/compute.py ex_gst --param amount_inc_gst=485000
   builders_margin_pct: 20           # margin on variations, from the contract schedule
   retention_pct: 0                  # retention held by the client, if the contract has any
+  sopa_act: Building and Construction Industry Security of Payment Act 1999 (NSW)   # see brain/contracts/security_of_payment.md
   site_supervisor: Chris Smith

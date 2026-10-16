@@ -1,6 +1,6 @@
 ---
 name: site
-description: Keep day-to-day site records for Australian builders. Fills the Site Diary (weather, trades, work, delays, instructions, visitors), writes the weekly client Progress Update, tracks material orders and trade bookings, and walks quality hold points. Use when someone gives a daily update ("sparky and chippie on today, rain arvo"), wants to log the diary, update the client, chase a delivery, book or confirm trades, check what's next on the job, or sign off a stage before covering up.
+description: Keep day-to-day site records for Australian builders. Fills the Site Diary (weather, trades, work, delays, instructions, visitors), writes the weekly client Progress Update, tracks material orders and trade bookings, walks quality hold points, and produces RFIs, Meeting Minutes, the Construction Program and Timesheets and Day Work Dockets. Use when someone gives a daily update ("sparky and chippie on today, rain arvo"), wants to log the diary, update the client, chase a delivery, book or confirm trades, check what's next on the job, or sign off a stage before covering up.
 ---
 
 # Site
@@ -23,7 +23,7 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/site_management.md` (read it first), `brain/playbooks/quality_hold_points.md`, `brain/phases/` (the phase for the job's type and stage: readiness checks, inspections, materials, weather risk, next trades), `brain/phases/trade_sequence.md`, `brain/glossary/site_slang.md`
 - Maths: `brain/computations/site_week.md`, `progress_claim.md` (for % complete)
-- Templates: `templates/excel/Site_Diary_TEMPLATE.xlsx`, `Material_Order_Tracker_TEMPLATE.xlsx`, `Trade_Booking_Lead_Time_Tracker_TEMPLATE.xlsx`; `templates/word/Progress_Update_Email_TEMPLATE.docx`; `templates/pdf/Quality_Hold_Point_Checklist.pdf`
+- Templates: `templates/excel/Site_Diary_TEMPLATE.xlsx`, `Material_Order_Tracker_TEMPLATE.xlsx`, `Trade_Booking_Lead_Time_Tracker_TEMPLATE.xlsx`; `templates/word/Progress_Update_Email_TEMPLATE.docx`, `RFI_TEMPLATE.docx`, `Meeting_Minutes_TEMPLATE.docx`; `templates/excel/Construction_Program_TEMPLATE.xlsx`, `Timesheet_Docket_TEMPLATE.xlsx`; `templates/pdf/Quality_Hold_Point_Checklist.pdf`
 - Examples: `examples/site_diary_spec.yaml`, `progress_update_spec.yaml`, `material_order_spec.yaml`, `trade_booking_spec.yaml`
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
@@ -90,6 +90,13 @@ Before covering up work (slab pour, lining, waterproofing, PC), walk the
 relevant section of `brain/playbooks/quality_hold_points.md`. A failed hold
 point means the next trade waits. Record each sign-off (date and who) in the
 diary.
+
+## Questions, meetings, program and dockets
+
+- **RFI** (`examples/rfi_001_spec.yaml`): one question per RFI, with what was found, the drawing references (`fill_table` "Drawing / Document"), a proposed answer if the builder has one, and a response date. `row` "To:" names the recipient; `[NAME]` is whoever raised it. Tick the impact. An answer that changes scope, cost or time is a variation: point the user to the variations skill.
+- **Meeting Minutes** (`examples/meeting_minutes_spec.yaml`): attendees (`fill_table` "Name") and items with an action, who and when (`fill_table` "Item"). List decisions that change cost or time separately, and remind the user each needs a variation or delay notice: minutes are not a variation.
+- **Construction Program** (`examples/construction_program_spec.yaml`): Setup fills from the project file. Durations go in column E (working days), predecessors in column G, non-working days on Holidays (public holidays for the job's state and the Christmas shutdown). Start and finish dates calculate. Use `brain/phases/` and `brain/phases/trade_sequence.md` for the task order. If the finish passes the contract completion date, raise it with the user.
+- **Timesheets and dockets** (`examples/timesheet_docket_spec.yaml`): one row per worker per day from row 5, times as HH:MM. Put the variation number in "Charge To" for day work, and get it signed off the same day. The Summary sheet totals by charge, ex GST, with GST; use those totals in the variation.
 
 ## Checks
 

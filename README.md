@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.6.1.** All eleven skills work end to end, covering all 53 templates. NCC 2025
+> **Status: v0.7.0.** All eleven skills work end to end, covering all 64 templates. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -17,7 +17,7 @@ and the National Construction Code.
 |---|---|
 | [`brain/`](brain/index.md) | The knowledge base: lifecycle stages, construction phases, contract topics, state rules, the NCC, the template catalogue and the money computations. Plain markdown in [Google's Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format), kept up by an agent using [Karpathy's LLM-wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). |
 | [`skills/`](skills/) | Claude skills that turn the brain plus your job details into finished documents. |
-| [`templates/`](templates/) | 53 Word, Excel and PDF templates (variations, claims, notices, WHS, handover...). |
+| [`templates/`](templates/) | 64 Word, Excel and PDF templates (variations, claims, security of payment, notices, WHS, handover...). |
 | [`tools/`](tools/) | Python that fills templates, runs the money maths and lints the brain. |
 | [`examples/`](examples/) | A fictional project file and variation, for trying it out. |
 
@@ -87,7 +87,7 @@ python3 tools/profile.py show --trade sparky --state QLD
 
 ## Using the templates
 
-The 53 templates in `templates/` are references for producing your own
+The 64 templates in `templates/` are references for producing your own
 documents quickly:
 
 - **Fill them as they are.** `tools/fill_template.py` fills the Word and Excel templates from your project file, and the skills do this for you.
@@ -126,11 +126,11 @@ personal use only) and never stores anyone's prices.
 | Skill | Templates | Status |
 |---|---|---|
 | `variations` | change request, builder variation, priced notice, approval, explanation, register, allowances, selections | **working** |
-| `estimating` | estimate workbook, estimate to quote, quote comparison, margin sensitivity, clarifications, quote acceptance | **working** |
+| `estimating` | estimate workbook, estimate to quote, quote comparison, margin sensitivity, clarifications, trade quote, quote acceptance | **working** |
 | `contracts` | contract summary, scope of works, subcontract, trade scope, pre-construction checklist | **working** |
-| `claims` | progress claim calculator and invoice, payment register, subbie payments, retention, claim pack | **working** |
-| `notices` | delay notification, site instruction, back charge | **working** |
-| `site` | site diary, progress email, material orders, trade bookings, hold points | **working** |
+| `claims` | progress claim calculator and invoice, SOPA payment claim and payment schedule, trade tax invoice, payment register, subbie payments, retention, claim pack | **working** |
+| `notices` | delay notification, site instruction, back charge, suspension, breach, termination | **working** |
+| `site` | site diary, progress email, RFI, meeting minutes, construction program, timesheets and dockets, material orders, trade bookings, hold points | **working** |
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |

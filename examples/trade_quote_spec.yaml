@@ -1,0 +1,25 @@
+# Example values for a Trade Quote (fictional electrician's quote).
+template: templates/word/Trade_Quote_TEMPLATE.docx
+# GST from: python3 tools/compute.py gst --param amount_ex_gst=8650
+set:
+  QUOTE_NUMBER: Q-017
+  DATE: 16/10/2026
+  DD/MM/YYYY: 15/11/2026
+  TRADE: Electrical
+  NUMBER: "4"
+cell:
+  "[Describe the work you will do": "Electrical installation for the rear extension: new 6-way sub-board fed from the main switchboard, rough-in and fit-off of power, lighting and data to the family room, kitchen and laundry as marked on drawing E-01 rev B, and smoke alarms interconnected to the existing alarms."
+  "[List what is included": "All cable, conduit, fittings and the sub-board. Clipsal Iconic power points and switches (white). 10 LED downlights (warm white, IC-4 rated). Connection of the client-supplied rangehood and cooktop. Testing and a certificate of compliance."
+  "[List what is not included": "Light fittings other than downlights. Patching and painting of existing walls. Trenching or underground supply. Work outside normal hours. Any rectification of existing wiring found to be faulty (quoted separately if found)."
+fill_table:
+  "Item":
+    - "1|Sub-board, mains connection and rough-in|$5,150.00"
+    - "2|Fit-off: power, lighting, data, smoke alarms|$2,850.00"
+    - "3|Testing and certificate of compliance|$650.00"
+row:
+  "Subtotal (excl. GST)": "$8,650.00"
+  "GST (10%)": "$865.00"
+  "QUOTE TOTAL (incl. GST)": "$9,515.00"
+replace:
+  "[SELECT: deposit on acceptance, balance on completion / progress payments as listed above / full payment on completion]": "progress payments: item 1 on completion of rough-in, items 2 and 3 on completion"
+  "[SELECT: within 10 working days of acceptance / on a date agreed in writing]": "on a date agreed in writing, to suit the builder's program"

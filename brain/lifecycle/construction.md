@@ -16,25 +16,35 @@ The construction sequence for each project type is in [phases](/phases/index.md)
 |---|---|
 | [Allowances Register](/documents/allowances_register.md) | Tracks prime cost and provisional sum allowances against actual cost. |
 | [Back Charge Notice](/documents/back_charge_notice.md) | Charges a subcontractor for rework, damage or clean-up they caused. |
+| [Breach Notice](/documents/breach_notice.md) | Notice of substantial breach requiring the other party to remedy it, the step before termination. |
 | [Budget vs Actual Tracker](/documents/budget_vs_actual_tracker.md) | Tracks budget against actual cost by trade during the job. |
 | [Builder Initiated Variation](/documents/builder_initiated_variation.md) | Builder raises a variation, for example for latent conditions or a regulatory change. |
 | [Claim Support Pack Checklist](/documents/claim_support_pack_checklist.md) | What to attach to a progress claim so it gets paid. |
 | [Client Change Request](/documents/client_change_request.md) | Client asks for a change; the starting point of a variation. |
 | [Client Selections Register](/documents/client_selections_register.md) | Tracks client selections (fixtures, finishes) and their due dates. |
+| [Construction Program](/documents/construction_program.md) | A simple bar chart program: tasks, trades, durations in working days, linked start dates and holidays. |
 | [Delay Notification Letter](/documents/delay_notification_letter.md) | Notifies the client of a delay and the extension of time claimed. |
 | [Incident Near Miss Report](/documents/incident_near_miss_report.md) | Report of a site incident or near miss. |
 | [Material Order Tracker](/documents/material_order_tracker.md) | Tracks material orders, suppliers and delivery dates. |
+| [Meeting Minutes](/documents/meeting_minutes.md) | Records a site or client meeting: attendees, items, actions and decisions that affect cost or time. |
+| [Payment Claim](/documents/payment_claim.md) | A payment claim under the state's security of payment act, for subcontractors, trades and builders. |
+| [Payment Schedule](/documents/payment_schedule.md) | Answers a payment claim under the security of payment act: the amount you will pay and every reason for paying less. |
 | [Payment Tracking Register](/documents/payment_tracking_register.md) | Tracks claims issued, due dates and payments received. |
 | [Priced Variation Notice](/documents/priced_variation_notice.md) | Formal priced variation with cost breakdown, time impact and client sign-off. |
 | [Progress Claim Calculator](/documents/progress_claim_calculator.md) | Calculates each progress claim from the stage schedule and approved variations. |
 | [Progress Claim Invoice](/documents/progress_claim_invoice.md) | Progress claim invoice to the client. |
 | [Progress Update Email](/documents/progress_update_email.md) | Weekly progress update to the client. |
 | [Quality Hold Point Checklist](/documents/quality_hold_point_checklist.md) | Quality checks at each hold point before work is covered up. |
+| [Request for Information](/documents/request_for_information.md) | Asks the designer, engineer or client a question about the documents, with a due date and a response section. |
 | [Site Diary](/documents/site_diary.md) | Daily record of trades, work, weather, delays and issues. |
 | [Site Instruction Form](/documents/site_instruction_form.md) | Records an instruction given on site, so it can't be disputed later. |
 | [Site Safety Inspection Checklist](/documents/site_safety_inspection_checklist.md) | Periodic site safety inspection checklist. |
 | [Subbie Payment Schedule](/documents/subbie_payment_schedule.md) | Schedules and tracks payments to subcontractors. |
+| [Suspension Notice](/documents/suspension_notice.md) | Notice of intention to suspend work for non-payment, under the contract or the security of payment act. |
 | [SWMS](/documents/swms.md) | Safe Work Method Statement for high-risk construction work. |
+| [Tax Invoice](/documents/tax_invoice.md) | A simple GST tax invoice for trades and small jobs, with an optional security of payment statement. |
+| [Termination Notice](/documents/termination_notice.md) | Terminates the contract after a breach notice has not been complied with. Legal advice first. |
+| [Timesheet and Docket](/documents/timesheet_and_docket.md) | Daily timesheets and day work dockets with hours, labour and materials, totalled by contract or variation. |
 | [Toolbox Talk Record](/documents/toolbox_talk_record.md) | Record of a toolbox talk and who attended. |
 | [Trade Booking Lead Time Tracker](/documents/trade_booking_lead_time_tracker.md) | Tracks trade bookings and lead times against the program. |
 | [Trade Induction Form](/documents/trade_induction_form.md) | Site induction record for a worker or trade. |

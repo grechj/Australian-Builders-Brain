@@ -14,12 +14,13 @@ Settle scope gaps and exclusions now. Every unclear item becomes a variation arg
 
 | Document | Use it to |
 |---|---|
-| [Materials Estimate](/documents/materials_estimate.md) | Materials list with quantities, packs to buy and prices, totalled inc and ex GST with a rough order of magnitude range and the qualifications. |
 | [Estimate to Quote Converter](/documents/estimate_to_quote_converter.md) | Turn a working estimate into a client-facing quote. |
 | [Margin Sensitivity Calculator](/documents/margin_sensitivity_calculator.md) | Test how cost overruns or price changes move the job margin. |
+| [Materials Estimate](/documents/materials_estimate.md) | Materials list with quantities, packs to buy and prices, totalled inc and ex GST with a rough order of magnitude range and the qualifications. |
 | [Pre Contract Clarifications](/documents/pre_contract_clarifications.md) | Log questions, assumptions and exclusions to settle before signing. |
 | [Quote Acceptance Form](/documents/quote_acceptance_form.md) | Client's signed acceptance of a quote before the contract. |
 | [Quote Comparison](/documents/quote_comparison.md) | Compare subcontractor or supplier quotes side by side. |
 | [Trade Based Estimate Workbook](/documents/trade_based_estimate_workbook.md) | Build a job estimate trade by trade, with a quote output sheet. |
+| [Trade Quote](/documents/trade_quote.md) | A trade's quote to a client or builder: scope, price, inclusions, exclusions, terms and acceptance. |
 
 Next: [Contract and pre-construction](/lifecycle/contract_and_pre_construction.md)

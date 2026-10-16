@@ -1,0 +1,24 @@
+# Example values for Meeting Minutes (fictional site meeting).
+template: templates/word/Meeting_Minutes_TEMPLATE.docx
+set:
+  MEETING_NUMBER: "4"
+  DATE: 16/10/2026
+  TIME: 7:30 am
+  LOCATION: Site office, 42 Banksia St
+  NAME: Chris Smith
+  DD/MM/YYYY: 23/10/2026
+  NUMBER: "2"
+replace:
+  "[SELECT: Site meeting / Client meeting / Pre-start / Trade coordination / Handover]": "Site meeting"
+fill_table:
+  "Name":
+    - "Chris Smith|Smith Building, Site Supervisor|Present"
+    - "Jo Citizen|Owner|Present"
+    - "Alex Lee|Hunter Sparks, Electrician|Present"
+    - "Sam Citizen|Owner|Apology"
+  "Item":
+    - "1|Frame inspection passed 14/10/2026.|None|-|-"
+    - "2|Owners asked for two extra power points in the family room.|Price as a variation|Chris Smith|20/10/2026"
+    - "3|Kitchen joinery shop drawings received; owners to choose the benchtop edge.|Confirm benchtop edge|Jo Citizen|21/10/2026"
+cell:
+  "[List any decision that changes scope": "Two extra power points (item 2): a priced variation will be issued before the work is done. No decision today changes the program."

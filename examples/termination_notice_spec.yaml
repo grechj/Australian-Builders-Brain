@@ -1,0 +1,16 @@
+# Example values for a Notice of Termination (fictional). Legal advice first.
+template: templates/word/Termination_Notice_TEMPLATE.docx
+set:
+  DATE: 30/11/2026
+  CONTRACT_CLAUSE: Clause 26
+  DD/MM/YYYY: 13/11/2026
+replace:
+  "[SELECT: Hand / Registered post / Email, as the contract requires]": "Registered post and email"
+cell:
+  "[Summarise the breach": "Progress claim 3 (INV-003, $100,696.00 incl. GST, due 30/10/2026) remains unpaid. The notice of breach dated 13/11/2026 required payment within 10 working days, by 27/11/2026. No payment has been received."
+  "[State the arrangements": "The site will be secured and the temporary fencing left in place until 7/12/2026. Unfixed materials on site (roof trusses and cladding) remain our property until paid for and will be removed by arrangement."
+row:
+  "Work done and not yet paid": "$100,696.00"
+  "Approved variations not yet paid": "$0.00"
+  "Other amounts the contract allows": "$0.00"
+  "TOTAL CLAIMED (incl. GST)": "$100,696.00"

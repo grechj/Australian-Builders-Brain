@@ -3,11 +3,13 @@
 * [Allowances Register](allowances_register.md) - Tracks prime cost and provisional sum allowances against actual cost.
 * [As Built Documentation Register](as_built_documentation_register.md) - Register of as-built drawings, certificates and compliance documents.
 * [Back Charge Notice](back_charge_notice.md) - Charges a subcontractor for rework, damage or clean-up they caused.
+* [Breach Notice](breach_notice.md) - Notice of substantial breach requiring the other party to remedy it, the step before termination.
 * [Budget vs Actual Tracker](budget_vs_actual_tracker.md) - Tracks budget against actual cost by trade during the job.
 * [Builder Initiated Variation](builder_initiated_variation.md) - Builder raises a variation, for example for latent conditions or a regulatory change.
 * [Claim Support Pack Checklist](claim_support_pack_checklist.md) - What to attach to a progress claim so it gets paid.
 * [Client Change Request](client_change_request.md) - Client asks for a change; the starting point of a variation.
 * [Client Selections Register](client_selections_register.md) - Tracks client selections (fixtures, finishes) and their due dates.
+* [Construction Program](construction_program.md) - A simple bar chart program: tasks, trades, durations in working days, linked start dates and holidays.
 * [Contract Data Summary](contract_data_summary.md) - One-page summary of the key contract facts: parties, sum, dates, margins, clauses.
 * [Defects Liability Explanation](defects_liability_explanation.md) - Plain-English explanation of the defects liability period for clients.
 * [Defects List Tracking](defects_list_tracking.md) - Tracks defects from inspection through to rectification.
@@ -22,6 +24,9 @@
 * [Margin Sensitivity Calculator](margin_sensitivity_calculator.md) - Test how cost overruns or price changes move the job margin.
 * [Material Order Tracker](material_order_tracker.md) - Tracks material orders, suppliers and delivery dates.
 * [Materials Estimate](materials_estimate.md) - Materials list with quantities, packs to buy and prices, totalled inc and ex GST with a rough order of magnitude range and the qualifications.
+* [Meeting Minutes](meeting_minutes.md) - Records a site or client meeting: attendees, items, actions and decisions that affect cost or time.
+* [Payment Claim](payment_claim.md) - A payment claim under the state's security of payment act, for subcontractors, trades and builders.
+* [Payment Schedule](payment_schedule.md) - Answers a payment claim under the security of payment act: the amount you will pay and every reason for paying less.
 * [Payment Tracking Register](payment_tracking_register.md) - Tracks claims issued, due dates and payments received.
 * [Practical Completion Checklist](practical_completion_checklist.md) - What must be done before claiming practical completion.
 * [Practical Completion Notice](practical_completion_notice.md) - Notice to the client that the works have reached practical completion.
@@ -34,6 +39,7 @@
 * [Quality Hold Point Checklist](quality_hold_point_checklist.md) - Quality checks at each hold point before work is covered up.
 * [Quote Acceptance Form](quote_acceptance_form.md) - Client's signed acceptance of a quote before the contract.
 * [Quote Comparison](quote_comparison.md) - Compare subcontractor or supplier quotes side by side.
+* [Request for Information](request_for_information.md) - Asks the designer, engineer or client a question about the documents, with a due date and a response section.
 * [Retention Release Tracker](retention_release_tracker.md) - Tracks retention held and released on subcontracts.
 * [SWMS](swms.md) - Safe Work Method Statement for high-risk construction work.
 * [Scope of Works](scope_of_works.md) - What is and isn't included in the contract works.
@@ -44,10 +50,15 @@
 * [Subbie Insurance Licence Tracker](subbie_insurance_licence_tracker.md) - Tracks subcontractor licences and insurance expiry dates.
 * [Subbie Payment Schedule](subbie_payment_schedule.md) - Schedules and tracks payments to subcontractors.
 * [Subcontractor Agreement](subcontractor_agreement.md) - Agreement between the builder and a subcontractor.
+* [Suspension Notice](suspension_notice.md) - Notice of intention to suspend work for non-payment, under the contract or the security of payment act.
+* [Tax Invoice](tax_invoice.md) - A simple GST tax invoice for trades and small jobs, with an optional security of payment statement.
+* [Termination Notice](termination_notice.md) - Terminates the contract after a breach notice has not been complied with. Legal advice first.
+* [Timesheet and Docket](timesheet_and_docket.md) - Daily timesheets and day work dockets with hours, labour and materials, totalled by contract or variation.
 * [Toolbox Talk Record](toolbox_talk_record.md) - Record of a toolbox talk and who attended.
 * [Trade Based Estimate Workbook](trade_based_estimate_workbook.md) - Build a job estimate trade by trade, with a quote output sheet.
 * [Trade Booking Lead Time Tracker](trade_booking_lead_time_tracker.md) - Tracks trade bookings and lead times against the program.
 * [Trade Induction Form](trade_induction_form.md) - Site induction record for a worker or trade.
+* [Trade Quote](trade_quote.md) - A trade's quote to a client or builder: scope, price, inclusions, exclusions, terms and acceptance.
 * [Trade Scope Confirmation](trade_scope_confirmation.md) - Confirms a trade's scope, price and timing before they start.
 * [Variation Approval Form](variation_approval_form.md) - Client's written approval to proceed with a priced variation.
 * [Variation Explanation Letter](variation_explanation_letter.md) - Plain-English letter explaining why a variation is needed and what it costs.
