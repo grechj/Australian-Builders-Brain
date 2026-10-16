@@ -1,0 +1,40 @@
+# Example project file. Copy it to my_project.yaml and fill in your details.
+# Every key fills the placeholder of the same name in upper case:
+# client_name -> [CLIENT_NAME]. See brain/fields/project_fields.md.
+# This is a fictional job.
+
+business:
+  business_name: Smith Building Pty Ltd
+  abn: 12 345 678 901
+  licence_number: 123456C
+  business_address: 1 Trade St
+  business_address_line_2: Newcastle NSW 2300
+  phone: 0400 000 000
+  email: jobs@smithbuilding.com.au
+  website: smithbuilding.com.au
+  account_name: Smith Building Pty Ltd
+  bsb: 062-000
+  account_number: 1234 5678
+
+project:
+  project_name: Banksia St extension
+  project_address: 42 Banksia St, Merewether NSW 2291
+  state: NSW
+  project_type: extension
+  start_date: 03/02/2027
+  end_date: 30/09/2027
+  nearest_hospital: John Hunter Hospital, Lookout Rd, New Lambton Heights NSW 2305
+
+client:
+  client_name: Jo and Sam Citizen
+  client_address: 42 Banksia St, Merewether NSW 2291
+  client_phone: 0411 111 111
+  client_email: citizens@example.com
+
+contract:
+  contract_number: SB-2027-014
+  contract_type: HIA
+  contract_edition: HIA NSW Residential Building Contract for New Dwellings (check edition)
+  contract_date: 20/01/2027
+  contract_sum: 485,000.00
+  builders_margin_pct: 20

@@ -1,0 +1,38 @@
+# Example document values for a Priced Variation Notice (fictional).
+# Money figures come from the receipt of:
+#   python tools/compute.py variation_price --param labour=1200 --param materials=1450 \
+#       --param plant=150 --param margin_pct=20
+set:
+  VAR_NUMBER: VAR-001
+  CONTRACT_CLAUSE: "Clause 17 (check against the signed contract)"
+  # Any [DD/MM/YYYY] not filled by a row below is the date raised.
+  DD/MM/YYYY: 16/10/2026
+replace:
+  "[SELECT: 7/14/30 days]": "14 days"
+  "[SELECT: HIA / MBA / Other]": "HIA"
+  "[SELECT: Client Request / Latent Conditions / Regulatory Compliance / Design Change / Other: _____]": "Latent Conditions"
+  "[For HIA contracts: Clause 17 | For MBA contracts: Clause [X] | Other: Refer to Contract Clause ___]": "Clause 17 of the HIA contract (check against the signed contract)"
+cell:
+  "[Describe the variation": "Excavate and remove sandstone floater rock found in the north-east footing trenches (grid C3 to D4), and deepen the footings to 900 mm to reach the founding material specified by the engineer.\nRefer to engineer's site instruction ENG-SI-02 dated 14/10/2026 and drawing S-101 rev C."
+  "[Use this space for internal notes": "Excavator hire 1 day $150 ex GST. Rock disposal quote Hunter Tip $1,450 ex GST."
+row:
+  # Time impact rows hold two label/value pairs; every cell after the first is rewritten.
+  "Additional Days Required:": "2 days|Current Completion Date:|30/09/2027"
+  "Reason for Delay:": "Rock excavation and extra footing depth before the slab pour|Revised Completion Date:|02/10/2027"
+  "Labour": "$1,440.00"
+  "Materials": "$1,740.00"
+  "Subcontractor Costs": "$0.00"
+  "Equipment / Plant": "$180.00"
+  "Other (specify)": "$0.00"
+  "Subtotal (excl. GST)": "$3,360.00"
+  "GST (10%)": "$336.00"
+  "TOTAL VARIATION COST (incl. GST)": "$3,696.00"
+  "Labour (hours": "$1,200.00|$1,440.00|$240.00"
+  "Materials (actual": "$1,450.00|$1,740.00|$290.00"
+  "Subcontractor Costs#2": "$0.00|$0.00|$0.00"
+  "Equipment / Plant#2": "$150.00|$180.00|$30.00"
+  "Other#2": "$0.00|$0.00|$0.00"
+  "Subtotal (excl. GST)#2": "$2,800.00|$3,360.00|$560.00"
+  "TOTAL (incl. GST)": "$3,080.00|$3,696.00|$616.00"
+  "Total Margin ($)": "$560.00"
+  "Margin Percentage": "16.67% on sell (20% markup on cost)"
