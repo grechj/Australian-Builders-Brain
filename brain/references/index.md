@@ -1,6 +1,6 @@
 # Folders
 
-* [Handouts](handouts/)
+* [Handouts](handouts/) - Plain-English handouts for clients
 
 # Concepts
 

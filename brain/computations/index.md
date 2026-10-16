@@ -9,6 +9,8 @@
 * [GST on an ex-GST amount](gst.md) - Adds 10% GST to an ex-GST amount and produces the AMOUNT, AMOUNT_GST and AMOUNT_TOTAL template fields.
 * [Licence and insurance expiry status](expiry_status.md) - Works out whether each licence and insurance is current, expiring soon or expired on a given date, and the overall status for the Subbie Insurance and Licence Tracker.
 * [Margin achieved](margin.md) - Margin in dollars and percent on a quoted item, matching the Variation Register's formula.
+* [Materials rough order of magnitude](materials_rom.md) - Prices a materials list from unit prices (for example Bunnings retail prices), works out packs to buy, and gives the total inc and ex GST with a rough order of magnitude range.
+* [Materials takeoff](materials_takeoff.md) - Turns a job (timber deck, stud wall, plasterboard, concrete slab, paling fence, tiling, painting) into a materials list with quantities, purchase lengths or packs, and the rule behind each line.
 * [Payment schedule](payment_schedule.md) - Turns a contract's stage percentages into stage amounts inc and ex GST, adding up exactly to the contract sum, and flags a deposit over the state cap.
 * [Progress claim](progress_claim.md) - Works out a progress claim from the stage schedule (value completed less previous claims), deducts any retention, and adds GST.
 * [Site week number](site_week.md) - The construction week number of a date, counting from the site start date, for weekly progress updates.

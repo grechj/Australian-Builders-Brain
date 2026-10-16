@@ -1,0 +1,11 @@
+[
+  {"item": "Joists", "quantity": 12, "pack_size": 1, "unit_price_inc_gst": 40.00, "product": "140x45 H3 treated pine 3.6 m", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Bearers", "quantity": 6, "pack_size": 1, "unit_price_inc_gst": 53.00, "product": "140x45 H3 treated pine 4.8 m", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Posts", "quantity": 3, "pack_size": 1, "unit_price_inc_gst": 30.00, "product": "90x90 H4 treated pine 2.4 m", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Decking boards", "quantity": 41, "pack_size": 1, "unit_price_inc_gst": 14.00, "product": "90x22 H3 treated pine decking 5.4 m", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Decking screws", "quantity": 936, "pack_size": 500, "unit_price_inc_gst": 85.00, "product": "Decking screws, box of 500", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Joist-to-bearer fixings", "quantity": 36, "pack_size": 1, "unit_price_inc_gst": 3.20, "product": "Triple grip, galvanised", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Post anchors / stirrups", "quantity": 12, "pack_size": 1, "unit_price_inc_gst": 15.00, "product": "Post stirrup to suit 90 mm post", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Cup head bolts", "quantity": 24, "pack_size": 1, "unit_price_inc_gst": 2.80, "product": "M12 cup head bolt with nut and washer", "source": "ILLUSTRATIVE, not a real price"},
+  {"item": "Concrete premix", "quantity": 69, "pack_size": 1, "product": "Ready-mix from a concrete supplier recommended (0.65 m3)", "source": "not priced"}
+]

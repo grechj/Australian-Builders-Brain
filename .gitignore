@@ -7,3 +7,6 @@ raw/ncc/*.zip
 raw/ncc/*/
 out/
 my_project*.yaml
+.env
+*.env
+out/

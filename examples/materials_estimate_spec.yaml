@@ -1,0 +1,81 @@
+# Example Materials Estimate (fictional deck, 4.8 x 3.6 m).
+# PRICES ARE ILLUSTRATIVE ONLY, not real Bunnings prices. Totals match:
+#   python3 tools/compute.py materials_rom --param "lines=$(cat examples/deck_materials_lines.json)"
+template: templates/excel/Materials_Estimate_TEMPLATE.xlsx
+set:
+  JOB_DESCRIPTION: Timber deck 4.8 x 3.6 m, 600 mm high, treated pine
+  PRICING_SOURCE: Illustrative prices (example only)
+  STORE: n/a
+  PRICED_ON: 17/10/2026
+cell:
+  "Materials!A5": "Joists"
+  "Materials!B5": "140x45 H3 treated pine, 3.6 m"
+  "Materials!C5": 12
+  "Materials!D5": "lengths of 3.6 m"
+  "Materials!G5": "140x45 H3 treated pine 3.6 m"
+  "Materials!H5": 40.0
+  "Materials!J5": "ILLUSTRATIVE, not a real price"
+  "Materials!K5": "17/10/2026"
+  "Materials!A6": "Bearers"
+  "Materials!B6": "2/140x45 H3 treated pine, 4.8 m"
+  "Materials!C6": 6
+  "Materials!D6": "lengths of 4.8 m"
+  "Materials!G6": "140x45 H3 treated pine 4.8 m"
+  "Materials!H6": 53.0
+  "Materials!J6": "ILLUSTRATIVE, not a real price"
+  "Materials!K6": "17/10/2026"
+  "Materials!A7": "Posts"
+  "Materials!B7": "90x90 H4 treated pine, 2.4 m"
+  "Materials!C7": 3
+  "Materials!D7": "lengths of 2.4 m"
+  "Materials!G7": "90x90 H4 treated pine 2.4 m"
+  "Materials!H7": 30.0
+  "Materials!J7": "ILLUSTRATIVE, not a real price"
+  "Materials!K7": "17/10/2026"
+  "Materials!A8": "Decking boards"
+  "Materials!B8": "90x22 H3 treated pine decking, 5.4 m"
+  "Materials!C8": 41
+  "Materials!D8": "lengths of 5.4 m"
+  "Materials!G8": "90x22 H3 treated pine decking 5.4 m"
+  "Materials!H8": 14.0
+  "Materials!J8": "ILLUSTRATIVE, not a real price"
+  "Materials!K8": "17/10/2026"
+  "Materials!A9": "Decking screws"
+  "Materials!B9": "Stainless or class 4"
+  "Materials!C9": 936
+  "Materials!D9": "screws"
+  "Materials!E9": 500
+  "Materials!G9": "Decking screws, box of 500"
+  "Materials!H9": 85.0
+  "Materials!J9": "ILLUSTRATIVE, not a real price"
+  "Materials!K9": "17/10/2026"
+  "Materials!A10": "Joist-to-bearer fixings"
+  "Materials!B10": "Triple grips, galvanised"
+  "Materials!C10": 36
+  "Materials!D10": "each"
+  "Materials!G10": "Triple grip, galvanised"
+  "Materials!H10": 3.2
+  "Materials!J10": "ILLUSTRATIVE, not a real price"
+  "Materials!K10": "17/10/2026"
+  "Materials!A11": "Post anchors / stirrups"
+  "Materials!B11": "Galvanised, to suit post"
+  "Materials!C11": 12
+  "Materials!D11": "each"
+  "Materials!G11": "Post stirrup to suit 90 mm post"
+  "Materials!H11": 15.0
+  "Materials!J11": "ILLUSTRATIVE, not a real price"
+  "Materials!K11": "17/10/2026"
+  "Materials!A12": "Cup head bolts"
+  "Materials!B12": "M12 galvanised"
+  "Materials!C12": 24
+  "Materials!D12": "each"
+  "Materials!G12": "M12 cup head bolt with nut and washer"
+  "Materials!H12": 2.8
+  "Materials!J12": "ILLUSTRATIVE, not a real price"
+  "Materials!K12": "17/10/2026"
+  "Materials!A13": "Concrete premix"
+  "Materials!B13": "20 kg bags (ready-mix recommended)"
+  "Materials!C13": 69
+  "Materials!D13": "bags"
+  "Materials!G13": "Ready-mix from a concrete supplier recommended (0.65 m3)"
+  "Materials!J13": "not priced"

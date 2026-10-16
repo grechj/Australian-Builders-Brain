@@ -41,7 +41,7 @@ entries as in `examples/estimate_spec.yaml`:
 - Subcontractors, rows 62 to 76: trade, subcontractor, quote ref, quote date, amount
 - Setup: default markup (B16) and contingency (B17) as fractions (0.2 and 0.05), or leave the defaults
 
-Prompt for the commonly missed items listed in the brain page. Never invent
+For the materials lines, the materials skill can take off quantities and price them (Bunnings as a retail guide); replace those with trade prices before quoting. Prompt for the commonly missed items listed in the brain page. Never invent
 quantities or prices. Mark anything the user hasn't given as an allowance
 and say so.
 

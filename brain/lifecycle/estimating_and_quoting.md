@@ -14,6 +14,7 @@ Settle scope gaps and exclusions now. Every unclear item becomes a variation arg
 
 | Document | Use it to |
 |---|---|
+| [Materials Estimate](/documents/materials_estimate.md) | Materials list with quantities, packs to buy and prices, totalled inc and ex GST with a rough order of magnitude range and the qualifications. |
 | [Estimate to Quote Converter](/documents/estimate_to_quote_converter.md) | Turn a working estimate into a client-facing quote. |
 | [Margin Sensitivity Calculator](/documents/margin_sensitivity_calculator.md) | Test how cost overruns or price changes move the job margin. |
 | [Pre Contract Clarifications](/documents/pre_contract_clarifications.md) | Log questions, assumptions and exclusions to settle before signing. |

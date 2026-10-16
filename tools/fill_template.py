@@ -88,8 +88,14 @@ SETUP_LABELS = {
     "site supervisor": "site_supervisor",
     "quote number": "quote_number",
     "quote date": "quote_date",
+    "job description": "job_description",
+    "pricing source": "pricing_source",
+    "store / supplier": "store",
+    "prices checked on": "priced_on",
+    "rom low (%)": "rom_low_pct",
+    "rom high (%)": "rom_high_pct",
 }
-NUMERIC_FIELDS = {"contract_sum", "contract_sum_ex_gst"}
+NUMERIC_FIELDS = {"contract_sum", "contract_sum_ex_gst", "rom_low_pct", "rom_high_pct"}
 # Entered as a whole percentage (5), stored by Excel as a fraction (0.05).
 PERCENT_FIELDS = {"retention_pct"}
 

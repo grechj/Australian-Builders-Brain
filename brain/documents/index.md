@@ -21,6 +21,7 @@
 * [Lessons Learned Register](lessons_learned_register.md) - What went well and what to change on the next job.
 * [Margin Sensitivity Calculator](margin_sensitivity_calculator.md) - Test how cost overruns or price changes move the job margin.
 * [Material Order Tracker](material_order_tracker.md) - Tracks material orders, suppliers and delivery dates.
+* [Materials Estimate](materials_estimate.md) - Materials list with quantities, packs to buy and prices, totalled inc and ex GST with a rough order of magnitude range and the qualifications.
 * [Payment Tracking Register](payment_tracking_register.md) - Tracks claims issued, due dates and payments received.
 * [Practical Completion Checklist](practical_completion_checklist.md) - What must be done before claiming practical completion.
 * [Practical Completion Notice](practical_completion_notice.md) - Notice to the client that the works have reached practical completion.

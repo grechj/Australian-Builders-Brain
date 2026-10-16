@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-17
+* **Creation**: Added [materials estimating](/contracts/materials_estimating.md), the [materials takeoff](/computations/materials_takeoff.md) and [materials ROM](/computations/materials_rom.md) computations, the [Materials Estimate](/documents/materials_estimate.md) workbook, and a Bunnings API client (`tools/bunnings.py`, official APIs only).
 * **Update**: Removed the retired BEAM branding from every template, page and PDF. Corrected outdated names: the Building and Plumbing Commission (Victoria's regulator since 2025, replacing the VBA), Before You Dig Australia (formerly Dial Before You Dig), and NCC (formerly BCA). The incident report now says "WHS regulator", and the estimate workbook's quote terms no longer suggest a 50% deposit.
 * **Creation**: Added the [defects liability guide](/references/handouts/defects_liability_guide.md), with statutory warranties described accurately by state. PDFs are now built from brain pages by `tools/build_pdfs.py`, and every document page has a generated Structure outline (`tools/describe_templates.py`) for producing the document in any format.
 
