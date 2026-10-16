@@ -122,6 +122,27 @@ Tell the user:
 - That no work should start until the client signs, and to log it in the Variation Register (status "Priced")
 - Anything you assumed or couldn't verify
 
+## Variation Register
+
+Keep one row per variation from row 5 (VAR numbers fill themselves), as in
+`examples/variation_register_spec.yaml`:
+- B date raised, C description, D reason (Client Request, Latent Conditions, Compliance, Design Change, Other)
+- E status (Requested, Priced, Approved, Rejected, Invoiced, Paid)
+- F quoted and G actual cost, both ex GST; J days
+- K approved date, L invoice number
+
+Move the status along as things happen. The Summary sheet's revised
+contract sum counts only Approved, Invoiced and Paid variations, ex GST.
+
+## Allowances and selections
+
+PC items and provisional sums are allowances in the contract.
+
+- **Allowances Register**: one row per PC or PS item with the allowance and, once known, the actual cost (ex GST). Status runs Provisional, Selected, Ordered, Installed, Finalised. A negative variance (actual over allowance) is an adjustment to claim. Depending on the contract, it may go through as a variation or as a PC/PS adjustment, plus the builder's margin if the contract allows it.
+- **Client Selections Register**: what the client still has to choose, by room, with the allowance, the chosen product, supplier and price, and the status (Pending, Selected, Ordered, Installed). Chase pending selections with a date in the weekly progress update (site skill); late selections cause delays.
+
+Both feed the final account (handover skill) as PC/PS adjustments.
+
 ## Writing the description
 
 Builders and clients both read this, so write it plainly. Say what, where

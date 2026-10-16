@@ -2,18 +2,18 @@
 type: Document Template
 title: Subbie Insurance Licence Tracker
 description: "Tracks subcontractor licences and insurance expiry dates."
-tags: [documents, whs, xlsx]
+tags: [documents, safety, xlsx]
 status: stable
 resource: templates/excel/Subbie_Insurance_Licence_Tracker_TEMPLATE.xlsx
 format: xlsx
 lifecycle_stage: contract_and_pre_construction
-skill: whs
+skill: safety
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/excel/Subbie_Insurance_Licence_Tracker_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Subbie_Insurance_Licence_Tracker_TEMPLATE.xlsx)
 
-Lifecycle stage: [contract and pre construction](/lifecycle/contract_and_pre_construction.md) · Skill: `whs`
+Lifecycle stage: [contract and pre construction](/lifecycle/contract_and_pre_construction.md) · Skill: `safety`
 
 # Sheets
 

@@ -1,0 +1,20 @@
+# Example Budget vs Actual lines (fictional), ex GST. Status from:
+#   python3 tools/compute.py budget_status --param 'lines=[{"item":"Framing","budget":18500,"committed":19200,"spent":12000},
+#     {"item":"Roofing","budget":11500,"committed":11500,"spent":11500,"complete":true},
+#     {"item":"Electrical","budget":14800,"committed":14800,"spent":7400}]'
+# Rows: 9 Framing, 10 Roofing, 14 Electrical. Columns: B budget, C committed, D spent, H status.
+template: templates/excel/Budget_vs_Actual_Tracker_TEMPLATE.xlsx
+cell:
+  "Budget vs Actual!B9": 18500
+  "Budget vs Actual!C9": 19200
+  "Budget vs Actual!D9": 12000
+  "Budget vs Actual!H9": Over Budget
+  "Budget vs Actual!I9": Truss redesign after engineer's change; recover through VAR-001
+  "Budget vs Actual!B10": 11500
+  "Budget vs Actual!C10": 11500
+  "Budget vs Actual!D10": 11500
+  "Budget vs Actual!H10": Complete
+  "Budget vs Actual!B14": 14800
+  "Budget vs Actual!C14": 14800
+  "Budget vs Actual!D14": 7400
+  "Budget vs Actual!H14": At Risk

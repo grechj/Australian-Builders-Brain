@@ -2,18 +2,18 @@
 type: Document Template
 title: Site Safety Inspection Checklist
 description: "Periodic site safety inspection checklist."
-tags: [documents, whs, pdf]
+tags: [documents, safety, pdf]
 status: stable
 resource: templates/pdf/Site_Safety_Inspection_Checklist.pdf
 format: pdf
 lifecycle_stage: construction
-skill: whs
+skill: safety
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/pdf/Site_Safety_Inspection_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Site_Safety_Inspection_Checklist.pdf)
 
-Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `whs`
+Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `safety`
 
 # Use
 

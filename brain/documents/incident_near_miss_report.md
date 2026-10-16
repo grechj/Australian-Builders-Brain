@@ -2,18 +2,18 @@
 type: Document Template
 title: Incident Near Miss Report
 description: "Report of a site incident or near miss."
-tags: [documents, whs, docx]
+tags: [documents, safety, docx]
 status: stable
 resource: templates/word/Incident_Near_Miss_Report_TEMPLATE.docx
 format: docx
 lifecycle_stage: construction
-skill: whs
+skill: safety
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/word/Incident_Near_Miss_Report_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Incident_Near_Miss_Report_TEMPLATE.docx)
 
-Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `whs`
+Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `safety`
 
 # Fields
 

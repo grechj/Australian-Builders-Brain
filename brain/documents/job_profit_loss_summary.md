@@ -2,18 +2,18 @@
 type: Document Template
 title: Job Profit Loss Summary
 description: "Job profit and loss at completion."
-tags: [documents, job_financials, xlsx]
+tags: [documents, financials, xlsx]
 status: stable
 resource: templates/excel/Job_Profit_Loss_Summary_TEMPLATE.xlsx
 format: xlsx
 lifecycle_stage: defects_and_final_account
-skill: job_financials
+skill: financials
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/excel/Job_Profit_Loss_Summary_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Job_Profit_Loss_Summary_TEMPLATE.xlsx)
 
-Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `job_financials`
+Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `financials`
 
 # Sheets
 

@@ -2,18 +2,18 @@
 type: Document Template
 title: Practical Completion Notice
 description: "Notice to the client that the works have reached practical completion."
-tags: [documents, completion_handover, docx]
+tags: [documents, handover, docx]
 status: stable
 resource: templates/word/Practical_Completion_Notice_TEMPLATE.docx
 format: docx
 lifecycle_stage: completion_and_handover
-skill: completion_handover
+skill: handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/word/Practical_Completion_Notice_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Practical_Completion_Notice_TEMPLATE.docx)
 
-Lifecycle stage: [completion and handover](/lifecycle/completion_and_handover.md) · Skill: `completion_handover`
+Lifecycle stage: [completion and handover](/lifecycle/completion_and_handover.md) · Skill: `handover`
 
 # Fields
 

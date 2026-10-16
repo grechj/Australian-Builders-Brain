@@ -2,18 +2,18 @@
 type: Document Template
 title: Scope of Works
 description: "What is and isn't included in the contract works."
-tags: [documents, contract_setup, docx]
+tags: [documents, contracts, docx]
 status: stable
 resource: templates/word/Scope_of_Works_TEMPLATE.docx
 format: docx
 lifecycle_stage: contract_and_pre_construction
-skill: contract_setup
+skill: contracts
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/word/Scope_of_Works_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Scope_of_Works_TEMPLATE.docx)
 
-Lifecycle stage: [contract and pre construction](/lifecycle/contract_and_pre_construction.md) · Skill: `contract_setup`
+Lifecycle stage: [contract and pre construction](/lifecycle/contract_and_pre_construction.md) · Skill: `contracts`
 
 # Fields
 

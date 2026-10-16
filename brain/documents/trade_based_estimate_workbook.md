@@ -2,18 +2,18 @@
 type: Document Template
 title: Trade Based Estimate Workbook
 description: "Build a job estimate trade by trade, with a quote output sheet."
-tags: [documents, estimating_quoting, xlsx]
+tags: [documents, estimating, xlsx]
 status: stable
 resource: templates/excel/Trade_Based_Estimate_Workbook.xlsx
 format: xlsx
 lifecycle_stage: estimating_and_quoting
-skill: estimating_quoting
+skill: estimating
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/excel/Trade_Based_Estimate_Workbook.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Trade_Based_Estimate_Workbook.xlsx)
 
-Lifecycle stage: [estimating and quoting](/lifecycle/estimating_and_quoting.md) · Skill: `estimating_quoting`
+Lifecycle stage: [estimating and quoting](/lifecycle/estimating_and_quoting.md) · Skill: `estimating`
 
 # Sheets
 

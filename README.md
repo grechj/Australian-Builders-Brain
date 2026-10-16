@@ -6,9 +6,9 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: early (v0.3).** The `estimating`, `contracts`, `variations`, `claims`, `notices`, `site`, `safety`, `handover` and `ncc` skills work
-> end to end, and the full NCC 2025 text is loaded. The other skills and the state-by-state
-> rules are on the roadmap below. Everything marked `status: draft` in `brain/` still needs
+> **Status: v0.4.** All ten skills work end to end, covering all 52 templates, and the full
+> NCC 2025 text is loaded. Still to do: verified state-by-state rules and NCC 2022
+> (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
 
 ## What's inside
@@ -87,7 +87,7 @@ $1,450 tip fees, $150 excavator, 2 days delay."*
 | `site` | site diary, progress email, material orders, trade bookings, hold points | **working** |
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
-| `financials` | budget vs actual, job P&L, lessons learned | planned |
+| `financials` | budget vs actual, job P&L, lessons learned | **working** |
 | `ncc` | NCC 2025 lookups with clause citations and state variations (1,652 clauses, all five volumes) | **working** |
 
 Knowledge work still to do: load NCC 2022 for jobs lodged under it, verify and

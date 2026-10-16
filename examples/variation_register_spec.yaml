@@ -1,0 +1,17 @@
+# Example Variation Register rows (fictional), ex GST.
+template: templates/excel/Variation_Register.xlsx
+cell:
+  "Variation Register!B5": 16/10/2026
+  "Variation Register!C5": Rock excavation and deeper footings, NE corner
+  "Variation Register!D5": Latent Conditions
+  "Variation Register!E5": Approved
+  "Variation Register!F5": 3360
+  "Variation Register!G5": 2800
+  "Variation Register!J5": 2
+  "Variation Register!K5": 18/10/2026
+  "Variation Register!B6": 12/04/2027
+  "Variation Register!C6": Stacking door upgrade to 4-panel
+  "Variation Register!D6": Client Request
+  "Variation Register!E6": Priced
+  "Variation Register!F6": 1000
+  "Variation Register!J6": 0

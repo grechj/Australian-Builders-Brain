@@ -2,18 +2,18 @@
 type: Document Template
 title: Estimate to Quote Converter
 description: "Turn a working estimate into a client-facing quote."
-tags: [documents, estimating_quoting, xlsx]
+tags: [documents, estimating, xlsx]
 status: stable
 resource: templates/excel/Estimate_to_Quote_Converter_TEMPLATE.xlsx
 format: xlsx
 lifecycle_stage: estimating_and_quoting
-skill: estimating_quoting
+skill: estimating
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/excel/Estimate_to_Quote_Converter_TEMPLATE.xlsx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/excel/Estimate_to_Quote_Converter_TEMPLATE.xlsx)
 
-Lifecycle stage: [estimating and quoting](/lifecycle/estimating_and_quoting.md) · Skill: `estimating_quoting`
+Lifecycle stage: [estimating and quoting](/lifecycle/estimating_and_quoting.md) · Skill: `estimating`
 
 # Sheets
 

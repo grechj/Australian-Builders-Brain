@@ -2,18 +2,18 @@
 type: Document Template
 title: Defects Liability Explanation
 description: "Plain-English explanation of the defects liability period for clients."
-tags: [documents, completion_handover, pdf]
+tags: [documents, handover, pdf]
 status: stable
 resource: templates/pdf/Defects_Liability_Explanation.pdf
 format: pdf
 lifecycle_stage: defects_and_final_account
-skill: completion_handover
+skill: handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/pdf/Defects_Liability_Explanation.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Defects_Liability_Explanation.pdf)
 
-Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `completion_handover`
+Lifecycle stage: [defects and final account](/lifecycle/defects_and_final_account.md) · Skill: `handover`
 
 # Use
 

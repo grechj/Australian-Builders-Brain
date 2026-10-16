@@ -2,18 +2,18 @@
 type: Document Template
 title: Claim Support Pack Checklist
 description: "What to attach to a progress claim so it gets paid."
-tags: [documents, claims_payments, pdf]
+tags: [documents, claims, pdf]
 status: stable
 resource: templates/pdf/Claim_Support_Pack_Checklist.pdf
 format: pdf
 lifecycle_stage: construction
-skill: claims_payments
+skill: claims
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/pdf/Claim_Support_Pack_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Claim_Support_Pack_Checklist.pdf)
 
-Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `claims_payments`
+Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `claims`
 
 # Use
 

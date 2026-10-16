@@ -2,18 +2,18 @@
 type: Document Template
 title: Progress Update Email
 description: "Weekly progress update to the client."
-tags: [documents, site_management, docx]
+tags: [documents, site, docx]
 status: stable
 resource: templates/word/Progress_Update_Email_TEMPLATE.docx
 format: docx
 lifecycle_stage: construction
-skill: site_management
+skill: site
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/word/Progress_Update_Email_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Progress_Update_Email_TEMPLATE.docx)
 
-Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `site_management`
+Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `site`
 
 # Fields
 

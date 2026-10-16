@@ -1,0 +1,18 @@
+# Example lessons learned (fictional). Category must match the dropdown:
+# Estimating, Scheduling, Subbies, Materials, Client, Safety, Quality, Commercial, Other.
+template: templates/excel/Lessons_Learned_Register_TEMPLATE.xlsx
+cell:
+  "Lessons!B5": Estimating
+  "Lessons!C5": Rock in the footings wasn't allowed for; the geotech report flagged possible floaters
+  "Lessons!D5": 2 days delay; $3,360 variation, accepted by the client
+  "Lessons!E5": Latent condition clause and a fast priced variation got paid
+  "Lessons!F5": Read the geotech report at quote stage and price a rock provisional sum
+  "Lessons!G5": Add a 'rock / latent conditions PS' line to the estimate template
+  "Lessons!H5": Chris Smith
+  "Lessons!B6": Safety
+  "Lessons!C6": Battens fell from the scaffold platform (near miss, toe board removed)
+  "Lessons!D6": Work stopped half a day; no injury
+  "Lessons!E6": Near miss reported and fixed the same day
+  "Lessons!F6": Loading bays with gates on every scaffold from day one
+  "Lessons!G6": Add a loading bay to the scaffold order checklist
+  "Lessons!H6": Chris Smith

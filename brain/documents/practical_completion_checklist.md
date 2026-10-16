@@ -2,18 +2,18 @@
 type: Document Template
 title: Practical Completion Checklist
 description: "What must be done before claiming practical completion."
-tags: [documents, completion_handover, pdf]
+tags: [documents, handover, pdf]
 status: stable
 resource: templates/pdf/Practical_Completion_Checklist.pdf
 format: pdf
 lifecycle_stage: completion_and_handover
-skill: completion_handover
+skill: handover
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/pdf/Practical_Completion_Checklist.pdf`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/pdf/Practical_Completion_Checklist.pdf)
 
-Lifecycle stage: [completion and handover](/lifecycle/completion_and_handover.md) · Skill: `completion_handover`
+Lifecycle stage: [completion and handover](/lifecycle/completion_and_handover.md) · Skill: `handover`
 
 # Use
 

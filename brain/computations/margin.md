@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: margin
-computation_sha256: 146109d8e347ef9f027a3d6fa3bf877aec54fb55635dcc4b5ce367987494f7a7
+computation_sha256: ed648470cebcfca459ccf06ce34df51582e49c7629861103d3cda1071acdd2d0
 parameters:
   - { name: quoted_ex_gst, type: decimal, required: true }
   - { name: actual_cost_ex_gst, type: decimal, required: true }

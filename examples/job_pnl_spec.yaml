@@ -1,0 +1,18 @@
+# Example Job P&L at completion (fictional extension), ex GST. Margin check:
+#   python3 tools/compute.py margin --param quoted_ex_gst=120847 --param actual_cost_ex_gst=101905
+template: templates/excel/Job_Profit_Loss_Summary_TEMPLATE.xlsx
+cell:
+  "Profit & Loss!B6": 116487
+  "Profit & Loss!C6": 116487
+  "Profit & Loss!B7": 0
+  "Profit & Loss!C7": 4360
+  "Profit & Loss!B11": 18400
+  "Profit & Loss!C11": 20150
+  "Profit & Loss!B12": 31250
+  "Profit & Loss!C12": 32980
+  "Profit & Loss!B13": 42800
+  "Profit & Loss!C13": 43375
+  "Profit & Loss!B15": 4622.5
+  "Profit & Loss!C15": 3900
+  "Profit & Loss!B20": 1500
+  "Profit & Loss!C20": 1500

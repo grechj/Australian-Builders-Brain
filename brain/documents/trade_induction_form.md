@@ -2,18 +2,18 @@
 type: Document Template
 title: Trade Induction Form
 description: "Site induction record for a worker or trade."
-tags: [documents, whs, docx]
+tags: [documents, safety, docx]
 status: stable
 resource: templates/word/Trade_Induction_Form_TEMPLATE.docx
 format: docx
 lifecycle_stage: construction
-skill: whs
+skill: safety
 generated: { by: claude/opus-5.5, at: 2026-10-16T00:00:00Z }
 ---
 
 Template: [`templates/word/Trade_Induction_Form_TEMPLATE.docx`](https://github.com/grechj/Australian-Builders-Brain/blob/main/templates/word/Trade_Induction_Form_TEMPLATE.docx)
 
-Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `whs`
+Lifecycle stage: [construction](/lifecycle/construction.md) · Skill: `safety`
 
 # Fields
 

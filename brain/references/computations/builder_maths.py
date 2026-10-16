@@ -354,3 +354,38 @@ def expiry_status(items: dict, on_date: str, warn_days: Decimal) -> dict:
         out[name] = {"expiry": d.strftime("%d/%m/%Y"), "days_left": str(left), "status": status}
     overall = max((v["status"] for v in out.values()), key=rank.get, default="Incomplete")
     return {"result": {"on_date": today.strftime("%d/%m/%Y"), "items": out, "overall_status": overall}, "fields": {}}
+
+
+def budget_status(lines: list, at_risk_pct: Decimal) -> dict:
+    """Budget status per cost line, the way the Budget vs Actual Tracker reports it.
+
+    lines: [{"item", "budget", "committed", "spent", "complete": true|false}, ...], ex GST.
+    Forecast = the higher of committed and spent. Over Budget if forecast >
+    budget; Complete if marked complete and not over; At Risk if forecast is
+    at or above at_risk_pct of budget; otherwise On Track.
+    """
+    rows, totals = [], {"budget": Decimal("0"), "committed": Decimal("0"), "spent": Decimal("0")}
+    for line in lines:
+        budget = _money(Decimal(str(line.get("budget", 0))))
+        committed = _money(Decimal(str(line.get("committed", 0))))
+        spent = _money(Decimal(str(line.get("spent", 0))))
+        forecast = max(committed, spent)
+        used = _money(spent / budget * 100) if budget else Decimal("0.00")
+        if forecast > budget:
+            status = "Over Budget"
+        elif line.get("complete") in (True, "true", "yes", "Yes"):
+            status = "Complete"
+        elif budget and forecast >= budget * at_risk_pct / 100:
+            status = "At Risk"
+        else:
+            status = "On Track"
+        rows.append({"item": str(line["item"]), "budget": str(budget), "committed": str(committed),
+                     "spent": str(spent), "remaining": str(budget - spent), "variance": str(budget - forecast),
+                     "pct_used": str(used), "status": status})
+        totals["budget"] += budget; totals["committed"] += committed; totals["spent"] += spent
+    forecast_total = sum((max(Decimal(r["committed"]), Decimal(r["spent"])) for r in rows), Decimal("0"))
+    return {"result": {"lines": rows, "budget_total": str(totals["budget"]), "committed_total": str(totals["committed"]),
+                       "spent_total": str(totals["spent"]), "forecast_total": str(forecast_total),
+                       "variance_total": str(totals["budget"] - forecast_total),
+                       "over_budget": [r["item"] for r in rows if r["status"] == "Over Budget"],
+                       "at_risk": [r["item"] for r in rows if r["status"] == "At Risk"]}, "fields": {}}
