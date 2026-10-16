@@ -1,5 +1,6 @@
 # Concepts
 
+* [Estimating and quoting](estimating_and_quoting.md) - Building an estimate, pricing it with contingency and markup, comparing trade quotes, clarifying scope, and turning an accepted quote into a contract.
 * [Extension of time](extension_of_time.md) - When and how a builder notifies a delay and claims more time, and what evidence supports it.
 * [HIA and MBA clause map](hia_mba_clause_map.md) - Where common topics (variations, EOT, progress payments, PC, defects) sit in HIA and MBA residential contracts.
 * [Practical completion, defects and handover](practical_completion_and_defects.md) - What practical completion means, the defects liability period, statutory warranties, handover documents and the final account.

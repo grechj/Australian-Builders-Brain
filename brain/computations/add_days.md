@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/builder_maths.py
 entry_point: add_days
-computation_sha256: b6f19cc356118580f48815dea77a7777ff2d76264e6cf690208875f67f469d8f
+computation_sha256: 3a9e44178cc735d6224b516252e10c29c034dea0d8fa6df4f7f517b3258a83bf
 parameters:
   - { name: start_date, type: date, required: true }
   - { name: days, type: decimal, required: true }

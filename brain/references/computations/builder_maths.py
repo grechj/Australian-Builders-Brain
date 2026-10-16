@@ -258,3 +258,37 @@ def final_account(contract_sum_ex_gst: Decimal, variations_additions: Decimal, v
         "total_inc_gst": priced["result"]["amount_inc_gst"], "warnings": warnings,
     }
     return {"result": result, "fields": priced["fields"]}
+
+
+def estimate_price(labour: Decimal, materials: Decimal, subcontract: Decimal,
+                   contingency_pct: Decimal, markup_pct: Decimal) -> dict:
+    """Price a quote from an estimate, the way the Trade Based Estimate Workbook does.
+
+    Direct cost = labour + materials + subcontract (all ex GST).
+    Contingency = direct cost x contingency_pct.
+    Markup = (direct cost + contingency) x markup_pct (markup on cost).
+    The client-facing lines are each cost line plus markup, with any rounding
+    cent on the largest line so they add up to the quote.
+    """
+    lines = {"labour": _money(labour), "materials": _money(materials),
+             "subcontract": _money(subcontract)}
+    direct = sum(lines.values(), Decimal("0"))
+    contingency = _money(direct * contingency_pct / 100)
+    lines["contingency"] = contingency
+    cost = direct + contingency
+    markup = _money(cost * markup_pct / 100)
+    subtotal = cost + markup
+    factor = 1 + markup_pct / 100
+    sell = {k: _money(v * factor) for k, v in lines.items()}
+    gap = subtotal - sum(sell.values(), Decimal("0"))
+    if gap:
+        sell[max(lines, key=lambda k: lines[k])] += gap
+    priced = gst(subtotal)
+    margin_on_price = _money(markup / subtotal * 100) if subtotal else Decimal("0.00")
+    result = {"direct_cost_ex_gst": str(direct), "contingency_ex_gst": str(contingency),
+              "total_cost_ex_gst": str(cost), "markup_ex_gst": str(markup),
+              "margin_on_price_pct": str(margin_on_price),
+              **{f"{k}_quote_ex_gst": str(v) for k, v in sell.items()},
+              "quote_ex_gst": priced["result"]["amount_ex_gst"], "gst": priced["result"]["gst"],
+              "quote_inc_gst": priced["result"]["amount_inc_gst"]}
+    return {"result": result, "fields": priced["fields"]}

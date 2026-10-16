@@ -1,0 +1,18 @@
+# Example values for a Quote Acceptance Form (fictional). Money from:
+#   python3 tools/compute.py estimate_price --param labour=18400 --param materials=31250 \
+#       --param subcontract=42800 --param contingency_pct=5 --param markup_pct=20
+template: templates/word/Quote_Acceptance_Form_TEMPLATE.docx
+set:
+  QUOTE_NUMBER: Q-014
+row:
+  "Quote Number:": "Q-014|Quote Date:|10/11/2026"
+  "Project:": "42 Banksia St, Merewether NSW 2291|Valid Until:|10/12/2026"
+  "Subtotal (excl. GST):": "$116,487.00"
+  "GST (10%):": "$11,648.70"
+  "TOTAL QUOTE (incl. GST):": "$128,135.70"
+  # NSW: deposit for residential building work is capped; check the state rules.
+  "Deposit Required:": "$12,813.57|Deposit %:|10%"
+cell:
+  "[Brief description of works": "Single-storey rear extension (family room and deck, about 38 m²) as per drawings A-01 to A-06 rev B: framing, fibre cement cladding, metal roof, electrical, plumbing and internal fit-out to lock-up and fixing. Excludes landscaping, floor coverings and window furnishings. Refer to quotation Q-014 for full inclusions, exclusions and allowances."
+replace:
+  "[  ] EFT": "☒ EFT"

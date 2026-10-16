@@ -1,0 +1,49 @@
+# Example inputs for the Trade Based Estimate Workbook (fictional extension).
+# Totals match:
+#   python3 tools/compute.py estimate_price --param labour=18400 --param materials=31250 \
+#       --param subcontract=42800 --param contingency_pct=5 --param markup_pct=20
+template: templates/excel/Trade_Based_Estimate_Workbook.xlsx
+cell:
+  "Estimate!B3": Banksia St extension
+  "Estimate!B4": 42 Banksia St, Merewether NSW 2291
+  "Estimate!B5": Jo and Sam Citizen
+  "Estimate!G3": 10/11/2026
+  "Estimate!G4": EST-014
+  # Labour (rows 9 to 28): trade, description, qty, unit, rate
+  "Estimate!A9": Carpenter
+  "Estimate!B9": Frame, fix-out and doors
+  "Estimate!C9": 160
+  "Estimate!D9": hrs
+  "Estimate!E9": 85
+  "Estimate!A10": Labourer
+  "Estimate!B10": Site clean, materials handling
+  "Estimate!C10": 80
+  "Estimate!D10": hrs
+  "Estimate!E10": 60
+  # Materials (rows 33 to 57): item, description, qty, unit, unit cost
+  "Estimate!A33": Framing
+  "Estimate!B33": Wall and roof framing, trusses, fixings
+  "Estimate!C33": 1
+  "Estimate!D33": lot
+  "Estimate!E33": 18500
+  "Estimate!A34": Cladding
+  "Estimate!B34": Fibre cement cladding and sarking
+  "Estimate!C34": 1
+  "Estimate!D34": lot
+  "Estimate!E34": 12750
+  # Subcontractors (rows 62 to 76): trade, subcontractor, quote ref, quote date, amount
+  "Estimate!A62": Electrician
+  "Estimate!B62": Hunter Sparks Pty Ltd
+  "Estimate!C62": HS-2291
+  "Estimate!D62": 02/11/2026
+  "Estimate!E62": 14800
+  "Estimate!A63": Plumber
+  "Estimate!B63": Coastal Plumbing
+  "Estimate!C63": CP-118
+  "Estimate!D63": 03/11/2026
+  "Estimate!E63": 16500
+  "Estimate!A64": Roofer
+  "Estimate!B64": Newcastle Roofing
+  "Estimate!C64": NR-77
+  "Estimate!D64": 04/11/2026
+  "Estimate!E64": 11500

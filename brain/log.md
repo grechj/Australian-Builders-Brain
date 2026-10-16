@@ -1,6 +1,8 @@
 # Directory Update Log
 
 ## 2026-10-16
+* **Creation**: Added the [estimate price](/computations/estimate_price.md) computation and [estimating and quoting](/contracts/estimating_and_quoting.md).
+* **Update**: Quote Acceptance Form now uses the client's phone and email (it printed the builder's). Estimate, quote converter and sensitivity workbooks now say "markup" where they calculate markup, and the sensitivity sheet shows the margin on price.
 * **Creation**: Added the [final account](/computations/final_account.md) and [add period](/computations/add_period.md) computations, [practical completion, defects and handover](/contracts/practical_completion_and_defects.md), and two [playbooks](/playbooks/index.md) built from the BEAM PDF checklists.
 * **Update**: Fixed the Final Account Summary workbook, which counted retention twice, and gave the Final Claim and Release an ex-GST contract sum field.
 * **Creation**: Added the [progress claim](/computations/progress_claim.md), [ex GST](/computations/ex_gst.md) and [add days](/computations/add_days.md) computations.

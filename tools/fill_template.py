@@ -254,7 +254,10 @@ def fill_xlsx(src: Path, out: Path, values: dict[str, str], cells: dict[str, str
             unmatched.append(f"cell: {address} (no sheet {sheet!r})")
             continue
         cell = wb[sheet][ref]
-        if isinstance(cell.value, str) and cell.value.startswith("="):
+        # A formula that only points at another cell (=Setup!B14) is a default
+        # the user may override, such as a labour rate. Real calculations are protected.
+        is_default = isinstance(cell.value, str) and re.fullmatch(r"=(?:'?[\w ]+'?!)?\$?[A-Z]{1,3}\$?\d+", cell.value)
+        if isinstance(cell.value, str) and cell.value.startswith("=") and not is_default:
             unmatched.append(f"cell: {address} is a formula, not an input")
             continue
         excel_value(cell, raw)
