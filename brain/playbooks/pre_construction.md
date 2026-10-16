@@ -1,7 +1,7 @@
 ---
 type: Playbook
 title: Pre-construction checklist
-description: Everything to have in place before breaking ground: contracts, approvals, insurance, documents, site set-up and safety, from the BEAM pre-construction checklist.
+description: "Everything to have in place before breaking ground (contracts, approvals, insurance, documents, site set-up and safety), from the BEAM pre-construction checklist."
 tags: [playbooks, contracts, pre_construction, approvals, insurance]
 status: stable
 sources:

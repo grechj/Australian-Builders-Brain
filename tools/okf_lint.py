@@ -69,7 +69,10 @@ def split_front(text: str) -> tuple[dict | None, str]:
         _, front, body = text.split("---\n", 2)
     except ValueError:
         return None, text
-    return yaml.safe_load(front) or {}, body
+    try:
+        return yaml.safe_load(front) or {}, body
+    except yaml.YAMLError as e:
+        return {"_yaml_error": str(e).splitlines()[0]}, body
 
 
 def concepts() -> list[Path]:
@@ -89,6 +92,9 @@ def check_concepts(errors: list[str], warnings: list[str]) -> None:
         meta, body = split_front(p.read_text())
         if meta is None:
             errors.append(f"{rel}: no YAML frontmatter")
+            continue
+        if "_yaml_error" in meta:
+            errors.append(f"{rel}: frontmatter is not valid YAML ({meta['_yaml_error']}). Quote values that contain a colon")
             continue
         if not meta.get("type"):
             errors.append(f"{rel}: frontmatter has no `type`")

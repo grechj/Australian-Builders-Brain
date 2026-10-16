@@ -7,5 +7,6 @@
 * [Final account](final_account.md) - Works out the adjusted contract sum and the final claim from the contract sum, variations, PC/PS adjustments, claims to date and retention.
 * [GST on an ex-GST amount](gst.md) - Adds 10% GST to an ex-GST amount and produces the AMOUNT, AMOUNT_GST and AMOUNT_TOTAL template fields.
 * [Margin achieved](margin.md) - Margin in dollars and percent on a quoted item, matching the Variation Register's formula.
+* [Payment schedule](payment_schedule.md) - Turns a contract's stage percentages into stage amounts inc and ex GST, adding up exactly to the contract sum, and flags a deposit over the state cap.
 * [Progress claim](progress_claim.md) - Works out a progress claim from the stage schedule (value completed less previous claims), deducts any retention, and adds GST.
 * [Variation price](variation_price.md) - Prices a variation from its cost lines, adds the builder's margin, then adds GST.
