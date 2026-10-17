@@ -88,12 +88,12 @@ def normalise(ledger: dict, accounts: dict) -> list[dict]:
     out = []
     for t in ledger.get("transactions") or []:
         lines = [{"amount": str(l.get("amount", Decimal(str(l.get("quantity", 1))) * Decimal(str(l.get("unit_amount", 0))))),
-                  "tax": l["tax"], "account": l.get("account", "")} for l in t["lines"]]
+                  "tax": l["tax"], "account": l.get("account", ""), "description": str(l.get("description", ""))} for l in t["lines"]]
         tpar = t.get("tpar")
         if tpar is None:
             tpar = t["type"] in PURCHASES and any(l.get("account") in tpar_roles for l in t["lines"])
         c = t.get("contact") or {}
-        out.append({"type": t["type"], "number": str(t["number"]), "date": str(t["date"]),
+        out.append({"type": t["type"], "number": str(t["number"]), "date": str(t["date"]), "due": str(t.get("due") or ""),
                     "contact": {"name": c.get("name", ""), "abn": c.get("abn", ""), "address": c.get("address", "")},
                     "lines": lines, "payments": [{"date": str(p["date"]), "amount": str(p["amount"])} for p in t.get("payments") or []],
                     "withheld": str(t.get("withheld", 0) or 0), "tpar": bool(tpar)})

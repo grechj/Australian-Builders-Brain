@@ -7,7 +7,7 @@ status: draft
 runtime: python
 computation: /references/computations/finance_maths.py
 entry_point: bas_summary
-computation_sha256: 9cf62924924f24eaf3dafc99796bdd34e761455239aef66f0566fbc20b28fdfd
+computation_sha256: e65bf5d2d248f39245fb2427b8f93f0ecba2bdb63a5f2ec2f1798ca7930c7e73
 parameters:
   - { name: transactions, type: json, required: true }
   - { name: period_start, type: date, required: true }

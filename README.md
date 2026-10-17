@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.9.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
+> **Status: v0.10.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -135,8 +135,13 @@ python3 tools/finance.py bas examples/ledger_example.yaml --accounts examples/ac
 
 List your jobs, current and finished, in a portfolio file and get CSV
 extracts plus a dashboard page for each job: P&L and margin against target,
-receipts and what's outstanding, costs against budget, cash in and out by
-month, time on site, and job length against the contract and your average.
+a forecast at completion, receipts and what's outstanding, costs against
+budget, cash in and out by month, time on site, and job length against the
+contract and your average. The dashboard links to every document generated
+for the job (locally, or in Dropbox, Google Drive or SharePoint), and the
+extracts include flat transaction tables for modelling, a cost mix by
+project type for pricing new work, and Xero, MYOB or QuickBooks import files
+covering every job.
 
 ```bash
 python3 tools/dashboard.py examples/jobs_example.yaml --as-at 31/10/2026 --out out/dashboard

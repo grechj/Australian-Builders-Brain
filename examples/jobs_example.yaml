@@ -4,11 +4,17 @@
 #
 # Each job takes its details from its project file, or from the keys here
 # (keys here win). budget: the estimate's cost by role, ex GST.
+# documents: the folder the skills write that job's documents into; add
+# documents_url (the same folder in Dropbox, Google Drive or SharePoint) to
+# make the dashboard's links open there instead.
+
+accounts: accounts_example.yaml     # one account mapping for the import files
 
 jobs:
   - project: project_example.yaml
     ledger: ledger_example.yaml
     timesheets: timesheets_example.csv
+    documents: ../out/jobs/SB-2027-014      # created when you generate documents for the job
     status: active
     start_date: 03/08/2026          # the example project file's dates are illustrative; this job started earlier
     contract_end_date: 30/04/2027

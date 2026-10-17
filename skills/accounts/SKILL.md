@@ -135,15 +135,18 @@ use their software's TPAR report, which is usually easier.
 
 When the user wants to see how a job (or all their jobs) is going:
 
-1. Keep a portfolio file, `jobs.yaml`, in their folder (pattern: `$ABB/examples/jobs_example.yaml`): each job's project file, ledger, timesheets (a CSV, or the Timesheet and Docket workbook), status, start, contract end and practical completion dates, target margin, and the cost budget by role from the estimate. Completed jobs belong there too: they give the averages.
+1. Keep a portfolio file, `jobs.yaml`, in their folder (pattern: `$ABB/examples/jobs_example.yaml`): the account mapping (`accounts:`), and for each job its project file, ledger, timesheets (a CSV, or the Timesheet and Docket workbook), the folder its documents are written to (`documents:`, usually that job folder's `out/`), status, start, contract end and practical completion dates, target margin, and the cost budget by role from the estimate. Completed jobs belong there too: they give the averages. If their job folders live in Dropbox, Google Drive or SharePoint, add `documents_url:` (the same folder's web link) so the dashboard's document links open there.
 2. Build it:
 
    ```bash
-   python3 $ABB/tools/dashboard.py jobs.yaml --out out/dashboard --as-at <DD/MM/YYYY>
+   python3 $ABB/tools/dashboard.py jobs.yaml --out out/dashboard --as-at <DD/MM/YYYY> [--since <DD/MM/YYYY>] [--software xero,myob]
    python3 $ABB/brain/references/attesters/check_receipt.py out/dashboard/receipt.json
    ```
 
-3. Give the user `out/dashboard/dashboard.html` (opens in any browser, no internet needed) and the CSVs (`jobs.csv`, `monthly.csv`, `costs.csv`, `benchmarks.csv`) for Excel, Google Sheets, Power BI or Looker Studio. If they want to share it, offer to publish the dashboard page.
+3. Give the user `out/dashboard/dashboard.html` (opens in any browser, no internet needed; it links to every document generated for the job and to every extract) and point them to:
+   - **To model work:** `transactions.csv` (every invoice and bill with paid, outstanding, days to settle, days overdue, financial year and quarter), `transaction_lines.csv` (every line and timesheet cost with role and account code: the table for pivots), `costs.csv` (actual, budget, forecast final and % of revenue), `cost_mix.csv` (average cost per category as % of revenue by project type: use it to sanity-check a new estimate) and `jobs.csv` (forecast profit at completion).
+   - **To send to the books by hand:** `imports/<software>/`, one import file set for all jobs, tracked by job. Use `--since` with the date of the last send so only new transactions go in; Xero, MYOB and QuickBooks reject numbers that already exist, but don't rely on it.
+   If they want to share the dashboard, offer to publish it.
 4. Read the headline back in a few lines: profit and margin against target, cash received and outstanding, the cost categories over budget, days on site, and job length against the contract and the average. Pass on every warning.
 
 Margin here is profit on revenue to date, so an early job that has claimed ahead of its costs shows a high margin: say so, and compare costs to budget for the real picture. Own labour counts only if timesheets are in the portfolio.

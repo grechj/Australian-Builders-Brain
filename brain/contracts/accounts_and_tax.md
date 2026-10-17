@@ -132,6 +132,10 @@ and labour, and job length against the contract period and the average of
 completed jobs of the same type. The CSVs load straight into Excel, Google
 Sheets, Power BI or Looker Studio, and are what a web app would read.
 
+- **Documents.** Each job's documents folder is scanned for what the skills generated (claims, variations, notices, RFIs, minutes, diaries...). The dashboard lists them, typed by template and numbered from the file name, with links to the files, or to the same folder in Dropbox, Google Drive or SharePoint if a `documents_url` is set. `documents.csv` is the register.
+- **Modelling.** `transactions.csv` and `transaction_lines.csv` are the job ledgers flattened, with financial year, quarter, days to settle and days overdue: the tables to pivot or model cash flow from. `cost_mix.csv` gives each cost category as a percentage of revenue, averaged across completed jobs by project type, for checking new estimates. `jobs.csv` carries a forecast at completion (each cost category at the larger of budget and actual).
+- **Manual import.** `imports/<software>/` holds one set of Xero, MYOB or QuickBooks import files covering every job, tracked by job; `--since` limits it to transactions since the last send.
+
 # Tax questions beyond the job
 
 For tax rules beyond these summaries (BAS labels in depth, PAYG, TPAR edge

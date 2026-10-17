@@ -170,6 +170,13 @@ def _month(text: str) -> str:
     return _date(text).strftime("%Y-%m")
 
 
+def _period(text: str) -> dict:
+    """Month, Australian financial year (July to June) and quarter of a date."""
+    d = _date(text)
+    fy = d.year + 1 if d.month >= 7 else d.year
+    return {"month": d.strftime("%Y-%m"), "financial_year": f"FY{fy}", "quarter": f"FY{fy} Q{(d.month - 7) % 12 // 3 + 1}"}
+
+
 def job_dashboard(jobs: list, as_at: str) -> dict:
     """Per-job P&L, cash, costs, margin and time, monthly series, and benchmarks
     across jobs, for the project dashboard.
@@ -183,10 +190,14 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
     Revenue and costs are ex GST on an accrual basis (by transaction date);
     receipts and payments are inc GST, by payment date. Balance sheet lines
     (retention, deposits held, capital equipment) are left out of profit.
-    Own labour from timesheets is a cost of the job.
+    Own labour from timesheets is a cost of the job. Forecasts take each cost
+    category at the larger of actual and budget (active jobs only) against
+    the revised contract. Also returns every transaction (with days to settle
+    and days overdue) and every line, for modelling and pivot tables.
     """
     today = _date(as_at)
     rows, monthly, costs, warnings = [], {}, [], []
+    txn_rows, line_rows = [], []
     for j in jobs:
         rev = {r: Decimal("0") for r in INCOME_ROLES}
         cost = {}
@@ -201,6 +212,40 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
             pay = sum((Decimal(str(p["amount"])) for p in t.get("payments", [])), Decimal("0")) * sign
             m = monthly.setdefault((j["job"], _month(t["date"])), {"revenue": Decimal("0"), "costs": Decimal("0"),
                                                                      "received": Decimal("0"), "paid": Decimal("0")})
+            ex_total = sum((a for a, _, _ in lines), Decimal("0")) * sign
+            paid_dates = sorted((_date(p["date"]) for p in t.get("payments", [])))
+            settled = None
+            if total_inc and pay * sign >= abs(total_inc) - CENT:
+                running_paid = Decimal("0")
+                for p in sorted(t.get("payments", []), key=lambda p: _date(p["date"])):
+                    running_paid += Decimal(str(p["amount"]))
+                    if running_paid >= abs(total_inc) - CENT:
+                        settled = _date(p["date"])
+                        break
+            outstanding = total_inc - pay
+            due = _date(t["due"]) if t.get("due") else None
+            txn_rows.append({
+                "job": j["job"], "side": "sale" if t["type"] in SALES else "purchase", "type": t["type"],
+                "number": t["number"], "date": t["date"], "due": t.get("due", ""), **_period(t["date"]),
+                "contact": t.get("contact", {}).get("name", ""), "abn": t.get("contact", {}).get("abn", ""),
+                "ex_gst": str(_money(ex_total)), "gst": str(_money(total_inc - ex_total)), "inc_gst": str(_money(total_inc)),
+                "paid_inc_gst": str(_money(pay)), "outstanding_inc_gst": str(_money(outstanding)),
+                "first_payment": paid_dates[0].strftime("%d/%m/%Y") if paid_dates else "",
+                "settled_on": settled.strftime("%d/%m/%Y") if settled else "",
+                "days_to_settle": str((settled - _date(t["date"])).days) if settled else "",
+                "days_overdue": str((today - due).days) if due and outstanding and today > due else "",
+            })
+            for (amount, gst_line, tax), line in zip(lines, t["lines"]):
+                role = line.get("account", "")
+                kind = "balance_sheet" if role in BALANCE_ROLES else ("income" if t["type"] in SALES else "cost")
+                line_rows.append({
+                    "job": j["job"], "side": "sale" if t["type"] in SALES else "purchase", "type": t["type"],
+                    "number": t["number"], "date": t["date"], **_period(t["date"]),
+                    "contact": t.get("contact", {}).get("name", ""), "role": role, "kind": kind,
+                    "description": line.get("description", ""), "tax": tax,
+                    "ex_gst": str(_money(amount * sign)), "gst": str(_money(gst_line * sign)),
+                    "inc_gst": str(_money((amount + gst_line) * sign)),
+                })
             for (amount, _gst, _tax), line in zip(lines, t["lines"]):
                 role = line.get("account", "")
                 if role in BALANCE_ROLES:
@@ -238,6 +283,10 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
             lm = monthly.setdefault((j["job"], _month(entry["date"])), {"revenue": Decimal("0"), "costs": Decimal("0"),
                                                                          "received": Decimal("0"), "paid": Decimal("0")})
             lm["costs"] += c
+            line_rows.append({"job": j["job"], "side": "labour", "type": "timesheet", "number": "", "date": entry["date"],
+                              **_period(entry["date"]), "contact": entry.get("worker", ""), "role": "own_labour",
+                              "kind": "cost", "description": f"{h} hours", "tax": "",
+                              "ex_gst": str(c), "gst": "0.00", "inc_gst": str(c)})
         if labour:
             cost["own_labour"] = cost.get("own_labour", Decimal("0")) + labour
         revenue = sum(rev.values(), Decimal("0"))
@@ -250,9 +299,17 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
         elapsed = (finish - start).days + 1
         contract_days = (_date(j["contract_end_date"]) - start).days + 1 if j.get("contract_end_date") else None
         budget = {k: _money(Decimal(str(v))) for k, v in (j.get("budget") or {}).items()}
+        forecast_cost = Decimal("0")
         for role in sorted(set(cost) | set(budget)):
-            costs.append({"job": j["job"], "category": role, "actual_ex_gst": str(_money(cost.get(role, Decimal("0")))),
-                          "budget_ex_gst": str(budget[role]) if role in budget else ""})
+            actual = _money(cost.get(role, Decimal("0")))
+            forecast = max(actual, budget.get(role, Decimal("0"))) if j.get("status") != "complete" else actual
+            forecast_cost += forecast
+            costs.append({"job": j["job"], "category": role, "actual_ex_gst": str(actual),
+                          "budget_ex_gst": str(budget[role]) if role in budget else "",
+                          "forecast_final_ex_gst": str(forecast),
+                          "pct_of_revenue": str((actual / revenue * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if revenue else ""})
+        final_revenue = revised if j.get("status") != "complete" else revenue
+        forecast_profit = final_revenue - forecast_cost
         margin = (profit / revenue * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP) if revenue else None
         target = Decimal(str(j["target_margin_pct"])) if j.get("target_margin_pct") is not None else None
         rows.append({
@@ -276,6 +333,10 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
             "start_date": j["start_date"], "contract_end_date": j.get("contract_end_date", ""), "pc_date": j.get("pc_date", ""),
             "days_elapsed": str(elapsed), "contract_days": str(contract_days) if contract_days else "",
             "time_used_pct": str((Decimal(elapsed) / contract_days * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if contract_days else "",
+            "forecast_revenue_ex_gst": str(_money(final_revenue)), "forecast_costs_ex_gst": str(_money(forecast_cost)),
+            "forecast_profit_ex_gst": str(_money(forecast_profit)),
+            "forecast_margin_pct": str((forecast_profit / final_revenue * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if final_revenue else "",
+            "labour_hours_per_100k_revenue": str((hours / revenue * 100000).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if revenue and hours else "",
         })
         if margin is not None and target is not None and margin < target:
             warnings.append(f"{j['job']}: margin {margin}% is below the target {target}%")
@@ -295,9 +356,24 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
                       "average_days": str(avg_days.quantize(Decimal("1"), rounding=ROUND_HALF_UP)),
                       "average_margin_pct": str((sum(margins) / len(margins)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if margins else ""})
 
+    def mix(group: str, members: list) -> None:
+        codes = {r["job"] for r in members}
+        cats = sorted({c["category"] for c in costs if c["job"] in codes})
+        for cat in cats:
+            shares = [Decimal(c["pct_of_revenue"]) for c in costs if c["job"] in codes and c["category"] == cat and c["pct_of_revenue"]]
+            if shares:
+                cost_mix.append({"group": group, "category": cat, "completed_jobs": str(len(members)),
+                                 "average_pct_of_revenue": str((sum(shares) / len(members)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))})
+
+    cost_mix = []
     add("all", done)
+    mix("all", done)
     for ptype in sorted({r["project_type"] for r in done if r["project_type"]}):
         add(ptype, [r for r in done if r["project_type"] == ptype])
+        mix(ptype, [r for r in done if r["project_type"] == ptype])
+    settle = [Decimal(x["days_to_settle"]) for x in txn_rows if x["side"] == "sale" and x["days_to_settle"]]
+    if settle and bench:
+        bench[0]["average_days_to_be_paid"] = str((sum(settle) / len(settle)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
     by_group = {b["group"]: b for b in bench}
     for r in rows:
         b = by_group.get(r["project_type"]) or by_group.get("all")
@@ -313,5 +389,6 @@ def job_dashboard(jobs: list, as_at: str) -> dict:
         series.append({"job": job, "month": month, "revenue_ex_gst": str(_money(m["revenue"])),
                        "costs_ex_gst": str(_money(m["costs"])), "received_inc_gst": str(_money(m["received"])),
                        "paid_inc_gst": str(_money(m["paid"])), "cumulative_profit_ex_gst": str(_money(running[job]))})
-    result = {"as_at": as_at, "jobs": rows, "monthly": series, "costs": costs, "benchmarks": bench, "warnings": warnings}
+    result = {"as_at": as_at, "jobs": rows, "monthly": series, "costs": costs, "benchmarks": bench,
+              "cost_mix": cost_mix, "transactions": txn_rows, "lines": line_rows, "warnings": warnings}
     return {"result": result, "fields": {"JOBS": str(len(rows))}}

@@ -117,6 +117,38 @@ def main() -> None:
         receipt = Path(tmp) / "receipt.json"
         p = subprocess.run([sys.executable, str(ROOT / "brain/references/attesters/check_receipt.py"), str(receipt)], capture_output=True, text=True)
         expect("dashboard receipt passes the attester", p.returncode, 0)
+        expect("dashboard forecast at completion", (j.get("forecast_costs_ex_gst"), j.get("forecast_profit_ex_gst"), j.get("forecast_margin_pct")),
+               ("355500.00", "88769.09", "20.0"))
+        txns = {r["number"]: r for r in csv.DictReader((Path(tmp) / "transactions.csv").open(newline=""))}
+        expect("transactions extract: days to settle and quarter", (txns["INV-002"]["days_to_settle"], txns["INV-002"]["quarter"]), ("14", "FY2027 Q1"))
+        expect("transactions extract: HS-118 unpaid as at 31/10", txns["HS-118"]["outstanding_inc_gst"], "11760.00")
+        lines = list(csv.DictReader((Path(tmp) / "transaction_lines.csv").open(newline="")))
+        retention = [l for l in lines if l["role"] == "retention_payable"][0]
+        expect("line extract: retention is balance sheet, coded 805", (retention["kind"], retention["account_code"], retention["ex_gst"]), ("balance_sheet", "805", "-560.00"))
+        mix = {(r["group"], r["category"]): r["average_pct_of_revenue"] for r in csv.DictReader((Path(tmp) / "cost_mix.csv").open(newline=""))}
+        expect("cost mix for extensions", mix.get(("extension", "subcontractors")), "36.9")
+        imp = list(csv.DictReader((Path(tmp) / "imports" / "xero" / "xero_sales_invoices.csv").open(newline="")))
+        expect("portfolio Xero import has every job's sales lines", len(imp), 4 + 5 + 5)
+        expect("portfolio import tracks each job", sorted({r["TrackingOption1"] for r in imp}), ["SB-2025-031", "SB-2026-007", "SB-2027-014"])
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "jobs_example.yaml"),
+                            "--as-at", "31/10/2026", "--since", "01/10/2026", "--out", tmp], capture_output=True, text=True)
+        imp = list(csv.DictReader((Path(tmp) / "imports" / "xero" / "xero_sales_invoices.csv").open(newline="")))
+        expect("--since limits the import files", sorted({r["*InvoiceNumber"] for r in imp}), ["INV-003"])
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dashboard
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp) / "SB-1"
+        folder.mkdir()
+        for name in ("VAR-002_Priced_Variation_Notice.docx", "DELAY-001_Delay_Notification_Letter.docx", "Site_Diary.xlsx", "notes.txt"):
+            (folder / name).write_text("x")
+        docs = {d["file"]: d for d in dashboard.documents("SB-1", folder, None, Path(tmp) / "out", dashboard.template_titles())}
+        expect("documents found (not the .txt)", sorted(docs), ["DELAY-001_Delay_Notification_Letter.docx", "Site_Diary.xlsx", "VAR-002_Priced_Variation_Notice.docx"])
+        expect("documents typed and referenced", (docs["VAR-002_Priced_Variation_Notice.docx"]["document"], docs["VAR-002_Priced_Variation_Notice.docx"]["reference"]),
+               ("Priced Variation Notice", "VAR-002"))
+        expect("documents linked relative to the dashboard", docs["Site_Diary.xlsx"]["link"], "../SB-1/Site_Diary.xlsx")
+        cloud = dashboard.documents("SB-1", folder, "https://www.dropbox.com/home/Jobs/SB-1", Path(tmp) / "out", dashboard.template_titles())
+        expect("documents linked to a cloud folder", [d["link"] for d in cloud if d["file"] == "Site_Diary.xlsx"], ["https://www.dropbox.com/home/Jobs/SB-1/Site_Diary.xlsx"])
 
     print(f"\n{'all finance checks passed' if not failures else f'{failures} failed'}")
     sys.exit(1 if failures else 0)

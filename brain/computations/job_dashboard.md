@@ -7,7 +7,7 @@ status: stable
 runtime: python
 computation: /references/computations/finance_maths.py
 entry_point: job_dashboard
-computation_sha256: 9cf62924924f24eaf3dafc99796bdd34e761455239aef66f0566fbc20b28fdfd
+computation_sha256: e65bf5d2d248f39245fb2427b8f93f0ecba2bdb63a5f2ec2f1798ca7930c7e73
 parameters:
   - { name: jobs, type: json, required: true }
   - { name: as_at, type: date, required: true }
@@ -36,6 +36,10 @@ and timesheets:
 | Days elapsed | Start date to practical completion (or to the as-at date while active), inclusive |
 | Time used | Days elapsed as a percentage of the contract period |
 | Job length vs average | Days elapsed against the average of completed jobs of the same project type (or all completed jobs) |
+
+| Forecast at completion | Active jobs: revised contract less each cost category at the larger of budget and actual |
+| Cost mix | Each category's cost as a percentage of revenue, averaged across completed jobs, by project type |
+| Days to settle, days overdue | Per transaction: from its date to the payment that settled it; and from its due date to the as-at date while unpaid |
 
 Retention, deposits held and capital equipment are balance sheet items, so
 they are left out of profit. Monthly series give revenue, costs, receipts,

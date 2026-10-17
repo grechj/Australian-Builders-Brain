@@ -3,6 +3,12 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.10.0 (2026-10-17)
+
+- The dashboard lists every document generated for each job (typed by template, numbered from the file name) with links to the files, or to the same folder in Dropbox, Google Drive or SharePoint (`documents_url`); `documents.csv` is the register.
+- Modelling extracts: `transactions.csv` (paid, outstanding, days to settle, days overdue, financial year and quarter), `transaction_lines.csv` (every line and timesheet cost with role and account code), `cost_mix.csv` (cost per category as % of revenue by project type), and forecast profit at completion in `jobs.csv` and on the dashboard.
+- Manual import files for all jobs at once: `imports/<software>/` (Xero, MYOB, QuickBooks), tracked by job, with `--since` for only what's new.
+
 ## 0.9.0 (2026-10-17)
 
 - Project dashboard and financial extracts: `tools/dashboard.py` reads a portfolio of jobs (ledger, timesheets, budget) and writes `jobs.csv`, `monthly.csv`, `costs.csv` and `benchmarks.csv`, plus a self-contained dashboard page (P&L and margin against target, receipts and outstanding, costs against budget, cash by month, time on site, job length against the contract and the average of completed jobs). Works offline, in light and dark mode, on a phone.
