@@ -1,0 +1,40 @@
+# Example account mapping. Copy it to accounts.yaml in your own folder and
+# change the codes to match YOUR chart of accounts. Have your accountant or
+# bookkeeper check it once; after that every export uses it.
+#
+# The ledger codes each line with a role (contract_income, subcontractors...).
+# This file says which account each role posts to in your software.
+# The codes below are a standard Australian Xero chart, plus three accounts
+# marked "create" that a builder usually adds.
+
+software: xero              # xero, myob or quickbooks
+
+# Xero tracking category (or MYOB job, or QuickBooks location) used to
+# report each job separately. The option is the ledger's job number.
+tracking_name: Job
+
+accounts:
+  contract_income: "200"         # Sales
+  variation_income: "200"        # Sales (or create a separate Variations income account)
+  other_income: "260"            # Other Revenue
+  subcontractors: "310"          # Cost of Goods Sold (or create Subcontractors)
+  materials: "310"               # Cost of Goods Sold (or create Materials)
+  plant_hire: "310"              # Cost of Goods Sold
+  labour_hire: "310"             # Cost of Goods Sold
+  site_costs: "310"              # Cost of Goods Sold
+  permits_fees: "429"            # General Expenses
+  insurance: "433"               # Insurance
+  equipment: "710"               # Office Equipment (capital purchases)
+  retention_receivable: "625"    # create: Retentions Receivable (current asset)
+  retention_payable: "805"       # create: Retentions Payable (current liability)
+  deposits_held: "806"           # create: Customer Deposits (current liability), if you hold deposits before invoicing
+
+# Bills coded to these roles are reported in the TPAR unless a bill says
+# tpar: false (for example materials-only supply from a subcontractor).
+tpar_accounts: [subcontractors, labour_hire]
+
+# Optional: tax names in your file, if they differ from the defaults in
+# tools/finance_formats.yaml.
+# tax_names:
+#   sales: {gst: GST on Income}
+#   purchases: {gst: GST on Expenses}

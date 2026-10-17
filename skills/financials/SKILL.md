@@ -31,6 +31,8 @@ plugin's setup hook creates it). Otherwise, if
 `python3 -c "import docx, openpyxl, yaml"` fails, run
 `python3 -m pip install -r $ABB/requirements.txt` first.
 
+To get costs and claims into Xero, MYOB or QuickBooks, or for GST, BAS or TPAR figures, use the accounts skill; its job ledger can feed the actual costs here.
+
 Everything here is ex GST. If the user gives inc-GST invoice totals,
 convert them with `python3 $ABB/tools/compute.py ex_gst --param amount_inc_gst=...`.
 

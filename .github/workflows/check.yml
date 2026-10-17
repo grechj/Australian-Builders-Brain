@@ -19,3 +19,5 @@ jobs:
         run: python tools/test_profile.py
       - name: Materials takeoff (hand-checked)
         run: python tools/test_takeoff.py
+      - name: Finance exports, BAS and TPAR (hand-checked)
+        run: python tools/test_finance.py

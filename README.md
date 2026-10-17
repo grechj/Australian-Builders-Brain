@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.7.0.** All eleven skills work end to end, covering all 64 templates. NCC 2025
+> **Status: v0.8.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -33,6 +33,10 @@ claude plugin marketplace add grechj/Australian-Builders-Brain
 claude plugin install australian_builders_brain
 ```
 
+Or in one step, inside Claude Code: `/plugin install australian_builders_brain --marketplace grechj/Australian-Builders-Brain`
+
+That's all a plugin user needs: no clone and no `pip install`.
+
 The plugin's skills run from your own project folder and write their
 documents there; the brain itself stays read-only. The first time a session
 starts, a setup hook builds a private Python environment for the tools
@@ -46,7 +50,9 @@ full brain, use Claude Code.
 
 **Any other agent:** clone the repo and point the agent at `AGENTS.md`.
 
-Working in a clone, install the Python tools' dependencies yourself:
+Only if you're working in a clone of this repository (to contribute, or
+without the plugin), install the Python tools' dependencies yourself, from
+the clone's folder:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -107,6 +113,24 @@ Bunnings prices are a retail guide only; specialist suppliers often price
 better. The brain never scrapes the Bunnings website (its terms allow
 personal use only) and never stores anyone's prices.
 
+## Money into your accounts (accounts skill)
+
+Claims, invoices and bills from the other skills go into a per-job ledger
+(`ledger.yaml`), coded once to your own chart of accounts (`accounts.yaml`).
+From there `tools/finance.py` writes import files for Xero, MYOB
+AccountRight or QuickBooks Online, or the skill creates drafts through your
+own Xero, MYOB or QuickBooks connector after you approve them. It also works
+out the job's BAS GST labels and the TPAR contractor payments as attested
+computations. Nothing is lodged, and no keys or logins are stored.
+
+```bash
+python3 tools/finance.py export examples/ledger_example.yaml --accounts examples/accounts_example.yaml --out out/finance
+```
+
+```bash
+python3 tools/finance.py bas examples/ledger_example.yaml --accounts examples/accounts_example.yaml --from 01/07/2026 --to 30/09/2026 --basis accrual
+```
+
 ## How it stays trustworthy
 
 - **Money is never guessed.** GST, variation prices and margins come from
@@ -134,6 +158,7 @@ personal use only) and never stores anyone's prices.
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
+| `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
 | `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |
 

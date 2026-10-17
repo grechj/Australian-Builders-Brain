@@ -22,6 +22,7 @@ skills:
 - site
 - safety
 - financials
+- accounts
 - ncc
 - contracts
 - handover
@@ -53,7 +54,7 @@ State and territory variations to these parts are shown for the user's state onl
 
 # Skills
 
-`estimating`, `materials`, `variations`, `claims`, `notices`, `site`, `safety`, `financials`, `ncc`, `contracts`, `handover`
+`estimating`, `materials`, `variations`, `claims`, `notices`, `site`, `safety`, `financials`, `accounts`, `ncc`, `contracts`, `handover`
 
 # Materials
 

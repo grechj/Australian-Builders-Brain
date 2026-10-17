@@ -3,6 +3,14 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.8.0 (2026-10-17)
+
+- New `accounts` skill: a per-job ledger of invoices, credit notes, bills, supplier credits and payments; a per-user account mapping; import files for Xero (checked against Xero's import help), MYOB AccountRight and QuickBooks Online (draft formats, in `tools/finance_formats.yaml`); a payload for creating drafts through the user's own Xero, MYOB or QuickBooks connector, only after they approve.
+- New attested computations: [BAS summary](brain/computations/bas_summary.md) (G1 to G4, G10, G11, 1A, 1B on a cash or accrual basis) and [TPAR summary](brain/computations/tpar_summary.md) (contractor payments per ABN for the financial year).
+- New brain page `contracts/accounts_and_tax.md`: GST timing, deposits, retention methods, BAS, TPAR, connectors, and where to go for deeper tax questions (OpenAccountants, referenced not copied).
+- `tools/finance.py` (check, export, payload, bas, tpar) with hand-checked tests in CI (`tools/test_finance.py`).
+- Every trade profile now lists the accounts skill. README: plugin users need no clone or pip install; one-step install line.
+
 ## 0.7.0 (2026-10-17)
 
 - 11 new templates (64 in all): Payment Claim and Payment Schedule under the security of payment acts, a trade Tax Invoice, Trade Quote, Request for Information, Meeting Minutes, Suspension, Breach and Termination notices, a Construction Program (linked working-day dates and a bar chart) and Timesheets and Day Work Dockets.

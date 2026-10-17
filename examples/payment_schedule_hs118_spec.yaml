@@ -5,7 +5,7 @@ set:
   DATE: 20/10/2026
   CLAIM_REF: HS-118
   SUBBIE_NAME: Hunter Sparks Pty Ltd
-  SUBBIE_ABN: 98 765 432 109
+  SUBBIE_ABN: 95 471 173 493
   DD/MM/YYYY: 13/10/2026          # the date the claim was received
 replace:
   "The scheduled amount will be paid by [DD/MM/YYYY].": "The scheduled amount will be paid by 10/11/2026."

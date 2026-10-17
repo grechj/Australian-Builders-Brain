@@ -1,0 +1,98 @@
+# Example job ledger (fictional). Copy it to ledger.yaml in your own folder.
+# One entry per invoice, credit note, bill or supplier credit, with the
+# payments made against it. Amounts are ex GST; GST is calculated per line.
+# ABNs are made up and only pass the ABN checksum.
+#
+# type:     invoice | credit_note (your sales)   bill | supplier_credit (your purchases)
+# account:  a role from accounts.yaml (contract_income, subcontractors, materials...)
+# tax:      gst | gst_free | export | input_taxed | capital | bas_excluded
+# tpar:     optional on a bill; defaults from accounts.yaml tpar_accounts
+
+job: SB-2027-014
+
+transactions:
+  - type: invoice
+    number: INV-001
+    date: 12/08/2026
+    due: 19/08/2026
+    reference: Deposit
+    contact: {name: Jo and Sam Citizen, email: citizens@example.com}
+    lines:
+      - {description: "Deposit (5%)", amount: 22045.45, account: contract_income, tax: gst}
+    payments:
+      - {date: 15/08/2026, amount: 24250.00}
+
+  - type: invoice
+    number: INV-002
+    date: 18/09/2026
+    due: 02/10/2026
+    reference: Claim 2, base stage
+    contact: {name: Jo and Sam Citizen, email: citizens@example.com}
+    lines:
+      - {description: "Base / slab stage (15%)", amount: 66136.36, account: contract_income, tax: gst}
+    payments:
+      - {date: 02/10/2026, amount: 72750.00}
+
+  - type: invoice
+    number: INV-003
+    date: 16/10/2026
+    due: 30/10/2026
+    reference: Claim 3, frame stage
+    source: examples/claim_003_spec.yaml
+    contact: {name: Jo and Sam Citizen, email: citizens@example.com}
+    lines:
+      - {description: "Frame stage (20%)", amount: 88181.82, account: contract_income, tax: gst}
+      - {description: "VAR-001 additional power points", amount: 3360.00, account: variation_income, tax: gst}
+    payments:
+      - {date: 28/10/2026, amount: 100696.00}
+
+  - type: bill
+    number: CE-2291
+    date: 25/08/2026
+    due: 08/09/2026
+    contact: {name: Coastal Excavations Pty Ltd, abn: 25 999 583 278, address: "7 Quarry Rd, Cardiff NSW 2285"}
+    lines:
+      - {description: "Site cut and footing excavation", amount: 6400.00, account: subcontractors, tax: gst}
+    payments:
+      - {date: 01/09/2026, amount: 7040.00}
+
+  - type: bill
+    number: HTS-55102
+    date: 05/09/2026
+    due: 05/10/2026
+    contact: {name: Hunter Timber Supplies, abn: 31 864 452 323, address: "40 Mill St, Mayfield NSW 2304"}
+    lines:
+      - {description: "Wall frames and trusses, supply only", amount: 4820.00, account: materials, tax: gst}
+    payments:
+      - {date: 05/09/2026, amount: 5302.00}
+
+  - type: supplier_credit
+    number: HTS-CR-881
+    date: 12/09/2026
+    contact: {name: Hunter Timber Supplies, abn: 31 864 452 323, address: "40 Mill St, Mayfield NSW 2304"}
+    lines:
+      - {description: "Returned 6 x 90x45 MGP10 6.0 m", amount: 320.00, account: materials, tax: gst}
+    payments:
+      - {date: 12/09/2026, amount: 352.00}
+
+  - type: bill
+    number: LL-1001
+    date: 10/09/2026
+    due: 10/09/2026
+    contact: {name: Newcastle Survey Gear, abn: 84 022 765 333}
+    lines:
+      - {description: "Rotating laser level", amount: 1850.00, account: equipment, tax: capital}
+    payments:
+      - {date: 10/09/2026, amount: 2035.00}
+
+  - type: bill
+    number: HS-118
+    date: 20/10/2026
+    due: 10/11/2026
+    reference: Payment schedule 20/10/2026
+    contact: {name: Hunter Sparks Pty Ltd, abn: 95 471 173 493, address: "12 Volt St, Wickham NSW 2293"}
+    lines:
+      - {description: "Electrical rough-in, ground floor (as scheduled)", amount: 11200.00, account: subcontractors, tax: gst}
+      - {description: "Retention held (5%)", amount: -560.00, account: retention_payable, tax: bas_excluded}
+    payments:
+      - {date: 10/11/2026, amount: 11760.00}

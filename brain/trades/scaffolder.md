@@ -18,6 +18,7 @@ skills:
 - notices
 - safety
 - financials
+- accounts
 takeoff_jobs: []
 generated:
   by: claude/opus-5.5

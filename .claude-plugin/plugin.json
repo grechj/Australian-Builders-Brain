@@ -1,8 +1,8 @@
 {
   "name": "australian_builders_brain",
   "displayName": "Australian Builder's Brain",
-  "version": "0.7.0",
-  "description": "Knowledge and document skills for Australian builders and tradies: variations, progress claims, delay notices, handover and the NCC.",
+  "version": "0.8.0",
+  "description": "Knowledge and document skills for Australian builders and tradies: variations, progress claims, security of payment, notices, handover, the NCC, and job money into Xero, MYOB or QuickBooks.",
   "author": {
     "name": "Joshua Grech"
   },
@@ -15,6 +15,11 @@
     "builder",
     "ncc",
     "variations",
-    "tradie"
+    "tradie",
+    "xero",
+    "myob",
+    "quickbooks",
+    "gst",
+    "bas"
   ]
 }

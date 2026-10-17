@@ -2,6 +2,7 @@
 
 * [Add a calendar period to a date](add_period.md) - Adds years, months, weeks and days to a date. Used for defects liability period end dates and statutory warranty end dates.
 * [Add calendar or working days to a date](add_days.md) - Moves a date forward by calendar or working days, skipping weekends, public holidays and shutdowns. Used for revised completion dates and notice deadlines.
+* [BAS GST summary](bas_summary.md) - Works out the GST labels of a Business Activity Statement (G1, G2, G3, G4, G10, G11, 1A, 1B) for one period from the job ledger, on a cash or accrual basis.
 * [Budget status](budget_status.md) - Status of each cost line (On Track, At Risk, Over Budget, Complete) from budget, committed and spent, with the forecast variance, matching the Budget vs Actual Tracker.
 * [Estimate to quote price](estimate_price.md) - Turns estimated labour, materials and subcontract costs into a quote price with contingency, markup and GST, matching the Trade Based Estimate Workbook.
 * [Ex GST from a GST-inclusive amount](ex_gst.md) - Splits a GST-inclusive amount (a contract sum, a supplier invoice) into its ex-GST price and the GST, which is 1/11 of the total.
@@ -14,4 +15,5 @@
 * [Payment schedule](payment_schedule.md) - Turns a contract's stage percentages into stage amounts inc and ex GST, adding up exactly to the contract sum, and flags a deposit over the state cap.
 * [Progress claim](progress_claim.md) - Works out a progress claim from the stage schedule (value completed less previous claims), deducts any retention, and adds GST.
 * [Site week number](site_week.md) - The construction week number of a date, counting from the site start date, for weekly progress updates.
+* [TPAR contractor payments](tpar_summary.md) - Totals the payments made to each contractor in a financial year for the Taxable payments annual report (TPAR) - gross paid including GST, the GST in it, and tax withheld.
 * [Variation price](variation_price.md) - Prices a variation from its cost lines, adds the builder's margin, then adds GST.

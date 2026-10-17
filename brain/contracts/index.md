@@ -1,5 +1,6 @@
 # Concepts
 
+* [Accounts and tax](accounts_and_tax.md) - How a builder's claims, invoices and bills become entries in Xero, MYOB or QuickBooks, and what that means for GST, the BAS and the TPAR: the job ledger, account mapping, retention, deposits and the official connectors.
 * [Contract and job setup](contract_setup.md) - Setting up a job after signing: the contract summary, payment schedule, scope of works, subcontracts and trade scope confirmations, insurance and approvals.
 * [Estimating and quoting](estimating_and_quoting.md) - Building an estimate, pricing it with contingency and markup, comparing trade quotes, clarifying scope, and turning an accepted quote into a contract.
 * [Extension of time](extension_of_time.md) - When and how a builder notifies a delay and claims more time, and what evidence supports it.

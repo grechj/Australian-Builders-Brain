@@ -1,0 +1,173 @@
+# Import file formats for tools/finance.py.
+#
+# Each software's columns, in order, and where each value comes from. If the
+# software changes its import file, fix it here rather than in the code.
+# Sources and checks:
+#   Xero: central.xero.com "Import customer invoices" and "Import bills and
+#     credit notes" (checked 17/10/2026). Dates DD/MM/YYYY; amounts are
+#     exported tax exclusive, so choose "tax exclusive" when importing;
+#     credit notes are negative unit amounts; imports arrive as drafts.
+#   MYOB AccountRight: "Import and export fields", Sales - Services and
+#     Purchases - Services (checked 17/10/2026). Tab-delimited, a blank line
+#     between transactions, cards, accounts, jobs and tax codes must exist.
+#     MYOB Business (the browser product) has no invoice import: use the
+#     MYOB connector instead.
+#   QuickBooks Online: invoice import (Settings > Import data > Invoices).
+#     Columns are mapped on screen, so names matter less; credit notes can't
+#     be imported, and only 100 invoices per file. The bill import is not
+#     available in every region: use the QuickBooks connector if it's missing.
+#     Draft: check against the sample file your QuickBooks offers.
+#
+# Value keys: contact, email, number, reference, date, due, description,
+# quantity, unit_amount, amount, account, tax, tax_amount, job,
+# tracking_name, tracking_option, supplier_invoice, blank.
+
+xero:
+  delimiter: ","
+  extension: csv
+  separate_by_blank_line: false
+  sales:
+    file: xero_sales_invoices
+    types: [invoice, credit_note]
+    columns:
+      - ["*ContactName", contact]
+      - ["EmailAddress", email]
+      - ["POAddressLine1", blank]
+      - ["POAddressLine2", blank]
+      - ["POAddressLine3", blank]
+      - ["POAddressLine4", blank]
+      - ["POCity", blank]
+      - ["PORegion", blank]
+      - ["POPostalCode", blank]
+      - ["POCountry", blank]
+      - ["*InvoiceNumber", number]
+      - ["Reference", reference]
+      - ["*InvoiceDate", date]
+      - ["*DueDate", due]
+      - ["InventoryItemCode", blank]
+      - ["*Description", description]
+      - ["*Quantity", quantity]
+      - ["*UnitAmount", unit_amount]
+      - ["Discount", blank]
+      - ["*AccountCode", account]
+      - ["*TaxType", tax]
+      - ["TrackingName1", tracking_name]
+      - ["TrackingOption1", tracking_option]
+      - ["TrackingName2", blank]
+      - ["TrackingOption2", blank]
+      - ["Currency", blank]
+      - ["BrandingTheme", blank]
+  purchases:
+    file: xero_bills
+    types: [bill, supplier_credit]
+    columns:
+      - ["*ContactName", contact]
+      - ["EmailAddress", email]
+      - ["POAddressLine1", blank]
+      - ["POAddressLine2", blank]
+      - ["POAddressLine3", blank]
+      - ["POAddressLine4", blank]
+      - ["POCity", blank]
+      - ["PORegion", blank]
+      - ["POPostalCode", blank]
+      - ["POCountry", blank]
+      - ["*InvoiceNumber", number]
+      - ["*InvoiceDate", date]
+      - ["*DueDate", due]
+      - ["InventoryItemCode", blank]
+      - ["Description", description]
+      - ["*Quantity", quantity]
+      - ["*UnitAmount", unit_amount]
+      - ["*AccountCode", account]
+      - ["*TaxType", tax]
+      - ["TrackingName1", tracking_name]
+      - ["TrackingOption1", tracking_option]
+      - ["TrackingName2", blank]
+      - ["TrackingOption2", blank]
+      - ["Currency", blank]
+  # Tax rate display names in a standard Australian Xero organisation.
+  tax_names:
+    sales: {gst: GST on Income, gst_free: GST Free Income, export: GST Free Exports, input_taxed: Input Taxed, bas_excluded: BAS Excluded}
+    purchases: {gst: GST on Expenses, gst_free: GST Free Expenses, capital: GST on Capital, input_taxed: Input Taxed, bas_excluded: BAS Excluded}
+  # Xero API tax codes, for pushing through the Xero connector.
+  api_tax_codes:
+    sales: {gst: OUTPUT, gst_free: EXEMPTOUTPUT, export: EXEMPTEXPORT, input_taxed: INPUTTAXED, bas_excluded: BASEXCLUDED}
+    purchases: {gst: INPUT, gst_free: EXEMPTEXPENSES, capital: CAPEXINPUT, input_taxed: INPUTTAXED, bas_excluded: BASEXCLUDED}
+
+myob:
+  delimiter: "\t"
+  extension: txt
+  separate_by_blank_line: true
+  sales:
+    file: myob_service_sales
+    types: [invoice, credit_note]
+    columns:
+      - ["Co./Last Name", contact]
+      - ["Invoice No.", number]
+      - ["Date", date]
+      - ["Customer PO", reference]
+      - ["Description", description]
+      - ["Account No.", account]
+      - ["Amount", amount]
+      - ["Job", job]
+      - ["Tax Code", tax]
+      - ["Tax Amount", tax_amount]
+  purchases:
+    file: myob_service_purchases
+    types: [bill, supplier_credit]
+    columns:
+      - ["Co./Last Name", contact]
+      - ["Purchase No.", blank]
+      - ["Supplier Invoice No.", number]
+      - ["Date", date]
+      - ["Description", description]
+      - ["Account No.", account]
+      - ["Amount", amount]
+      - ["Job", job]
+      - ["Tax Code", tax]
+      - ["Tax Amount", tax_amount]
+  # Standard AccountRight tax codes.
+  tax_names:
+    sales: {gst: GST, gst_free: FRE, export: EXP, input_taxed: ITS, bas_excluded: N-T}
+    purchases: {gst: GST, gst_free: FRE, capital: CAP, input_taxed: INP, bas_excluded: N-T}
+
+quickbooks:
+  delimiter: ","
+  extension: csv
+  separate_by_blank_line: false
+  sales:
+    file: quickbooks_invoices
+    types: [invoice]
+    columns:
+      - ["InvoiceNo", number]
+      - ["Customer", contact]
+      - ["InvoiceDate", date]
+      - ["DueDate", due]
+      - ["Memo", reference]
+      - ["Item(Product/Service)", account]
+      - ["ItemDescription", description]
+      - ["ItemQuantity", quantity]
+      - ["ItemRate", unit_amount]
+      - ["ItemAmount", amount]
+      - ["ItemTaxCode", tax]
+      - ["ItemTaxAmount", tax_amount]
+      - ["Location", job]
+  purchases:
+    file: quickbooks_bills
+    types: [bill]
+    columns:
+      - ["BillNo", number]
+      - ["Supplier", contact]
+      - ["BillDate", date]
+      - ["DueDate", due]
+      - ["Memo", reference]
+      - ["Account", account]
+      - ["LineDescription", description]
+      - ["LineAmount", amount]
+      - ["LineTaxCode", tax]
+      - ["LineTaxAmount", tax_amount]
+      - ["Location", job]
+  # Common Australian QuickBooks Online tax code names. Check yours.
+  tax_names:
+    sales: {gst: GST, gst_free: GST free, export: Export, input_taxed: Input taxed, bas_excluded: Out of scope}
+    purchases: {gst: GST, gst_free: GST free, capital: Capital GST, input_taxed: Input taxed, bas_excluded: Out of scope}
