@@ -8,8 +8,8 @@
     {
       "name": "australian-builders-brain",
       "source": {
-        "source": "github",
-        "repo": "grechj/Australian-Builders-Brain"
+        "source": "url",
+        "url": "https://github.com/grechj/Australian-Builders-Brain.git"
       },
       "description": "Knowledge and document skills for Australian builders and tradies."
     }
