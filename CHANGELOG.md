@@ -3,6 +3,10 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.13.1 (2026-10-17)
+
+- Add marketplace now works on claude.ai (confirmed in a browser after the 0.12.1 source change), so the README leads with it again: Customize, Plugins, Add marketplace, Discover, Add, Sync automatically. The release zip stays as the fallback.
+
 ## 0.13.0 (2026-10-17)
 
 - Session-start welcome and briefing: the hook (`hooks/session_start.sh`) now also runs `tools/start.py brief`. In an empty or jobs-like folder it has Claude welcome a new user, offer setup once and show three things to ask; in a set-up jobs folder it opens with a short briefing (inbox, overdue invoices with amounts, bills due this week, missing profile details). It stays silent in code projects.

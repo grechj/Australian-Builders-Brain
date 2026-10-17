@@ -14,15 +14,15 @@
 
 ## Get started (5 minutes, no terminal)
 
-You need the [Claude desktop app](https://claude.ai/download) and a Claude Pro or Max plan.
+You need a Claude Pro or Max plan and the [Claude desktop app](https://claude.ai/download).
 
-1. Download **australian-builders-brain.zip** from the [latest release](https://github.com/grechj/Australian-Builders-Brain/releases/latest).
-2. In Claude, go to **Customize → Plugins → Add → Upload plugin** and choose the zip.
-3. Open **Cowork**, then **Projects → +**. Choose **Start from scratch** and call it `Jobs` (or **Use an existing folder**, for example one in Dropbox, Google Drive or OneDrive so you can add photos from your phone).
+1. In your web browser, go to [claude.ai → Customize → Plugins](https://claude.ai/customize/plugins), then **Add → Add marketplace**.
+2. Enter `grechj/Australian-Builders-Brain` and press **Sync**. On the **Discover** tab, find **Australian Builder's Brain** and click **Add**. Turn on **Sync automatically** to get updates.
+3. In the desktop app, open **Cowork**, then **Projects → +**. Choose **Start from scratch** and call it `Jobs` (or **Use an existing folder**, for example one in Dropbox, Google Drive or OneDrive so you can add photos from your phone).
 4. Click the project to start a session. The brain says hello and offers to set you up.
 5. Say **"set me up"**. It asks your trade, state and business details, walks you through a practice job and shows you what to ask.
 
-To update, download the new zip and upload it again. (A listing in Claude's plugin directory, with one-click install and automatic updates, is on the way.)
+If adding the marketplace fails in the desktop app, do step 1 and 2 on claude.ai in a browser; the plugin then appears in the desktop app too. No luck either way? Download **australian-builders-brain.zip** from the [latest release](https://github.com/grechj/Australian-Builders-Brain/releases/latest) and use **Add → Upload plugin** instead (re-upload a new zip to update).
 
 Using Claude Code in a terminal? `claude plugin install australian-builders-brain --marketplace grechj/Australian-Builders-Brain`
 
