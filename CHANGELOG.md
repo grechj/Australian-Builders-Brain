@@ -10,6 +10,7 @@ plugin version in `.claude-plugin/plugin.json`.
 - New home page (`tools/home.py`, `home.html` in the jobs folder): profile, what's waiting in the inbox, every job's position (contract, received, outstanding, profit, margin against target, forecast, invoiced and time meters) with its latest documents, links to the dashboard (which opens on the chosen job) and extracts, and the trade's cards with copy buttons. Offline, light and dark, phone-friendly.
 - New jobs copy the business details, state and trade from `profile.yaml`. A register entry can take its job number from its project file or ledger.
 - `tools/test_start.py` in CI.
+- The README is now a one-page quick start with screenshots of the home page, the dashboard and a generated document (`docs/images/`); the detail moved to [docs/guide.md](docs/guide.md).
 
 ## 0.11.0 (2026-10-17)
 
