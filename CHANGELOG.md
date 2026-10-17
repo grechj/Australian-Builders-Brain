@@ -3,6 +3,11 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.13.2 (2026-10-17)
+
+- Setup no longer settles for Cowork's temporary session workspace: when the session isn't in a folder the user chose, the start skill recommends a Cowork project on a real Jobs folder first, or sets up a clearly labelled trial.
+- One question per message during setup, and trade-neutral examples in the welcome.
+
 ## 0.13.1 (2026-10-17)
 
 - Add marketplace now works on claude.ai (confirmed in a browser after the 0.12.1 source change), so the README leads with it again: Customize, Plugins, Add marketplace, Discover, Add, Sync automatically. The release zip stays as the fallback.

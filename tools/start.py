@@ -160,12 +160,14 @@ def brief(folder: Path) -> str:
     if not st["profile"] and not st["projects_register"]:
         if not _looks_like_new_jobs_folder(folder):
             return ""
-        c = cards(folder, None)
-        examples = [card["say"][0] for card in c["cards"] if card["skill"] in ("projects", "estimating", "variations", "claims", "ncc")][:3]
+        examples = ["Start a new job for the Smiths at 14 Ocean St", "Here's a supplier invoice for that job",
+                    "What does the building code say about stair heights?"]
         return ("The Australian Builder's Brain plugin is installed and this folder isn't set up yet. "
                 "In your first reply, whatever the user asks: welcome them in one line, say the brain can set up this folder as their jobs folder "
                 "in a couple of minutes (the start skill), and give three examples of what they can ask, such as: "
                 + "; ".join(f'"{e}"' for e in examples) + ". "
+                "Ask only one question per message. If this session isn't in a folder the user chose (for example Cowork without a project), "
+                "recommend a Cowork project on a real Jobs folder before setting up, as the start skill describes. "
                 "If they're asking for something else, help with that first and offer setup after. "
                 "Run setup once only: if setup is already under way in this session or another thread, don't start it again.")
     import projects

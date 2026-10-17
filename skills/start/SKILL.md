@@ -46,10 +46,18 @@ python3 $ABB/tools/start.py status
 
 - Already set up (a profile and projects): say so in one line, then go to step 5 (cards) or ask what they'd like to do.
 - Not set up, and the folder looks like something else (a code project, their Documents folder): suggest they make a folder called `Jobs` (in Documents, or in Dropbox, Google Drive or OneDrive so they can drop files in from their phone) and open that instead. Don't set up inside a random folder.
+- **Not a folder they chose.** In Cowork, a session started outside a project works in a temporary workspace: files there may be hard to find later or not kept. If there's no sign the user picked this folder (Cowork without a project, or a path that looks like a session or scratch workspace), say so plainly in one short message, and recommend they set up a Cowork project first:
+
+  > Before we start: this session isn't in a folder you've chosen, so your jobs could be hard to find later. In Cowork, open **Projects → +**, pick **Start from scratch** (call it `Jobs`) or **Use an existing folder** (Dropbox, Google Drive or OneDrive lets you add photos from your phone), then start a session from that project and say "set me up". Or I can set up a trial here to show you around first.
+
+  If they choose the trial, call it a trial everywhere (folder name `Jobs_trial`) and remind them at the end to set up the project for their real jobs. Don't ask this together with the trade and state question.
 
 ## 2. Two quick questions
 
 > G'day. I'll set you up in a couple of minutes. What's your trade, and which state or territory do you mostly work in?
+
+One question per message, always: wait for this answer before asking
+anything else (business details, folders, software).
 
 Builders count as a trade (`builder` sees everything). If they name more
 than one trade, pick the main one and say they can change it.
