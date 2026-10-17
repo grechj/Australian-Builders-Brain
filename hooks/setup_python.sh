@@ -10,8 +10,8 @@ command -v python3 >/dev/null 2>&1 || exit 0
 
 VENV="$DATA/venv"
 STAMP="$VENV/.requirements_sha256"
-# The PDF tools (reportlab, pdfplumber) are for maintainers, not the skills.
-REQS=$(grep -v -e '^\s*#' -e 'reportlab' -e 'pdfplumber' "$ROOT/requirements.txt" | sed 's/#.*//' | grep -v '^\s*$')
+# reportlab only builds the brain's own PDFs, so the skills don't need it.
+REQS=$(grep -v -e '^\s*#' -e 'reportlab' "$ROOT/requirements.txt" | sed 's/#.*//' | grep -v '^\s*$')
 SHA=$(printf '%s' "$REQS" | shasum -a 256 2>/dev/null | cut -d' ' -f1)
 
 [ -f "$STAMP" ] && [ "$(cat "$STAMP")" = "$SHA" ] && exit 0

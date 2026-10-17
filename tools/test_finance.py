@@ -101,7 +101,7 @@ def main() -> None:
     expect("bad ABN warned", any("checksum" in w for w in r["warnings"]), True)
 
     with tempfile.TemporaryDirectory() as tmp:
-        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "jobs_example.yaml"),
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "projects_example.yaml"),
                             "--as-at", "31/10/2026", "--out", tmp], capture_output=True, text=True)
         expect("dashboard builds", p.returncode, 0)
         rows = {r["job"]: r for r in csv.DictReader((Path(tmp) / "jobs.csv").open(newline=""))}
@@ -130,7 +130,7 @@ def main() -> None:
         imp = list(csv.DictReader((Path(tmp) / "imports" / "xero" / "xero_sales_invoices.csv").open(newline="")))
         expect("portfolio Xero import has every job's sales lines", len(imp), 4 + 5 + 5)
         expect("portfolio import tracks each job", sorted({r["TrackingOption1"] for r in imp}), ["SB-2025-031", "SB-2026-007", "SB-2027-014"])
-        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "jobs_example.yaml"),
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "projects_example.yaml"),
                             "--as-at", "31/10/2026", "--since", "01/10/2026", "--out", tmp], capture_output=True, text=True)
         imp = list(csv.DictReader((Path(tmp) / "imports" / "xero" / "xero_sales_invoices.csv").open(newline="")))
         expect("--since limits the import files", sorted({r["*InvoiceNumber"] for r in imp}), ["INV-003"])

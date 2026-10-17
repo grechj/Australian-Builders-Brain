@@ -24,6 +24,7 @@ skills:
 - safety
 - financials
 - accounts
+- projects
 - ncc
 takeoff_jobs:
 - paling_fence
@@ -45,7 +46,7 @@ State and territory variations to these parts are shown for the user's state onl
 
 # Skills
 
-`estimating`, `materials`, `variations`, `claims`, `notices`, `site`, `safety`, `financials`, `accounts`, `ncc`
+`estimating`, `materials`, `variations`, `claims`, `notices`, `site`, `safety`, `financials`, `accounts`, `projects`, `ncc`
 
 # Materials
 

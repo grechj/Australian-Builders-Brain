@@ -62,6 +62,9 @@ turns roles into your own account codes, once. Then `tools/finance.py`:
 4. works out the **BAS** GST labels ([BAS summary](/computations/bas_summary.md)) and the **TPAR** ([TPAR summary](/computations/tpar_summary.md)) as attested computations
 
 The ledger is per job; the accounting software stays the books of record.
+Invoices and payment screenshots that arrive as files come in through the
+projects skill's inbox, which reads them, checks the figures and files the
+originals in the job's `processed/` folder, linked from the ledger.
 
 # Getting it into the software
 

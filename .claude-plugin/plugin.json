@@ -1,8 +1,8 @@
 {
   "name": "australian-builders-brain",
   "displayName": "Australian Builder's Brain",
-  "version": "0.10.0",
-  "description": "Knowledge and document skills for Australian builders and tradies: variations, progress claims, security of payment, notices, handover, the NCC, job money into Xero, MYOB or QuickBooks, and a project dashboard.",
+  "version": "0.11.0",
+  "description": "Knowledge and document skills for Australian builders and tradies: projects and an inbox for invoices and receipts, variations, progress claims, security of payment, notices, handover, the NCC, job money into Xero, MYOB or QuickBooks, and a project dashboard.",
   "author": {
     "name": "Joshua Grech"
   },
@@ -21,6 +21,9 @@
     "quickbooks",
     "gst",
     "bas",
-    "dashboard"
+    "dashboard",
+    "projects",
+    "invoices",
+    "inbox"
   ]
 }

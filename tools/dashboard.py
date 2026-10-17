@@ -1,9 +1,9 @@
 """Financial extracts (CSV) and a project dashboard for every job.
 
 Usage:
-    python tools/dashboard.py jobs.yaml --out out/dashboard [--as-at 31/10/2026] [--since 01/10/2026]
+    python tools/dashboard.py projects.yaml --out out/dashboard [--as-at 31/10/2026] [--since 01/10/2026]
 
-jobs.yaml (examples/jobs_example.yaml) lists each job with its project file,
+projects.yaml (examples/projects_example.yaml) lists each job with its project file,
 ledger (see tools/finance.py), optional timesheets and budget. This runs the
 job_dashboard computation and writes, into --out:
 
@@ -90,18 +90,29 @@ def read_timesheets(path: Path) -> list[dict]:
     return rows
 
 
+SKIPPED: list[str] = []
+
+
 def gather(jobs_file: Path) -> list[dict]:
     spec = yaml.safe_load(jobs_file.read_text()) or {}
     base = jobs_file.parent
     jobs = []
-    titles = template_titles()
-    for entry in spec.get("jobs") or []:
+    for entry in spec.get("projects") or spec.get("jobs") or []:
+        entry = dict(entry)
+        if entry.get("folder"):  # a project folder made by tools/projects.py: standard file names
+            f = entry["folder"].rstrip("/")
+            entry.setdefault("project", f"{f}/project.yaml")
+            entry.setdefault("ledger", f"{f}/ledger.yaml")
+            ts = base / f / "timesheets.csv"
+            if "timesheets" not in entry and ts.exists() and len(ts.read_text().strip().splitlines()) > 1:
+                entry["timesheets"] = f"{f}/timesheets.csv"
+            entry.setdefault("documents", [f"{f}/out", f"{f}/processed"])
         job = {}
-        if entry.get("project"):
+        if entry.get("project") and (base / entry["project"]).exists():
             p = flat(base / entry["project"])
             job.update({ours: p[theirs] for theirs, ours in PROJECT_KEYS.items() if p.get(theirs)})
         for k, v in entry.items():
-            if k not in ("project", "ledger", "timesheets", "accounts", "documents", "documents_url"):
+            if k not in ("project", "ledger", "timesheets", "accounts", "documents", "documents_url", "folder", "tags", "aliases"):
                 job[k] = ddmmyyyy(v) if isinstance(v, (date, datetime)) else v
         if "contract_sum_ex_gst" in job:
             job["contract_sum_ex_gst"] = str(job["contract_sum_ex_gst"]).replace(",", "").replace("$", "")
@@ -111,11 +122,15 @@ def gather(jobs_file: Path) -> list[dict]:
         job["transactions"] = finance.normalise(ledger, accounts)
         job["labour"] = read_timesheets(base / entry["timesheets"]) if entry.get("timesheets") else []
         job["_ledger"], job["_accounts"] = ledger, accounts or {}
-        job["_documents"] = (base / entry["documents"]) if entry.get("documents") else None
+        docs = entry.get("documents")
+        job["_documents"] = [base / d for d in (docs if isinstance(docs, list) else [docs])] if docs else None
+        job["_folder"] = (base / entry["folder"]) if entry.get("folder") else None
         job["_documents_url"] = entry.get("documents_url")
-        missing = [k for k in ("job", "start_date") if not job.get(k)]
-        if missing:
-            raise SystemExit(f"{jobs_file}: a job is missing {', '.join(missing)}")
+        if not job.get("job"):
+            raise SystemExit(f"{jobs_file}: a project has no job number")
+        if not job.get("start_date"):
+            SKIPPED.append(f"{job['job']}: no start date yet, so not on the dashboard (set start_date in the register or project file)")
+            continue
         jobs.append(job)
     return jobs
 
@@ -136,18 +151,38 @@ def template_titles() -> list[tuple[str, str]]:
     return sorted(out, key=lambda x: -len(x[0]))
 
 
-def documents(job: str, folder: Path, base_url: str | None, out: Path, titles: list) -> list[dict]:
-    """Every generated document in a job's folder, typed by the template it came from."""
-    if not folder.is_dir():
-        return []
+RECEIVED = {"BILL": "Supplier bill (received)", "CREDIT": "Supplier credit (received)", "PAY": "Payment record (received)",
+            "INV": "Sales invoice copy", "CN": "Credit note copy"}
+DOC_EXTS |= {".png", ".jpg", ".jpeg", ".heic", ".webp"}
+
+
+def documents(job: str, folder, base_url: str | None, out: Path, titles: list, base: Path | None = None) -> list[dict]:
+    """Every document in a job's folders (generated in out/, received and filed
+    in processed/), typed by the template it came from or how it was filed."""
+    folders = [Path(f) for f in (folder if isinstance(folder, (list, tuple)) else [folder])]
+    rows = []
+    for fold in folders:
+        if not fold.is_dir():
+            continue
+        rows += _documents(job, fold, base_url, out, titles, base or fold)
+    return rows
+
+
+def _documents(job: str, folder: Path, base_url: str | None, out: Path, titles: list, base: Path) -> list[dict]:
     rows = []
     for f in sorted(folder.rglob("*")):
         if f.suffix.lower() not in DOC_EXTS or f.name.startswith(("~$", ".")):
             continue
         name = f.stem.lower()
-        kind = next((title for stem, title in titles if stem in name), "Other document")
+        prefix = f.stem.split("_", 1)[0]
+        label = re.match(r"(.+?)_\d{4}-\d{2}-\d{2}_", f.stem)
+        kind = (RECEIVED.get(prefix) or (label.group(1).replace("_", " ") + " (received)" if label else None)
+                or next((title for stem, title in titles if stem in name), "Other document"))
         ref = REF.search(f.stem)
-        rel = f.relative_to(folder).as_posix()
+        try:
+            rel = f.relative_to(base).as_posix()
+        except ValueError:
+            rel = f.relative_to(folder).as_posix()
         link = (base_url.rstrip("/") + "/" + quote(rel)) if base_url else quote(os.path.relpath(f, out).replace(os.sep, "/"))
         rows.append({"job": job, "document": kind, "reference": ref.group(0) if ref else "", "file": rel,
                      "modified": datetime.fromtimestamp(f.stat().st_mtime).strftime("%d/%m/%Y"), "link": link})
@@ -196,7 +231,7 @@ def render(receipt: dict, out: Path, docs: list, extracts: list) -> Path:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("jobs", type=Path, help="portfolio YAML (examples/jobs_example.yaml)")
+    parser.add_argument("jobs", type=Path, help="portfolio YAML (examples/projects_example.yaml)")
     parser.add_argument("--out", type=Path, default=Path("out/dashboard"))
     parser.add_argument("--as-at", default=date.today().strftime("%d/%m/%Y"), help="DD/MM/YYYY (default today)")
     parser.add_argument("--since", help="only put transactions dated on or after DD/MM/YYYY in the import files")
@@ -218,10 +253,22 @@ def main() -> None:
     acct = spec_accounts or next((j["_accounts"] for j in jobs if j["_accounts"]), {})
     # Account codes are labels, not money: added to a copy so the receipt stays as computed.
     lines = [{**row, "account_code": str((acct.get("accounts") or {}).get(row["role"], ""))} for row in r["lines"]]
-    write_csv(args.out / "transactions.csv", r["transactions"])
     write_csv(args.out / "transaction_lines.csv", lines)
     titles = template_titles()
-    docs = [d for j in jobs if j["_documents"] for d in documents(j["job"], j["_documents"], j["_documents_url"], args.out, titles)]
+    docs = [d for j in jobs if j["_documents"]
+            for d in documents(j["job"], j["_documents"], j["_documents_url"], args.out, titles, j["_folder"])]
+    # Each transaction's source document (an invoice filed from the inbox), as a link.
+    sources = {}
+    for j in jobs:
+        root = j["_folder"] or args.jobs.parent
+        for t in j["_ledger"].get("transactions") or []:
+            if t.get("source"):
+                src = root / t["source"]
+                link = (j["_documents_url"].rstrip("/") + "/" + quote(t["source"])) if j["_documents_url"] \
+                    else quote(os.path.relpath(src, args.out).replace(os.sep, "/"))
+                sources[(j["job"], str(t["number"]), t["type"])] = link
+    r_transactions = [{**t, "source_link": sources.get((t["job"], t["number"], t["type"]), "")} for t in r["transactions"]]
+    write_csv(args.out / "transactions.csv", r_transactions)
     write_csv(args.out / "documents.csv", docs or [{"job": "", "document": "", "reference": "", "file": "", "modified": "", "link": ""}])
     (args.out / "receipt.json").write_text(json.dumps(receipt, indent=2))
     softwares = [s.strip() for s in (args.software or acct.get("software") or "xero").split(",")]
@@ -236,7 +283,7 @@ def main() -> None:
                       "written": [str(args.out / n) for n in names] + [str(page)],
                       "imports": [{"software": rep["software"], "written": rep.get("written", []),
                                    "skipped": rep.get("skipped", []), "errors": rep.get("errors", [])} for rep in import_reports],
-                      "warnings": r["warnings"]}, indent=2))
+                      "warnings": SKIPPED + r["warnings"]}, indent=2))
 
 
 if __name__ == "__main__":

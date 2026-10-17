@@ -51,4 +51,4 @@ past their contract completion date.
 
 Runs `job_dashboard()` in [finance_maths.py](/references/computations/finance_maths.py).
 
-    python tools/dashboard.py examples/jobs_example.yaml --as-at 31/10/2026 --out out/dashboard
+    python tools/dashboard.py examples/projects_example.yaml --as-at 31/10/2026 --out out/dashboard

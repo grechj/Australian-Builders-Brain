@@ -3,6 +3,13 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.11.0 (2026-10-17)
+
+- New `projects` skill and `tools/projects.py`: a project register (`projects.yaml`) with job numbers, names, tags and status; a standard folder per job (`project.yaml`, `ledger.yaml`, `timesheets.csv`, `inbox/`, `processed/`, `out/`); and an inbox for screenshots, photos and PDFs. Files are matched to a project by folder, name, tag or the text inside them; invoices are read into checked ledger entries (arithmetic and GST through the sanctioned maths, ABN checksum, tax invoice rules, duplicates across every project) and payments from bank screenshots into a payments log, only after the user confirms; originals are filed in `processed/` and linked from the ledger and the dashboard.
+- The dashboard reads project folders, lists received documents alongside generated ones, and links each transaction to its source document. Projects without a start date are listed as skipped.
+- `examples/jobs_example.yaml` is now `examples/projects_example.yaml` (the `jobs:` key still works). Sample invoice PDF and bank screenshot in `examples/inbox/`.
+- The plugin's Python setup now includes pdfplumber, for reading typed PDF invoices.
+
 ## 0.10.0 (2026-10-17)
 
 - The dashboard lists every document generated for each job (typed by template, numbered from the file name) with links to the files, or to the same folder in Dropbox, Google Drive or SharePoint (`documents_url`); `documents.csv` is the register.

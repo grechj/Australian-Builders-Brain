@@ -27,7 +27,7 @@ every update.
 - Maths: `brain/computations/bas_summary.md`, `tpar_summary.md`, `gst.md`, `ex_gst.md`
 - Tool: `tools/finance.py` (check, export, payload, bas, tpar); import formats in `tools/finance_formats.yaml`
 - Dashboard: `tools/dashboard.py` (CSV extracts and a dashboard page), maths in `brain/computations/job_dashboard.md`
-- Examples: `examples/ledger_example.yaml`, `examples/accounts_example.yaml`, `examples/jobs_example.yaml`, `examples/timesheets_example.csv`
+- Examples: `examples/ledger_example.yaml`, `examples/accounts_example.yaml`, `examples/projects_example.yaml`, `examples/timesheets_example.csv`
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
 plugin's setup hook creates it). Otherwise, if
@@ -54,6 +54,8 @@ invoices.
 4. **Ledger.** Copy `$ABB/examples/ledger_example.yaml` to `ledger.yaml` and set `job` to the job number.
 
 ## Add transactions
+
+Invoices, bills and payment screenshots that arrive as files go through the projects skill's inbox, which reads, checks and files them. Add entries by hand here only for documents the brain generated or figures the user gives you.
 
 Every document the other skills produce that moves money becomes a ledger
 entry: progress claims and tax invoices (invoice), credit notes, subbie
@@ -133,13 +135,13 @@ use their software's TPAR report, which is usually easier.
 
 ## Dashboard and extracts
 
-When the user wants to see how a job (or all their jobs) is going:
+When the user wants to see how a job (or all their jobs) is going. The projects skill keeps the register (`projects.yaml`) and each job's folder, and files invoices and payments from the inbox into the ledgers; a project made with it only needs `folder:` in the register.
 
-1. Keep a portfolio file, `jobs.yaml`, in their folder (pattern: `$ABB/examples/jobs_example.yaml`): the account mapping (`accounts:`), and for each job its project file, ledger, timesheets (a CSV, or the Timesheet and Docket workbook), the folder its documents are written to (`documents:`, usually that job folder's `out/`), status, start, contract end and practical completion dates, target margin, and the cost budget by role from the estimate. Completed jobs belong there too: they give the averages. If their job folders live in Dropbox, Google Drive or SharePoint, add `documents_url:` (the same folder's web link) so the dashboard's document links open there.
+1. Keep a portfolio file, `projects.yaml`, in their folder (pattern: `$ABB/examples/projects_example.yaml`): the account mapping (`accounts:`), and for each job its project file, ledger, timesheets (a CSV, or the Timesheet and Docket workbook), the folder its documents are written to (`documents:`, usually that job folder's `out/`), status, start, contract end and practical completion dates, target margin, and the cost budget by role from the estimate. Completed jobs belong there too: they give the averages. If their job folders live in Dropbox, Google Drive or SharePoint, add `documents_url:` (the same folder's web link) so the dashboard's document links open there.
 2. Build it:
 
    ```bash
-   python3 $ABB/tools/dashboard.py jobs.yaml --out out/dashboard --as-at <DD/MM/YYYY> [--since <DD/MM/YYYY>] [--software xero,myob]
+   python3 $ABB/tools/dashboard.py projects.yaml --out out/dashboard --as-at <DD/MM/YYYY> [--since <DD/MM/YYYY>] [--software xero,myob]
    python3 $ABB/brain/references/attesters/check_receipt.py out/dashboard/receipt.json
    ```
 

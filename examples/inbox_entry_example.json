@@ -1,0 +1,17 @@
+{
+  "_about": "What the projects skill reads off examples/inbox/Coastal_Concrete_Pumping_invoice.pdf, for tools/projects.py add. Lines are ex GST (or give amount_inc for GST-inclusive lines). 'stated' is copied from the document so the arithmetic can be checked.",
+  "type": "bill",
+  "number": "CCP-2207",
+  "date": "14/10/2026",
+  "due": "28/10/2026",
+  "reference": "Slab pour, ordered by Chris Smith",
+  "contact": {"name": "Coastal Concrete Pumping Pty Ltd", "abn": "45 328 961 731", "address": "8 Pump Lane, Warabrook NSW 2304"},
+  "lines": [
+    {"description": "Concrete boom pump hire, slab pour (4 hrs at $185)", "amount": 740.00, "account": "plant_hire", "tax": "gst"},
+    {"description": "Line pump set-up and travel", "amount": 220.00, "account": "plant_hire", "tax": "gst"},
+    {"description": "Washout bay", "amount": 65.00, "account": "plant_hire", "tax": "gst"}
+  ],
+  "stated": {"subtotal_ex": 1025.00, "gst": 102.50, "total_inc": 1127.50},
+  "is_tax_invoice": true,
+  "buyer_named": true
+}

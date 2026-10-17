@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.10.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
+> **Status: v0.11.0.** All thirteen skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -113,6 +113,30 @@ Bunnings prices are a retail guide only; specialist suppliers often price
 better. The brain never scrapes the Bunnings website (its terms allow
 personal use only) and never stores anyone's prices.
 
+## Projects and the inbox (projects skill)
+
+Each job gets a number, a name, tags and a standard folder (`project.yaml`,
+`ledger.yaml`, `timesheets.csv`, `inbox/`, `processed/`, `out/`), all listed
+in one register, `projects.yaml`. Drop supplier invoices, subbie claims,
+bank payment screenshots, dockets and site photos into a job's inbox, or
+into the shared inbox (a subfolder named for a tag labels them). Claude
+reads each one and works out which job it's for from the address, client or
+order number on it. It checks the figures (lines add up to the total, GST
+is 10%, ABN, tax invoice rules, not already entered in any job), then shows
+you the entry. Once you say yes, it adds the entry to the job's ledger and
+files the original as `processed/BILL_<supplier>_<number>.pdf`, linked from
+the dashboard.
+
+```bash
+python3 tools/projects.py new projects.yaml --job SB-2027-014 --name "Banksia St extension" --tags banksia,citizen
+```
+
+```bash
+python3 tools/projects.py inbox projects.yaml
+```
+
+Try it with the sample invoice and bank screenshot in `examples/inbox/`.
+
 ## Money into your accounts (accounts skill)
 
 Claims, invoices and bills from the other skills go into a per-job ledger
@@ -144,7 +168,7 @@ project type for pricing new work, and Xero, MYOB or QuickBooks import files
 covering every job.
 
 ```bash
-python3 tools/dashboard.py examples/jobs_example.yaml --as-at 31/10/2026 --out out/dashboard
+python3 tools/dashboard.py examples/projects_example.yaml --as-at 31/10/2026 --out out/dashboard
 ```
 
 ## How it stays trustworthy
@@ -174,6 +198,7 @@ python3 tools/dashboard.py examples/jobs_example.yaml --as-at 31/10/2026 --out o
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
+| `projects` | project register, tags and folders; inbox for invoices, payment screenshots, dockets and photos, read, checked and filed per job | **working** |
 | `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR, CSV extracts and project dashboard | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
 | `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |

@@ -82,6 +82,16 @@ def tax_name(software: str, s: str, tax: str, accounts: dict) -> str:
     return custom.get(tax) or FORMATS[software]["tax_names"][s].get(tax, "")
 
 
+def payments_for(t: dict, ledger: dict) -> list[dict]:
+    """A transaction's payments: those listed under it, plus any in the
+    ledger's payments log (added from remittances and bank screenshots) that
+    name its number (and contact, where given)."""
+    name = ((t.get("contact") or {}).get("name") or "").strip().lower()
+    logged = [p for p in ledger.get("payments") or [] if str(p.get("number")) == str(t.get("number"))
+              and (not p.get("contact") or str(p["contact"]).strip().lower() == name)]
+    return list(t.get("payments") or []) + logged
+
+
 def normalise(ledger: dict, accounts: dict) -> list[dict]:
     """The shape finance_maths expects, with each bill's TPAR flag resolved."""
     tpar_roles = set(accounts.get("tpar_accounts") or ["subcontractors"])
@@ -95,7 +105,7 @@ def normalise(ledger: dict, accounts: dict) -> list[dict]:
         c = t.get("contact") or {}
         out.append({"type": t["type"], "number": str(t["number"]), "date": str(t["date"]), "due": str(t.get("due") or ""),
                     "contact": {"name": c.get("name", ""), "abn": c.get("abn", ""), "address": c.get("address", "")},
-                    "lines": lines, "payments": [{"date": str(p["date"]), "amount": str(p["amount"])} for p in t.get("payments") or []],
+                    "lines": lines, "payments": [{"date": str(p["date"]), "amount": str(p["amount"])} for p in payments_for(t, ledger)],
                     "withheld": str(t.get("withheld", 0) or 0), "tpar": bool(tpar)})
     return out
 
@@ -226,7 +236,7 @@ def payload(ledger: dict, accounts: dict, software: str) -> dict:
                       "date_iso": iso(t["date"]), "due_iso": iso(t.get("due", t["date"])),
                       "amounts_are": "tax exclusive", "lines": lines,
                       "payments": [{"date": p["date"], "date_iso": iso(p["date"]), "amount": money(p["amount"])}
-                                   for p in t.get("payments") or []]})
+                                   for p in payments_for(t, ledger)]})
     return {"software": software, "create_as": "DRAFT", "transactions": items,
             "rules": ["Show the user every transaction and get a clear yes before creating anything.",
                       "Create as drafts only; the user approves them in their software.",
