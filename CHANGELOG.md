@@ -3,6 +3,10 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.12.1 (2026-10-17)
+
+- The marketplace entry now points at the GitHub repository instead of the marketplace root (`./`), which claude.ai's Add marketplace refused with "Failed to add marketplace". Claude Code installs are unchanged.
+
 ## 0.12.0 (2026-10-17)
 
 - No-terminal install: the README now leads with the Claude desktop app (Customize, Plugins, Add marketplace), which also works on claude.ai and carries the plugin into Cowork and Claude Code.
