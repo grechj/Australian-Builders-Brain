@@ -16,13 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build the plugin zip
         run: git archive --format=zip -o australian-builders-brain.zip HEAD
+      - name: Write the release notes
+        run: |
+          {
+            echo "Install: download australian-builders-brain.zip, then in Claude go to Customize > Plugins > Add > Upload plugin."
+            echo
+            awk '/^## /{n++} n==1' CHANGELOG.md | tail -n +2
+          } > notes.md
       - name: Publish the release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          notes=$(awk '/^## /{n++} n==1' CHANGELOG.md | tail -n +2)
-          gh release create "$GITHUB_REF_NAME" australian-builders-brain.zip \
-            --title "Australian Builder's Brain $GITHUB_REF_NAME" \
-            --notes "Install: download australian-builders-brain.zip, then in Claude go to Customize > Plugins > Add > Upload plugin.
-
-$notes"
+        run: gh release create "$GITHUB_REF_NAME" australian-builders-brain.zip --title "Australian Builder's Brain $GITHUB_REF_NAME" --notes-file notes.md
