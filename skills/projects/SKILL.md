@@ -138,6 +138,7 @@ way against the sales invoice.
 - Tell the user what was added, filed or left (and why), per project.
 - The accounts skill takes it from there: the dashboard (`tools/dashboard.py projects.yaml`), import files for Xero, MYOB or QuickBooks, BAS and TPAR.
 - `list` shows every project with its tags and how much is still waiting in its inbox.
+- Rebuild the home page (`python3 $ABB/tools/home.py projects.yaml`) so `home.html` shows what changed.
 
 ## Your own format
 

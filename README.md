@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.11.0.** All thirteen skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
+> **Status: v0.12.0.** All fourteen skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -23,40 +23,27 @@ and the National Construction Code.
 
 ## Install
 
-**Claude Code**, as a plugin:
+**Easiest: the Claude desktop app, no terminal.** You need a Claude Pro or Max plan.
+
+1. Install the [Claude desktop app](https://claude.ai/download) and sign in.
+2. Go to **Customize → Plugins → Add → Add marketplace** and enter `grechj/Australian-Builders-Brain`.
+3. Add **Australian Builder's Brain** from that marketplace. Turn on **Sync automatically** so you get updates.
+4. Make a folder called `Jobs` (in Documents, or in Dropbox, Google Drive or OneDrive so you can drop in photos from your phone).
+5. Open **Cowork** (or the **Code** tab) on that folder and say **"set me up"**.
+
+The same steps work on [claude.ai](https://claude.ai/customize/plugins); the plugin then follows your account into the desktop app and Claude Code. In a plain chat the skills still answer questions and write documents, but the jobs folder, inbox, home page and dashboard need Cowork or the Code tab, which can work in a folder on your computer.
+
+**Claude Code in a terminal:**
 
 ```bash
-claude plugin marketplace add grechj/Australian-Builders-Brain
+claude plugin install australian-builders-brain --marketplace grechj/Australian-Builders-Brain
 ```
 
-```bash
-claude plugin install australian-builders-brain
-```
+The first time a session starts, the plugin sets up its own Python
+environment (Python 3.9 or later must be installed). Nothing else to install.
 
-Or in one step, inside Claude Code: `/plugin install australian-builders-brain --marketplace grechj/Australian-Builders-Brain`
-
-That's all a plugin user needs: no clone and no `pip install`.
-
-The plugin's skills run from your own project folder and write their
-documents there; the brain itself stays read-only. The first time a session
-starts, a setup hook builds a private Python environment for the tools
-(python-docx, openpyxl, PyYAML) in the plugin's data folder. You need Python
-3.9 or later installed.
-
-**Claude.ai or Claude Desktop:** zip a folder from `skills/` and upload it
-under Settings → Capabilities → Skills. An uploaded skill doesn't include the
-brain, templates or tools, so it works in its "your own format" mode. For the
-full brain, use Claude Code.
-
-**Any other agent:** clone the repo and point the agent at `AGENTS.md`.
-
-Only if you're working in a clone of this repository (to contribute, or
-without the plugin), install the Python tools' dependencies yourself, from
-the clone's folder:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
+**Any other agent:** clone the repo and point the agent at `AGENTS.md`. In a
+clone, install the tools' dependencies with `python3 -m pip install -r requirements.txt`.
 
 ## Try it
 
@@ -198,6 +185,7 @@ python3 tools/dashboard.py examples/projects_example.yaml --as-at 31/10/2026 --o
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
+| `start` | first-run setup: profile, jobs folder, a practice job, and what to ask for your trade; builds the home page | **working** |
 | `projects` | project register, tags and folders; inbox for invoices, payment screenshots, dockets and photos, read, checked and filed per job | **working** |
 | `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR, CSV extracts and project dashboard | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |

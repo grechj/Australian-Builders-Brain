@@ -23,3 +23,5 @@ jobs:
         run: python tools/test_finance.py
       - name: Projects, tags and the inbox
         run: python tools/test_projects.py
+      - name: First-run setup and home page
+        run: python tools/test_start.py

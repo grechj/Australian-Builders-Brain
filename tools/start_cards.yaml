@@ -1,0 +1,112 @@
+# "Things you can say": one card per skill, shown by the start skill and the
+# home page, filtered to the skills in the user's trade profile. Plain words,
+# the way a builder or tradie would actually ask. NCC examples vary by trade.
+
+skills:
+  projects:
+    title: "Jobs and paperwork"
+    does: "Keeps a folder per job and reads the invoices, receipts and photos you drop in."
+    say:
+      - "Start a new job: 14 Ocean St deck for Pat Lee"
+      - "Process my inbox"
+      - "Here's the timber invoice for the Banksia job"
+  estimating:
+    title: "Quotes"
+    does: "Builds estimates and quotes, compares subbie quotes and checks your margin."
+    say:
+      - "Quote a 6 x 4 m deck in merbau"
+      - "Compare these three plumbing quotes"
+      - "What margin am I making at this price?"
+  materials:
+    title: "Materials lists"
+    does: "Works out what to buy and roughly what it costs."
+    say:
+      - "What materials do I need for a 20 m paling fence?"
+      - "Rough materials cost for a 30 m2 slab"
+      - "Add the Bunnings price for 90x45 MGP10 to my price list"
+  contracts:
+    title: "Contracts and setup"
+    does: "Sets a job up after it's signed: summary, scope, subcontracts, pre-start checklist."
+    say:
+      - "I've just signed the Banksia job: set it up"
+      - "Write a subcontract for the sparky"
+      - "What do I need before I start on site?"
+  variations:
+    title: "Variations"
+    does: "Prices changes, gets them signed and keeps the register."
+    say:
+      - "Price a variation: rock in the footings, $1,200 labour, $1,450 tip fees, 2 days"
+      - "The client wants two extra power points"
+      - "Show me the variation register"
+  claims:
+    title: "Claims and getting paid"
+    does: "Progress claims, tax invoices, payment claims under the Act, and chasing payment."
+    say:
+      - "Do the frame stage claim"
+      - "Invoice the builder for the rough-in"
+      - "A subbie sent me a claim: what do I have to do?"
+  notices:
+    title: "Notices"
+    does: "Delay letters, site instructions, back charges, and suspension or breach notices."
+    say:
+      - "Rain delay: three days last week"
+      - "Tell the concreter to fix the set-down"
+      - "The client hasn't paid claim 3"
+  site:
+    title: "Site records"
+    does: "Site diary, client updates, RFIs, minutes, the program and day work dockets."
+    say:
+      - "Sparky and chippie on today, rain this arvo"
+      - "Send the client this week's update"
+      - "Ask the engineer about the beam over the family room"
+  safety:
+    title: "Safety (WHS)"
+    does: "SWMS, safety plans, toolbox talks, inductions and incident reports."
+    say:
+      - "SWMS for roof work on a single-storey house"
+      - "Toolbox talk on working at heights"
+      - "Someone cut their hand on site this morning"
+  handover:
+    title: "Handover"
+    does: "Practical completion, defects, warranties and the final account."
+    say:
+      - "Book the PC inspection"
+      - "List the defects from today's walk-through"
+      - "Do the final account"
+  financials:
+    title: "Job costs"
+    does: "Budget against actual, job profit and loss, and lessons learned."
+    say:
+      - "How's the Banksia job tracking against budget?"
+      - "What did we make on the Hill St job?"
+  accounts:
+    title: "Accounts and dashboard"
+    does: "Gets your jobs into Xero, MYOB or QuickBooks, BAS and TPAR figures, and the dashboard."
+    say:
+      - "Show me how my jobs are going"
+      - "Export this month's bills for Xero"
+      - "What's my GST for the September quarter?"
+  ncc:
+    title: "Building code (NCC)"
+    does: "Answers code questions with the clause, for your state."
+    say:
+      - "Minimum balustrade height on a deck?"
+
+# NCC questions by trade (used in place of the generic one above).
+ncc_by_trade:
+  electrician: ["Where do smoke alarms have to go in a house?", "Do I need RCDs on all circuits?"]
+  plumber: ["Minimum fall on a sewer drain?", "Hot water temperature at the tap?"]
+  carpenter: ["Maximum riser height for stairs in a house?", "Balustrade height on a deck 1.5 m off the ground?"]
+  builder: ["Minimum ceiling height in a habitable room?", "Waterproofing in a shower recess?"]
+  roofer: ["Roof tie-down in wind class N3?", "Minimum pitch for corrugated roofing?"]
+  tiler: ["Shower falls and waterproofing?", "Waterproofing behind a bath?"]
+  waterproofer: ["Wet area waterproofing in a laundry?", "Waterproofing a balcony over a room?"]
+  concreter: ["Slab edge cover to reinforcement?", "Termite protection at the slab edge?"]
+  glazier: ["Safety glass near a door?", "Glass in a balustrade?"]
+  painter: ["Lead paint on an old house: what are the rules?"]
+  hvac: ["Ductwork insulation requirements?", "Condensate drains?"]
+  insulation_installer: ["Ceiling insulation R-value in climate zone 5?", "Clearances to downlights?"]
+  bricklayer: ["Wall ties spacing in brick veneer?", "Weepholes and flashings?"]
+  plasterer: ["Wet area plasterboard?", "Fire-rated plasterboard between garage and house?"]
+  fencer: ["Pool fence height and gaps?"]
+  landscaper: ["Pool fence near garden beds?", "Retaining wall height before an engineer?"]

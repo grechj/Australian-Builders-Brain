@@ -3,6 +3,14 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.12.0 (2026-10-17)
+
+- No-terminal install: the README now leads with the Claude desktop app (Customize, Plugins, Add marketplace), which also works on claude.ai and carries the plugin into Cowork and Claude Code.
+- New `start` skill ("set me up"): asks trade, state and business details once and saves them in `profile.yaml`, makes the jobs folder (register, account mapping, inbox), runs a practice job with the sample invoice and bank screenshot in a separate `demo/` folder, and shows "things you can say" cards for the user's trade (`tools/start_cards.yaml`). `tools/start.py` (status, setup, demo, cards).
+- New home page (`tools/home.py`, `home.html` in the jobs folder): profile, what's waiting in the inbox, every job's position (contract, received, outstanding, profit, margin against target, forecast, invoiced and time meters) with its latest documents, links to the dashboard (which opens on the chosen job) and extracts, and the trade's cards with copy buttons. Offline, light and dark, phone-friendly.
+- New jobs copy the business details, state and trade from `profile.yaml`. A register entry can take its job number from its project file or ledger.
+- `tools/test_start.py` in CI.
+
 ## 0.11.0 (2026-10-17)
 
 - New `projects` skill and `tools/projects.py`: a project register (`projects.yaml`) with job numbers, names, tags and status; a standard folder per job (`project.yaml`, `ledger.yaml`, `timesheets.csv`, `inbox/`, `processed/`, `out/`); and an inbox for screenshots, photos and PDFs. Files are matched to a project by folder, name, tag or the text inside them; invoices are read into checked ledger entries (arithmetic and GST through the sanctioned maths, ABN checksum, tax invoice rules, duplicates across every project) and payments from bank screenshots into a payments log, only after the user confirms; originals are filed in `processed/` and linked from the ledger and the dashboard.

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Builder's Brain Home</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --track: #cde2fb; --wash: rgba(42,120,214,0.08);
+  --good: #006300; --critical: #d03b3b; --warn: #fab219;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+    --s1: #3987e5; --track: #184f95; --wash: rgba(57,135,229,0.12); --good: #0ca30c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+  --s1: #3987e5; --track: #184f95; --wash: rgba(57,135,229,0.12); --good: #0ca30c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 16px; }
+h1 { font-size: 22px; margin: 0; font-weight: 650; }
+.who { color: var(--ink-2); margin-top: 2px; }
+.links { display: flex; gap: 8px; flex-wrap: wrap; }
+a { color: var(--s1); }
+.btn, button { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; padding: 6px 10px; cursor: pointer; text-decoration: none; display: inline-block; }
+.card { background: var(--surface); border-radius: 10px; box-shadow: 0 0 0 1px var(--ring); padding: 16px; }
+.grid { display: grid; gap: 12px; }
+.top { grid-template-columns: 1fr 1fr; margin-bottom: 20px; }
+.jobs { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); margin-bottom: 24px; }
+.cards { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+@media (max-width: 720px) { .top { grid-template-columns: 1fr; } .jobs { grid-template-columns: 1fr; } }
+h2 { font-size: 16px; margin: 0 0 10px; font-weight: 650; }
+h3 { font-size: 15px; margin: 0; font-weight: 650; }
+.sub { color: var(--ink-2); font-size: 13px; }
+.muted { color: var(--muted); font-size: 12.5px; }
+.big { font-size: 28px; font-weight: 600; line-height: 1.1; }
+.badge { font-size: 12px; color: var(--ink-2); border: 1px solid var(--axis); border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.tag { font-size: 12px; color: var(--ink-2); background: var(--wash); border-radius: 4px; padding: 1px 6px; }
+.figs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px; margin: 12px 0; }
+.fig .l { color: var(--ink-2); font-size: 12px; }
+.fig { min-width: 0; }
+.fig .v { font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
+.good { color: var(--good); } .below { color: var(--critical); }
+.meter { margin: 6px 0 2px; }
+.meter .row { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-2); }
+.meter .track { height: 8px; border-radius: 4px; background: var(--track); overflow: hidden; margin-top: 3px; }
+.meter .fill { height: 100%; border-radius: 4px; background: var(--s1); }
+.docs { list-style: none; margin: 8px 0 0; padding: 0; }
+.docs li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-top: 1px solid var(--grid); font-size: 13px; }
+.docs li span:last-child { color: var(--muted); white-space: nowrap; }
+.foot { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
+.say { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; }
+.say li { display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; background: var(--wash); border-radius: 6px; padding: 6px 8px; font-size: 13px; }
+.say button { padding: 2px 8px; font-size: 12px; flex: none; }
+.warn { display: flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 8px; background: var(--surface); box-shadow: 0 0 0 1px var(--ring); margin-bottom: 8px; }
+.warn .icon { width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 12px; font-weight: 700; color: #0b0b0b; background: var(--warn); flex: none; }
+.inbox li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-top: 1px solid var(--grid); font-size: 13px; }
+.inbox { list-style: none; margin: 8px 0; padding: 0; }
+.empty { text-align: center; padding: 28px 16px; }
+footer { color: var(--muted); font-size: 12px; margin-top: 24px; }
+.toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--page); padding: 8px 14px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1 id="title">Builder's Brain</h1>
+      <div class="who" id="who"></div>
+    </div>
+    <div class="links" id="links"></div>
+  </header>
+  <div id="warnings"></div>
+
+  <div class="grid top">
+    <div class="card" id="inbox-card"></div>
+    <div class="card" id="profile-card"></div>
+  </div>
+
+  <h2>Your jobs</h2>
+  <div class="grid jobs" id="jobs"></div>
+
+  <h2 id="cards-title">Things you can say</h2>
+  <p class="sub" style="margin-top:-4px">Copy one into Claude, or just describe the job in your own words.</p>
+  <div class="grid cards" id="cards"></div>
+
+  <footer>Australian Builder's Brain · this page lives in your jobs folder and nothing leaves your computer · ask Claude to "update my home page" to refresh it.</footer>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (id) => document.getElementById(id);
+const num = (s) => (s === "" || s == null ? null : Number(s));
+const money = (v) => v == null ? "–" : (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString("en-AU", { maximumFractionDigits: 0 });
+function h(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === "class") e.className = v; else if (k === "text") e.textContent = v; else e.setAttribute(k, v); }
+  kids.flat().forEach(k => e.append(k instanceof Node ? k : document.createTextNode(String(k))));
+  return e;
+}
+function safeLink(href, label) {
+  const a = h("a", { text: label });
+  if (/^(https?:\/\/|[^:]+$)/i.test(href)) { a.href = href; a.target = "_blank"; a.rel = "noopener"; }
+  return a;
+}
+function toast(msg) { const t = $("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1600); }
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); }
+  catch { const ta = h("textarea"); ta.value = text; document.body.append(ta); ta.select(); document.execCommand("copy"); ta.remove(); }
+  toast("Copied: paste it into Claude");
+}
+const copyBtn = (text) => { const b = h("button", { type: "button", "aria-label": "Copy: " + text, text: "Copy" }); b.addEventListener("click", () => copy(text)); return b; };
+function sayItem(text) { return h("li", {}, h("span", { text: "“" + text + "”" }), copyBtn(text)); }
+function meter(label, pct, note) {
+  const p = Math.max(0, Math.min(100, pct || 0));
+  return h("div", { class: "meter" },
+    h("div", { class: "row" }, h("span", { text: label }), h("span", { text: note })),
+    h("div", { class: "track", role: "img", "aria-label": `${label}: ${note}` }, h("div", { class: "fill", style: `width:${p}%` })));
+}
+
+function init() {
+  if (!DATA) { document.querySelector("main").textContent = "No data. Build this page with tools/home.py."; return; }
+  const biz = (DATA.profile.business || {}), set = (DATA.profile.settings || {});
+  if (biz.business_name) $("title").textContent = biz.business_name;
+  $("who").textContent = [DATA.cards.trade_title, set.state || DATA.cards.state, "as at " + DATA.as_at].filter(Boolean).join(" · ");
+  if (DATA.dashboard) $("links").append(safeLink(DATA.dashboard, "Dashboard"));
+  if (DATA.extracts) $("links").append(safeLink(DATA.extracts, "Extracts and import files"));
+  [...$("links").children].forEach(a => a.className = "btn");
+  DATA.warnings.forEach(w => $("warnings").append(h("div", { class: "warn" }, h("span", { class: "icon", "aria-hidden": "true", text: "!" }), h("span", { text: w }))));
+
+  // Inbox
+  const ib = $("inbox-card"), waiting = DATA.projects.flatMap(p => p.inbox.map(i => ({ ...i, name: p.name }))).concat(DATA.unassigned.map(i => ({ ...i, name: "" })));
+  ib.append(h("h2", { text: "Inbox" }));
+  if (waiting.length) {
+    ib.append(h("div", { class: "big", text: String(waiting.length) }), h("div", { class: "sub", text: waiting.length === 1 ? "file waiting to be read" : "files waiting to be read" }));
+    const ul = h("ul", { class: "inbox" });
+    waiting.slice(0, 6).forEach(i => ul.append(h("li", {}, safeLink(i.file, i.file.split("/").pop()), h("span", { class: "muted", text: i.project ? i.name || i.project : "job not known yet" }))));
+    ib.append(ul, h("ul", { class: "say" }, sayItem("Process my inbox")));
+  } else {
+    ib.append(h("div", { class: "sub", text: "Nothing waiting. Drop invoices, receipts, dockets and photos into the inbox folder (or a job's own inbox), then ask Claude to process them." }),
+      h("ul", { class: "say" }, sayItem("Process my inbox")));
+  }
+
+  // Profile
+  const pc = $("profile-card");
+  pc.append(h("h2", { text: "Your details" }));
+  const rows = [["Business", biz.business_name], ["ABN", biz.abn], ["Licence", biz.licence_number], ["Phone", biz.phone], ["Email", biz.email],
+                ["Trade", DATA.cards.trade_title], ["State", set.state],
+                ["Accounts", ({ xero: "Xero", myob: "MYOB", quickbooks: "QuickBooks", none: "None" })[String(set.software || "").toLowerCase()] || set.software]];
+  const dl = h("div", { class: "figs", style: "grid-template-columns:repeat(2,minmax(0,1fr))" });
+  rows.forEach(([l, v]) => dl.append(h("div", { class: "fig" }, h("div", { class: "l", text: l }), h("div", { class: "v", style: "font-size:14px", text: v || "–" }))));
+  pc.append(dl);
+  if (DATA.missing.length) pc.append(h("div", { class: "sub", text: "Still to add: " + DATA.missing.map(m => m.replace(/_/g, " ")).join(", ") }), h("ul", { class: "say" }, sayItem("Update my profile")));
+
+  // Jobs
+  const jobs = $("jobs");
+  if (!DATA.projects.length) {
+    jobs.append(h("div", { class: "card empty" }, h("h3", { text: "No jobs yet" }), h("p", { class: "sub", text: "Tell Claude the job name and site address and it sets up the folder." }),
+      h("ul", { class: "say", style: "max-width:420px;margin:8px auto 0" }, sayItem("Start a new job: 14 Ocean St deck for Pat Lee"))));
+  }
+  const order = (p) => (p.status === "complete" ? 1 : 0);
+  [...DATA.projects].sort((a, b) => order(a) - order(b)).forEach(p => {
+    const f = p.figures || {}, c = h("div", { class: "card" });
+    c.append(h("div", { style: "display:flex;justify-content:space-between;gap:8px;align-items:baseline" },
+      h("h3", { text: p.name || p.job }), h("span", { class: "badge", text: p.status === "complete" ? "Complete" : (p.status || "active").replace(/^./, s => s.toUpperCase()) })));
+    c.append(h("div", { class: "muted", text: p.job }));
+    if (p.tags.length) c.append(h("div", { class: "tags" }, p.tags.map(t => h("span", { class: "tag", text: t }))));
+    if (f.job) {
+      const margin = num(f.margin_pct), target = num(f.target_margin_pct);
+      const mEl = h("div", { class: "v" + (margin != null && target != null ? (margin < target ? " below" : " good") : ""), text: margin == null ? "–" : margin + "%" });
+      c.append(h("div", { class: "figs" },
+        h("div", { class: "fig" }, h("div", { class: "l", text: "Contract (revised)" }), h("div", { class: "v", text: money(num(f.revised_contract_ex_gst)) })),
+        h("div", { class: "fig" }, h("div", { class: "l", text: "Received (inc GST)" }), h("div", { class: "v", text: money(num(f.received_inc_gst)) })),
+        h("div", { class: "fig" }, h("div", { class: "l", text: "Outstanding" }), h("div", { class: "v", text: money(num(f.outstanding_inc_gst)) })),
+        h("div", { class: "fig" }, h("div", { class: "l", text: "Profit to date" }), h("div", { class: "v", text: money(num(f.gross_profit_ex_gst)) })),
+        h("div", { class: "fig" }, h("div", { class: "l", text: "Margin" + (target != null ? ` (target ${target}%)` : "") }), mEl),
+        h("div", { class: "fig" }, h("div", { class: "l", text: p.status === "complete" ? "Final costs" : "Forecast margin" }),
+          h("div", { class: "v", text: p.status === "complete" ? money(num(f.costs_ex_gst)) : (f.forecast_margin_pct ? f.forecast_margin_pct + "%" : "–") }))));
+      if (f.invoiced_pct_of_contract) c.append(meter("Invoiced", num(f.invoiced_pct_of_contract), `${f.invoiced_pct_of_contract}% of contract`));
+      if (f.time_used_pct) c.append(meter("Time", num(f.time_used_pct), `${f.days_elapsed} of ${f.contract_days} days`));
+    } else {
+      c.append(h("p", { class: "sub", text: "No figures yet: add the start date and contract, and its invoices and bills as they come in." }));
+    }
+    if (p.documents.length) {
+      const ul = h("ul", { class: "docs" });
+      p.documents.slice(0, 4).forEach(d => ul.append(h("li", {}, safeLink(d.link, d.document + (d.reference ? " " + d.reference : "")), h("span", { text: d.modified }))));
+      c.append(ul);
+      if (p.documents.length > 4) c.append(h("div", { class: "muted", style: "margin-top:4px", text: `and ${p.documents.length - 4} more on the dashboard` }));
+    }
+    const foot = h("div", { class: "foot" });
+    if (f.job && DATA.dashboard) { const a = safeLink(DATA.dashboard + "#" + encodeURIComponent(p.job), "Open dashboard"); a.className = "btn"; foot.append(a); }
+    if (p.inbox.length) foot.append(h("span", { class: "sub", text: `${p.inbox.length} in its inbox` }));
+    c.append(foot);
+    if (p.status !== "complete") c.append(h("ul", { class: "say" }, sayItem(`Do the next progress claim for ${p.name || p.job}`)));
+    jobs.append(c);
+  });
+
+  // Cards
+  $("cards-title").textContent = `Things you can say${DATA.cards.trade_title ? " as " + (/^[aeiou]/i.test(DATA.cards.trade_title) ? "an " : "a ") + DATA.cards.trade_title.toLowerCase() : ""}`;
+  DATA.cards.cards.forEach(card => $("cards").append(h("div", { class: "card" },
+    h("h3", { text: card.title }), h("div", { class: "sub", style: "margin-top:2px", text: card.does }),
+    h("ul", { class: "say" }, card.say.slice(0, 3).map(sayItem)))));
+}
+init();
+</script>
+</body>
+</html>

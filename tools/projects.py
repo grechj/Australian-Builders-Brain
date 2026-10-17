@@ -71,6 +71,18 @@ def load_register(path: Path) -> dict:
     data = yaml.safe_load(path.read_text()) if path.exists() else None
     data = data or {}
     data.setdefault("projects", data.pop("jobs", None) or [])
+    for p in data["projects"]:  # an entry may take its job number from its project file or ledger
+        if p.get("job"):
+            continue
+        for key, field in (("project", "contract_number"), ("ledger", "job")):
+            f = path.parent / p[key] if p.get(key) else None
+            if f and f.exists():
+                doc = yaml.load(f.read_text(), Loader=yaml.BaseLoader) or {}
+                found = doc.get(field) or next((s.get(field) for s in doc.values() if isinstance(s, dict) and s.get(field)), None)
+                if found:
+                    p["job"] = str(found)
+                    break
+        p.setdefault("job", "")
     return data
 
 
@@ -115,13 +127,24 @@ def new(reg_path: Path, code: str, name: str, tags: list[str], **details) -> dic
         (folder / sub).mkdir(parents=True, exist_ok=True)
     project = {
         "business": {k: "" for k in ("business_name", "abn", "licence_number", "business_address", "business_address_line_2",
-                                     "phone", "email", "account_name", "bsb", "account_number")},
+                                     "phone", "email", "website", "account_name", "bsb", "account_number")},
         "project": {"project_name": name, "project_address": details.get("address", ""), "state": details.get("state", ""),
                     "trade": details.get("trade", "builder"), "project_type": details.get("project_type", ""),
                     "ncc_edition": "2025", "start_date": details.get("start_date", ""), "end_date": ""},
         "client": {"client_name": details.get("client", ""), "client_address": "", "client_phone": "", "client_email": ""},
         "contract": {"contract_number": code, "contract_sum": "", "contract_sum_ex_gst": "", "retention_pct": 0},
     }
+    prof_path = reg_path.parent / "profile.yaml"
+    prof = (yaml.safe_load(prof_path.read_text()) or {}) if prof_path.exists() else {}
+    for k, v in (prof.get("business") or {}).items():
+        if v not in (None, "") and k in project["business"]:
+            project["business"][k] = v
+    settings = prof.get("settings") or {}
+    for k in ("state", "trade"):
+        if settings.get(k) and not details.get(k):
+            project["project"][k] = settings[k]
+    if settings.get("region"):
+        project["project"]["region"] = settings["region"]
     if not (folder / "project.yaml").exists():
         (folder / "project.yaml").write_text("# Project file. Every key fills the placeholder of the same name in upper case.\n"
                                               + yaml.safe_dump(project, sort_keys=False))

@@ -421,8 +421,11 @@ function init() {
     const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
     r.dataset.theme = dark ? "light" : "dark"; renderJob(sel.value); });
   const fl = $("files"); (DATA.extracts || []).forEach(x => { const li = document.createElement("li"); li.appendChild(link(x.link, x.label)); fl.appendChild(li); });
-  const first = DATA.jobs.find(j => j.status !== "complete") || DATA.jobs[0];
+  if (!DATA.jobs.length) { document.querySelector("main").textContent = "No jobs with a start date yet."; return; }
+  const wanted = decodeURIComponent(location.hash.slice(1));
+  const first = DATA.jobs.find(j => j.job === wanted) || DATA.jobs.find(j => j.status !== "complete") || DATA.jobs[0];
   select(first.job);
+  sel.addEventListener("change", () => history.replaceState(null, "", "#" + encodeURIComponent(sel.value)));
 }
 init();
 </script>
