@@ -11,3 +11,4 @@ my_project*.yaml
 *.env
 out/
 my_prices*.csv
+.claude/

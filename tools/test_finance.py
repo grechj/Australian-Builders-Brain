@@ -100,6 +100,24 @@ def main() -> None:
     expect("bad date and tax code reported", sum(("date" in e) or ("tax must be" in e) for e in r["errors"]), 2)
     expect("bad ABN warned", any("checksum" in w for w in r["warnings"]), True)
 
+    with tempfile.TemporaryDirectory() as tmp:
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "dashboard.py"), str(ROOT / "examples" / "jobs_example.yaml"),
+                            "--as-at", "31/10/2026", "--out", tmp], capture_output=True, text=True)
+        expect("dashboard builds", p.returncode, 0)
+        rows = {r["job"]: r for r in csv.DictReader((Path(tmp) / "jobs.csv").open(newline=""))}
+        j = rows.get("SB-2027-014", {})
+        expect("dashboard P&L", (j.get("revenue_ex_gst"), j.get("costs_ex_gst"), j.get("gross_profit_ex_gst"), j.get("margin_pct")),
+               ("179723.63", "121087.50", "58636.13", "32.6"))
+        expect("dashboard cash as at", (j.get("received_inc_gst"), j.get("paid_inc_gst")), ("197696.00", "60500.00"))
+        expect("dashboard time", (j.get("days_elapsed"), j.get("contract_days"), j.get("benchmark_average_days"), j.get("days_vs_average_pct")),
+               ("90", "271", "193", "46.6"))
+        expect("dashboard labour", (j.get("labour_hours"), j.get("labour_cost_ex_gst"), j.get("days_on_site")), ("667.5", "56737.50", "53"))
+        page = (Path(tmp) / "dashboard.html").read_text()
+        expect("dashboard page has its data embedded", "/*__DATA__*/null" not in page and '"SB-2027-014"' in page, True)
+        receipt = Path(tmp) / "receipt.json"
+        p = subprocess.run([sys.executable, str(ROOT / "brain/references/attesters/check_receipt.py"), str(receipt)], capture_output=True, text=True)
+        expect("dashboard receipt passes the attester", p.returncode, 0)
+
     print(f"\n{'all finance checks passed' if not failures else f'{failures} failed'}")
     sys.exit(1 if failures else 0)
 

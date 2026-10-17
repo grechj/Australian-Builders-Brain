@@ -88,7 +88,7 @@ def normalise(ledger: dict, accounts: dict) -> list[dict]:
     out = []
     for t in ledger.get("transactions") or []:
         lines = [{"amount": str(l.get("amount", Decimal(str(l.get("quantity", 1))) * Decimal(str(l.get("unit_amount", 0))))),
-                  "tax": l["tax"]} for l in t["lines"]]
+                  "tax": l["tax"], "account": l.get("account", "")} for l in t["lines"]]
         tpar = t.get("tpar")
         if tpar is None:
             tpar = t["type"] in PURCHASES and any(l.get("account") in tpar_roles for l in t["lines"])

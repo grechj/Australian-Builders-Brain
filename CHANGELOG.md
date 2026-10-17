@@ -3,6 +3,12 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.9.0 (2026-10-17)
+
+- Project dashboard and financial extracts: `tools/dashboard.py` reads a portfolio of jobs (ledger, timesheets, budget) and writes `jobs.csv`, `monthly.csv`, `costs.csv` and `benchmarks.csv`, plus a self-contained dashboard page (P&L and margin against target, receipts and outstanding, costs against budget, cash by month, time on site, job length against the contract and the average of completed jobs). Works offline, in light and dark mode, on a phone.
+- New attested computation [job dashboard](brain/computations/job_dashboard.md), with an as-at cut-off.
+- Example portfolio of three jobs with ledgers and timesheets; hand-checked dashboard tests in CI.
+
 ## 0.8.1 (2026-10-17)
 
 - The plugin and marketplace are now `australian-builders-brain`, as Claude.ai's marketplace sync requires; skills are `australian-builders-brain:<skill>`. File and folder names keep underscores. Reinstall: `claude plugin marketplace add grechj/Australian-Builders-Brain` then `claude plugin install australian-builders-brain`.

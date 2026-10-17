@@ -1,0 +1,44 @@
+# Example portfolio for the project dashboard (fictional). List every job you
+# want on the dashboard: the current ones and completed ones (which give the
+# averages a job is compared against). Paths are relative to this file.
+#
+# Each job takes its details from its project file, or from the keys here
+# (keys here win). budget: the estimate's cost by role, ex GST.
+
+jobs:
+  - project: project_example.yaml
+    ledger: ledger_example.yaml
+    timesheets: timesheets_example.csv
+    status: active
+    start_date: 03/08/2026          # the example project file's dates are illustrative; this job started earlier
+    contract_end_date: 30/04/2027
+    target_margin_pct: 18
+    budget: {subcontractors: 96000, materials: 118000, plant_hire: 9500, site_costs: 12000, own_labour: 120000}
+
+  - job: SB-2025-031
+    name: Lambton Rd renovation
+    project_type: renovation
+    state: NSW
+    status: complete
+    contract_sum_ex_gst: 168000
+    start_date: 10/02/2025
+    contract_end_date: 01/08/2025
+    pc_date: 22/08/2025
+    target_margin_pct: 18
+    ledger: ledger_job_sb_2025_031.yaml
+    timesheets: timesheets_job_sb_2025_031.csv
+    budget: {subcontractors: 61000, materials: 52000, plant_hire: 4000, own_labour: 24000}
+
+  - job: SB-2026-007
+    name: Hill St extension
+    project_type: extension
+    state: NSW
+    status: complete
+    contract_sum_ex_gst: 312000
+    start_date: 03/02/2026
+    contract_end_date: 31/07/2026
+    pc_date: 14/08/2026
+    target_margin_pct: 18
+    ledger: ledger_job_sb_2026_007.yaml
+    timesheets: timesheets_job_sb_2026_007.csv
+    budget: {subcontractors: 112000, materials: 98000, plant_hire: 7000, own_labour: 32000}

@@ -160,3 +160,158 @@ def tpar_summary(transactions: list, year_ending: str) -> dict:
               "due": f"28 August {year_ending}", "payees": rows,
               "total_gross_paid_inc_gst": str(total_gross), "warnings": warnings}
     return {"result": result, "fields": {"TPAR_PAYEES": str(len(rows)), "TPAR_TOTAL": str(total_gross)}}
+
+
+INCOME_ROLES = {"contract_income", "variation_income", "other_income"}
+BALANCE_ROLES = {"retention_receivable", "retention_payable", "deposits_held", "equipment"}
+
+
+def _month(text: str) -> str:
+    return _date(text).strftime("%Y-%m")
+
+
+def job_dashboard(jobs: list, as_at: str) -> dict:
+    """Per-job P&L, cash, costs, margin and time, monthly series, and benchmarks
+    across jobs, for the project dashboard.
+
+    jobs: [{"job", "name", "project_type", "state", "status": "active" | "complete",
+            "contract_sum_ex_gst", "start_date", "contract_end_date", "pc_date",
+            "target_margin_pct", "budget": {role: amount ex GST},
+            "transactions": [normalised, each line with its "account" role],
+            "labour": [{"date", "hours", "rate" (ex GST per hour) or "cost"}]}]
+    Only transactions, payments and timesheets dated on or before as_at count.
+    Revenue and costs are ex GST on an accrual basis (by transaction date);
+    receipts and payments are inc GST, by payment date. Balance sheet lines
+    (retention, deposits held, capital equipment) are left out of profit.
+    Own labour from timesheets is a cost of the job.
+    """
+    today = _date(as_at)
+    rows, monthly, costs, warnings = [], {}, [], []
+    for j in jobs:
+        rev = {r: Decimal("0") for r in INCOME_ROLES}
+        cost = {}
+        invoiced_inc = received = billed_inc = paid_out = Decimal("0")
+        for t in j.get("transactions", []):
+            if _date(t["date"]) > today:
+                continue
+            t = {**t, "payments": [p for p in t.get("payments", []) if _date(p["date"]) <= today]}
+            sign = SALES.get(t["type"]) or PURCHASES.get(t["type"])
+            lines = _lines(t)
+            total_inc = sum((a + g for a, g, _ in lines), Decimal("0")) * sign
+            pay = sum((Decimal(str(p["amount"])) for p in t.get("payments", [])), Decimal("0")) * sign
+            m = monthly.setdefault((j["job"], _month(t["date"])), {"revenue": Decimal("0"), "costs": Decimal("0"),
+                                                                     "received": Decimal("0"), "paid": Decimal("0")})
+            for (amount, _gst, _tax), line in zip(lines, t["lines"]):
+                role = line.get("account", "")
+                if role in BALANCE_ROLES:
+                    continue
+                if t["type"] in SALES:
+                    if role not in INCOME_ROLES:
+                        warnings.append(f"{j['job']} {t['number']}: sales line with role {role!r} counted as other income")
+                        role = "other_income"
+                    rev[role] += amount * sign
+                    m["revenue"] += amount * sign
+                else:
+                    cost[role] = cost.get(role, Decimal("0")) + amount * sign
+                    m["costs"] += amount * sign
+            for p in t.get("payments", []):
+                pm = monthly.setdefault((j["job"], _month(p["date"])), {"revenue": Decimal("0"), "costs": Decimal("0"),
+                                                                         "received": Decimal("0"), "paid": Decimal("0")})
+                pm["received" if t["type"] in SALES else "paid"] += Decimal(str(p["amount"])) * sign
+            if t["type"] in SALES:
+                invoiced_inc += total_inc
+                received += pay
+            else:
+                billed_inc += total_inc
+                paid_out += pay
+        hours = labour = Decimal("0")
+        days = set()
+        for entry in j.get("labour", []):
+            if _date(entry["date"]) > today:
+                continue
+            h = Decimal(str(entry.get("hours", 0)))
+            c = _money(Decimal(str(entry["cost"]))) if entry.get("cost") not in (None, "") \
+                else _money(h * Decimal(str(entry.get("rate", 0))))
+            hours += h
+            labour += c
+            days.add(entry["date"])
+            lm = monthly.setdefault((j["job"], _month(entry["date"])), {"revenue": Decimal("0"), "costs": Decimal("0"),
+                                                                         "received": Decimal("0"), "paid": Decimal("0")})
+            lm["costs"] += c
+        if labour:
+            cost["own_labour"] = cost.get("own_labour", Decimal("0")) + labour
+        revenue = sum(rev.values(), Decimal("0"))
+        total_cost = sum(cost.values(), Decimal("0"))
+        profit = revenue - total_cost
+        contract = _money(Decimal(str(j.get("contract_sum_ex_gst") or 0)))
+        revised = contract + rev["variation_income"]
+        start = _date(j["start_date"])
+        finish = _date(j["pc_date"]) if j.get("pc_date") else today
+        elapsed = (finish - start).days + 1
+        contract_days = (_date(j["contract_end_date"]) - start).days + 1 if j.get("contract_end_date") else None
+        budget = {k: _money(Decimal(str(v))) for k, v in (j.get("budget") or {}).items()}
+        for role in sorted(set(cost) | set(budget)):
+            costs.append({"job": j["job"], "category": role, "actual_ex_gst": str(_money(cost.get(role, Decimal("0")))),
+                          "budget_ex_gst": str(budget[role]) if role in budget else ""})
+        margin = (profit / revenue * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP) if revenue else None
+        target = Decimal(str(j["target_margin_pct"])) if j.get("target_margin_pct") is not None else None
+        rows.append({
+            "job": j["job"], "name": j.get("name", ""), "project_type": j.get("project_type", ""),
+            "state": j.get("state", ""), "status": j.get("status", "active"),
+            "contract_sum_ex_gst": str(contract), "variations_ex_gst": str(_money(rev["variation_income"])),
+            "revised_contract_ex_gst": str(revised),
+            "revenue_ex_gst": str(_money(revenue)), "costs_ex_gst": str(_money(total_cost)),
+            "gross_profit_ex_gst": str(_money(profit)),
+            "margin_pct": str(margin) if margin is not None else "",
+            "target_margin_pct": str(target) if target is not None else "",
+            "invoiced_pct_of_contract": str((revenue / revised * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if revised else "",
+            "invoiced_inc_gst": str(_money(invoiced_inc)), "received_inc_gst": str(_money(received)),
+            "outstanding_inc_gst": str(_money(invoiced_inc - received)),
+            "billed_inc_gst": str(_money(billed_inc)), "paid_inc_gst": str(_money(paid_out)),
+            "unpaid_bills_inc_gst": str(_money(billed_inc - paid_out)),
+            "net_cash_inc_gst": str(_money(received - paid_out)),
+            "materials_ex_gst": str(_money(cost.get("materials", Decimal("0")))),
+            "subcontractors_ex_gst": str(_money(cost.get("subcontractors", Decimal("0")))),
+            "labour_hours": str(hours), "labour_cost_ex_gst": str(_money(labour)), "days_on_site": str(len(days)),
+            "start_date": j["start_date"], "contract_end_date": j.get("contract_end_date", ""), "pc_date": j.get("pc_date", ""),
+            "days_elapsed": str(elapsed), "contract_days": str(contract_days) if contract_days else "",
+            "time_used_pct": str((Decimal(elapsed) / contract_days * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if contract_days else "",
+        })
+        if margin is not None and target is not None and margin < target:
+            warnings.append(f"{j['job']}: margin {margin}% is below the target {target}%")
+        if contract_days and j.get("status") != "complete" and elapsed > contract_days:
+            warnings.append(f"{j['job']}: {elapsed - contract_days} days past the contract completion date")
+
+    # Benchmarks: completed jobs only.
+    done = [r for r in rows if r["status"] == "complete"]
+    bench = []
+
+    def add(group: str, members: list) -> None:
+        if not members:
+            return
+        avg_days = sum(Decimal(r["days_elapsed"]) for r in members) / len(members)
+        margins = [Decimal(r["margin_pct"]) for r in members if r["margin_pct"]]
+        bench.append({"group": group, "completed_jobs": str(len(members)),
+                      "average_days": str(avg_days.quantize(Decimal("1"), rounding=ROUND_HALF_UP)),
+                      "average_margin_pct": str((sum(margins) / len(margins)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)) if margins else ""})
+
+    add("all", done)
+    for ptype in sorted({r["project_type"] for r in done if r["project_type"]}):
+        add(ptype, [r for r in done if r["project_type"] == ptype])
+    by_group = {b["group"]: b for b in bench}
+    for r in rows:
+        b = by_group.get(r["project_type"]) or by_group.get("all")
+        r["benchmark_group"] = b["group"] if b else ""
+        r["benchmark_average_days"] = b["average_days"] if b else ""
+        r["days_vs_average_pct"] = str((Decimal(r["days_elapsed"]) / Decimal(b["average_days"]) * 100).quantize(
+            Decimal("0.1"), rounding=ROUND_HALF_UP)) if b and Decimal(b["average_days"]) else ""
+
+    series, running = [], {}
+    for (job, month) in sorted(monthly):
+        m = monthly[(job, month)]
+        running[job] = running.get(job, Decimal("0")) + m["revenue"] - m["costs"]
+        series.append({"job": job, "month": month, "revenue_ex_gst": str(_money(m["revenue"])),
+                       "costs_ex_gst": str(_money(m["costs"])), "received_inc_gst": str(_money(m["received"])),
+                       "paid_inc_gst": str(_money(m["paid"])), "cumulative_profit_ex_gst": str(_money(running[job]))})
+    result = {"as_at": as_at, "jobs": rows, "monthly": series, "costs": costs, "benchmarks": bench, "warnings": warnings}
+    return {"result": result, "fields": {"JOBS": str(len(rows))}}

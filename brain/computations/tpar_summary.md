@@ -7,7 +7,7 @@ status: draft
 runtime: python
 computation: /references/computations/finance_maths.py
 entry_point: tpar_summary
-computation_sha256: 73388a89e313ae1509a650653381b05a6ec387ebbbc9447a64f2f93da63b7b0c
+computation_sha256: 9cf62924924f24eaf3dafc99796bdd34e761455239aef66f0566fbc20b28fdfd
 parameters:
   - { name: transactions, type: json, required: true }
   - { name: year_ending, type: string, required: true }

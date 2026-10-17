@@ -1,0 +1,13 @@
+# Summary ledger for a completed job (fictional).
+job: SB-2026-007
+transactions:
+  - {type: invoice, number: H07-1, date: 05/02/2026, contact: {name: Robin and Ash Hill}, lines: [{description: Deposit, amount: 15600, account: contract_income, tax: gst}], payments: [{date: 09/02/2026, amount: 17160}]}
+  - {type: invoice, number: H07-2, date: 20/03/2026, contact: {name: Robin and Ash Hill}, lines: [{description: Base and frame, amount: 109200, account: contract_income, tax: gst}], payments: [{date: 31/03/2026, amount: 120120}]}
+  - {type: invoice, number: H07-3, date: 29/05/2026, contact: {name: Robin and Ash Hill}, lines: [{description: Lock-up and fixing, amount: 140400, account: contract_income, tax: gst}, {description: Variations VAR-001 to VAR-006, amount: 21500, account: variation_income, tax: gst}], payments: [{date: 12/06/2026, amount: 178090}]}
+  - {type: invoice, number: H07-4, date: 14/08/2026, contact: {name: Robin and Ash Hill}, lines: [{description: Practical completion, amount: 46800, account: contract_income, tax: gst}], payments: [{date: 28/08/2026, amount: 51480}]}
+  - {type: bill, number: H07-B1, date: 27/02/2026, contact: {name: Subcontractors (month), abn: 25 999 583 278}, lines: [{description: Excavation, slab and pier, amount: 31800, account: subcontractors, tax: gst}], payments: [{date: 13/03/2026, amount: 34980}]}
+  - {type: bill, number: H07-B2, date: 31/03/2026, contact: {name: Materials (month), abn: 31 864 452 323}, lines: [{description: Frame, trusses, roofing, amount: 47900, account: materials, tax: gst}, {description: Plant hire, amount: 6200, account: plant_hire, tax: gst}], payments: [{date: 30/04/2026, amount: 59510}]}
+  - {type: bill, number: H07-B3, date: 29/05/2026, contact: {name: Subcontractors (month), abn: 25 999 583 278}, lines: [{description: Trades rough-in, lining, waterproofing, amount: 56300, account: subcontractors, tax: gst}], payments: [{date: 19/06/2026, amount: 61930}]}
+  - {type: bill, number: H07-B4, date: 30/06/2026, contact: {name: Materials (month), abn: 31 864 452 323}, lines: [{description: Fix-out materials, tiles, fittings, amount: 58700, account: materials, tax: gst}], payments: [{date: 31/07/2026, amount: 64570}]}
+  - {type: bill, number: H07-B5, date: 07/08/2026, contact: {name: Subcontractors (month), abn: 25 999 583 278}, lines: [{description: Fit-off, painting, landscaping, amount: 34900, account: subcontractors, tax: gst}], payments: [{date: 21/08/2026, amount: 38390}]}
+  - {type: bill, number: H07-B6, date: 30/04/2026, contact: {name: Site costs (month)}, lines: [{description: Skips, toilet, fencing, scaffold, amount: 8800, account: site_costs, tax: gst}], payments: [{date: 29/05/2026, amount: 9680}]}

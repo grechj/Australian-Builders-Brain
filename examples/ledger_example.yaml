@@ -96,3 +96,23 @@ transactions:
       - {description: "Retention held (5%)", amount: -560.00, account: retention_payable, tax: bas_excluded}
     payments:
       - {date: 10/11/2026, amount: 11760.00}
+
+  - type: bill
+    number: HTS-56120
+    date: 02/10/2026
+    due: 01/11/2026
+    contact: {name: Hunter Timber Supplies, abn: 31 864 452 323, address: "40 Mill St, Mayfield NSW 2304"}
+    lines:
+      - {description: "Roofing, windows and external doors, supply only", amount: 38400.00, account: materials, tax: gst}
+    payments:
+      - {date: 30/10/2026, amount: 42240.00}
+
+  - type: bill
+    number: PH-7731
+    date: 06/10/2026
+    due: 20/10/2026
+    contact: {name: Hunter Plant Hire, abn: 31 864 452 323}
+    lines:
+      - {description: "Scaffold and scissor lift hire, October", amount: 3850.00, account: plant_hire, tax: gst}
+    payments:
+      - {date: 20/10/2026, amount: 4235.00}

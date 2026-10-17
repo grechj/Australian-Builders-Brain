@@ -119,6 +119,19 @@ was paid in the year including GST, the GST, and any tax withheld. Bills
 coded to subcontractors (or labour hire) count by default; materials-only
 supply doesn't. Set `tpar: false` or `true` on a bill to override.
 
+# Dashboard and extracts
+
+`tools/dashboard.py` reads a portfolio file listing every job (current and
+completed) with its ledger, timesheets and budget, and runs the
+[job dashboard](/computations/job_dashboard.md) computation. It writes CSV
+extracts (one row per job, per job and month, per cost category, and the
+averages across completed jobs) and a self-contained dashboard page: profit
+and margin against target, contract and variations, invoiced and received,
+outstanding, costs against budget, cash in and out by month, days on site
+and labour, and job length against the contract period and the average of
+completed jobs of the same type. The CSVs load straight into Excel, Google
+Sheets, Power BI or Looker Studio, and are what a web app would read.
+
 # Tax questions beyond the job
 
 For tax rules beyond these summaries (BAS labels in depth, PAYG, TPAR edge

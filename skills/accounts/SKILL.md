@@ -1,6 +1,6 @@
 ---
 name: accounts
-description: Get an Australian builder's or trade's job money into Xero, MYOB or QuickBooks, and summarise it for tax. Keeps the job ledger of invoices, progress claims, bills, credit notes and payments, maps it to the user's chart of accounts, exports import files (Xero CSV, MYOB AccountRight, QuickBooks Online), pushes drafts through the user's own Xero, MYOB or QuickBooks connector, and works out BAS GST labels (G1, 1A, 1B) and the TPAR contractor payments report. Use when someone mentions Xero, MYOB, QuickBooks, their bookkeeper or accountant, getting invoices or bills into the books, coding to jobs, GST, BAS, a quarterly activity statement, TPAR, reporting subbie payments to the ATO, or cash vs accrual.
+description: Get an Australian builder's or trade's job money into Xero, MYOB or QuickBooks, and summarise it for tax. Keeps the job ledger of invoices, progress claims, bills, credit notes and payments, maps it to the user's chart of accounts, exports import files (Xero CSV, MYOB AccountRight, QuickBooks Online), pushes drafts through the user's own Xero, MYOB or QuickBooks connector, works out BAS GST labels (G1, 1A, 1B) and the TPAR contractor payments report, and builds CSV extracts and a project dashboard (P&L, receipts, costs against budget, margin, time on site, job length against the average). Use when someone mentions Xero, MYOB, QuickBooks, their bookkeeper or accountant, getting invoices or bills into the books, coding to jobs, GST, BAS, a quarterly activity statement, TPAR, reporting subbie payments to the ATO, or cash vs accrual, or wants a dashboard, graphs or a CSV extract of how their jobs are going.
 ---
 
 # Accounts
@@ -26,7 +26,8 @@ every update.
 - Knowledge: `brain/contracts/accounts_and_tax.md` (read it first), `brain/contracts/progress_payments.md`, `brain/contracts/security_of_payment.md`
 - Maths: `brain/computations/bas_summary.md`, `tpar_summary.md`, `gst.md`, `ex_gst.md`
 - Tool: `tools/finance.py` (check, export, payload, bas, tpar); import formats in `tools/finance_formats.yaml`
-- Examples: `examples/ledger_example.yaml`, `examples/accounts_example.yaml`
+- Dashboard: `tools/dashboard.py` (CSV extracts and a dashboard page), maths in `brain/computations/job_dashboard.md`
+- Examples: `examples/ledger_example.yaml`, `examples/accounts_example.yaml`, `examples/jobs_example.yaml`, `examples/timesheets_example.csv`
 
 For `python3`, use `${CLAUDE_PLUGIN_DATA}/venv/bin/python` if it exists (the
 plugin's setup hook creates it). Otherwise, if
@@ -129,6 +130,23 @@ due date (28 August). Pass on every warning (no ABN, no address). Remind
 the user the TPAR applies when building and construction is 50% or more of
 their business, and that it covers all jobs: combine every job's ledger, or
 use their software's TPAR report, which is usually easier.
+
+## Dashboard and extracts
+
+When the user wants to see how a job (or all their jobs) is going:
+
+1. Keep a portfolio file, `jobs.yaml`, in their folder (pattern: `$ABB/examples/jobs_example.yaml`): each job's project file, ledger, timesheets (a CSV, or the Timesheet and Docket workbook), status, start, contract end and practical completion dates, target margin, and the cost budget by role from the estimate. Completed jobs belong there too: they give the averages.
+2. Build it:
+
+   ```bash
+   python3 $ABB/tools/dashboard.py jobs.yaml --out out/dashboard --as-at <DD/MM/YYYY>
+   python3 $ABB/brain/references/attesters/check_receipt.py out/dashboard/receipt.json
+   ```
+
+3. Give the user `out/dashboard/dashboard.html` (opens in any browser, no internet needed) and the CSVs (`jobs.csv`, `monthly.csv`, `costs.csv`, `benchmarks.csv`) for Excel, Google Sheets, Power BI or Looker Studio. If they want to share it, offer to publish the dashboard page.
+4. Read the headline back in a few lines: profit and margin against target, cash received and outstanding, the cost categories over budget, days on site, and job length against the contract and the average. Pass on every warning.
+
+Margin here is profit on revenue to date, so an early job that has claimed ahead of its costs shows a high margin: say so, and compare costs to budget for the real picture. Own labour counts only if timesheets are in the portfolio.
 
 ## Tax questions
 

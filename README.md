@@ -6,7 +6,7 @@ contracts through variations, delay notices and progress claims to practical
 completion and the final account, and it knows the construction sequence
 and the National Construction Code.
 
-> **Status: v0.8.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
+> **Status: v0.9.0.** All twelve skills work end to end, covering all 64 templates, and job money exports to Xero, MYOB and QuickBooks. NCC 2025
 > and NCC 2022 (with Amendments 1 and 2) are loaded. Still to do: verified state-by-state
 > rules (see the roadmap). Everything marked `status: draft` in `brain/` still needs
 > checking by a person.
@@ -131,6 +131,17 @@ python3 tools/finance.py export examples/ledger_example.yaml --accounts examples
 python3 tools/finance.py bas examples/ledger_example.yaml --accounts examples/accounts_example.yaml --from 01/07/2026 --to 30/09/2026 --basis accrual
 ```
 
+### Project dashboard
+
+List your jobs, current and finished, in a portfolio file and get CSV
+extracts plus a dashboard page for each job: P&L and margin against target,
+receipts and what's outstanding, costs against budget, cash in and out by
+month, time on site, and job length against the contract and your average.
+
+```bash
+python3 tools/dashboard.py examples/jobs_example.yaml --as-at 31/10/2026 --out out/dashboard
+```
+
 ## How it stays trustworthy
 
 - **Money is never guessed.** GST, variation prices and margins come from
@@ -158,7 +169,7 @@ python3 tools/finance.py bas examples/ledger_example.yaml --accounts examples/ac
 | `safety` | SWMS, safety plan, toolbox talk, incident report, induction, inspection, subbie compliance | **working** |
 | `handover` | PC checklist and notice, defects, as-builts, warranties, final claim, final account | **working** |
 | `financials` | budget vs actual, job P&L, lessons learned | **working** |
-| `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
+| `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR, CSV extracts and project dashboard | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
 | `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
 | `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |
 
