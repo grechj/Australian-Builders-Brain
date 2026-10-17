@@ -131,6 +131,9 @@ def cards(folder: Path, trade: str | None) -> dict:
         if s not in skills or s not in data["skills"]:
             continue
         card = dict(data["skills"][s], skill=s)
+        trade_say = (data.get("by_trade") or {}).get(p["trade"], {}).get(s)
+        if trade_say:
+            card["say"] = trade_say
         if s == "ncc":
             card["say"] = data["ncc_by_trade"].get(p["trade"]) or (data["ncc_by_trade"]["builder"] + card["say"][:1])
         out.append(card)

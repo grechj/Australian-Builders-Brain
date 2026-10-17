@@ -3,6 +3,10 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.13.3 (2026-10-17)
+
+- "Things you can say" examples are now written for each common trade (builder, carpenter, electrician, plumber, tiler, painter, roofer, concreter, landscaper), neutral for the rest, with no sample job names. The home page's suggested prompts follow the trade too (trades invoice, builders claim).
+
 ## 0.13.2 (2026-10-17)
 
 - Setup no longer settles for Cowork's temporary session workspace: when the session isn't in a folder the user chose, the start skill recommends a Cowork project on a real Jobs folder first, or sets up a clearly labelled trial.

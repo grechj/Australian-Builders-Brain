@@ -1,112 +1,404 @@
 # "Things you can say": one card per skill, shown by the start skill and the
 # home page, filtered to the skills in the user's trade profile. Plain words,
-# the way a builder or tradie would actually ask. NCC examples vary by trade.
+# the way a builder or tradie would ask. `skills` holds the neutral examples;
+# `by_trade` replaces them for the common trades; `ncc_by_trade` holds the
+# building code questions. No sample job names (use "the Smith job").
 
 skills:
   projects:
-    title: "Jobs and paperwork"
-    does: "Keeps a folder per job and reads the invoices, receipts and photos you drop in."
+    title: Jobs and paperwork
+    does: Keeps a folder per job and reads the invoices, receipts and photos you drop in.
     say:
-      - "Start a new job: 14 Ocean St deck for Pat Lee"
-      - "Process my inbox"
-      - "Here's the timber invoice for the Banksia job"
+    - Start a new job for the Smiths at 14 Ocean St
+    - Process my inbox
+    - Here's a supplier invoice for the Smith job
   estimating:
-    title: "Quotes"
-    does: "Builds estimates and quotes, compares subbie quotes and checks your margin."
+    title: Quotes
+    does: Builds estimates and quotes, compares subbie quotes and checks your margin.
     say:
-      - "Quote a 6 x 4 m deck in merbau"
-      - "Compare these three plumbing quotes"
-      - "What margin am I making at this price?"
+    - Quote this job from my notes
+    - Compare these two supplier quotes
+    - What margin am I making at this price?
   materials:
-    title: "Materials lists"
-    does: "Works out what to buy and roughly what it costs."
+    title: Materials lists
+    does: Works out what to buy and roughly what it costs.
     say:
-      - "What materials do I need for a 20 m paling fence?"
-      - "Rough materials cost for a 30 m2 slab"
-      - "Add the Bunnings price for 90x45 MGP10 to my price list"
+    - What materials do I need for this job?
+    - Rough materials cost for the Smith job
+    - Add today's supplier prices to my price list
   contracts:
-    title: "Contracts and setup"
-    does: "Sets a job up after it's signed: summary, scope, subcontracts, pre-start checklist."
+    title: Contracts and setup
+    does: 'Sets a job up after it''s signed: summary, scope, subcontracts, pre-start checklist.'
     say:
-      - "I've just signed the Banksia job: set it up"
-      - "Write a subcontract for the sparky"
-      - "What do I need before I start on site?"
+    - 'I''ve just signed the Smith job: set it up'
+    - Write a subcontract for my electrician
+    - What do I need before I start on site?
   variations:
-    title: "Variations"
-    does: "Prices changes, gets them signed and keeps the register."
+    title: Variations
+    does: Prices changes, gets them signed and keeps the register.
     say:
-      - "Price a variation: rock in the footings, $1,200 labour, $1,450 tip fees, 2 days"
-      - "The client wants two extra power points"
-      - "Show me the variation register"
+    - 'The client wants extra work: price a variation'
+    - 'Price a variation: 6 hours labour and $480 materials'
+    - Show me my variations on the Smith job
   claims:
-    title: "Claims and getting paid"
-    does: "Progress claims, tax invoices, payment claims under the Act, and chasing payment."
+    title: Claims and getting paid
+    does: Progress claims, tax invoices, payment claims under the Act, and chasing payment.
     say:
-      - "Do the frame stage claim"
-      - "Invoice the builder for the rough-in"
-      - "A subbie sent me a claim: what do I have to do?"
+    - Invoice the client for the work done this week
+    - Do the next progress claim on the Smith job
+    - A client hasn't paid my invoice
   notices:
-    title: "Notices"
-    does: "Delay letters, site instructions, back charges, and suspension or breach notices."
+    title: Notices
+    does: Delay letters, site instructions, back charges, and suspension or breach notices.
     say:
-      - "Rain delay: three days last week"
-      - "Tell the concreter to fix the set-down"
-      - "The client hasn't paid claim 3"
+    - Rain held us up three days last week
+    - Write a site instruction for the change
+    - 'The client still hasn''t paid: what are my options?'
   site:
-    title: "Site records"
-    does: "Site diary, client updates, RFIs, minutes, the program and day work dockets."
+    title: Site records
+    does: Site diary, client updates, RFIs, minutes, the program and day work dockets.
     say:
-      - "Sparky and chippie on today, rain this arvo"
-      - "Send the client this week's update"
-      - "Ask the engineer about the beam over the family room"
+    - 'Log today: two of us on site, rained after lunch'
+    - Send the client this week's update
+    - Ask the designer about a detail on the drawings
   safety:
-    title: "Safety (WHS)"
-    does: "SWMS, safety plans, toolbox talks, inductions and incident reports."
+    title: Safety (WHS)
+    does: SWMS, safety plans, toolbox talks, inductions and incident reports.
     say:
-      - "SWMS for roof work on a single-storey house"
-      - "Toolbox talk on working at heights"
-      - "Someone cut their hand on site this morning"
+    - SWMS for working at heights
+    - Toolbox talk on manual handling
+    - Someone cut their hand on site this morning
   handover:
-    title: "Handover"
-    does: "Practical completion, defects, warranties and the final account."
+    title: Handover
+    does: Practical completion, defects, warranties and the final account.
     say:
-      - "Book the PC inspection"
-      - "List the defects from today's walk-through"
-      - "Do the final account"
+    - Book the final inspection
+    - List the defects from today's walk-through
+    - Do the final account
   financials:
-    title: "Job costs"
-    does: "Budget against actual, job profit and loss, and lessons learned."
+    title: Job costs
+    does: Budget against actual, job profit and loss, and lessons learned.
     say:
-      - "How's the Banksia job tracking against budget?"
-      - "What did we make on the Hill St job?"
+    - How's the Smith job tracking against budget?
+    - What did we make on our last job?
   accounts:
-    title: "Accounts and dashboard"
-    does: "Gets your jobs into Xero, MYOB or QuickBooks, BAS and TPAR figures, and the dashboard."
+    title: Accounts and dashboard
+    does: Gets your jobs into Xero, MYOB or QuickBooks, BAS and TPAR figures, and the dashboard.
     say:
-      - "Show me how my jobs are going"
-      - "Export this month's bills for Xero"
-      - "What's my GST for the September quarter?"
+    - Show me how my jobs are going
+    - Export this month's bills for Xero
+    - What's my GST for the September quarter?
   ncc:
-    title: "Building code (NCC)"
-    does: "Answers code questions with the clause, for your state."
+    title: Building code (NCC)
+    does: Answers code questions with the clause, for your state.
     say:
-      - "Minimum balustrade height on a deck?"
-
-# NCC questions by trade (used in place of the generic one above).
+    - Minimum balustrade height on a deck?
+by_trade:
+  builder:
+    estimating:
+    - Quote a 30 m2 rear extension
+    - Compare these three plumbing quotes
+    - What margin am I making at this price?
+    materials:
+    - Rough materials cost for a 30 m2 slab
+    - Framing materials for the extension
+    - Add today's Bunnings price for 90x45 MGP10
+    variations:
+    - 'Price a variation: rock in the footings, $1,200 labour, $1,450 tip fees, 2 days'
+    - The client wants two extra power points
+    - Show me the variation register for the Smith job
+    claims:
+    - Do the frame stage claim for the Smith job
+    - 'A subbie sent me a claim: what do I have to do?'
+    - The client hasn't paid claim 3
+    notices:
+    - 'Rain delay: three days last week'
+    - Tell the concreter to fix the set-down
+    - 'The client hasn''t paid claim 3: what are my options?'
+    site:
+    - Sparky and chippie on today, rain this arvo
+    - Send the client this week's update
+    - Ask the engineer about the beam over the family room
+    safety:
+    - SWMS for roof work on a single-storey house
+    - Toolbox talk on working at heights
+    - Someone cut their hand on site this morning
+  carpenter:
+    estimating:
+    - Quote a 6 x 4 m merbau deck with stairs
+    - Quote a 4 x 3 m pergola off the house
+    - What margin am I making at this price?
+    materials:
+    - What timber do I need for a 6 x 4 m deck?
+    - Materials for 12 m of new stud wall
+    - Add today's Bunnings price for 90x45 MGP10
+    variations:
+    - 'The client wants the deck 1 m longer: price it'
+    - 'Rotten bearer found under the laundry: price the fix'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the fix-out
+    - Invoice the client for the deck frame
+    - The builder hasn't paid my last invoice
+    notices:
+    - Rain held up the deck for three days
+    - 'The tiler damaged my architraves: back charge them'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: pergola frame up, rained after lunch'
+    - Send the client this week's update on the deck
+    - Ask the engineer about the beam size over the opening
+    safety:
+    - SWMS for working at heights on a pergola roof
+    - Toolbox talk on nail gun safety
+    - Someone cut their hand on the drop saw
+  electrician:
+    estimating:
+    - Quote a switchboard upgrade and 10 new power points
+    - Quote LED downlights through the whole house
+    - What margin am I making at this price?
+    materials:
+    - Rough-in materials for a 4-bedroom house
+    - Cable and fittings for 12 new power points
+    - Add today's price for 2.5 mm TPS cable to my price list
+    variations:
+    - 'The client wants two extra power points: price it'
+    - 'Extra circuit for the new oven: price it'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the rough-in
+    - Invoice the client for the switchboard upgrade
+    - The builder hasn't paid my rough-in invoice
+    notices:
+    - Held up two days waiting on the plasterer
+    - 'The plasterer covered my cables before inspection: tell the builder'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: rough-in done upstairs, inspection booked'
+    - Send the builder this week's update
+    - Ask the builder where the meter box is going
+    safety:
+    - SWMS for work near live electrical parts
+    - Toolbox talk on isolation and tagging
+    - The apprentice got a tingle from a power point
+  plumber:
+    estimating:
+    - Quote a bathroom rough-in and fit-off
+    - Quote a hot water system replacement
+    - What margin am I making at this price?
+    materials:
+    - Rough-in materials for a bathroom and laundry
+    - Pipe and fittings for 20 m of sewer drain
+    - Add today's price for 100 mm PVC pipe to my price list
+    variations:
+    - 'The client wants the shower moved: price it'
+    - 'Rock in the sewer trench: price the extra digging'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the bathroom rough-in
+    - Invoice the client for the hot water system
+    - The builder hasn't paid my last invoice
+    notices:
+    - Held up waiting on the waterproofer
+    - 'The tiler cracked a waste pipe: back charge them'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: rough-in done, pressure test passed'
+    - Send the builder this week's update
+    - Ask the builder for the vanity set-out
+    safety:
+    - SWMS for trench work over 1.5 m deep
+    - Toolbox talk on hot works
+    - Someone burnt their hand on the blowtorch
+  tiler:
+    estimating:
+    - Quote tiling a 3 x 2.4 m bathroom, floor and walls
+    - Quote a 25 m2 porcelain alfresco
+    - What margin am I making at this price?
+    materials:
+    - Tiles, adhesive and grout for a 3 x 2.4 m bathroom
+    - Materials for 25 m2 of outdoor tiling
+    - Add today's price for 20 kg tile adhesive
+    variations:
+    - 'The client changed to a bigger tile: price it'
+    - 'An extra niche in the shower: price it'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the bathroom tiling
+    - Invoice the client for the alfresco
+    - The builder hasn't paid my last invoice
+    notices:
+    - Held up waiting for the waterproofing to cure
+    - 'The plumber''s waste is in the wrong spot: tell the builder'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: bathroom walls done, floor tomorrow'
+    - Send the builder this week's update
+    - Ask the builder about the tile set-out in the ensuite
+    safety:
+    - SWMS for cutting tiles with a wet saw
+    - Toolbox talk on silica dust
+    - A tile fell and cut a labourer's foot
+  painter:
+    estimating:
+    - Quote painting the inside of a 4-bedroom house
+    - Quote repainting weatherboards on a single-storey house
+    - What margin am I making at this price?
+    materials:
+    - Paint for the inside of a 4-bedroom house
+    - Primer and paint for 120 m2 of weatherboards
+    - Add today's price for 10 L of low-sheen acrylic
+    variations:
+    - The client wants a feature wall in a second colour
+    - 'Extra prep for flaking paint: price it'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the interior paint
+    - Invoice the client for the exterior repaint
+    - The builder hasn't paid my last invoice
+    notices:
+    - Rain stopped the exterior paint for three days
+    - 'The electrician marked the fresh paint: back charge them'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: ceilings done, walls tomorrow'
+    - Send the client this week's update
+    - Ask the builder which colours are final
+    safety:
+    - SWMS for ladders and mobile scaffold
+    - Toolbox talk on lead paint
+    - Someone slipped off the bottom step of a ladder
+  roofer:
+    estimating:
+    - Quote a Colorbond re-roof on a 180 m2 house
+    - Quote new gutters and downpipes
+    - What margin am I making at this price?
+    materials:
+    - Sheets and flashings for a 12 x 9 m gable roof
+    - Gutters and downpipes for a 40 m perimeter
+    - Add today's price for Colorbond Custom Orb per metre
+    variations:
+    - 'Rotten battens found: price the replacement'
+    - The client wants whirlybirds added
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the roof install
+    - Invoice the client for the gutter replacement
+    - The builder hasn't paid my last invoice
+    notices:
+    - Wind held up the roof for two days
+    - 'The solar installer damaged my flashings: back charge them'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: north side sheeted, flashings tomorrow'
+    - Send the builder this week's update
+    - Ask the builder about the skylight positions
+    safety:
+    - SWMS for roof work on a two-storey house
+    - Toolbox talk on edge protection
+    - Someone slipped on a wet roof sheet
+  concreter:
+    estimating:
+    - Quote a 30 m2 exposed aggregate driveway
+    - Quote a house slab on waffle pods
+    - What margin am I making at this price?
+    materials:
+    - Concrete and mesh for a 30 m2 slab
+    - Materials for 20 m of 1.2 m wide path
+    - Add today's price per m3 for 25 MPa concrete
+    variations:
+    - 'Rock in the footings: price the extra excavation'
+    - 'The client wants a coloured finish: price it'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the builder for the slab
+    - Invoice the client for the driveway
+    - The builder hasn't paid my last invoice
+    notices:
+    - Rain postponed the pour twice
+    - 'The plumbing wasn''t in before the pour: tell the builder'
+    - 'The builder still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: slab poured, 32 m3'
+    - Send the builder this week's update
+    - Ask the engineer about the edge beam detail
+    safety:
+    - SWMS for concrete pumping
+    - Toolbox talk on concrete burns
+    - Someone got concrete in their boot and has a burn
+  landscaper:
+    estimating:
+    - Quote a 20 m paling fence with a gate
+    - Quote turf and garden beds for a new backyard
+    - What margin am I making at this price?
+    materials:
+    - Materials for a 20 m paling fence
+    - Sleepers and posts for a 10 m retaining wall
+    - Add today's price for treated pine sleepers
+    variations:
+    - 'The client wants an extra garden bed: price it'
+    - 'Rock where the fence posts go: price the extra work'
+    - Show me my variations on the Smith job
+    claims:
+    - Invoice the client for the fence
+    - Invoice the builder for the landscaping
+    - The client hasn't paid my last invoice
+    notices:
+    - Rain held up the turf for a week
+    - 'The neighbours want the fence line moved: write it up'
+    - 'The client still hasn''t paid: what are my options?'
+    site:
+    - 'Log today: posts in, rails tomorrow'
+    - Send the client this week's update
+    - Ask the client to confirm the plant list
+    safety:
+    - SWMS for digging near underground services
+    - Toolbox talk on Before You Dig
+    - Someone hurt their back lifting sleepers
 ncc_by_trade:
-  electrician: ["Where do smoke alarms have to go in a house?", "Do I need RCDs on all circuits?"]
-  plumber: ["Minimum fall on a sewer drain?", "Hot water temperature at the tap?"]
-  carpenter: ["Maximum riser height for stairs in a house?", "Balustrade height on a deck 1.5 m off the ground?"]
-  builder: ["Minimum ceiling height in a habitable room?", "Waterproofing in a shower recess?"]
-  roofer: ["Roof tie-down in wind class N3?", "Minimum pitch for corrugated roofing?"]
-  tiler: ["Shower falls and waterproofing?", "Waterproofing behind a bath?"]
-  waterproofer: ["Wet area waterproofing in a laundry?", "Waterproofing a balcony over a room?"]
-  concreter: ["Slab edge cover to reinforcement?", "Termite protection at the slab edge?"]
-  glazier: ["Safety glass near a door?", "Glass in a balustrade?"]
-  painter: ["Lead paint on an old house: what are the rules?"]
-  hvac: ["Ductwork insulation requirements?", "Condensate drains?"]
-  insulation_installer: ["Ceiling insulation R-value in climate zone 5?", "Clearances to downlights?"]
-  bricklayer: ["Wall ties spacing in brick veneer?", "Weepholes and flashings?"]
-  plasterer: ["Wet area plasterboard?", "Fire-rated plasterboard between garage and house?"]
-  fencer: ["Pool fence height and gaps?"]
-  landscaper: ["Pool fence near garden beds?", "Retaining wall height before an engineer?"]
+  electrician:
+  - Where do smoke alarms have to go in a house?
+  - Do I need RCDs on all circuits?
+  plumber:
+  - Minimum fall on a sewer drain?
+  - Hot water temperature at the tap?
+  carpenter:
+  - Maximum riser height for stairs in a house?
+  - Balustrade height on a deck 1.5 m off the ground?
+  builder:
+  - Minimum ceiling height in a habitable room?
+  - Waterproofing in a shower recess?
+  roofer:
+  - Roof tie-down in wind class N3?
+  - Minimum pitch for corrugated roofing?
+  tiler:
+  - Shower falls and waterproofing?
+  - Waterproofing behind a bath?
+  waterproofer:
+  - Wet area waterproofing in a laundry?
+  - Waterproofing a balcony over a room?
+  concreter:
+  - Slab edge cover to reinforcement?
+  - Termite protection at the slab edge?
+  glazier:
+  - Safety glass near a door?
+  - Glass in a balustrade?
+  painter:
+  - 'Lead paint on an old house: what are the rules?'
+  hvac:
+  - Ductwork insulation requirements?
+  - Condensate drains?
+  insulation_installer:
+  - Ceiling insulation R-value in climate zone 5?
+  - Clearances to downlights?
+  bricklayer:
+  - Wall ties spacing in brick veneer?
+  - Weepholes and flashings?
+  plasterer:
+  - Wet area plasterboard?
+  - Fire-rated plasterboard between garage and house?
+  fencer:
+  - Pool fence height and gaps?
+  landscaper:
+  - Pool fence near garden beds?
+  - Retaining wall height before an engineer?

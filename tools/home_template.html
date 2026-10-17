@@ -170,7 +170,7 @@ function init() {
   const jobs = $("jobs");
   if (!DATA.projects.length) {
     jobs.append(h("div", { class: "card empty" }, h("h3", { text: "No jobs yet" }), h("p", { class: "sub", text: "Tell Claude the job name and site address and it sets up the folder." }),
-      h("ul", { class: "say", style: "max-width:420px;margin:8px auto 0" }, sayItem("Start a new job: 14 Ocean St deck for Pat Lee"))));
+      h("ul", { class: "say", style: "max-width:420px;margin:8px auto 0" }, sayItem(((DATA.cards.cards.find(c => c.skill === "projects") || {}).say || ["Start a new job for the Smiths at 14 Ocean St"])[0]))));
   }
   const order = (p) => (p.status === "complete" ? 1 : 0);
   [...DATA.projects].sort((a, b) => order(a) - order(b)).forEach(p => {
@@ -205,7 +205,8 @@ function init() {
     if (f.job && DATA.dashboard) { const a = safeLink(DATA.dashboard + "#" + encodeURIComponent(p.job), "Open dashboard"); a.className = "btn"; foot.append(a); }
     if (p.inbox.length) foot.append(h("span", { class: "sub", text: `${p.inbox.length} in its inbox` }));
     c.append(foot);
-    if (p.status !== "complete") c.append(h("ul", { class: "say" }, sayItem(`Do the next progress claim for ${p.name || p.job}`)));
+    const nextAsk = DATA.cards.trade === "builder" ? `Do the next progress claim for ${p.name || p.job}` : `Invoice the work done so far on ${p.name || p.job}`;
+    if (p.status !== "complete") c.append(h("ul", { class: "say" }, sayItem(nextAsk)));
     jobs.append(c);
   });
 

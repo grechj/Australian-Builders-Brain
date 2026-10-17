@@ -55,6 +55,15 @@ def main() -> None:
         expect("electrician code questions", r["cards"][-1]["say"][0], "Where do smoke alarms have to go in a house?")
         _, r = run("start.py", "cards", ws, "--trade", "builder")
         expect("builder sees every card", len(r["cards"]), 13)
+        _, r = run("start.py", "cards", ws, "--trade", "carpenter")
+        quote = [c for c in r["cards"] if c["skill"] == "estimating"][0]["say"][0]
+        expect("carpenter gets carpentry examples", "deck" in quote, True)
+        samples = ("Banksia", "Hill St", "Lambton", "Coastal", "Hunter Sparks")
+        leaks = []
+        for trade in ("builder", "carpenter", "electrician", "plumber", "tiler", "painter", "roofer", "concreter", "landscaper", "glazier", "scaffolder"):
+            _, rc = run("start.py", "cards", ws, "--trade", trade)
+            leaks += [f"{trade}: {s}" for c in rc["cards"] for s in c["say"] if any(x in s for x in samples)]
+        expect("no sample job names in any trade's examples", leaks, [])
 
         _, r = run("projects.py", "new", ws / "projects.yaml", "--job", "BS-001", "--name", "Smith house rewire")
         proj = yaml.safe_load((ws / "BS-001_Smith_house_rewire" / "project.yaml").read_text())
