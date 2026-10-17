@@ -30,10 +30,10 @@ claude plugin marketplace add grechj/Australian-Builders-Brain
 ```
 
 ```bash
-claude plugin install australian_builders_brain
+claude plugin install australian-builders-brain
 ```
 
-Or in one step, inside Claude Code: `/plugin install australian_builders_brain --marketplace grechj/Australian-Builders-Brain`
+Or in one step, inside Claude Code: `/plugin install australian-builders-brain --marketplace grechj/Australian-Builders-Brain`
 
 That's all a plugin user needs: no clone and no `pip install`.
 

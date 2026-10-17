@@ -1,9 +1,12 @@
 {
-  "name": "australian_builders_brain",
-  "owner": { "name": "Joshua Grech" },
+  "name": "australian-builders-brain",
+  "description": "The Australian Builder's Brain: knowledge and document skills for Australian builders and tradies.",
+  "owner": {
+    "name": "Joshua Grech"
+  },
   "plugins": [
     {
-      "name": "australian_builders_brain",
+      "name": "australian-builders-brain",
       "source": "./",
       "description": "Knowledge and document skills for Australian builders and tradies."
     }

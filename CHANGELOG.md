@@ -3,6 +3,10 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.8.1 (2026-10-17)
+
+- The plugin and marketplace are now `australian-builders-brain`, as Claude.ai's marketplace sync requires; skills are `australian-builders-brain:<skill>`. File and folder names keep underscores. Reinstall: `claude plugin marketplace add grechj/Australian-Builders-Brain` then `claude plugin install australian-builders-brain`.
+
 ## 0.8.0 (2026-10-17)
 
 - New `accounts` skill: a per-job ledger of invoices, credit notes, bills, supplier credits and payments; a per-user account mapping; import files for Xero (checked against Xero's import help), MYOB AccountRight and QuickBooks Online (draft formats, in `tools/finance_formats.yaml`); a payload for creating drafts through the user's own Xero, MYOB or QuickBooks connector, only after they approve.

@@ -19,6 +19,7 @@ this repo follows these rules.
 ## Naming
 
 - Use `_`, never spaces or hyphens, in file and folder names: `extension_of_time.md`, `Delay_Notification_Letter_TEMPLATE.docx`.
+- One exception: the product's own identifier is `australian-builders-brain` (plugin, marketplace, install commands, skill namespace such as `australian-builders-brain:claims`), because Claude's plugin marketplaces require hyphens. Its display name is "Australian Builder's Brain".
 - Template placeholders are `[UPPER_SNAKE_CASE]` and must exist in
   [`brain/fields/project_fields.md`](brain/fields/project_fields.md).
   Bracketed prose such as `[Describe the variation...]` or `[SELECT: A / B]`
