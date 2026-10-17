@@ -1,0 +1,7 @@
+# Exact versions the plugin's setup hook installs into its private Python
+# environment (tested on Python 3.9 to 3.13). requirements.txt is for people
+# working in a clone of the repository.
+python-docx==1.2.0
+openpyxl==3.1.5
+PyYAML==6.0.3
+pdfplumber==0.11.8

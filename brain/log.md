@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-17
+* **Update**: Session-start welcome and briefing, `/` shortcuts (`commands/`), and the plugin directory submission prepared (PRIVACY.md, docs/directory_submission.md).
 * **Creation**: Added the start skill (profile, jobs folder, practice job, cards by trade) and the home page (`tools/home.py`).
 * **Creation**: Added the projects skill and `tools/projects.py`: a project register with tags, a standard folder per job, and an inbox that reads, checks and files invoices, payment screenshots, dockets and photos into each job's ledger and `processed/` folder. [Accounts and tax](/contracts/accounts_and_tax.md) points to it.
 * **Update**: The [job dashboard](/computations/job_dashboard.md) now forecasts profit at completion, returns every transaction and line for modelling, and averages the cost mix by project type; the dashboard links each job's generated documents and writes import files for all jobs.

@@ -3,6 +3,14 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.13.0 (2026-10-17)
+
+- Session-start welcome and briefing: the hook (`hooks/session_start.sh`) now also runs `tools/start.py brief`. In an empty or jobs-like folder it has Claude welcome a new user, offer setup once and show three things to ask; in a set-up jobs folder it opens with a short briefing (inbox, overdue invoices with amounts, bills due this week, missing profile details). It stays silent in code projects.
+- Shortcuts in the `/` menu: `job`, `inbox`, `quote`, `variation`, `claim`, `invoice`, `dashboard`, `home`, `today` and `help` (`commands/`).
+- The start skill runs once only, always shows the top six cards for the trade and the shortcuts, and finishes on the home page.
+- Ready for the plugin directory: PRIVACY.md, a "What it runs and sends" README section, listing fields (icon, documentation, support and privacy links), pinned runtime packages (`hooks/requirements_runtime.txt`), and `docs/directory_submission.md` with the checklist and listing text.
+- README install now uses the release zip and a Cowork project, while Add marketplace on claude.ai is investigated.
+
 ## 0.12.1 (2026-10-17)
 
 - The marketplace entry now points at the repository's HTTPS address instead of the marketplace root (`./`), which claude.ai's Add marketplace refused with "Failed to add marketplace". Claude Code installs are unchanged.

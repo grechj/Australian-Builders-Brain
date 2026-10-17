@@ -5,6 +5,7 @@ Usage:
     python tools/start.py setup   [folder] --trade electrician --state QLD --business-name "Bright Sparks" --abn "..." ...
     python tools/start.py demo    [folder]                       # a practice job in folder/demo with sample paperwork
     python tools/start.py cards   [folder] [--trade carpenter]   # "things you can say" for the trade
+    python tools/start.py brief   [folder] [--hook]              # what Claude should know at the start of a session
 
 `setup` writes, in the folder (the current one by default):
 
@@ -136,12 +137,92 @@ def cards(folder: Path, trade: str | None) -> dict:
     return {"trade": p["trade"], "trade_title": p["trade_title"], "state": p["state"], "cards": out}
 
 
+CODE_MARKERS = (".git", "package.json", "pyproject.toml", "Cargo.toml", "go.mod", "pom.xml", "Gemfile", "requirements.txt", "src")
+JOBS_WORDS = ("job", "build", "construct", "project", "work", "trade", "reno", "site", "client")
+
+
+def _looks_like_new_jobs_folder(folder: Path) -> bool:
+    """An empty or near-empty folder, or one named like a jobs folder, that isn't a code project."""
+    if (folder / ".claude-plugin" / "plugin.json").exists() or any((folder / m).exists() for m in CODE_MARKERS):
+        return False
+    visible = [p for p in folder.iterdir() if not p.name.startswith(".")] if folder.is_dir() else []
+    return len(visible) <= 5 or any(w in folder.name.lower() for w in JOBS_WORDS)
+
+
+def _money(x) -> str:
+    return f"${x:,.2f}"
+
+
+def brief(folder: Path) -> str:
+    """The facts Claude needs at the start of a session, in plain words."""
+    folder = folder.resolve()
+    st = status(folder)
+    if not st["profile"] and not st["projects_register"]:
+        if not _looks_like_new_jobs_folder(folder):
+            return ""
+        c = cards(folder, None)
+        examples = [card["say"][0] for card in c["cards"] if card["skill"] in ("projects", "estimating", "variations", "claims", "ncc")][:3]
+        return ("The Australian Builder's Brain plugin is installed and this folder isn't set up yet. "
+                "In your first reply, whatever the user asks: welcome them in one line, say the brain can set up this folder as their jobs folder "
+                "in a couple of minutes (the start skill), and give three examples of what they can ask, such as: "
+                + "; ".join(f'"{e}"' for e in examples) + ". "
+                "If they're asking for something else, help with that first and offer setup after. "
+                "Run setup once only: if setup is already under way in this session or another thread, don't start it again.")
+    import projects
+    import finance
+    from datetime import date, datetime, timedelta
+
+    prof = read(folder / "profile.yaml")
+    biz = (prof.get("business") or {}).get("business_name") or "the user"
+    s = prof.get("settings") or {}
+    lines = [f"The Australian Builder's Brain is set up in this folder for {biz} ({s.get('trade') or 'trade not set'}, {s.get('state') or 'state not set'})."]
+    today = date.today()
+    facts = []
+    try:
+        reg_path = folder / "projects.yaml"
+        reg = projects.load_register(reg_path) if reg_path.exists() else {"projects": []}
+        waiting = projects.inbox(reg_path) if reg_path.exists() else []
+        if waiting:
+            facts.append(f"{len(waiting)} file(s) waiting in the inbox")
+        active = [p for p in reg["projects"] if p.get("status", "active") != "complete"]
+        for p in active:
+            bits = []
+            n_in = sum(1 for i in waiting if i["project"] == p.get("job"))
+            if n_in:
+                bits.append(f"{n_in} in its inbox")
+            lp = projects.ledger_path(reg_path, p) if (p.get("folder") or p.get("ledger")) else None
+            if lp and lp.exists():
+                ledger = yaml.safe_load(lp.read_text()) or {}
+                for t, n in zip(ledger.get("transactions") or [], finance.normalise(ledger, {})):
+                    owing = finance.maths._total(n) - sum((finance.Decimal(x["amount"]) for x in n["payments"]), finance.Decimal("0"))
+                    if owing <= finance.Decimal("0.05") or not t.get("due"):
+                        continue
+                    due = datetime.strptime(str(t["due"]), "%d/%m/%Y").date()
+                    if t["type"] == "invoice" and due < today:
+                        bits.append(f"invoice {t['number']} overdue {(today - due).days} days ({_money(owing)} inc GST)")
+                    elif t["type"] == "bill" and due <= today + timedelta(days=7):
+                        bits.append(f"bill {t['number']} to {(t.get('contact') or {}).get('name', '')} due {t['due']} ({_money(owing)})")
+            facts.append(f"{p.get('name') or p.get('job')} ({p.get('job')}): " + ("; ".join(bits) if bits else "nothing urgent"))
+        if not active:
+            facts.append("no active jobs yet")
+    except Exception as e:  # a briefing must never break a session
+        facts.append(f"(couldn't read every job: {str(e)[:80]})")
+    if st["missing_profile_fields"]:
+        facts.append("profile still missing: " + ", ".join(m.replace("_", " ") for m in st["missing_profile_fields"]))
+    lines.append("Facts as at today: " + " | ".join(facts) + ".")
+    lines.append("Open your first reply with a two to four line briefing from these facts only (most urgent first), then answer what the user asked. "
+                 "Mention home.html if they ask what's going on. Don't repeat the briefing later in the session.")
+    return " ".join(lines)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="cmd", required=True)
-    for name in ("status", "setup", "demo", "cards"):
+    for name in ("status", "setup", "demo", "cards", "brief"):
         s = sub.add_parser(name)
         s.add_argument("folder", nargs="?", type=Path, default=Path("."))
+        if name == "brief":
+            s.add_argument("--hook", action="store_true", help="print as SessionStart hook JSON")
         if name in ("setup", "cards"):
             s.add_argument("--trade")
         if name == "setup":
@@ -159,6 +240,14 @@ def main() -> None:
         out = setup(a.folder, values)
     elif a.cmd == "demo":
         out = demo(a.folder)
+    elif a.cmd == "brief":
+        text = brief(a.folder)
+        if a.hook:
+            if text:
+                print(json.dumps({"hookSpecificOutput": {"hookEventName": "SessionStart", "additionalContext": text}}))
+        else:
+            print(text)
+        return
     else:
         out = cards(a.folder, a.trade)
     print(json.dumps(out, indent=2))

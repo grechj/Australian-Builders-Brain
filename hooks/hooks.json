@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/setup_python.sh",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/session_start.sh",
             "timeout": 300
           }
         ]

@@ -32,6 +32,12 @@ for their trade from `$ABB/tools/start_cards.yaml` if you can read it (or
 describe the skills in a few lines), and suggest the Claude desktop app's
 Cowork or Code tab for the full brain.
 
+## 0. Only once
+
+Setup runs once per folder. If it's already running in this session or in
+another thread or task (Cowork can start more than one), don't start a
+second: say it's under way and carry on with what the user asked.
+
 ## 1. See what's there
 
 ```bash
@@ -97,18 +103,33 @@ checked the numbers, and the original is filed against the job.
 python3 $ABB/tools/start.py cards
 ```
 
-Show the cards for their trade as a short list: each card's title, one line
-on what it does, and two of its examples in quotes. Keep it scannable.
-Mention that they don't need exact words: describing the job is enough.
+Show the **top six** cards for their trade as a short list: each card's
+title, one line on what it does, and one example in quotes. Keep it
+scannable. Mention that they don't need exact words, and that typing `/`
+shows the brain's shortcuts (`/australian-builders-brain:job`, `:inbox`,
+`:quote`, `:variation`, `:claim`, `:invoice`, `:dashboard`, `:home`,
+`:today`, `:help`). This step is the point of onboarding: never skip it or
+fold it into a summary, even if the user moved on quickly; show it when
+setup finishes.
 
 ## 6. First real job
 
 > Want to set up your first real job? Just tell me the job name and address.
 
-If yes, hand over to the projects skill (`new`). Then build their home page
-(`python3 $ABB/tools/home.py projects.yaml`) and tell them it's the page to
-open any time to see their jobs, what's waiting in the inbox, and what to
-ask.
+If yes, hand over to the projects skill (`new`).
+
+## 7. Finish on the home page
+
+Always end setup here, whether or not they made a job:
+
+```bash
+python3 $ABB/tools/home.py projects.yaml
+```
+
+Open `home.html` for them (show the file, or give the path to double-click)
+and say it's the page to open any time: their jobs, what's waiting in the
+inbox, and what to ask, with copy buttons. Next time they start a session
+in this folder the brain opens with a short briefing on its own.
 
 ## Updating the profile later
 

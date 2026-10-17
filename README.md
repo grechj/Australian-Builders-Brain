@@ -16,11 +16,13 @@
 
 You need the [Claude desktop app](https://claude.ai/download) and a Claude Pro or Max plan.
 
-1. In Claude, go to **Customize → Plugins → Add → Add marketplace**.
-2. Enter `grechj/Australian-Builders-Brain`, then add **Australian Builder's Brain**. Turn on **Sync automatically** for updates.
-3. Make a folder called `Jobs` (Dropbox, Google Drive or OneDrive lets you add photos from your phone).
-4. Open **Cowork** or the **Code** tab on that folder.
-5. Say **"set me up"**. It asks your trade, state and business details, then walks you through a practice job.
+1. Download **australian-builders-brain.zip** from the [latest release](https://github.com/grechj/Australian-Builders-Brain/releases/latest).
+2. In Claude, go to **Customize → Plugins → Add → Upload plugin** and choose the zip.
+3. Open **Cowork**, then **Projects → +**. Choose **Start from scratch** and call it `Jobs` (or **Use an existing folder**, for example one in Dropbox, Google Drive or OneDrive so you can add photos from your phone).
+4. Click the project to start a session. The brain says hello and offers to set you up.
+5. Say **"set me up"**. It asks your trade, state and business details, walks you through a practice job and shows you what to ask.
+
+To update, download the new zip and upload it again. (A listing in Claude's plugin directory, with one-click install and automatic updates, is on the way.)
 
 Using Claude Code in a terminal? `claude plugin install australian-builders-brain --marketplace grechj/Australian-Builders-Brain`
 
@@ -40,6 +42,18 @@ Documents come out filled in from one sentence, with the money worked out and ch
 - **Money is checked, not guessed.** GST, claims, variations, BAS and TPAR come from tested calculations, with a receipt you can verify.
 - **You approve everything.** Nothing goes into your books or out the door until you say yes.
 - **Drafts, not legal advice.** Check documents against your contract, and get advice on disputes.
+
+## What it runs and sends
+
+- **On your computer:** at the start of a session it sets up a private Python environment (four open-source packages from PyPI, pinned in `hooks/requirements_runtime.txt`) and reads your jobs folder to brief Claude on what's waiting. When you ask for a document or figures, its Python tools read and write files in your folder.
+- **Nothing to this project:** no accounts, servers, tracking or data collection.
+- **Only when you ask:** drafts to your own Xero, MYOB or QuickBooks (after you approve each one), and Bunnings price lookups with your own API keys or public product pages.
+
+The details are in [PRIVACY.md](PRIVACY.md).
+
+## Shortcuts
+
+Type `/` in Claude to see them: `job`, `inbox`, `quote`, `variation`, `claim`, `invoice`, `dashboard`, `home`, `today` and `help` (each starts `australian-builders-brain:`).
 
 ## Learn more
 

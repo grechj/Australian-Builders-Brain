@@ -82,6 +82,49 @@ def main() -> None:
         figs = {p["job"]: p["figures"].get("margin_pct") for p in data["projects"]}
         expect("home page shows each job's margin", figs, {"SB-2027-014": "32.6", "SB-2025-031": "12.5", "SB-2026-007": "18.2"})
 
+    import os
+    with tempfile.TemporaryDirectory() as tmp:
+        empty = Path(tmp) / "Jobs"
+        empty.mkdir()
+        _, _ = 0, 0
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "start.py"), "brief", str(empty)], capture_output=True, text=True)
+        expect("welcome in an empty folder", ("isn't set up yet" in p.stdout, "Run setup once only" in p.stdout), (True, True))
+        code_repo = Path(tmp) / "app"
+        (code_repo / ".git").mkdir(parents=True)
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "start.py"), "brief", str(code_repo)], capture_output=True, text=True)
+        expect("silent in a code project", p.stdout.strip(), "")
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "start.py"), "brief", str(ROOT)], capture_output=True, text=True)
+        expect("silent in the brain's own repository", p.stdout.strip(), "")
+
+        ws = Path(tmp) / "Work"
+        run("start.py", "setup", ws, "--trade", "carpenter", "--state", "ACT", "--business-name", "Chapman Carpentry")
+        run("projects.py", "new", ws / "projects.yaml", "--job", "CC-001", "--name", "Chapman veranda", "--start-date", "01/09/2026")
+        ledger = ws / "CC-001_Chapman_veranda" / "ledger.yaml"
+        ledger.write_text("job: CC-001\ntransactions:\n- {type: invoice, number: INV-1, date: 01/09/2026, due: 08/09/2026, "
+                          "contact: {name: Bill Burr}, lines: [{description: Deposit, amount: 1000, account: contract_income, tax: gst}]}\npayments: []\n")
+        (ws / "inbox" / "receipt.jpg").write_bytes(b"x")
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "start.py"), "brief", str(ws)], capture_output=True, text=True)
+        expect("briefing names the business and trade", "Chapman Carpentry (carpenter, ACT)" in p.stdout, True)
+        expect("briefing flags the overdue invoice with its amount", "invoice INV-1 overdue" in p.stdout and "$1,100.00" in p.stdout, True)
+        expect("briefing counts the inbox", "1 file(s) waiting in the inbox" in p.stdout, True)
+        env = {k: v for k, v in os.environ.items() if k != "CLAUDE_PLUGIN_DATA"}
+        env.update({"CLAUDE_PLUGIN_ROOT": str(ROOT), "CLAUDE_PROJECT_DIR": str(ws)})
+        p = subprocess.run([str(ROOT / "hooks" / "session_start.sh")], capture_output=True, text=True, env=env)
+        out = json.loads(p.stdout or "{}").get("hookSpecificOutput", {})
+        expect("session-start hook prints the briefing as context", (out.get("hookEventName"), "Chapman Carpentry" in out.get("additionalContext", "")),
+               ("SessionStart", True))
+        env["CLAUDE_PROJECT_DIR"] = str(code_repo)
+        p = subprocess.run([str(ROOT / "hooks" / "session_start.sh")], capture_output=True, text=True, env=env)
+        expect("session-start hook stays quiet in a code project", p.stdout.strip(), "")
+
+    skills = {d.name for d in (ROOT / "skills").iterdir() if d.is_dir()}
+    commands = {}
+    for f in sorted((ROOT / "commands").glob("*.md")):
+        front = f.read_text().split("---", 2)[1]
+        commands[f.stem] = (yaml.safe_load(front) or {}).get("description", "")
+    expect("every command has a description", [c for c, d in commands.items() if not d], [])
+    expect("no command shares a skill's name", sorted(set(commands) & skills), [])
+
     print(f"\n{'all start checks passed' if not failures else f'{failures} failed'}")
     sys.exit(1 if failures else 0)
 

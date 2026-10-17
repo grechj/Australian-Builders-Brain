@@ -13,7 +13,8 @@ this repo follows these rules.
 | `skills/` | Claude skills that turn brain knowledge plus project facts into documents. | Humans and agents |
 | `templates/` | The Word, Excel and PDF templates the skills fill. | Humans |
 | `tools/` | Deterministic Python: template filling, computations, wiki linting. | Humans and agents |
-| `hooks/` | Plugin setup hook: builds the tools' Python environment when the plugin is installed. | Humans |
+| `hooks/` | Session-start hook: builds the tools' Python environment (pinned in `hooks/requirements_runtime.txt`) and briefs Claude on the user's jobs folder. | Humans |
+| `commands/` | The shortcuts in the `/` menu (`job`, `inbox`, `quote`...). One word each, never the same name as a skill. | Humans and agents |
 | `examples/` | Sample project files for testing. | Anyone |
 
 ## Naming
