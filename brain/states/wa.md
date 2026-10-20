@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | Building and Energy (WA) |
 | Home building law | Home Building Contracts Act 1991 |
 | Security of payment law | Building and Construction Industry (Security of Payment) Act 2021 |
+| Licence register | [Building and Energy Online Licence Search](https://ols.demirs.wa.gov.au/search) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - WA adds a water-use Part (H9) and changes to AS/NZS 3500.3 (H10) to NCC Volume Two, and changes to AS/NZS 3500.3 for Volume One buildings.
 - Building and Energy registers builders and licenses plumbers, gasfitters and electricians.
 

@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | Consumer and Business Services |
 | Home building law | Building Work Contractors Act 1995 |
 | Security of payment law | Building and Construction Industry Security of Payment Act 2009 |
+| Licence register | [CBS Find a licence holder](https://secure.cbs.sa.gov.au/OccLicPubReg/LicenceSearch.php) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - SA adds Parts for access for people with a disability (Volume Two H10) and for maintenance access and miscellaneous provisions (Volume One G8, G9). SA's former Part H9 has been removed in NCC 2025.
 - Consumer and Business Services licenses builders and trades.
 

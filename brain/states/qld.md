@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | Queensland Building and Construction Commission (QBCC) |
 | Home building law | Queensland Building and Construction Commission Act 1991 |
 | Security of payment law | Building Industry Fairness (Security of Payment) Act 2017 |
+| Licence register | [QBCC licensee register](https://my.qbcc.qld.gov.au/myQBCC/s/qbcc-licensee-register) (electricians: Electrical Safety Office) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - QBCC licenses builders and most trades (including plumbers, drainers and waterproofers). Electricians are licensed by the Electrical Safety Office.
 - Home warranty is through the QBCC statutory insurance scheme above the threshold.
 

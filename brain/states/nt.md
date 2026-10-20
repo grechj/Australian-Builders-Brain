@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | NT Building Advisory Services / Building Practitioners Board |
 | Home building law | Building Act 1993 |
 | Security of payment law | Construction Contracts (Security of Payments) Act 2004 |
+| Licence register | [Building Practitioners Board registration check](https://ntlis.nt.gov.au/building-practitioners/) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - The Building Practitioners Board registers builders and certifiers.
 
 # Climate and materials

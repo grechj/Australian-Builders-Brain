@@ -11,7 +11,7 @@ Everything you give it (your business details, jobs, invoices, receipts,
 photos, timesheets and the documents it writes) is saved as ordinary files in
 the folder you choose, on your computer or in your own Dropbox, Google Drive
 or OneDrive. Delete the folder and it's gone. Bank details you add for your
-invoices stay in `profile.yaml` in that folder.
+invoices, and the insurance policies you record, stay in `profile.yaml` in that folder.
 
 What you type and the files Claude reads are handled by Claude under
 [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy), the
@@ -26,6 +26,7 @@ same as any other conversation with Claude.
 
 - **Xero, MYOB or QuickBooks:** if you connect your own accounting software to Claude and ask the brain to send invoices or bills, it creates drafts in your account after you approve each one. You can also export import files instead and upload them yourself.
 - **Bunnings prices:** if you have your own Bunnings developer API keys and set them on your computer, the materials skill uses them to look up prices. Otherwise Claude may open public Bunnings product pages you ask about. Nothing is stored except in your own price list file.
+- **ABN and licence checks:** if you ask, or agree when it offers, Claude opens the public ABN Lookup page and your state's public licence register for the ABN or licence number in question, and records what they showed in your folder (`profile.yaml` for your own, the subbie tracker for subbies). It uses no keys or accounts, and nothing is looked up in the background.
 - **Building code links:** answers cite the NCC and link to ncc.abcb.gov.au; the code text itself is included in the plugin, so lookups don't go online.
 
 ## Contact

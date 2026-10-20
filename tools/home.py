@@ -67,7 +67,9 @@ def build(reg_path: Path, as_at: str) -> dict:
     prof = start.read(ws / "profile.yaml")
     st = start.status(ws)
     cards = start.cards(ws, None)
-    return {"as_at": as_at, "profile": prof, "missing": st["missing_profile_fields"], "projects": rows,
+    st = start.status(ws, as_at)
+    return {"as_at": as_at, "profile": prof, "missing": st["missing_profile_fields"], "alerts": st["alerts"],
+            "insurance_labels": start.INSURANCE, "projects": rows,
             "unassigned": [i for i in waiting if not i["project"]], "cards": cards,
             "dashboard": "out/dashboard/dashboard.html" if (out / "dashboard.html").exists() else "",
             "extracts": "out/dashboard/" if (out / "jobs.csv").exists() else "", "warnings": warnings}
