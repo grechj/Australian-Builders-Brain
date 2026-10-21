@@ -35,8 +35,8 @@ stale_after: 2027-10-21T00:00:00Z
 > provisions for houses. The NCC text wins: follow the clause links, check
 > your state's variations (SA replaces 10.2.1 and adds a floor waste
 > clause), and use the edition in force when the permit application was
-> lodged. Most states also license waterproofers or require a certificate:
-> check your state page.
+> lodged. Some states license waterproofing work (NSW and Queensland, for
+> example) or require a certificate: check your state page.
 
 Part 10.2 ([2025](/ncc/2025/housing_provisions/10_2_wet_area_waterproofing.md#10_2_1), [2022](/ncc/2022/housing_provisions/10_2_wet_area_waterproofing.md#10_2_1)) uses two levels:
 

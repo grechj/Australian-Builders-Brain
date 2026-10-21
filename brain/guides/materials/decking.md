@@ -41,7 +41,7 @@ works out boards, screws and frame from the deck size.
 
 # Gaps and fixing
 
-- Gaps between boards are typically 3 to 6 mm for hardwood depending on how dry the boards are (wider for wetter boards), and as the maker says for composite. Gaps let water drain and leaves fall through.
+- Gaps between boards are typically 3 to 5 mm for hardwood depending on how dry the boards are (boards laid wet shrink, so they go in tighter), and as the maker says for composite. Gaps let water drain and leaves fall through.
 - Two screws per joist; pre-drill hardwood near board ends.
 - Screws: Class 4 or stainless in pine; stainless in hardwood near the coast and for oily species. See [fixings and corrosion](fixings_and_corrosion.md).
 - Keep a ventilated gap under low decks: boards close to the ground with no airflow cup and rot.

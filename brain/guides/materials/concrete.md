@@ -33,8 +33,8 @@ normal-class mixes (the number is the strength in MPa at 28 days).[^holcim_stand
 | Grade | Typical use (unless the engineer says otherwise) |
 |---|---|
 | **N20** | The NCC's minimum for house footings and slabs under the deemed-to-satisfy rules, with 20 mm aggregate and 100 mm slump (Housing Provisions 4.2.10) |
-| **N25** | Common for house slabs, paths and patios |
-| **N32** | Driveways, garage floors, exposed or coastal work, and wherever the engineer specifies it |
+| **N25** | Common for house slabs, paths, patios and many driveways |
+| **N32** | Heavier-duty driveways and garage floors, exposed or coastal work, and wherever the engineer specifies it |
 | N40 and up | Engineered and commercial work |
 
 When ordering, give: grade, slump (80 or 100 mm typical), maximum aggregate

@@ -3,6 +3,16 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.15.0 (2026-10-21)
+
+- **Plain-English code guides** (`brain/guides/code/`): decks, balconies and stairs; wet area waterproofing; termite management; bushfire construction; energy efficiency; smoke alarms; room heights; footings and slabs. Each cites the clauses in NCC 2022 and 2025 and flags state variations. Every figure a guide states is pinned in its `checks:` frontmatter to the NCC sentence it came from, and `okf_lint.py` fails if that sentence isn't on the page or a link into the NCC points at a clause that doesn't exist.
+- **Material guides** (`brain/guides/materials/`): timber treatment and grades, fixings and corrosion, decking, plasterboard and linings, concrete, membranes and sealants, insulation, sarking and wraps, paint systems.
+- `ncc_lookup.py guides "<question>" --trade <trade>` finds the right guide; `search` points to one when it matches; profiles list a trade's guides; the ncc and materials skills start from them.
+- **Product catalogue** (`tools/catalogue.yaml`, page `brain/references/product_catalogue.md`): what materials are sold as (stock lengths, sheet and pack sizes, coverage), with no prices. Price matching now reads pack sizes off product names, converts per-metre prices to the stock length, and buys the cheapest mix of pack sizes.
+- **New takeoff jobs:** cladding, insulation, retaining wall and pergola, with hand-checked tests.
+- **Learning from use** (`tools/usage.py`): a materials log in the user's folder (products saved, used or bought on supplier bills; never prices), a report of what's used, new and rising and where the catalogue falls short, and an opt-in anonymous summary the user can post as a GitHub issue. Maintainer tools collect and sanitise shared summaries into `brain/references/product_usage.md`.
+- Lint: skips `__pycache__`, and writes indexes for folders that only hold subfolders.
+
 ## 0.14.0 (2026-10-21)
 
 - ABN and licence checks: setup offers to check the user's ABN on ABN Lookup and their licence on their state's public register, and records what they showed (`tools/start.py check`): entity name, ABN status, GST registration, licence class, status and expiry. A changed ABN or licence number shows as not checked again. Setup also flags an ABN that fails the checksum. A trade that doesn't need a licence in its state (carpenters in the ACT, for example) can be recorded as not required, and the brain stops asking for one.

@@ -1,6 +1,9 @@
 # Directory Update Log
 
 ## 2026-10-21
+* **Creation**: Added [plain-English guides](/guides/index.md): eight [code guides](/guides/code/index.md) with every figure pinned to the NCC text, and nine [material guides](/guides/materials/index.md).
+* **Creation**: Added the [product catalogue](/references/product_catalogue.md) (generated from `tools/catalogue.yaml`) and [what products trades are using](/references/product_usage.md) (from summaries users choose to share).
+* **Update**: [Materials takeoff](/computations/materials_takeoff.md) adds cladding, insulation, retaining wall and pergola.
 * **Creation**: Added [checking ABNs, licences and insurance](/playbooks/checking_registers.md): ABN Lookup, each state's licence register, and certificates of currency, for the user's own business and for subbies. Each [state page](/states/index.md) links its licence register; the [ACT page](/states/act.md) notes which trades need a licence and the residential building work insurance rules.
 * **Update**: The user's profile now holds their own insurances (public liability, home warranty, contract works, professional indemnity) and the results of their ABN and licence checks, and warns before anything expires (`tools/start.py insurance`, `check`).
 

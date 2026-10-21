@@ -50,7 +50,7 @@ The fix is to let vapour out and ventilate behind the cladding.
 
 - Bathroom and WC exhausts at least **25 L/s**, kitchens and laundries **40 L/s**, all ducted **outside** (not into the roof space), including vented dryers.
 - In a bathroom without a window to the 10.6.2 standard, the fan is interlocked with the light and runs on for **10 minutes**, with make-up air (a door gap or vent).
-- In climate zones 6, 7 and 8 (the ACT, Victoria, Tasmania and alpine areas), a roof with ceiling insulation (not insulation along the roof line) needs a ventilated roof space above it.
+- In climate zones 6, 7 and 8 (for example Melbourne, Canberra, Hobart and alpine areas), a roof with ceiling insulation (not insulation along the roof line) needs a ventilated roof space above it.
 
 # On site
 
