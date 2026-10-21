@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nsw_g1d5"></a>
+<a id="g1d5"></a><a id="nsw_g1d5"></a>
 
 ### NSW G1D5 Provision for cleaning windows
 

@@ -23,13 +23,13 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i17d1"></a>
+<a id="i17d1"></a><a id="tas_i17d1"></a>
 
 ### TAS I17D1 Application of Part
 
 This Part is applicable to every building where work is undertaken on gas-fuelled vehicles.
 
-<a id="tas_i17d2"></a>
+<a id="i17d2"></a><a id="tas_i17d2"></a>
 
 ### TAS I17D2 Working areas
 

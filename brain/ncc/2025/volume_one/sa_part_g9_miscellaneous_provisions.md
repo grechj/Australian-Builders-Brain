@@ -25,6 +25,8 @@ This Part sets out miscellaneous addition requirements.
 
 ## Performance Requirements
 
+<a id="g9p1"></a>
+
 > **SA variation**: SA replaces G9P1 Attachments to buildings.
 >
 > An attachment to a building must incorporate features that will—
@@ -37,15 +39,21 @@ This Part sets out miscellaneous addition requirements.
 > to the degree necessary to avoid creating hazardous conditions that may cause injury to people passing below or driving past.
 >
 
+<a id="g9d1"></a>
+
 > **SA variation**: SA replaces G9D1 Deemed-to-Satisfy Provisions.
 >
 > *Performance Requirement* [SA G9P1](#g9p1) is satisfied by complying with [SA G9D2](#g9d2) and [SA G9D3](#g9d3).
 >
 
+<a id="g9d2"></a>
+
 > **SA variation**: SA replaces G9D2 Application of Part.
 >
 > [SA G9D3](#g9d3) applies to Class 2 to 9 buildings.
 >
+
+<a id="g9d3"></a>
 
 > **SA variation**: SA replaces G9D3 Attachments to buildings.
 >

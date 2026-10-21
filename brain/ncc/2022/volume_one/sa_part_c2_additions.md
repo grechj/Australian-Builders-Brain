@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="sa_c2d16"></a>
+<a id="c2d16"></a><a id="sa_c2d16"></a>
 
 ### SA C2D16 Class 7b bulk grain storage facilities
 

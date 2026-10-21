@@ -38,7 +38,7 @@ From **NCC 2025 Housing Provisions**, Fire safety.[^abcb_ncc] Defined terms are 
 >
 > - (a) fire separation of *external walls* (see [Part 9.2](/ncc/2025/housing_provisions/9_2_fire_separation_of_external_walls.md)); and
 > - (b) fire protection of *separating walls* (see [Part 9.3](/ncc/2025/housing_provisions/9_3_fire_protection_of_separating_walls_and_floors.md)); and
-> - (c) fire protection of garage top dwellings (see [NSW Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#part_ariation)); and
+> - (c) fire protection of garage top dwellings (see [NSW Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md)); and
 > - (d) smoke alarms and evacuation lighting (see [Part 9.5](/ncc/2025/housing_provisions/9_5_smoke_alarms_and_evacuation_lighting.md)).
 >
 

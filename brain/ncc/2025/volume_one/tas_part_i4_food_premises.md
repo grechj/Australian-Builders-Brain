@@ -25,6 +25,8 @@ This Part contains additional requirements for food premises.
 
 ## Objectives
 
+<a id="i4o1"></a>
+
 > **TAS variation**: TAS replaces I4O1 Objective.
 >
 > The objective of this Part is to facilitate the safe manufacture, preparation, storage and packing of food for sale for human consumption.
@@ -32,12 +34,16 @@ This Part contains additional requirements for food premises.
 
 ## Functional Statements
 
+<a id="i4f1"></a>
+
 > **TAS variation**: TAS replaces I4F1 Food premises.
 >
 > Each building or part of a building constructed as a food premise must be able to be used in such a manner that minimises opportunities for food contamination.
 >
 
 ## Performance Requirements
+
+<a id="i4p1"></a>
 
 > **TAS variation**: TAS replaces I4P1 Application of Part.
 >
@@ -75,6 +81,8 @@ This Part contains additional requirements for food premises.
 > - (g) premises that only sell pre-packaged food that is not potentially hazardous.
 >
 
+<a id="i4p2"></a>
+
 > **TAS variation**: TAS replaces I4P2 Design and construction.
 >
 > The design and construction of food premises must—
@@ -89,6 +97,8 @@ This Part contains additional requirements for food premises.
 > - (e) provide that the food premises is able to be used in such a manner that minimises opportunities for food contamination.
 >
 
+<a id="i4p3"></a>
+
 > **TAS variation**: TAS replaces I4P3 Water supply.
 >
 > (1) Food premises must have an adequate supply of water if water is to be used at the food premises for any of the activities conducted on the food premises.
@@ -101,6 +111,8 @@ This Part contains additional requirements for food premises.
 > >
 >
 
+<a id="i4p4"></a>
+
 > **TAS variation**: TAS replaces I4P4 Sewage and waste water disposal.
 >
 > Food premises must have a sewage and waste water disposal system that—
@@ -108,6 +120,8 @@ This Part contains additional requirements for food premises.
 > - (a) will effectively dispose of all sewage and waste water; and
 > - (b) is constructed and located so that there is no likelihood of the sewage and waste water polluting the water supply or contaminating food.
 >
+
+<a id="i4p5"></a>
 
 > **TAS variation**: TAS replaces I4P5 Storage of garbage and recyclables.
 >
@@ -118,15 +132,21 @@ This Part contains additional requirements for food premises.
 > - (c) are designed and constructed so that they may be effectively cleaned.
 >
 
+<a id="i4p6"></a>
+
 > **TAS variation**: TAS replaces I4P6 Ventilation.
 >
 > Food premises must have sufficient natural or mechanical ventilation to remove fumes, smoke and vapours from the food premises.
 >
 
+<a id="i4p7"></a>
+
 > **TAS variation**: TAS replaces I4P7 Lighting.
 >
 > Food premises must have lighting systems that provide sufficient natural or artificial light for the activities conducted on the food premises.
 >
+
+<a id="i4p8"></a>
 
 > **TAS variation**: TAS replaces I4P8 Floors.
 >
@@ -157,6 +177,8 @@ This Part contains additional requirements for food premises.
 > >
 >
 
+<a id="i4p9"></a>
+
 > **TAS variation**: TAS replaces I4P9 Walls and ceilings.
 >
 > Walls and ceilings—
@@ -181,6 +203,8 @@ This Part contains additional requirements for food premises.
 > >
 >
 
+<a id="i4p10"></a>
+
 > **TAS variation**: TAS replaces I4P10 Hand washing facilities.
 >
 > (1) Food premises must have hand washing facilities that are located where they can be easily accessed by food handlers—
@@ -195,6 +219,8 @@ This Part contains additional requirements for food premises.
 > - (c) of a size that allows easy and effective hand washing; and
 > - (d) clearly designated for the sole purpose of washing hands, arms and face.
 >
+
+<a id="i4p11"></a>
 
 > **TAS variation**: TAS replaces I4P11 Fixtures, fittings and equipment.
 >
@@ -213,6 +239,8 @@ This Part contains additional requirements for food premises.
 >   - (3) made of a material that will not contaminate food.
 >
 
+<a id="i4p12"></a>
+
 > **TAS variation**: TAS replaces I4P12 Storage facilities.
 >
 > Food premises must have adequate storage facilities—
@@ -221,10 +249,14 @@ This Part contains additional requirements for food premises.
 > - (b) located where there is no likelihood of stored items contaminating food or food contact surfaces.
 >
 
+<a id="i4p13"></a>
+
 > **TAS variation**: TAS replaces I4P13 Refrigerated and cooling chambers.
 >
 > All refrigerated and cooling chambers must be constructed so that the stored products will not be contaminated.
 >
+
+<a id="i4d1"></a>
 
 > **TAS variation**: TAS replaces I4D1 Application of Part.
 >
@@ -260,10 +292,14 @@ This Part contains additional requirements for food premises.
 > (4) In this Part, words and meanings as defined in the Food Act 2003, Food Standards Code and Liquor Licensing Act 1990, Dairy Industry Act 1994 and Primary Produce Safety Act 2011 apply.
 >
 
+<a id="i4d2"></a>
+
 > **TAS variation**: TAS replaces I4D2 Deemed-to-Satisfy Provisions.
 >
 > *Performance Requirements* [TAS I4P1](#i4p1) to [TAS I4P13](#i4p13) are satisfied by complying with the relevant provisions of [TAS I4D3](#i4d3) to [TAS I4D18](#i4d18).
 >
+
+<a id="i4d3"></a>
 
 > **TAS variation**: TAS replaces I4D3 General requirements.
 >
@@ -307,10 +343,14 @@ This Part contains additional requirements for food premises.
 > >
 >
 
+<a id="i4d4"></a>
+
 > **TAS variation**: TAS replaces I4D4 Pests and contaminants.
 >
 > Premises where customers are served outside the premises through an opening, that has an appliance for the elimination of flies and mechanical ventilation adequate to exhaust air through the opening at a rate of not less than 5 litres per second for each square metre of opening, satisfies [TAS I4P2(d)](#i4p2).
 >
+
+<a id="i4d5"></a>
 
 > **TAS variation**: TAS replaces I4D5 Drains and pipes.
 >
@@ -319,6 +359,8 @@ This Part contains additional requirements for food premises.
 > - (a) a grease trap, an overflow (relief) gully or an untrapped opening connected directly with a drain or sewer, is not installed in a room used for preparation, processing, packing or storing of food for sale; and
 > - (b) as far as is practicable, service pipes are concealed beneath the surface of walls, floors or ceilings, or are fixed clear of the wall, floor or ceiling, at such distance as to facilitate cleaning.
 >
+
+<a id="i4d6"></a>
 
 > **TAS variation**: TAS replaces I4D6 Offensive material and trade waste.
 >
@@ -331,10 +373,14 @@ This Part contains additional requirements for food premises.
 > satisfies [TAS I4P5](#i4p5).
 >
 
+<a id="i4d7"></a>
+
 > **TAS variation**: TAS replaces I4D7 Ventilation.
 >
 > A mechanical ventilating exhaust system complying with the requirements of AS/NZS 1668.1 and AS 1668.2 satisfies [TAS I4P6](#i4p6).
 >
+
+<a id="i4d8"></a>
 
 > **TAS variation**: TAS replaces I4D8 Lighting.
 >
@@ -348,12 +394,16 @@ This Part contains additional requirements for food premises.
 > satisfies [TAS I4P7](#i4p7).
 >
 
+<a id="i4d9"></a>
+
 > **TAS variation**: TAS replaces I4D9 Floors, walls and ceilings.
 >
 > (1) Floors, walls and ceilings constructed in accordance with Section 3 of AS 4674, satisfy [TAS I4P8](#i4p8) and [TAS I4P9](#i4p9).
 >
 > (2) The wall and ceiling provisions of (1) do not apply to areas in which all food for sale is completely enclosed and otherwise protected from contamination by processing plants, other appliances or other means.
 >
+
+<a id="i4d10"></a>
 
 > **TAS variation**: TAS replaces I4D10 Separation of work place.
 >
@@ -363,6 +413,8 @@ This Part contains additional requirements for food premises.
 >
 > (3) Access between the areas referred to in (2) via another room, a hallway, or an airlock, satisfies [TAS I4P9(b)](#i4p9).
 >
+
+<a id="i4d11"></a>
 
 > **TAS variation**: TAS replaces I4D11 Washbasins.
 >
@@ -375,6 +427,8 @@ This Part contains additional requirements for food premises.
 > - (c) provide not less than 250 mm between the spout and the bottom of the basin; and
 > - (d) be in a position that is not obstructed.
 >
+
+<a id="i4d12"></a>
 
 > **TAS variation**: TAS replaces I4D12 Sinks.
 >
@@ -392,6 +446,8 @@ This Part contains additional requirements for food premises.
 > (4) A cleaner’s sink separated from food storage and handling areas provided for the emptying of cleaning water, satisfies [TAS I4P11](#i4p11).
 >
 
+<a id="i4d13"></a>
+
 > **TAS variation**: TAS replaces I4D13 Design, construction and installation of fixtures, fittings and equipment.
 >
 > (1) The provision of fixtures, fittings and equipment designed, constructed and installed in accordance with clause 4.2 and clause 4.3 of AS 4674 satisfies [TAS I4P11](#i4p11).
@@ -404,6 +460,8 @@ This Part contains additional requirements for food premises.
 > satisfies [TAS I4P11](#i4p11).
 >
 
+<a id="i4d14"></a>
+
 > **TAS variation**: TAS replaces I4D14 Storage of materials and equipment.
 >
 > (1) Separate areas for the storage of fuel, cleaning compounds and general maintenance equipment provided so as to prevent contamination of the product in the event of a spillage of any other form of breakdown, satisfies [TAS I4P12](#i4p12).
@@ -411,10 +469,14 @@ This Part contains additional requirements for food premises.
 > (2) A separate area for the storage of staff clothing and personal effects, satisfies [TAS I4P12](#i4p12).
 >
 
+<a id="i4d15"></a>
+
 > **TAS variation**: TAS replaces I4D15 Food store.
 >
 > An eating house provided with a dry-food store, satisfies [TAS I4P12](#i4p12).
 >
+
+<a id="i4d16"></a>
 
 > **TAS variation**: TAS replaces I4D16 Meat premises.
 >
@@ -424,6 +486,8 @@ This Part contains additional requirements for food premises.
 > - (b) the provisions of [TAS I4D3](#i4d3) to [TAS I4D14](#i4d14) and [I4D18](#i4d18), satisfy in relation to building construction, the requirements of [TAS I4P2](#i4p2) to [TAS I4P13](#i4p13).
 >
 
+<a id="i4d17"></a>
+
 > **TAS variation**: TAS replaces I4D17 Dairy produce.
 >
 > Definition:
@@ -431,6 +495,8 @@ This Part contains additional requirements for food premises.
 > - (a) Dairy produce products include milk, colostrum, liquid milk products, cream and thickened cream, butter, butter concentrate, buttermilk, concentrated buttermilk, dairy blend, ghee, anhydrous milk fat (butter oil), casein, caseinate, cheese, whey, whey cream, concentrated whey cream, cultured milk, yoghurt, ice cream, ice cream mix, buttermilk powder, lactose powder, milk sugar, powdered milk, skim milk powder, whey powder, milk protein powder and other milk concentrates.
 > - (b) Premises designed and constructed in compliance with the Export Control (Milk and Dairy) Orders, satisfy the special requirements of this code for premises to be used for the manufacture of dairy produce.
 >
+
+<a id="i4d18"></a>
 
 > **TAS variation**: TAS replaces I4D18 Refrigerated and cooling chambers.
 >

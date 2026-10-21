@@ -948,6 +948,8 @@ must not permit a 300 mm sphere to pass through it.
 > Each *required* *fire-isolated stairway* and floor level is to be provided with a unique descriptor to assist co-ordination of egress and *fire brigade* activities. For example, a building may be provided with 2 *required* *fire-isolated stairways*, A and B. Stairway identification signs and floor identification signs for stairway B must contain the text “Stair B”.
 >
 
+<a id="d3d32"></a>
+
 > **NSW variation**: NSW adds D3D32 Doors in paths of travel to an entertainment venue.
 >
 > In a Class 9b building used as an *entertainment venue*, a doorway in a path of travel must comply with [NSW D3D24(2)(e)](#d3d24).

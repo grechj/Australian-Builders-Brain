@@ -23,12 +23,16 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for farm dairy premises.
 
+<a id="i7d1"></a>
+
 > **TAS variation**: TAS replaces I7D1 Application of Part.
 >
 > (1) This Part is applicable to every farm dairy as covered by the Dairy Industry Act 1994.
 >
 > (2) Dairies must be constructed in such a manner that contamination of milk can be avoided.
 >
+
+<a id="i7d2"></a>
 
 > **TAS variation**: TAS replaces I7D2 Milking sheds and holding yards.
 >
@@ -49,6 +53,8 @@ This Part contains additional requirements for farm dairy premises.
 > - (c) joints between wall sections and walls and walls and floors are sealed to prevent entry of water and pests; and
 > - (d) artificial lighting is designed to comply with AS 1680.
 >
+
+<a id="i7d3"></a>
 
 > **TAS variation**: TAS replaces I7D3 Milk receiving area and milk storage room.
 >
@@ -71,6 +77,8 @@ This Part contains additional requirements for farm dairy premises.
 > - (e) all openings are fitted with doors, *windows* or screens; and
 > - (f) ventilation is provided in accordance with [F6D6](/ncc/2025/volume_one/f6_light_and_ventilation.md#f6d6).
 >
+
+<a id="i7d4"></a>
 
 > **TAS variation**: TAS replaces I7D4 Water supply.
 >

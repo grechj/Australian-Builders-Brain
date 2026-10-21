@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="vic_i4p1"></a>
+<a id="i4p1"></a><a id="vic_i4p1"></a>
 
 ### VIC I4P1 Communication systems
 
@@ -34,7 +34,7 @@ An electronic communication system must be provided to enable residents and staf
 > VIC I4P1 only applies to Class 3 and Class 9a *residential aged care buildings* and Class 9c buildings.
 >
 
-<a id="vic_i4p2"></a>
+<a id="i4p2"></a><a id="vic_i4p2"></a>
 
 ### VIC I4P2 Electrical power outlets
 
@@ -45,19 +45,19 @@ Sufficient general purpose outlets must be provided for electrical appliances in
 > VIC I4P2 only applies to Class 3 and Class 9a *residential aged care buildings* and Class 9c buildings. Deemed-to-Satisfy Provisions
 >
 
-<a id="vic_i4d1"></a>
+<a id="i4d1"></a><a id="vic_i4d1"></a>
 
 ### VIC I4D1 Deemed-to-Satisfy Provisions
 
 *Performance Requirements* VIC I4P1 to VIC I4P3 and relevant *Performance Requirements* in Sections D and F are satisfied by complying with VIC I4D2 to VIC I4D7.
 
-<a id="vic_i4d2"></a>
+<a id="i4d2"></a><a id="vic_i4d2"></a>
 
 ### VIC I4D2 Application of Part
 
 The *Deemed-to-Satisfy Provisions* of this Part apply to Class 3 and Class 9a *residential aged care buildings* and Class 9c buildings.
 
-<a id="vic_i4d3"></a>
+<a id="i4d3"></a><a id="vic_i4d3"></a>
 
 ### VIC I4D3 Doorway width
 
@@ -65,7 +65,7 @@ The *Deemed-to-Satisfy Provisions* of this Part apply to Class 3 and Class 9a *r
 
 (2) The clear width of all other doorways must be not less than 800 mm.
 
-<a id="vic_i4d4"></a>
+<a id="i4d4"></a><a id="vic_i4d4"></a>
 
 ### VIC I4D4 Windows
 
@@ -73,13 +73,13 @@ The *Deemed-to-Satisfy Provisions* of this Part apply to Class 3 and Class 9a *r
 
 (2) Openable *windows* must be provided with flyscreens.
 
-<a id="vic_i4d5"></a>
+<a id="i4d5"></a><a id="vic_i4d5"></a>
 
 ### VIC I4D5 Grab rails
 
 Grab rails must be provided in association with every closet pan, shower or bath in accordance with AS 1428.1.
 
-<a id="vic_i4d6"></a>
+<a id="i4d6"></a><a id="vic_i4d6"></a>
 
 ### VIC I4D6 Electronic communication system
 
@@ -96,7 +96,7 @@ A communication system must—
   - (i) within the reach of a resident whilst in bed; and
   - (ii) in all common *habitable rooms*; and
   - (iii) in all bathrooms, *sanitary compartments* and shower rooms where the call point must be of waterproof construction and within the reach of any fallen resident.
-<a id="vic_i4d7"></a>
+<a id="i4d7"></a><a id="vic_i4d7"></a>
 
 ### VIC I4D7 Electrical power outlets
 

@@ -25,6 +25,8 @@ This Part sets out the requirements for the design, construction, installation, 
 
 ## Objectives
 
+<a id="e3o1"></a>
+
 > **VIC variation**: VIC replaces E3O1 Objective.
 >
 > The Objective of this Part is to—
@@ -39,12 +41,16 @@ This Part sets out the requirements for the design, construction, installation, 
 
 ## Functional Statements
 
+<a id="e3f1"></a>
+
 > **VIC variation**: VIC replaces E3F1 Functional statement.
 >
 > Buildings are to be provided with a roof drainage installation constructed to provide protection for people, property and the environment from the adverse effects of stormwater.
 >
 
 ## Performance Requirements
+
+<a id="e3p1"></a>
 
 > **VIC variation**: VIC replaces E3P1 Roof drainage systems.
 >
@@ -54,15 +60,21 @@ This Part sets out the requirements for the design, construction, installation, 
 > - (b) The severity of potential damage to property, *loss* of *amenity*, illness or injury that would result from the failure of the system.
 >
 
+<a id="e3p2"></a>
+
 > **VIC variation**: VIC replaces E3P2 Overflow.
 >
 > A roof drainage system must have an appropriate overflow device to transfer stormwater flows so that it avoids damage to property or hazard to people from a storm with an annual exceedance probability of 1%.
 >
 
+<a id="e3p3"></a>
+
 > **VIC variation**: VIC replaces E3P3 Watertightness.
 >
 > All internal roof drainage components must be watertight.
 >
+
+<a id="e3p4"></a>
 
 > **VIC variation**: VIC replaces E3P4 Design, construction and installation.
 >
@@ -78,10 +90,14 @@ This Part sets out the requirements for the design, construction, installation, 
 > - (c) *Loss* to buildings and property *amenity* due to *blockages* and *uncontrolled discharge*.
 >
 
+<a id="e3d1"></a>
+
 > **VIC variation**: VIC replaces E3D1 Application.
 >
 > *Performance Requirements* E3P1 to E3P4 are satisfied by complying with E3D2.
 >
+
+<a id="e3d2"></a>
 
 > **VIC variation**: VIC replaces E3D2 General requirements.
 >

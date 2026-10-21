@@ -23,10 +23,14 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for premises where work is undertaken on gas-fuelled vehicles.
 
+<a id="i17d1"></a>
+
 > **TAS variation**: TAS replaces I17D1 Application of Part.
 >
 > This Part is applicable to every building where work is undertaken on gas-fuelled vehicles.
 >
+
+<a id="i17d2"></a>
 
 > **TAS variation**: TAS replaces I17D2 Working areas.
 >

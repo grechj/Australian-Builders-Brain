@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i4o1"></a>
+<a id="i4o1"></a><a id="tas_i4o1"></a>
 
 ### TAS I4O1 Objective
 
@@ -31,7 +31,7 @@ The objective of this Part is to facilitate the safe manufacture, preparation, s
 
 Functional Statements
 
-<a id="tas_i4f1"></a>
+<a id="i4f1"></a><a id="tas_i4f1"></a>
 
 ### TAS I4F1 Food premises
 
@@ -39,7 +39,7 @@ Each building or part of a building constructed as a food premise must be able t
 
 Performance Requirements
 
-<a id="tas_i4p1"></a>
+<a id="i4p1"></a><a id="tas_i4p1"></a>
 
 ### TAS I4P1 Application of Part
 
@@ -73,7 +73,7 @@ Performance Requirements
 - (e) dairies covered by TAS Part I7; or
 - (f) live shellfish premises where live shellfish are being packed or handled for transport or transferral to shellfish processing premises; or
 - (g) premises that only sell pre-packaged food that is not potentially hazardous.
-<a id="tas_i4p2"></a>
+<a id="i4p2"></a><a id="tas_i4p2"></a>
 
 ### TAS I4P2 Design and construction
 
@@ -87,7 +87,7 @@ The design and construction of food premises must—
   - (ii) not permit the entry of pests; and
   - (iii) not provide harbourage for pests; and
 - (e) provide that the food premises is able to be used in such a manner that minimises opportunities for food contamination.
-<a id="tas_i4p3"></a>
+<a id="i4p3"></a><a id="tas_i4p3"></a>
 
 ### TAS I4P3 Water supply
 
@@ -95,7 +95,7 @@ The design and construction of food premises must—
 
 (2) A food premises must use potable water for all activities that use water that are conducted on the food premises. Limitations If a food business demonstrates that the use of non-potable water for a purpose will not adversely affect the safety of the food handled by the food business TAS I4P3(2) does not apply.
 
-<a id="tas_i4p4"></a>
+<a id="i4p4"></a><a id="tas_i4p4"></a>
 
 ### TAS I4P4 Sewage and waste water disposal
 
@@ -103,7 +103,7 @@ Food premises must have a sewage and waste water disposal system that—
 
 - (a) will effectively dispose of all sewage and waste water; and
 - (b) is constructed and located so that there is no likelihood of the sewage and waste water polluting the water supply or contaminating food.
-<a id="tas_i4p5"></a>
+<a id="i4p5"></a><a id="tas_i4p5"></a>
 
 ### TAS I4P5 Storage of garbage and recyclables
 
@@ -112,19 +112,19 @@ Food premises must have facilities for the storage of garbage and recyclable mat
 - (a) adequately contain the volume and type of garbage and recyclable matter on the food premises; and
 - (b) enclose the garbage or recyclable matter, if this is necessary to keep pests and animals away from it; and
 - (c) are designed and constructed so that they may be effectively cleaned.
-<a id="tas_i4p6"></a>
+<a id="i4p6"></a><a id="tas_i4p6"></a>
 
 ### TAS I4P6 Ventilation
 
 Food premises must have sufficient natural or mechanical ventilation to remove fumes, smoke and vapours from the food premises.
 
-<a id="tas_i4p7"></a>
+<a id="i4p7"></a><a id="tas_i4p7"></a>
 
 ### TAS I4P7 Lighting
 
 Food premises must have lighting systems that provide sufficient natural or artificial light for the activities conducted on the food premises.
 
-<a id="tas_i4p8"></a>
+<a id="i4p8"></a><a id="tas_i4p8"></a>
 
 ### TAS I4P8 Floors
 
@@ -154,7 +154,7 @@ Exemptions The following floors do not have to comply with TAS I4P8(2)—
 
 (b) floors of food premises that are unlikely to pose any risk of contamination of food handled on the food premises provided the food business has obtained approval for their use.
 
-<a id="tas_i4p9"></a>
+<a id="i4p9"></a><a id="tas_i4p9"></a>
 
 ### TAS I4P9 Walls and ceilings
 
@@ -181,7 +181,7 @@ Walls and ceilings—
 > (c) other areas to which members of the public usually have access.
 >
 
-<a id="tas_i4p10"></a>
+<a id="i4p10"></a><a id="tas_i4p10"></a>
 
 ### TAS I4P10 Hand washing facilities
 
@@ -195,7 +195,7 @@ Walls and ceilings—
 - (b) provided with a supply of warm running potable water; and
 - (c) of a size that allows easy and effective hand washing; and
 - (d) clearly designated for the sole purpose of washing hands, arms and face.
-<a id="tas_i4p11"></a>
+<a id="i4p11"></a><a id="tas_i4p11"></a>
 
 ### TAS I4P11 Fixtures, fittings and equipment
 
@@ -212,7 +212,7 @@ Fixtures, fittings and equipment must—
   - (i) able to be easily and effectively cleaned and, if necessary, sanitised if there is a likelihood that they will cause food contamination; and
   - (ii) unable to absorb grease, food particles and water if there is a likelihood that they will cause food contamination; and
   - (iii) made of a material that will not contaminate food.
-<a id="tas_i4p12"></a>
+<a id="i4p12"></a><a id="tas_i4p12"></a>
 
 ### TAS I4P12 Storage facilities
 
@@ -220,7 +220,7 @@ Food premises must have adequate storage facilities—
 
 - (a) for the storage of items that are likely to be the source of contamination of food, including chemicals, clothing and personal belongings; and
 - (b) located where there is no likelihood of stored items contaminating food or food contact surfaces.
-<a id="tas_i4p13"></a>
+<a id="i4p13"></a><a id="tas_i4p13"></a>
 
 ### TAS I4P13 Refrigerated and cooling chambers
 
@@ -228,7 +228,7 @@ All refrigerated and cooling chambers must be constructed so that the stored pro
 
 Deemed-to-Satisfy Provisions
 
-<a id="tas_i4d1"></a>
+<a id="i4d1"></a><a id="tas_i4d1"></a>
 
 ### TAS I4D1 Application of Part
 
@@ -260,13 +260,13 @@ Deemed-to-Satisfy Provisions
 - (e) premises that only sell pre-packaged food that is not potentially hazardous.
 (4) In this Part, words and meanings as defined in the Food Act 2003, Food Standards Code and Liquor Licensing Act 1990, Dairy Industry Act 1994 and Primary Produce Safety Act 2011 apply.
 
-<a id="tas_i4d2"></a>
+<a id="i4d2"></a><a id="tas_i4d2"></a>
 
 ### TAS I4D2 Deemed-to-Satisfy Provisions
 
 *Performance Requirements* TAS I4P1 to TAS I4P13 are satisfied by complying with the relevant provisions of TAS I4D3 to TAS I4D18.
 
-<a id="tas_i4d3"></a>
+<a id="i4d3"></a><a id="tas_i4d3"></a>
 
 ### TAS I4D3 General requirements
 
@@ -298,13 +298,13 @@ Deemed-to-Satisfy Provisions
 > ‘Regulated entity’ has the same meaning as Water and Sewerage Industry Act 2008.
 >
 
-<a id="tas_i4d4"></a>
+<a id="i4d4"></a><a id="tas_i4d4"></a>
 
 ### TAS I4D4 Pests and contaminants
 
 Premises where customers are served outside the premises through an opening, that has an appliance for the elimination of flies and mechanical ventilation adequate to exhaust air through the opening at a rate of not less than 5 litres per second for each square metre of opening, satisfies TAS I4P2(d).
 
-<a id="tas_i4d5"></a>
+<a id="i4d5"></a><a id="tas_i4d5"></a>
 
 ### TAS I4D5 Drains and pipes
 
@@ -312,7 +312,7 @@ Premises satisfy TAS I4P4 where—
 
 - (a) a grease trap, an overflow (relief) gully or an untrapped opening connected directly with a drain or sewer, is not installed in a room used for preparation, processing, packing or storing of food for sale; and
 - (b) as far as is practicable, service pipes are concealed beneath the surface of walls, floors or ceilings, or are fixed clear of the wall, floor or ceiling, at such distance as to facilitate cleaning.
-<a id="tas_i4d6"></a>
+<a id="i4d6"></a><a id="tas_i4d6"></a>
 
 ### TAS I4D6 Offensive material and trade waste
 
@@ -321,13 +321,13 @@ Where offensive material or trade waste is stored, a separate area or room which
 - (a) is paved and easily cleanable; and
 - (b) is graded to drain to a suitable drainage system; and
 - (c) has available a supply of water under pressure, satisfies TAS I4P5.
-<a id="tas_i4d7"></a>
+<a id="i4d7"></a><a id="tas_i4d7"></a>
 
 ### TAS I4D7 Ventilation
 
 A mechanical ventilating exhaust system complying with the requirements of AS/NZS 1668.1 and AS 1668.2 satisfies TAS I4P6.
 
-<a id="tas_i4d8"></a>
+<a id="i4d8"></a><a id="tas_i4d8"></a>
 
 ### TAS I4D8 Lighting
 
@@ -337,7 +337,7 @@ A lighting system that—
 - (b) in areas where open food is handled or stored, has light fittings which are—
   - (i) designed and constructed to prevent the contamination of food should the globe or tube shatter; and
   - (ii) free from any features that would harbour dirt, dust or insects or make the fitting difficult to clean, satisfies TAS I4P7.
-<a id="tas_i4d9"></a>
+<a id="i4d9"></a><a id="tas_i4d9"></a>
 
 ### TAS I4D9 Floors, walls and ceilings
 
@@ -345,7 +345,7 @@ A lighting system that—
 
 (2) The wall and ceiling provisions of (1) do not apply to areas in which all food for sale is completely enclosed and otherwise protected from contamination by processing plants, other appliances or other means.
 
-<a id="tas_i4d10"></a>
+<a id="i4d10"></a><a id="tas_i4d10"></a>
 
 ### TAS I4D10 Separation of work place
 
@@ -355,7 +355,7 @@ A lighting system that—
 
 (3) Access between the areas referred to in (2) via another room, a hallway, or an airlock, satisfies TAS I4P9(b).
 
-<a id="tas_i4d11"></a>
+<a id="i4d11"></a><a id="tas_i4d11"></a>
 
 ### TAS I4D11 Washbasins
 
@@ -367,7 +367,7 @@ A lighting system that—
 - (b) have a capacity of at least 11 litres; and
 - (c) provide not less than 250 mm between the spout and the bottom of the basin; and
 - (d) be in a position that is not obstructed.
-<a id="tas_i4d12"></a>
+<a id="i4d12"></a><a id="tas_i4d12"></a>
 
 ### TAS I4D12 Sinks
 
@@ -381,7 +381,7 @@ A lighting system that—
 
 (4) A cleaner’s sink separated from food storage and handling areas provided for the emptying of cleaning water, satisfies TAS I4P11.
 
-<a id="tas_i4d13"></a>
+<a id="i4d13"></a><a id="tas_i4d13"></a>
 
 ### TAS I4D13 Design, construction and installation of fixtures, fittings and equipment
 
@@ -391,7 +391,7 @@ A lighting system that—
 
 - (a) automatic equipment that uses water to sanitise utensils or other equipment and only operate for the purposes of sanitation when the water is at a temperature that will sanitise the utensils or equipment; or
 - (b) a sink that meets TAS I4D12, satisfies TAS I4P11.
-<a id="tas_i4d14"></a>
+<a id="i4d14"></a><a id="tas_i4d14"></a>
 
 ### TAS I4D14 Storage of materials and equipment
 
@@ -399,13 +399,13 @@ A lighting system that—
 
 (2) A separate area for the storage of staff clothing and personal effects, satisfies TAS I4P12.
 
-<a id="tas_i4d15"></a>
+<a id="i4d15"></a><a id="tas_i4d15"></a>
 
 ### TAS I4D15 Food store
 
 An eating house provided with a dry-food store, satisfies TAS I4P12.
 
-<a id="tas_i4d16"></a>
+<a id="i4d16"></a><a id="tas_i4d16"></a>
 
 ### TAS I4D16 Meat premises
 
@@ -413,7 +413,7 @@ Premises used for the preparation or sale of red meat, other than those licensed
 
 - (a) TAS Part I6; or
 - (b) the provisions of TAS I4D3 to TAS I4D14 and I4D18, satisfy in relation to building construction, the requirements of TAS I4P2 to TAS I4P13.
-<a id="tas_i4d17"></a>
+<a id="i4d17"></a><a id="tas_i4d17"></a>
 
 ### TAS I4D17 Dairy produce
 
@@ -421,7 +421,7 @@ Definition:
 
 - (a) Dairy produce products include milk, colostrum, liquid milk products, cream and thickened cream, butter, butter concentrate, buttermilk, concentrated buttermilk, dairy blend, ghee, anhydrous milk fat (butter oil), casein, caseinate, cheese, whey, whey cream, concentrated whey cream, cultured milk, yoghurt, ice cream, ice cream mix, buttermilk powder, lactose powder, milk sugar, powdered milk, skim milk powder, whey powder, milk protein powder and other milk concentrates.
 - (b) Premises designed and constructed in compliance with the Export Control (Milk and Dairy) Orders, satisfy the special requirements of this code for premises to be used for the manufacture of dairy produce.
-<a id="tas_i4d18"></a>
+<a id="i4d18"></a><a id="tas_i4d18"></a>
 
 ### TAS I4D18 Refrigerated and cooling chambers
 

@@ -160,6 +160,8 @@ Quick response sprinklers must be provided to a Class 9b *early childhood centre
 > - (b) with a *rise in storeys* of not more than 2, where the Class 9b *early childhood centre* is the only use in that building.
 >
 
+<a id="s17c15"></a>
+
 > **VIC variation**: VIC adds S17C15 Balconies in Class 2, 3, 9a and 9c building.
 >
 > Covered balconies in Class 2, 3, 9a or 9c buildings must be sprinkler protected.

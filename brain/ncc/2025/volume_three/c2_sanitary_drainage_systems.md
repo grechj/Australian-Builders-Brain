@@ -585,6 +585,8 @@ Where pumped discharge from a *swimming pool* discharges into a sanitary *draina
 
 A sanitary *drainage* system in a *designated bushfire prone area* must be in accordance with AS 3959.
 
+<a id="c2d6"></a>
+
 > **TAS variation**: TAS adds C2D6 Venting requirements.
 >
 > (1) A sanitary *drainage* system must provide ventilation in accordance with AS/NZS 3500.2.

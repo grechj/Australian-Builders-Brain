@@ -738,6 +738,8 @@ Protection of *drinking water* services from rainwater must be in accordance wit
 > - For B5D7(10), B5D7(11), B5D7(12), B5D7(13) and B5D7(14); in some jurisdictions, regulations issued under water supply legislation, and/or rules set by a *Network Utility Operator*, may prescribe backflow prevention requirements that exceed those contained in B5D6. In these circumstances those regulations and/or rules should be followed.
 >
 
+<a id="b5d8"></a>
+
 > **NSW variation**: NSW adds B5D8 Cooling tower water service.
 >
 > Water systems permanently attached to cooling towers backflow prevention shall be positioned so that—

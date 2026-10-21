@@ -23,10 +23,14 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those contained in Sections C, D, E, F and G for buildings containing or used as an *entertainment venue* other than temporary structures and drive-in theatres.
 
+<a id="i4d1"></a>
+
 > **NSW variation**: NSW replaces I4D1 Application of Part.
 >
 > This Part applies to every *entertainment venue* as described in the Environmental Planning and Assessment Regulation 2021.
 >
+
+<a id="i4d2"></a>
 
 > **NSW variation**: NSW replaces I4D2 Fire separation.
 >
@@ -38,6 +42,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > must be separated from the other parts of the building by construction having an FRL of not less than 60/60/60.
 >
 
+<a id="i4d3"></a>
+
 > **NSW variation**: NSW replaces I4D3 Foyer space.
 >
 > Where an *entertainment venue* is used principally for the purpose of—
@@ -47,6 +53,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >
 > foyer space (excluding stairways and concession areas) must be provided on the basis of at least 0.25 m<sup>2</sup> for each person that the *auditorium* accommodates.
 >
+
+<a id="i4d4"></a>
 
 > **NSW variation**: NSW replaces I4D4 Sprinkler systems for common foyers.
 >
@@ -58,20 +66,28 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >   - (2) throughout each *storey* in the building below that *storey*.
 >
 
+<a id="i4d5"></a>
+
 > **NSW variation**: NSW replaces I4D5 Conventional stages: application.
 >
 > [NSW I4D6](#i4d6) to [NSW I4D9](#i4d9) apply to a conventional *stage*, that is, a *stage* which is separated from the *auditorium* by a proscenium wall incorporating a proscenium opening.
 >
+
+<a id="i4d6"></a>
 
 > **NSW variation**: NSW replaces I4D6 Conventional stages: extent of stage area.
 >
 > If a room or area is not separated from the remainder of a conventional *stage* by construction having an FRL of not less than 60/60/60, the room or area is, for the purposes of this Part, to be taken to form part of the *stage*.
 >
 
+<a id="i4d7"></a>
+
 > **NSW variation**: NSW replaces I4D7 Conventional stages: small stages.
 >
 > A *stage* which is more than 50 m<sup>2</sup> but not more than 150 m<sup>2</sup> in area must have 2 or more means of egress from the *stage* and *backstage* area provided otherwise than through the proscenium wall.
 >
+
+<a id="i4d8"></a>
 
 > **NSW variation**: NSW replaces I4D8 Conventional stages: large stages.
 >
@@ -83,25 +99,35 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) must have 2 or more means of egress from the *stage* and *backstage* area provided otherwise than through the proscenium wall.
 >
 
+<a id="i4d9"></a>
+
 > **NSW variation**: NSW replaces I4D9 Conventional stages: fire separation of stages.
 >
 > A *stage* which is more than 50 m<sup>2</sup> in area, and all areas below such a *stage*, must (with the exception of the proscenium opening) be separated from the *backstage* and the remainder of the building by construction having an FRL of not less than 60/60/60.
 >
+
+<a id="i4d10"></a>
 
 > **NSW variation**: NSW replaces I4D10 Non-conventional stages: application.
 >
 > [NSW I4D11](#i4d11) and [NSW I4D12](#i4d12) apply to a *stage* that is not a conventional *stage* within the meaning of [NSW I4D5](#i4d5).
 >
 
+<a id="i4d11"></a>
+
 > **NSW variation**: NSW replaces I4D11 Non-conventional stages: small stages.
 >
 > A *stage* which is more than 50 m<sup>2</sup> but not more than 150 m<sup>2</sup> in area must have at least 2 means of egress from the *backstage* area.
 >
 
+<a id="i4d12"></a>
+
 > **NSW variation**: NSW replaces I4D12 Non-conventional stages: large stages.
 >
 > A *stage* which is more than 150 m<sup>2</sup> in area must have at least 2 means of egress from the *backstage* area.
 >
+
+<a id="i4d13"></a>
 
 > **NSW variation**: NSW replaces I4D13 Flying scenery.
 >
@@ -124,6 +150,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) The walls forming the *stage* area, and the area beneath the *stage*, must be constructed of masonry or concrete and have an FRL of not less than 120/120/120.
 >
 
+<a id="i4d14"></a>
+
 > **NSW variation**: NSW replaces I4D14 Load notice.
 >
 > (1) A notice indicating the actual distributed and concentrated load for which the *stage* floor has been designed must be conspicuously and permanently displayed in a position adjacent to the *stage* floor.
@@ -133,6 +161,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) at least 50 mm high; and
 > - (b) on a contrasting background.
 >
+
+<a id="i4d15"></a>
 
 > **NSW variation**: NSW replaces I4D15 Safety curtains.
 >
@@ -151,6 +181,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (k) have the words “Safety Curtain” exhibited on the curtain in clear and legible letters of adequate size to enable them to be read from all parts of the *auditorium*.
 >
 
+<a id="i4d16"></a>
+
 > **NSW variation**: NSW replaces I4D16 Safety curtains — additional requirements.
 >
 > A rigid safety curtain *required* by [NSW I4D13](#i4d13) must comply with the requirements of [NSW I4D15](#i4d15) and it must—
@@ -161,10 +193,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) when closed, overlap the proscenium opening by not less than 300 mm at each side and by not less than 600 mm at the top.
 >
 
+<a id="i4d17"></a>
+
 > **NSW variation**: NSW replaces I4D17 Seating in rows: application.
 >
 > [NSW I4D18](#i4d18) to [NSW I4D25](#i4d25) do not apply to *continental seating* or seating at tables.
 >
+
+<a id="i4d18"></a>
 
 > **NSW variation**: NSW replaces I4D18 Seating in rows: number of seats.
 >
@@ -173,6 +209,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) 8 where there is an *aisle* at one end only of the *row*; or
 > - (b) 16 where there are *aisles* on both ends of the *row*.
 >
+
+<a id="i4d19"></a>
 
 > **NSW variation**: NSW replaces I4D19 Seating in rows: chairs used for seating.
 >
@@ -186,6 +224,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) have a distance of at least 950 mm between the back of the chair and the back of the chair in front.
 >
 
+<a id="i4d20"></a>
+
 > **NSW variation**: NSW replaces I4D20 Seating in rows: chairs in auditoriums — level floors.
 >
 > Chairs in an *auditorium* that has a level floor must be—
@@ -194,10 +234,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) secured together in groups of not less than 4 and not more than 16.
 >
 
+<a id="i4d21"></a>
+
 > **NSW variation**: NSW replaces I4D21 Seating in rows: chairs in auditoriums — sloping floors.
 >
 > Chairs in an *auditorium* having a sloping floor, or having stepped or inclined platforms, must be securely fastened to the floor or platform.
 >
+
+<a id="i4d22"></a>
 
 > **NSW variation**: NSW replaces I4D22 Seating in rows: radiating aisles in seating areas.
 >
@@ -210,6 +254,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (c) the *rows* may be curved or straight.
 >
 
+<a id="i4d23"></a>
+
 > **NSW variation**: NSW replaces I4D23 Seating in rows: aisles and cross-overs.
 >
 > Where *aisles* and *cross-overs* are provided—
@@ -218,6 +264,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) the floor of each *aisle* must not have a grade of more than 1 in 8 at any part; and
 > - (c) if there is a step from a *row* to an *aisle* or from a landing to an *aisle*, the step must not project into the *aisle*.
 >
+
+<a id="i4d24"></a>
 
 > **NSW variation**: NSW replaces I4D24 Seating in rows: platforms and steps.
 >
@@ -234,6 +282,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (f) any going projecting in front of a seat adjacent to an *aisle* must be protected by a guardrail.
 >
 
+<a id="i4d25"></a>
+
 > **NSW variation**: NSW replaces I4D25 Seating in rows: stepped platforms.
 >
 > Where stepped platforms without chairs or stepped platforms with bench seats, are used for seating—
@@ -246,20 +296,28 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (f) in the case of stepped platforms with bench seats, there must be at least 300 mm between the back of each seat and the front of the platform behind, or the front of the bench seat behind, whichever is the closer.
 >
 
+<a id="i4d26"></a>
+
 > **NSW variation**: NSW replaces I4D26 Continental seating: application.
 >
 > [NSW I4D27](#i4d27) to [NSW I4D35](#i4d35) apply to *continental seating*.
 >
+
+<a id="i4d27"></a>
 
 > **NSW variation**: NSW replaces I4D27 Continental seating: seating to be fastened.
 >
 > Seating must be securely fastened to the floor.
 >
 
+<a id="i4d28"></a>
+
 > **NSW variation**: NSW replaces I4D28 Continental seating: maximum seats per row.
 >
 > The number of seats in a *row* must not exceed 120.
 >
+
+<a id="i4d29"></a>
 
 > **NSW variation**: NSW replaces I4D29 Continental seating: depth of seating.
 >
@@ -279,15 +337,21 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > | 106 - 120 | 1125 | 475 |
 >
 
+<a id="i4d30"></a>
+
 > **NSW variation**: NSW replaces I4D30 Continental seating: clearance between rows.
 >
 > The *minimum lateral clearance* between each *row* of seating must, in respect of a *row* containing a number of seats specified in Column 1 of [NSW Table I4D29](#table_f5779056) be not less than the clearance specified in Column 3 of that Table in respect of that number of seats.
 >
 
+<a id="i4d31"></a>
+
 > **NSW variation**: NSW replaces I4D31 Continental seating: chairs used for seating.
 >
 > Chairs used for seating must comply with [NSW I4D19(a)](#i4d19) and [(b)](#i4d19).
 >
+
+<a id="i4d32"></a>
 
 > **NSW variation**: NSW replaces I4D32 Continental seating: egress doorways.
 >
@@ -301,6 +365,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) must be provided with *exit* signs if the egress doorways are not sufficiently conspicuous.
 >
 
+<a id="i4d33"></a>
+
 > **NSW variation**: NSW replaces I4D33 Continental seating: clear areas.
 >
 > A clear area—
@@ -312,15 +378,21 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (c) if it contains platforms or steps, must comply with [NSW I4D24(a), (b), (c), (d) and (f)](#i4d24).
 >
 
+<a id="i4d34"></a>
+
 > **NSW variation**: NSW replaces I4D34 Continental seating: minimum clear space.
 >
 > At the entrance from a *row* to a clear area, there must be a clear level floor space having a width of at least the clearance specified for the *row* in Column 3 of [NSW Table I4D29](#table_f5779056).
 >
 
+<a id="i4d35"></a>
+
 > **NSW variation**: NSW replaces I4D35 Continental seating: doors.
 >
 > A door fitted to the egress doorway in the wall of an *auditorium* must comply with [NSW D3D16](/ncc/2025/volume_one/d3_construction_of_exits.md#d3d16) and [NSW D3D24(2)](/ncc/2025/volume_one/d3_construction_of_exits.md#d3d24).
 >
+
+<a id="i4d36"></a>
 
 > **NSW variation**: NSW replaces I4D36 Provision of guardrails: location.
 >
@@ -331,6 +403,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (c) where [NSW I4D37](#i4d37) and [NSW I4D38](#i4d38) apply.
 >
 
+<a id="i4d37"></a>
+
 > **NSW variation**: NSW replaces I4D37 Provision of guardrails: fixed back seats.
 >
 > If seats with fixed backs are provided, guardrails that extend for the full width of the seating, must be provided at least 500 mm above the platform unless—
@@ -338,6 +412,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) fixed back seats of the next lower level project at least 500 mm above the level of the stepped platform; and
 > - (b) there is only one riser between the platform and next lower *cross-over*.
 >
+
+<a id="i4d38"></a>
 
 > **NSW variation**: NSW replaces I4D38 Provision of guardrails: steps between platforms.
 >
@@ -352,10 +428,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (e) seating at tables is provided on a stepped platform, a guardrail at least 500 mm high must be provided along the front edge of the platform.
 >
 
+<a id="i4d39"></a>
+
 > **NSW variation**: NSW replaces I4D39 Guardrails for seating areas: application.
 >
 > [NSW I4D40](#i4d40) to [NSW I4D42](#i4d42) apply to seating areas.
 >
+
+<a id="i4d40"></a>
 
 > **NSW variation**: NSW replaces I4D40 Guardrails for seating areas: continental seating.
 >
@@ -364,6 +444,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) the distance between the back of each chair in that *row*, and the guardrail must be not less than the distance specified in Column 2 of [NSW Table I4D29](#table_f5779056) for the number of chairs in that *row*; and
 > - (b) the *minimum lateral clearance* between the front of each chair in that *row* and the guardrail must be not less than the clearance specified in Column 3 of [NSW Table I4D29](#table_f5779056) for the number of chairs in that *row*.
 >
+
+<a id="i4d41"></a>
 
 > **NSW variation**: NSW replaces I4D41 Guardrails for seating areas: balconies and boxes.
 >
@@ -375,6 +457,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) must have an unperforated kerb or toe guard extending for at least 300 mm above the floor.
 >
 
+<a id="i4d42"></a>
+
 > **NSW variation**: NSW replaces I4D42 Guardrails for seating areas: cross-overs.
 >
 > A guardrail provided along the front edge of a *cross-over* on a stepped floor—
@@ -382,6 +466,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) must be at least 750 mm high; and
 > - (b) must extend the full distance between *aisles*, or between a wall and an *aisle*, or for such other distance as considered necessary.
 >
+
+<a id="i4d43"></a>
 
 > **NSW variation**: NSW replaces I4D43 Dressing rooms.
 >
@@ -393,10 +479,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >   - (2) through a fire-isolated *exit* to a road or *open space*.
 >
 
+<a id="i4d44"></a>
+
 > **NSW variation**: NSW replaces I4D44 Storerooms.
 >
 > A storeroom must be separated from other parts of the building by construction having an FRL of not less than 60/60/60.
 >
+
+<a id="i4d45"></a>
 
 > **NSW variation**: NSW replaces I4D45 Projection suites: Application.
 >
@@ -404,6 +494,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >
 > (2) A *projection suite* must be provided in an *entertainment venue* intended to be used for the showing of *films*.
 >
+
+<a id="i4d46"></a>
 
 > **NSW variation**: NSW replaces I4D46 Projection suites: rooms to be provided.
 >
@@ -421,10 +513,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >     - (6) activate an audible alarm to immediately indicate to management the presence of smoke in the projection room.
 >
 
+<a id="i4d47"></a>
+
 > **NSW variation**: NSW replaces I4D47 Projection suites: fire separation.
 >
 > A *projection suite* must be separated from all other internal parts of the building in which it is located by construction having an FRL of not less than 60/60/60.
 >
+
+<a id="i4d48"></a>
 
 > **NSW variation**: NSW replaces I4D48 Projection suites: concession for protection of some openings.
 >
@@ -434,6 +530,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) any metal shutter or protection system must be equipped with a device to permit the closing of the shutter or the protection system from easily accessible operating positions adjacent to each egress doorway from the projection room.
 >
 
+<a id="i4d49"></a>
+
 > **NSW variation**: NSW replaces I4D49 Basement storeys.
 >
 > Where an *entertainment venue* includes not more than 2 basement *storeys* —
@@ -441,6 +539,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) all *required* *exits* from the basement must be enclosed in *non-combustible* construction, with the exception of the main entry or *exit*; and
 > - (b) any *auditorium* and other public areas in the basement must be equipped with an air-handling system that complies with AS 1668.2.
 >
+
+<a id="i4d50"></a>
 
 > **NSW variation**: NSW replaces I4D50 Basement storeys: more than two.
 >
@@ -451,6 +551,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (c) the building must be equipped with a sprinkler system (other than a FPAA101D or FPAA101H system) complying with [Specification 17](/ncc/2025/volume_one/specification_17_fire_sprinkler_systems.md).
 >
 
+<a id="i4d51"></a>
+
 > **NSW variation**: NSW replaces I4D51 Electric mains installation: main switchboard.
 >
 > The switchboard containing the main isolation switch must—
@@ -459,10 +561,14 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) be enclosed by construction having an FRL of not less than 60/60/60.
 >
 
+<a id="i4d52"></a>
+
 > **NSW variation**: NSW replaces I4D52 Electric mains installation: circuit protection.
 >
 > Protection of the final sub-circuit originating at a switchboard or distribution board must be by means of circuit breakers.
 >
+
+<a id="i4d53"></a>
 
 > **NSW variation**: NSW replaces I4D53 Electric mains installation: separate sub-mains.
 >
@@ -475,12 +581,16 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >   - (3) heavy-duty PVC conduit or metallic pipe, buried at least 500 mm below ground level, for underground cabling.
 >
 
+<a id="i4d54"></a>
+
 > **NSW variation**: NSW replaces I4D54 Lighting: lighting switches.
 >
 > (1) Any switch controlling the lighting system must not be accessible.
 >
 > (2) Where, during normal use, general lighting may be dimmed or switched off, an override switch to switch on all of the general lighting instantaneously must be installed in the *auditorium* in a position accessible to management.
 >
+
+<a id="i4d55"></a>
 
 > **NSW variation**: NSW replaces I4D55 Lighting: lighting levels.
 >
@@ -492,15 +602,21 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 >   - (2) capable of being switched in common with the general lighting and of being controlled also by the override switch *required* by [NSW I4D54(2)](#i4d54).
 >
 
+<a id="i4d56"></a>
+
 > **NSW variation**: NSW replaces I4D56 Lighting: provision of aisle lighting.
 >
 > Where general lighting is to be either dimmed or extinguished when the public is in attendance and where the floor is stepped or at an inclination greater than 1 in 12, *aisle* lights must be provided to illuminate the length of each *aisle* and the tread of each step therein.
 >
 
+<a id="i4d57"></a>
+
 > **NSW variation**: NSW replaces I4D57 Lighting: aisle lighting power supply.
 >
 > Where an *aisle* light is installed in a seat frame, it must be supplied at a voltage of not more than 32 volts AC or 115 volts DC.
 >
+
+<a id="i4d58"></a>
 
 > **NSW variation**: NSW replaces I4D58 Lighting: aisle lighting alternative lighting supply.
 >
@@ -509,6 +625,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) is capable of being *automatically* energised in the event of failure of the primary lighting electricity supply; and
 > - (b) complies with the provisions applying to emergency lighting.
 >
+
+<a id="i4d59"></a>
 
 > **NSW variation**: NSW replaces I4D59 Automatic smoke-and-heat vents for stages.
 >
@@ -520,6 +638,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (d) have an openable area of not less than 10 percent of the total area of the *stage*.
 >
 
+<a id="i4d60"></a>
+
 > **NSW variation**: NSW replaces I4D60 Solid fuel burning stoves and open fire places.
 >
 > Solid fuel burning stoves and open fire places must not be installed in premises designed for the purpose of—
@@ -528,6 +648,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (b) conducting live theatre productions.
 >
 
+<a id="i4d61"></a>
+
 > **NSW variation**: NSW replaces I4D61 Fuel gas cylinders: general.
 >
 > Fuel gas cylinders must—
@@ -535,6 +657,8 @@ NSW Part I4 contains *Deemed-to-Satisfy Provisions* additional to those containe
 > - (a) be housed in an enclosure that is located outside the building; and
 > - (b) comply with the ventilation requirements of AS/NZS 1596.
 >
+
+<a id="i4d62"></a>
 
 > **NSW variation**: NSW replaces I4D62 Fuel gas cylinders: enclosures.
 >

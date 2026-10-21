@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i5d1"></a>
+<a id="i5d1"></a><a id="tas_i5d1"></a>
 
 ### TAS I5D1 Application of Part
 
@@ -31,7 +31,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Dining rooms and bar rooms must provide for the comfort, convenience and health of customers.
 
-<a id="tas_i5d2"></a>
+<a id="i5d2"></a><a id="tas_i5d2"></a>
 
 ### TAS I5D2 Sanitary facilities
 
@@ -39,7 +39,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Where the sanitary facilities are not accessed from within the dining room or bar room, reasonable fixed protection from the elements must be provided.
 
-<a id="tas_i5d3"></a>
+<a id="i5d3"></a><a id="tas_i5d3"></a>
 
 ### TAS I5D3 Separation from other areas
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="vic_i6p1"></a>
+<a id="i6p1"></a><a id="vic_i6p1"></a>
 
 ### VIC I6P1 Doorways to a children’s room
 
@@ -36,19 +36,19 @@ The number and location of doorways to a children’s room must take into accoun
 
 Deemed-to-Satisfy Provisions
 
-<a id="vic_i6d1"></a>
+<a id="i6d1"></a><a id="vic_i6d1"></a>
 
 ### VIC I6D1 Deemed-to-Satisfy Provisions
 
 *Performance Requirement* VIC I6P1 and relevant *Performance Requirements* in Section D are satisfied by complying with VIC I6D2 and VIC I6D3.
 
-<a id="vic_i6d2"></a>
+<a id="i6d2"></a><a id="vic_i6d2"></a>
 
 ### VIC I6D2 Application of Part
 
 The *Deemed-to-Satisfy Provisions* of this Part apply to Class 9b *children’s services*.
 
-<a id="vic_i6d3"></a>
+<a id="i6d3"></a><a id="vic_i6d3"></a>
 
 ### VIC I6D3 Doorways to a children’s room
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_d1p10"></a>
+<a id="d1p10"></a><a id="tas_d1p10"></a>
 
 ### TAS D1P10 Standards made under the Disability Discrimination Act
 

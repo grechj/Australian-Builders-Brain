@@ -71,7 +71,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NSW | adds | [Part F4D4d](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#table_d161c3d2) |
 | NSW | deletes | [F4D10](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#f4d10) |
 | NSW | replaces | [F6D6](/ncc/2025/volume_one/f6_light_and_ventilation.md#f6d6) |
-| NSW | deletes | [Part F8](/ncc/2025/volume_one/f8_condensation_management.md#part_ariation) |
+| NSW | deletes | [Part F8](/ncc/2025/volume_one/f8_condensation_management.md) |
 | NSW | replaces | [G1O1](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1o1) |
 | NSW | adds | [G1F5](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1f5) |
 | NSW | replaces | [G1P2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1p2) |
@@ -88,7 +88,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NSW | replaces | [G5D2](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d2) |
 | NSW | replaces | [G5D3](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d3) |
 | NSW | replaces | [G5D4](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d4) |
-| NSW | deletes | [Part G7](/ncc/2025/volume_one/g7_livable_housing_design.md#part_ariation) |
+| NSW | deletes | [Part G7](/ncc/2025/volume_one/g7_livable_housing_design.md) |
 | NSW | replaces | [I1D1](/ncc/2025/volume_one/i1_class_9b_buildings.md#i1d1) |
 | NSW | adds | [Part I4](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md) |
 | NSW | replaces | [I4D1](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d1) |
@@ -180,7 +180,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NSW | replaces | [I6D4](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d4) |
 | NSW | replaces | [I6D5](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d5) |
 | NSW | replaces | [I6D6](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d6) |
-| NSW | replaces | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#part_ariation) |
+| NSW | replaces | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md) |
 | NSW | replaces | [J1O1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1o1) |
 | NSW | replaces | [J1F1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1f1) |
 | NSW | replaces | [J1P1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1p1) |
@@ -193,7 +193,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NSW | replaces | [J1V4](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1v4) |
 | NSW | replaces | [J2D1.1](/ncc/2025/volume_one/j2_energy_efficiency.md#j2d1) |
 | NSW | replaces | [J2D2](/ncc/2025/volume_one/j2_energy_efficiency.md#j2d2) |
-| NSW | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
+| NSW | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
 | NSW | replaces | [J4D1.1](/ncc/2025/volume_one/j4_building_fabric.md#j4d1) |
 | NSW | replaces | [J4D2](/ncc/2025/volume_one/j4_building_fabric.md#j4d2) |
 | NSW | replaces | [J5D1.1](/ncc/2025/volume_one/j5_building_sealing.md#j5d1) |
@@ -223,7 +223,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NT | adds | [Part B1D4](/ncc/2025/volume_one/b1_structural_provisions.md#table_32898a40) |
 | NT | replaces | [E1D10](/ncc/2025/volume_one/e1_fire_fighting_equipment.md#e1d10) |
 | NT | replaces | [F4D4](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#f4d4) |
-| NT | replaces | [Part F7](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#part_ariation) |
+| NT | replaces | [Part F7](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md) |
 | NT | replaces | [F7P1](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p1) |
 | NT | replaces | [F7P2](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p2) |
 | NT | replaces | [F7P3](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p3) |
@@ -241,15 +241,15 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | NT | replaces | [G1P2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1p2) |
 | NT | deletes | [G1D2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1d2) |
 | NT | deletes | [G1D5](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1d5) |
-| NT | deletes | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#part_ariation) |
-| NT | deletes | [Part J2](/ncc/2025/volume_one/j2_energy_efficiency.md#part_ariation) |
-| NT | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
-| NT | deletes | [Part J4](/ncc/2025/volume_one/j4_building_fabric.md#part_ariation) |
-| NT | deletes | [Part J5](/ncc/2025/volume_one/j5_building_sealing.md#part_ariation) |
-| NT | deletes | [Part J6](/ncc/2025/volume_one/j6_air_conditioning_and_ventilation.md#part_ariation) |
-| NT | deletes | [Part J7](/ncc/2025/volume_one/j7_artificial_lighting_and_power.md#part_ariation) |
-| NT | deletes | [Part J8](/ncc/2025/volume_one/j8_heated_water_supply_and_swimming_pool_and_spa_pool_plant.md#part_ariation) |
-| NT | deletes | [Part J9](/ncc/2025/volume_one/j9_energy_monitoring_and_on_site_distributed_energy_resources.md#part_ariation) |
+| NT | deletes | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md) |
+| NT | deletes | [Part J2](/ncc/2025/volume_one/j2_energy_efficiency.md) |
+| NT | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
+| NT | deletes | [Part J4](/ncc/2025/volume_one/j4_building_fabric.md) |
+| NT | deletes | [Part J5](/ncc/2025/volume_one/j5_building_sealing.md) |
+| NT | deletes | [Part J6](/ncc/2025/volume_one/j6_air_conditioning_and_ventilation.md) |
+| NT | deletes | [Part J7](/ncc/2025/volume_one/j7_artificial_lighting_and_power.md) |
+| NT | deletes | [Part J8](/ncc/2025/volume_one/j8_heated_water_supply_and_swimming_pool_and_spa_pool_plant.md) |
+| NT | deletes | [Part J9](/ncc/2025/volume_one/j9_energy_monitoring_and_on_site_distributed_energy_resources.md) |
 | QLD | deletes | [B1P3](/ncc/2025/volume_one/b1_structural_provisions.md#b1p3) |
 | QLD | replaces | [B1D4](/ncc/2025/volume_one/b1_structural_provisions.md#b1d4) |
 | QLD | adds | [Part B1D4](/ncc/2025/volume_one/b1_structural_provisions.md#table_6390f68a) |
@@ -511,7 +511,7 @@ From the state and territory schedules of **NCC 2025 Volume One**.[^abcb_ncc] Al
 | TAS | replaces | [I18D5](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d5) |
 | TAS | replaces | [I18D6](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d6) |
 | TAS | replaces | [I18D7](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d7) |
-| TAS | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
+| TAS | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
 | VIC | adds | [S17C15](/ncc/2025/volume_one/specification_17_fire_sprinkler_systems.md#s17c15) |
 | VIC | adds | [S18C5](/ncc/2025/volume_one/specification_18_class_2_and_3_buildings_not_more_than_25_m_in_effective_height.md#s18c5) |
 | VIC | replaces | [A2G2](/ncc/2025/volume_two/a2_compliance_with_the_ncc.md#a2g2) |

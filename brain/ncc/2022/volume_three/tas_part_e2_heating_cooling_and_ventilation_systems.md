@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="tas_e2o1"></a>
+<a id="e2o1"></a><a id="tas_e2o1"></a>
 
 ### TAS E2O1 Objective
 
@@ -37,13 +37,13 @@ The Objective of this Part is to—
 - (f) ensure that a heating, ventilation or air-conditioning installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e).
 Functional Statements
 
-<a id="tas_e2f1"></a>
+<a id="e2f1"></a><a id="tas_e2f1"></a>
 
 ### TAS E2F1 Functional statement 1
 
 Mechanical services, plant and equipment used for heating, cooling and/or ventilation of a building must be adequate for their intended purpose.
 
-<a id="tas_e2f2"></a>
+<a id="e2f2"></a><a id="tas_e2f2"></a>
 
 ### TAS E2F2 Functional statement 2
 
@@ -51,7 +51,7 @@ A heating, cooling and/or ventilation system must support energy efficient outco
 
 Performance Requirements
 
-<a id="tas_e2p1"></a>
+<a id="e2p1"></a><a id="tas_e2p1"></a>
 
 ### TAS E2P1 Design, construction, installation and maintenance
 
@@ -63,13 +63,13 @@ Performance Requirements
 
 - (a) Efficient use of energy and water.
 - (b) Access for maintenance.
-<a id="tas_e2p2"></a>
+<a id="e2p2"></a><a id="tas_e2p2"></a>
 
 ### TAS E2P2 Pressure equipment
 
 Pressure equipment used in mechanical heating, cooling and ventilation systems must avoid the likelihood of explosion, rupture or leakage.
 
-<a id="tas_e2p3"></a>
+<a id="e2p3"></a><a id="tas_e2p3"></a>
 
 ### TAS E2P3 Microbial control
 
@@ -77,13 +77,13 @@ Mechanical air-handling and cooling water systems installed in a building must c
 
 Deemed-to-Satisfy Provisions
 
-<a id="tas_e2d1"></a>
+<a id="e2d1"></a><a id="tas_e2d1"></a>
 
 ### TAS E2D1 Application
 
 *Performance Requirement* E2P1 to E2P3 are satisfied by complying with E2D2.
 
-<a id="tas_e2d2"></a>
+<a id="e2d2"></a><a id="tas_e2d2"></a>
 
 ### TAS E2D2 General requirements
 

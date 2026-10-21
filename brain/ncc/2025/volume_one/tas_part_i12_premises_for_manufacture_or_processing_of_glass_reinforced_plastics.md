@@ -23,10 +23,14 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for premises used for the manufacture or processing of glass reinforced plastics.
 
+<a id="i11d6"></a>
+
 > **TAS variation**: TAS replaces I11D6 Hand laminating and spray depositing.
 >
 > The walls and floors of areas to be used for hand laminating and spray depositing must be constructed of *non-combustible* materials.
 >
+
+<a id="i12d1"></a>
 
 > **TAS variation**: TAS replaces I12D1 Application of Part.
 >
@@ -38,6 +42,8 @@ This Part contains additional requirements for premises used for the manufacture
 > - (b) be constructed in a manner that will avoid the spread of fire within the building and to other buildings.
 >
 
+<a id="i12d2"></a>
+
 > **TAS variation**: TAS replaces I12D2 Separation from other buildings.
 >
 > A building for the manufacture or processing of glass reinforced plastics must be—
@@ -46,10 +52,14 @@ This Part contains additional requirements for premises used for the manufacture
 > - (b) separated from all other buildings by a clear space of not less than 6 m.
 >
 
+<a id="i12d3"></a>
+
 > **TAS variation**: TAS replaces I12D3 Rise in storeys.
 >
 > The building must be of single *storey* construction.
 >
+
+<a id="i12d4"></a>
 
 > **TAS variation**: TAS replaces I12D4 Maximum floor areas.
 >
@@ -63,12 +73,16 @@ This Part contains additional requirements for premises used for the manufacture
 > | Sprinklered: 6000 m<sup>2</sup> | Sprinklered: 5000 m<sup>2</sup> | Sprinklered: 3000 m<sup>2</sup> |
 >
 
+<a id="i12d5"></a>
+
 > **TAS variation**: TAS replaces I12D5 Required exits.
 >
 > (1) Each fire-separated section of a building which is a work place must have at least two *exits* for escape purposes and the number and location of *exits* must be such that any point on the floor is not further than 20 m from one of the *exits*.
 >
 > (2) Only *exits* with vertically hinged swinging doors may be considered as *exits* for the purposes of this clause.
 >
+
+<a id="i12d7"></a>
 
 > **TAS variation**: TAS replaces I12D7 Ventilation.
 >
@@ -81,6 +95,8 @@ This Part contains additional requirements for premises used for the manufacture
 > - (a) produce a negative pressure within any exhaust ducting within the work place so that a leak in the ducting will not vent exhaust air back in to the work place; and
 > - (b) vent the exhaust air to the atmosphere so as to prevent recirculation of that exhaust air.
 >
+
+<a id="i12d8"></a>
 
 > **TAS variation**: TAS replaces I12D8 Smoke and heat roof vents.
 >

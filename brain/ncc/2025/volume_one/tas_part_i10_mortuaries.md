@@ -23,12 +23,16 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for mortuaries.
 
+<a id="i10d1"></a>
+
 > **TAS variation**: TAS replaces I10D1 Application of Part.
 >
 > (1) This Part applies to any premises used for the storage or preparation for burial, cremation or disposal by other means, of bodies of deceased persons.
 >
 > (2) Mortuaries must be constructed in a manner that will ensure the health of staff and the general public.
 >
+
+<a id="i10d2"></a>
 
 > **TAS variation**: TAS replaces I10D2 Layout of mortuary.
 >
@@ -43,6 +47,8 @@ This Part contains additional requirements for mortuaries.
 >
 > (4) Access to toilet and shower facilities from any other part of the mortuary premises must be only by way of an air lock.
 >
+
+<a id="i10d3"></a>
 
 > **TAS variation**: TAS replaces I10D3 Construction of body preparation room.
 >
@@ -64,6 +70,8 @@ This Part contains additional requirements for mortuaries.
 > - (a) With sufficient capacity for the storage of at least two adult bodies; and
 > - (b) Capable of maintaining an internal temperature between 1°C and 5°C.
 >
+
+<a id="i10d4"></a>
 
 > **TAS variation**: TAS replaces I10D4 Water supply and sewerage.
 >

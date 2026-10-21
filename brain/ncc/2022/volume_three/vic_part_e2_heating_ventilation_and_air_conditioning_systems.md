@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="vic_e2o1"></a>
+<a id="e2o1"></a><a id="vic_e2o1"></a>
 
 ### VIC E2O1 Objective
 
@@ -35,19 +35,19 @@ The Objective of this Part is to—
 - (d) safeguard the environment; and
 - (e) safeguard public and private infrastructure; and
 - (f) ensure that a heating, ventilation or air-conditioning installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e). Functional Statements
-<a id="vic_e2f1"></a>
+<a id="e2f1"></a><a id="vic_e2f1"></a>
 
 ### VIC E2F1 Functional statement 1
 
 Mechanical services, plant and equipment used for heating, cooling and/or ventilation of a building must be adequate.
 
-<a id="vic_e2f2"></a>
+<a id="e2f2"></a><a id="vic_e2f2"></a>
 
 ### VIC E2F2 Functional statement 2
 
 A building’s heating, cooling and/or ventilation system installation and maintenance must support energy efficient outcomes and minimise any adverse impact on building occupants or occupants of adjoining places, the Network Utility Operator’s infrastructure, property and the environment. Performance Requirements
 
-<a id="vic_e2p1"></a>
+<a id="e2p1"></a><a id="vic_e2p1"></a>
 
 ### VIC E2P1 Design, construction, installation and maintenance
 
@@ -59,25 +59,25 @@ A building’s heating, cooling and/or ventilation system installation and maint
 
 - (a) Efficient use of energy and water.
 - (b) Access for maintenance.
-<a id="vic_e2p2"></a>
+<a id="e2p2"></a><a id="vic_e2p2"></a>
 
 ### VIC E2P2 Pressure equipment
 
 Pressure equipment used in mechanical heating, cooling or ventilation systems must avoid the likelihood of explosion, rupture or leakage.
 
-<a id="vic_e2p3"></a>
+<a id="e2p3"></a><a id="vic_e2p3"></a>
 
 ### VIC E2P3 Microbial control
 
 Mechanical air-handling and cooling water systems installed in a building must control the accumulation of harmful microbial growth. Deemed-to-Satisfy Provisions
 
-<a id="vic_e2d1"></a>
+<a id="e2d1"></a><a id="vic_e2d1"></a>
 
 ### VIC E2D1 Application
 
 Performance requirements E2P1 to E2P3 are satisfied by complying with E2D2.
 
-<a id="vic_e2d2"></a>
+<a id="e2d2"></a><a id="vic_e2d2"></a>
 
 ### VIC E2D2 General requirements
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in WA, from the WA schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
-<a id="wa_h9o1"></a>
+<a id="h9o1"></a><a id="wa_h9o1"></a>
 
 ### WA H9O1 Efficient use of water
 
@@ -31,7 +31,7 @@ The Objective is to reduce water demand by using water efficiently and minimisin
 
 Functional Statements
 
-<a id="wa_h9f1"></a>
+<a id="h9f1"></a><a id="wa_h9f1"></a>
 
 ### WA H9F1 Potable water demand
 
@@ -39,7 +39,7 @@ To reduce *potable water* demand, a building is to be capable of using *potable 
 
 Performance Requirements
 
-<a id="wa_h9p1"></a>
+<a id="h9p1"></a><a id="wa_h9p1"></a>
 
 ### WA H9P1 Water use efficiency
 
@@ -54,7 +54,7 @@ A building must have features that, to the degree necessary, facilitate the effi
 > WA H9P1 only applies to Class 1 buildings, associated Class 10a buildings and swimming pools associated with a Class 1 building.
 >
 
-<a id="wa_h9p2"></a>
+<a id="h9p2"></a><a id="wa_h9p2"></a>
 
 ### WA H9P2 Water loss prevention
 
@@ -70,7 +70,7 @@ A building, including any water holding structure, must have features that, to t
 > WA H9P2 only applies to Class 1 buildings, associated Class 10a buildings and *swimming pools* associated with a Class 1 building.
 >
 
-<a id="wa_h9p3"></a>
+<a id="h9p3"></a><a id="wa_h9p3"></a>
 
 ### WA H9P3 Heated water use efficiency
 
@@ -87,7 +87,7 @@ A building must have features that, to the degree necessary, facilitate the effi
 
 Deemed-to-Satisfy Provisions
 
-<a id="wa_h9d1"></a>
+<a id="h9d1"></a><a id="wa_h9d1"></a>
 
 ### WA H9D1 Deemed-to-Satisfy Provisions
 
@@ -97,7 +97,7 @@ Deemed-to-Satisfy Provisions
 
 (3) *Performance Requirement* WA H9P3 is satisfied for a building’s heated water use efficiency by complying with WA H9D4.
 
-<a id="wa_h9d2"></a>
+<a id="h9d2"></a><a id="wa_h9d2"></a>
 
 ### WA H9D2 Water use efficiency
 
@@ -107,7 +107,7 @@ Deemed-to-Satisfy Provisions
 
 (3) All sanitary flushing systems must be a minimum of 4 star *WELS* rated dual flush.
 
-<a id="wa_h9d3"></a>
+<a id="h9d3"></a><a id="wa_h9d3"></a>
 
 ### WA H9D3 Swimming pool covers and blankets
 
@@ -125,7 +125,7 @@ An outdoor private *swimming pool* or spa associated with a Class 1 building mus
 
 - (a) is deigned to reduce water evaporation; and
 - (b) is accredited under the Smart Approved Watermark Scheme governed by the Australian Water Association, the Irrigation Association of Australia, the Nursery and Garden Industry Australia and the Water Services Association of Australia.
-<a id="wa_h9d4"></a>
+<a id="h9d4"></a><a id="wa_h9d4"></a>
 
 ### WA H9D4 Heated water use efficiency
 

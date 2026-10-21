@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i10d1"></a>
+<a id="i10d1"></a><a id="tas_i10d1"></a>
 
 ### TAS I10D1 Application of Part
 
@@ -31,7 +31,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Mortuaries must be constructed in a manner that will ensure the health of staff and the general public.
 
-<a id="tas_i10d2"></a>
+<a id="i10d2"></a><a id="tas_i10d2"></a>
 
 ### TAS I10D2 Layout of mortuary
 
@@ -45,7 +45,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (4) Access to toilet and shower facilities from any other part of the mortuary premises must be only by way of an air lock.
 
-<a id="tas_i10d3"></a>
+<a id="i10d3"></a><a id="tas_i10d3"></a>
 
 ### TAS I10D3 Construction of body preparation room
 
@@ -65,7 +65,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 - (a) With sufficient capacity for the storage of at least two adult bodies; and
 - (b) Capable of maintaining an internal temperature between 1°C and 5°C.
-<a id="tas_i10d4"></a>
+<a id="i10d4"></a><a id="tas_i10d4"></a>
 
 ### TAS I10D4 Water supply and sewerage
 

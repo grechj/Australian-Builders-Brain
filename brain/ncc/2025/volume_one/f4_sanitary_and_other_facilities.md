@@ -917,6 +917,8 @@ Hot water, warm water and cooling water systems in a building other than a syste
 - (a) can only be accessed by staff, employees, contractors, maintenance personnel and the like; or
 - (b) is subject to an exemption under [D4D5](/ncc/2025/volume_one/d4_access_for_people_with_a_disability.md#d4d5).
 
+<a id="f4d13"></a>
+
 > **TAS variation**: TAS adds F4D13 Non-flushed urinals.
 >
 > Non-flushed urinals not connected to a sewerage system must comply with [TAS F4D14](#f4d14).
@@ -943,6 +945,8 @@ Hot water, warm water and cooling water systems in a building other than a syste
 > | 15,001 to 30,000 | 3 |
 > | Each extra 15,000 or part thereof | 1 |
 >
+
+<a id="f4d14"></a>
 
 > **TAS variation**: TAS adds F4D14 Installation of closet fixtures.
 >

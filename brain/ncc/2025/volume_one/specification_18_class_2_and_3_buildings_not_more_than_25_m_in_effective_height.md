@@ -112,6 +112,8 @@ The *Deemed-to-Satisfy Provisions* of this Specification take precedence where t
 - (d) The maximum distance of travel from a single *exit* serving the *storey* at the level of egress to a road or *open space*, as *required* by [D2D5(1)(a)(ii)](/ncc/2025/volume_one/d2_provision_for_escape.md#d2d5), may be increased from 20 m to 30 m.
 - (e) The maximum distance between alternative *exits*, as *required* by [D2D6(c)(i)](/ncc/2025/volume_one/d2_provision_for_escape.md#d2d6), may be increased from 45 m to 60 m.
 
+<a id="s18c5"></a>
+
 > **VIC variation**: VIC adds S18C5 Balconies in Class 2 and 3 buildings.
 >
 > Covered balconies in Class 2 or 3 buildings must be sprinkler protected.

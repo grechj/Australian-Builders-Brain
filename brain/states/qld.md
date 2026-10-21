@@ -88,7 +88,7 @@ Where Queensland changes the national code. A variation can replace, add to or d
 | QLD | adds | [B1D3.4](/ncc/2025/volume_three/b1_cold_water_services.md#b1d3) |
 | QLD | deletes | [B2P8](/ncc/2025/volume_three/b2_heated_water_services.md#b2p8) |
 | QLD | deletes | [B2D2](/ncc/2025/volume_three/b2_heated_water_services.md#b2d2) |
-| QLD | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md#part_ariation) |
+| QLD | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md) |
 
 ## Volume Two (8)
 

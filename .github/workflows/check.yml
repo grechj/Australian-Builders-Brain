@@ -31,3 +31,5 @@ jobs:
         run: python tools/test_start.py
       - name: Plain-English guides (found, and every figure pinned to the NCC)
         run: python tools/test_guides.py
+      - name: NCC anchors (every link lands on a clause)
+        run: python tools/test_ncc_anchors.py

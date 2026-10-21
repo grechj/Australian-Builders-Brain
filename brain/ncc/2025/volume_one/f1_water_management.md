@@ -110,6 +110,8 @@ A building is to be resistant to the effects of *water* from the ground.
 > - (c) an *open spectator stand* or *open-deck carpark*.
 >
 
+<a id="f1p2"></a>
+
 > **SA variation**: SA adds F1P2 Rising damp.
 >
 > (1) Moisture from the ground must be prevented from causing—

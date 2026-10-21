@@ -23,31 +23,31 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in WA, from the WA schedule of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
-<a id="wa_2_3_1"></a>
+<a id="2_3_1"></a><a id="wa_2_3_1"></a>
 
 ### WA 2.3.1 Scope
 
 [New for 2022] This Part sets out the changes necessary for Western Australia to the application of AS/NZS 1170.2:2021 for wind Region B2 and AS 4055:2021 for site wind classification.
 
-<a id="wa_2_3_2"></a>
+<a id="2_3_2"></a><a id="wa_2_3_2"></a>
 
 ### WA 2.3.2 Regional wind speeds
 
 [New for 2022]
 
-<a id="wa_2_3_3"></a>
+<a id="2_3_3"></a><a id="wa_2_3_3"></a>
 
 ### WA 2.3.3 Internal pressure
 
 [New for 2022]
 
-<a id="wa_2_3_4"></a>
+<a id="2_3_4"></a><a id="wa_2_3_4"></a>
 
 ### WA 2.3.4 Openings
 
 [New for 2022]
 
-<a id="wa_2_3_5"></a>
+<a id="2_3_5"></a><a id="wa_2_3_5"></a>
 
 ### WA 2.3.5 Site wind classification
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="sa_g8o1"></a>
+<a id="g8o1"></a><a id="sa_g8o1"></a>
 
 ### SA G8O1 Objective
 
@@ -31,25 +31,25 @@ The Objectives of this Part are—
 
 - (a) to safeguard people from injury while cleaning *windows*; and
 - (b) to safeguard people from injury or illness resulting from the creation of hazardous spaces between buildings. Functional Statements
-<a id="sa_g8f1"></a>
+<a id="g8f1"></a><a id="sa_g8f1"></a>
 
 ### SA G8F1 Window cleaning
 
 A building is to provide people with safe conditions for carrying out *window* cleaning operations.
 
-<a id="sa_g8f2"></a>
+<a id="g8f2"></a><a id="sa_g8f2"></a>
 
 ### SA G8F2 Hazardous conditions
 
 The space between buildings must not allow hazardous conditions to arise due to accumulation of rubbish that cannot readily be removed. Performance Requirements
 
-<a id="sa_g8p1"></a>
+<a id="g8p1"></a><a id="sa_g8p1"></a>
 
 ### SA G8P1 Window cleaning
 
 Where any part of a *window* in a building is more than 5.5 m above ground level, provision must be made for safe access to the external surface of the *window* for minor maintenance and cleaning.
 
-<a id="sa_g8p2"></a>
+<a id="g8p2"></a><a id="sa_g8p2"></a>
 
 ### SA G8P2 Hazardous conditions
 
@@ -58,19 +58,19 @@ The space between buildings must be sufficient to allow access for inspection an
 - (a) bridge termite barriers; or
 - (b) harbour vermin; or
 - (c) create a *fire hazard*. Deemed-to-Satisfy Provisions
-<a id="sa_g8d1"></a>
+<a id="g8d1"></a><a id="sa_g8d1"></a>
 
 ### SA G8D1 Deemed-to-Satisfy Provisions
 
 *Performance Requirements* SA G8P1 and SA G8P2 are satisfied by complying with SA G8D2 to SA G8D4.
 
-<a id="sa_g8d2"></a>
+<a id="g8d2"></a><a id="sa_g8d2"></a>
 
 ### SA G8D2 Application of Part
 
 SA G8D3 and SA G8D4 apply to Class 2 to 9 buildings.
 
-<a id="sa_g8d3"></a>
+<a id="g8d3"></a><a id="sa_g8d3"></a>
 
 ### SA G8D3 Access for window cleaning
 
@@ -84,7 +84,7 @@ SA G8D3 and SA G8D4 apply to Class 2 to 9 buildings.
   - (i) designed and installed in accordance with AS/NZS 1891.4; and
   - (ii) constructed of approved corrosion resistant material; or
 - (d) by means of opening sashes, in which the maximum reach to the farthest part of the *window* must not exceed 500 mm upwards or 1 m sideways or downwards and provided that where the *window* sill is less than 900 mm above floor level, safety anchorages are provided.
-<a id="sa_g8d4"></a>
+<a id="g8d4"></a><a id="sa_g8d4"></a>
 
 ### SA G8D4 Access for inspection and maintenance between buildings
 

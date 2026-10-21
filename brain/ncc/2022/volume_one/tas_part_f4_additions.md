@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_f4d13"></a>
+<a id="f4d13"></a><a id="tas_f4d13"></a>
 
 ### TAS F4D13 Non-flushed urinals
 
@@ -31,7 +31,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 Non-flushed urinals not connected to a sewerage system must comply with TAS F4D14.
 
-<a id="tas_f4d14"></a>
+<a id="f4d14"></a><a id="tas_f4d14"></a>
 
 ### TAS F4D14 Installation of closet fixtures
 

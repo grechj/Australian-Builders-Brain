@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="vic_f5d3"></a>
+<a id="f5d3"></a><a id="vic_f5d3"></a>
 
 ### VIC F5D3 Class 3, 9a and 9c residential aged care buildings – size of rooms
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="tas_e3o1"></a>
+<a id="e3o1"></a><a id="tas_e3o1"></a>
 
 ### TAS E3O1 Objective
 
@@ -37,7 +37,7 @@ The objective of this part is to—
 - (f) ensure that a roof drainage installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e).
 Functional Statements
 
-<a id="tas_e3f1"></a>
+<a id="e3f1"></a><a id="tas_e3f1"></a>
 
 ### TAS E3F1 Functional statements
 
@@ -45,7 +45,7 @@ Buildings are to be provided with roof drainage to provide protection to people,
 
 Performance Requirements
 
-<a id="tas_e3p1"></a>
+<a id="e3p1"></a><a id="tas_e3p1"></a>
 
 ### TAS E3P1 Roof drainage systems
 
@@ -58,19 +58,19 @@ Performance Requirements
 - (a) the importance of the building; and
 - (b) the severity of potential damage to the property; and
 - (c) The severity of *loss* of *amenity*, illness or injury that would result from the failure of the system.
-<a id="tas_e3p2"></a>
+<a id="e3p2"></a><a id="tas_e3p2"></a>
 
 ### TAS E3P2 Overflow
 
 A roof drainage system must provide an overflow device suitable for a 1% *annual exceedance probability* rainfall event.
 
-<a id="tas_e3p3"></a>
+<a id="e3p3"></a><a id="tas_e3p3"></a>
 
 ### TAS E3P3 Watertightness
 
 All internal roof drainage components must be *watertight*.
 
-<a id="tas_e3p4"></a>
+<a id="e3p4"></a><a id="tas_e3p4"></a>
 
 ### TAS E3P4 Design, construction and installation
 
@@ -84,13 +84,13 @@ All internal roof drainage components must be *watertight*.
 - (b) *loss* to building and property.
 (3) A roof drainage installation must avoid foul air and gasses accumulating in the roof drainage system. Deemed-to-Satisfy Provisions
 
-<a id="tas_e3d1"></a>
+<a id="e3d1"></a><a id="tas_e3d1"></a>
 
 ### TAS E3D1 Application
 
 *Performance Requirements* E3P1 to E3P4 are satisfied by complying with E3D2 and E3D3.
 
-<a id="tas_e3d2"></a>
+<a id="e3d2"></a><a id="tas_e3d2"></a>
 
 ### TAS E3D2 General requirements
 
@@ -98,7 +98,7 @@ A roof drainage system must comply with—
 
 - (a) AS/NZS 3500.3; or
 - (b) Housing Provisions 7.4
-<a id="tas_e3d3"></a>
+<a id="e3d3"></a><a id="tas_e3d3"></a>
 
 ### TAS E3D3 Roofing of liquid trade waste generation areas
 

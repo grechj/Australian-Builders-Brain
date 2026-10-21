@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NT, from the NT schedule of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
-<a id="nt_13_5_3"></a>
+<a id="13_5_3"></a><a id="nt_13_5_3"></a>
 
 ### NT 13.5.3 Ventilation openings
 

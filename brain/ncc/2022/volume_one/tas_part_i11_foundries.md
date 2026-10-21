@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i11d1"></a>
+<a id="i11d1"></a><a id="tas_i11d1"></a>
 
 ### TAS I11D1 Application of Part
 
@@ -31,7 +31,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Foundries must provide for the comfort and safety of workers on the premises.
 
-<a id="tas_i11d2"></a>
+<a id="i11d2"></a><a id="tas_i11d2"></a>
 
 ### TAS I11D2 General
 
@@ -41,7 +41,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 - (a) where a ceiling is provided, measured from the floor to the ceiling; or
 - (b) where a ceiling is not provided, measured from the floor to the lowest part of the roof.
-<a id="tas_i11d3"></a>
+<a id="i11d3"></a><a id="tas_i11d3"></a>
 
 ### TAS I11D3 Cupola charging platform
 
@@ -58,7 +58,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 - (b) the side between the top of the wall and the roof suitably waterproofed an ventilated.
 (4) A properly constructed access stair or ramp must be provide to give access to every cupola charging platform and must comply with AS 1657.
 
-<a id="tas_i11d4"></a>
+<a id="i11d4"></a><a id="tas_i11d4"></a>
 
 ### TAS I11D4 Deep moulds and pits
 
@@ -66,13 +66,13 @@ Deep moulds or pits, for permanent use—
 
 - (a) must be lined with bricks, concrete, or other suitable material in such a manner as to provide adequate reinforcement and to keep the pit or mould in a dry condition; and
 - (b) must be securely fenced by means of a wall of adequate construction, railings or chains and stanchions raised, in each case, to a height not less than 1 m above the surface of the surrounding floor.
-<a id="tas_i11d5"></a>
+<a id="i11d5"></a><a id="tas_i11d5"></a>
 
 ### TAS I11D5 Pot furnaces
 
 Where pot furnaces are below ground level, the pit must be covered by a substantial grating at the point at which metal is removed from the furnace, and must at all other times be securely fenced as in TAS I11D4(b)
 
-<a id="tas_i11d6"></a>
+<a id="i11d6"></a><a id="tas_i11d6"></a>
 
 ### TAS I11D6 Hand laminating and spray depositing
 

@@ -103,6 +103,8 @@ An outdoor play space is to be provided with a means of restricting the passage 
 > G1F4 only applies to a Class 9b *early childhood centre*.
 >
 
+<a id="g1f5"></a>
+
 > **NSW variation**: NSW adds G1F5 Cleaning of windows.
 >
 > A building is to be provided with a means to allow for the safe cleaning of *windows*.
@@ -260,6 +262,8 @@ must ensure that children cannot go through, over or under the fencing or other 
 >
 > G1P5 only applies to a Class 9b *early childhood centre*.
 >
+
+<a id="g1p6"></a>
 
 > **NSW variation**: NSW adds G1P6 Cleaning of windows.
 >
@@ -489,6 +493,8 @@ A *swimming pool's* pumped discharge must be discharged to the sanitary drainage
 >
 > Consideration should be given to the requirements of the relevant *Network Utility Operator*. Where a *Network Utility Operator* does not permit *swimming pool* discharge to the sanitary drainage system, a *Performance Solution* will be necessary to demonstrate the suitability of the alternative drainage method.
 >
+
+<a id="g1d6"></a>
 
 > **NSW variation**: NSW adds G1D6 Cleaning windows.
 >

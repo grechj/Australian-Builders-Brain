@@ -51,25 +51,25 @@ Where Northern Territory changes the national code. A variation can replace, add
 |---|---|---|
 | NT | replaces | [3.4.1.2](/ncc/2025/housing_provisions/3_4_termite_risk_management.md#3_4_1) |
 | NT | replaces | [3.4.2](/ncc/2025/housing_provisions/3_4_termite_risk_management.md#3_4_2) |
-| NT | replaces | [Part 10.7](/ncc/2025/housing_provisions/10_7_sound_insulation.md#part_ariation) |
+| NT | replaces | [Part 10.7](/ncc/2025/housing_provisions/10_7_sound_insulation.md) |
 | NT | replaces | [10.7.1](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_1) |
 | NT | replaces | [10.7.2](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_2) |
 | NT | replaces | [10.7.3](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_3) |
-| NT | replaces | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
+| NT | replaces | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
 | NT | replaces | [13.1.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#13_1_1) |
 | NT | replaces | [13.1.2](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#13_1_2) |
-| NT | replaces | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
+| NT | replaces | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
 | NT | replaces | [13.2.1](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_1) |
 | NT | replaces | [13.2.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_2) |
 | NT | replaces | [13.2.3](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_3) |
 | NT | replaces | [13.2.4](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_4) |
 | NT | replaces | [13.2.5](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_5) |
 | NT | replaces | [13.2.6](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_6) |
-| NT | replaces | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
+| NT | replaces | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
 | NT | replaces | [13.3.1](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_1) |
 | NT | replaces | [13.3.2](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_2) |
 | NT | replaces | [13.3.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_3) |
-| NT | replaces | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
+| NT | replaces | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
 | NT | replaces | [13.4.1](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_1) |
 | NT | replaces | [13.4.2](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_2) |
 | NT | replaces | [13.4.3](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_3) |
@@ -77,12 +77,12 @@ Where Northern Territory changes the national code. A variation can replace, add
 | NT | replaces | [13.4.5](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_5) |
 | NT | replaces | [13.4.6](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_6) |
 | NT | replaces | [13.4.7](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_7) |
-| NT | replaces | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
+| NT | replaces | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
 | NT | replaces | [13.5.1](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_1) |
 | NT | replaces | [13.5.2](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_2) |
 | NT | replaces | [13.5.3](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_3) |
-| NT | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| NT | replaces | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| NT | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| NT | replaces | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 | NT | replaces | [13.7.1](/ncc/2025/housing_provisions/13_7_services.md#13_7_1) |
 | NT | replaces | [13.7.2](/ncc/2025/housing_provisions/13_7_services.md#13_7_2) |
 | NT | replaces | [13.7.3](/ncc/2025/housing_provisions/13_7_services.md#13_7_3) |
@@ -104,7 +104,7 @@ Where Northern Territory changes the national code. A variation can replace, add
 | NT | adds | [Part B1D4](/ncc/2025/volume_one/b1_structural_provisions.md#table_32898a40) |
 | NT | replaces | [E1D10](/ncc/2025/volume_one/e1_fire_fighting_equipment.md#e1d10) |
 | NT | replaces | [F4D4](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#f4d4) |
-| NT | replaces | [Part F7](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#part_ariation) |
+| NT | replaces | [Part F7](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md) |
 | NT | replaces | [F7P1](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p1) |
 | NT | replaces | [F7P2](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p2) |
 | NT | replaces | [F7P3](/ncc/2025/volume_one/f7_sound_transmission_and_insulation.md#f7p3) |
@@ -122,15 +122,15 @@ Where Northern Territory changes the national code. A variation can replace, add
 | NT | replaces | [G1P2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1p2) |
 | NT | deletes | [G1D2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1d2) |
 | NT | deletes | [G1D5](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1d5) |
-| NT | deletes | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#part_ariation) |
-| NT | deletes | [Part J2](/ncc/2025/volume_one/j2_energy_efficiency.md#part_ariation) |
-| NT | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
-| NT | deletes | [Part J4](/ncc/2025/volume_one/j4_building_fabric.md#part_ariation) |
-| NT | deletes | [Part J5](/ncc/2025/volume_one/j5_building_sealing.md#part_ariation) |
-| NT | deletes | [Part J6](/ncc/2025/volume_one/j6_air_conditioning_and_ventilation.md#part_ariation) |
-| NT | deletes | [Part J7](/ncc/2025/volume_one/j7_artificial_lighting_and_power.md#part_ariation) |
-| NT | deletes | [Part J8](/ncc/2025/volume_one/j8_heated_water_supply_and_swimming_pool_and_spa_pool_plant.md#part_ariation) |
-| NT | deletes | [Part J9](/ncc/2025/volume_one/j9_energy_monitoring_and_on_site_distributed_energy_resources.md#part_ariation) |
+| NT | deletes | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md) |
+| NT | deletes | [Part J2](/ncc/2025/volume_one/j2_energy_efficiency.md) |
+| NT | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
+| NT | deletes | [Part J4](/ncc/2025/volume_one/j4_building_fabric.md) |
+| NT | deletes | [Part J5](/ncc/2025/volume_one/j5_building_sealing.md) |
+| NT | deletes | [Part J6](/ncc/2025/volume_one/j6_air_conditioning_and_ventilation.md) |
+| NT | deletes | [Part J7](/ncc/2025/volume_one/j7_artificial_lighting_and_power.md) |
+| NT | deletes | [Part J8](/ncc/2025/volume_one/j8_heated_water_supply_and_swimming_pool_and_spa_pool_plant.md) |
+| NT | deletes | [Part J9](/ncc/2025/volume_one/j9_energy_monitoring_and_on_site_distributed_energy_resources.md) |
 
 ## Volume Three (4)
 
@@ -148,7 +148,7 @@ Where Northern Territory changes the national code. A variation can replace, add
 | NT | deletes | [H2P4](/ncc/2025/volume_two/h2_damp_and_weatherproofing.md#h2p4) |
 | NT | replaces | [H4P6](/ncc/2025/volume_two/h4_health_and_amenity.md#h4p6) |
 | NT | deletes | [H4V4](/ncc/2025/volume_two/h4_health_and_amenity.md#h4v4) |
-| NT | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| NT | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | NT | replaces | [H6O1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6o1) |
 | NT | replaces | [H6F1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6f1) |
 | NT | replaces | [H6P1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6p1) |

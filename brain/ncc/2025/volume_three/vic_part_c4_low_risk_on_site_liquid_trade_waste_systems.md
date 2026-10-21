@@ -29,6 +29,8 @@ alteration and maintenance of any part of a low risk on-site liquid trade waste 
 
 ## Objectives
 
+<a id="c4o1"></a>
+
 > **VIC variation**: VIC replaces C4O1 Objective.
 >
 > The Objective of this part is to—
@@ -43,6 +45,8 @@ alteration and maintenance of any part of a low risk on-site liquid trade waste 
 
 ## Functional Statements
 
+<a id="c4f1"></a>
+
 > **VIC variation**: VIC replaces C4F1 Functional statement.
 >
 > (1) Where liquid trade waste is generated, adequate space and facilities must be provided for the safe and hygienic collection, holding, treatment and/or disposal of the waste.
@@ -51,6 +55,8 @@ alteration and maintenance of any part of a low risk on-site liquid trade waste 
 >
 
 ## Performance Requirements
+
+<a id="c4p1"></a>
 
 > **VIC variation**: VIC replaces C4P1 Requirements for low risk on-site liquid trade waste management practices.
 >

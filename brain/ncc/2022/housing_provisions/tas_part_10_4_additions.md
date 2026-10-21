@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
-<a id="tas_10_4_3"></a>
+<a id="10_4_3"></a><a id="tas_10_4_3"></a>
 
 ### TAS 10.4.3 Installation of closet fixtures
 

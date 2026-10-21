@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
-<a id="nsw_9_4_3"></a>
+<a id="9_4_3"></a><a id="nsw_9_4_3"></a>
 
 ### NSW 9.4.3 Construction of walls
 

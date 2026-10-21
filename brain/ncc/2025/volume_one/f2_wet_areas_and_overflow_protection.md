@@ -84,6 +84,8 @@ To protect the structure of the building and to maintain the *amenity* of the oc
 
 of *sanitary compartments*, bathrooms, laundries and the like.
 
+<a id="f2p3"></a>
+
 > **SA variation**: SA adds F2P3 Prevention of surface water accumulation.
 >
 > In laundries, bathrooms or rooms containing shower facilities the floors must be installed in a manner that will prevent accumulation of surface water which could create unhealthy or hazardous conditions.

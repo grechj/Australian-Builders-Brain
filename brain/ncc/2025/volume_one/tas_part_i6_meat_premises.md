@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for meat premises.
 
+<a id="i6d1"></a>
+
 > **TAS variation**: TAS replaces I6D1 Application of Part.
 >
 > (1) This Part is applicable to—
@@ -36,6 +38,8 @@ This Part contains additional requirements for meat premises.
 > - (b) provides for hygienic processing of animals; and
 > - (c) ensures the wholesomeness of meat and meat products.
 >
+
+<a id="i6d2"></a>
 
 > **TAS variation**: TAS replaces I6D2 Premises processing animals and meat.
 >

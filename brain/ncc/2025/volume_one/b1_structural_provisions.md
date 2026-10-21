@@ -269,6 +269,8 @@ Glass installations that are at risk of being subjected to human impact must hav
 > - (c) a Class 9c building.
 >
 
+<a id="b1p4"></a>
+
 > **NSW variation**: NSW adds B1P4 Structural resistance.
 >
 > The structural resistance of materials and forms of construction must be determined using five percentile characteristics material properties with appropriate allowance for—

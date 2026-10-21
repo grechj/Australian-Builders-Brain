@@ -23,10 +23,14 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 NSW Part I6 contains *Deemed-to-Satisfy Provisions* for drive-in theatres.
 
+<a id="i6d1"></a>
+
 > **NSW variation**: NSW replaces I6D1 Application of Part.
 >
 > This Part applies to drive-in theatres.
 >
+
+<a id="i6d2"></a>
 
 > **NSW variation**: NSW replaces I6D2 Speaker standards.
 >
@@ -36,10 +40,14 @@ NSW Part I6 contains *Deemed-to-Satisfy Provisions* for drive-in theatres.
 > - (b) be capable of being illuminated throughout any performance so as to be easily distinguishable at all times.
 >
 
+<a id="i6d3"></a>
+
 > **NSW variation**: NSW replaces I6D3 Lines of speaker standards.
 >
 > Lines of speaker standards along parking ramps must be placed at a distance of not less than 12.2 m apart.
 >
+
+<a id="i6d4"></a>
 
 > **NSW variation**: NSW replaces I6D4 Electrical services.
 >
@@ -50,10 +58,14 @@ NSW Part I6 contains *Deemed-to-Satisfy Provisions* for drive-in theatres.
 > - (c) all wiring to the speaker standards.
 >
 
+<a id="i6d5"></a>
+
 > **NSW variation**: NSW replaces I6D5 Vehicular entrances.
 >
 > Each public vehicular entrance to or exit from the drive-in theatre must be capable of being fully illuminated by flood lights that are so placed and so focussed as not to interfere with the vision of the driver of any motor vehicle.
 >
+
+<a id="i6d6"></a>
 
 > **NSW variation**: NSW replaces I6D6 Lighting.
 >

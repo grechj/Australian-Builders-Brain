@@ -23,19 +23,19 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in WA, from the WA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="wa_b2d1"></a>
+<a id="b2d1"></a><a id="wa_b2d1"></a>
 
 ### WA B2D1 Regional wind speeds
 
 [New for 2022]
 
-<a id="wa_b2d2"></a>
+<a id="b2d2"></a><a id="wa_b2d2"></a>
 
 ### WA B2D2 Internal pressure
 
 [New for 2022]
 
-<a id="wa_b2d3"></a>
+<a id="b2d3"></a><a id="wa_b2d3"></a>
 
 ### WA B2D3 Openings
 

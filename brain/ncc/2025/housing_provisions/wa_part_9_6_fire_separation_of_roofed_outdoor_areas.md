@@ -21,6 +21,8 @@ generated: { by: process:ncc_ingest/0.1, at: 2026-10-16T10:00:55Z }
 
 From **NCC 2025 Housing Provisions**, Fire safety.[^abcb_ncc] Defined terms are in *italics*; see [definitions](definitions.md). State and territory variations (WA) are shown in quotes beside the clause they change.
 
+<a id="9_6_1"></a>
+
 > **WA variation**: WA replaces 9.6.1 Measurement of distances.
 >
 > (1) For roofed outdoor areas complying with [WA 9.6.2(1)](#9_6_2) the distance is measured between the outermost structural projection of the roofed outdoor area and—
@@ -57,6 +59,8 @@ From **NCC 2025 Housing Provisions**, Fire safety.[^abcb_ncc] Defined terms are 
 >
 > <a id="figure_ea3b2844"></a>*Figure: Measurement of distance — buildings of different heights on the same allotment — roofed outdoor area complying with WA 9.6.2(3)* (not reproduced here, see the figure on ncc.abcb.gov.au)
 >
+
+<a id="9_6_2"></a>
 
 > **WA variation**: WA replaces 9.6.2 Roofed outdoor areas.
 >
