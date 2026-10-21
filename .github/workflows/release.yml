@@ -17,11 +17,20 @@ jobs:
       - name: Build the plugin zip
         run: git archive --format=zip -o australian-builders-brain.zip HEAD
       - name: Write the release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          # Every changelog section since the last published release, so skipped versions aren't lost.
+          prev=$(gh release view --json tagName -q .tagName 2>/dev/null || true)
+          prev=${prev#v}
           {
             echo "Install: download australian-builders-brain.zip, then in Claude go to Customize > Plugins > Add > Upload plugin."
             echo
-            awk '/^## /{n++} n==1' CHANGELOG.md | tail -n +2
+            if [ -n "$prev" ] && grep -q "^## $prev " CHANGELOG.md; then
+              awk -v stop="## $prev " 'index($0, stop) == 1 {exit} /^## /{n++} n>=1' CHANGELOG.md
+            else
+              awk '/^## /{n++} n==1' CHANGELOG.md
+            fi
           } > notes.md
       - name: Publish the release
         env:
