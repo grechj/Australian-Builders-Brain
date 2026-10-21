@@ -25,3 +25,5 @@ jobs:
         run: python tools/test_projects.py
       - name: First-run setup and home page
         run: python tools/test_start.py
+      - name: Plain-English guides (found, and every figure pinned to the NCC)
+        run: python tools/test_guides.py

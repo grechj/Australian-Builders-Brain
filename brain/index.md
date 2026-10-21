@@ -14,6 +14,7 @@ tradespeople, from quote to final account. Start with the job's
 * [Documents](documents/) - One page per template: what it's for, its fields, which skill fills it
 * [Fields](fields/) - The shared project fields every template fills from
 * [Glossary](glossary/) - Site slang and trade terms
+* [Guides](guides/) - Plain-English how-to guides: what the NCC asks for on common jobs, and the materials trades use
 * [Lifecycle](lifecycle/) - The five stages of a job, from quote to final account, with the documents used at each
 * [NCC](ncc/) - National Construction Code: editions, volumes, how to cite
 * [Phases](phases/) - Construction phases by project type: activities, inspections, materials, weather risk, next trades

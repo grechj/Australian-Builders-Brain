@@ -7,6 +7,7 @@ Usage:
     python tools/ncc_lookup.py define "wet area" --volume volume_two
     python tools/ncc_lookup.py variations --state NSW --volume volume_two
     python tools/ncc_lookup.py search "smoke alarm location" --trade electrician --state QLD
+    python tools/ncc_lookup.py guides "deck balustrade height" --trade carpenter   # plain-English guides first
 
 --trade limits clause and search results to that trade's NCC scope
 (brain/trades/<trade>.md; `builder` or `all` = everything). --state shows
@@ -163,6 +164,72 @@ def cmd_search(args, blocks: list[Block]) -> None:
     for score, b in scored[: args.limit]:
         snippet = re.sub(r"\s+", " ", re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", b.text))[:220]
         print(f"- **{b.heading}** ({b.volume}) score {score:.2f}\n  {snippet}...\n  `{b.page.relative_to(ROOT).as_posix()}#{b.anchor}`")
+    guides = [g for s, g in guide_matches(args.query, getattr(args, "trade", None), 2) if s >= 2]
+    if guides:
+        print("\nPlain-English guides on this: " + "; ".join(f"{g['title']} (`{g['path']}`)" for g in guides))
+
+
+QUESTION_WORDS = set("how what when where which who why does do did need needs go goes can should my i we you it its be to is are".split())
+SAME = {"high": "height", "higher": "height", "tall": "height", "deep": "depth", "deeper": "depth", "wide": "width",
+        "balustrading": "balustrade", "railing": "balustrade", "rail": "balustrade", "steps": "stair", "step": "stair",
+        "stairs": "stair", "stairway": "stair", "bathroom": "wet", "ensuite": "wet", "laundry": "wet"}
+
+
+def guide_terms(text: str) -> list[str]:
+    """Words for matching guides: question words dropped, plurals folded, a few site words mapped to the code's words."""
+    out = []
+    for w in WORD.findall(text.lower()):
+        if w in STOP or w in QUESTION_WORDS:
+            continue
+        w = SAME.get(w, w)
+        if len(w) > 4 and w.endswith("s") and not w.endswith("ss"):
+            w = w[:-1]
+        out.append(SAME.get(w, w))
+    return out
+
+
+def guide_matches(query: str, trade: str | None = None, limit: int = 3) -> list[tuple[float, dict]]:
+    """Plain-English guides (brain/guides/) that match the query, best first.
+
+    Each guide's title, description and tags count three times as much as
+    its body. --trade keeps guides written for that trade (their `trades:`
+    list), or every guide for `builder` and `all`.
+    """
+    q = set(guide_terms(query))
+    pages = []
+    for page in sorted((ROOT / "brain" / "guides").rglob("*.md")):
+        if page.name == "index.md":
+            continue
+        text = page.read_text()
+        front = text.split("---", 2)[1] if text.startswith("---") else ""
+        meta = {}
+        for key in ("title", "description", "tags", "trades"):
+            m = re.search(rf"^{key}: (.+)$", front, re.M)
+            meta[key] = m.group(1).strip() if m else ""
+        head = Counter(guide_terms(meta["title"] + " " + meta["description"] + " " + meta["tags"].replace("_", " ")))
+        body = Counter(guide_terms(text.split("---", 2)[2] if front else text))
+        pages.append((page, meta, head, body))
+    df = Counter(w for _, _, head, body in pages for w in set(head) | set(body))
+    out = []
+    for page, meta, head, body in pages:
+        if trade and trade not in ("builder", "all") and trade not in meta["trades"]:
+            continue
+        # Rarer words count for more, and a word in the title, description or tags counts most.
+        score = sum((3 * min(head[w], 2) + 0.3 * min(body[w], 5)) * math.log(1 + len(pages) / (1 + df[w])) for w in q)
+        hits = sum(1 for w in q if head[w] or body[w])
+        if hits:
+            out.append((score * hits / len(q), {"title": meta["title"], "description": meta["description"],
+                                                "path": page.relative_to(ROOT).as_posix()}))
+    out.sort(key=lambda x: -x[0])
+    return out[:limit]
+
+
+def cmd_guides(args, _blocks) -> None:
+    found = guide_matches(args.query, args.trade, args.limit)
+    if not found:
+        raise SystemExit("No guide matches. Search the code itself: ncc_lookup.py search ...")
+    for score, g in found:
+        print(f"- **{g['title']}** score {score:.2f}\n  {g['description']}\n  `{g['path']}`")
 
 
 def cmd_variations(args, _blocks) -> None:
@@ -182,18 +249,21 @@ def main() -> None:
     p = sub.add_parser("define"); p.add_argument("term")
     p = sub.add_parser("search"); p.add_argument("query"); p.add_argument("--limit", type=int, default=8)
     p = sub.add_parser("variations"); p.add_argument("--state", required=True)
+    p = sub.add_parser("guides"); p.add_argument("query"); p.add_argument("--limit", type=int, default=3)
+    p.add_argument("--trade", help="only guides written for this trade")
     for name in ("clause", "define", "search", "variations"):
         sub.choices[name].add_argument("--volume")
     for name in ("clause", "define", "search"):
         sub.choices[name].add_argument("--trade", help="limit to this trade's NCC scope")
         sub.choices[name].add_argument("--state", help="show only this state's variations")
     args = parser.parse_args()
-    if args.cmd == "variations":
+    if args.cmd in ("variations", "guides"):
         blocks = []
     else:
         state = args.state.upper() if args.state else None
         blocks = load(args.edition, args.volume, scope_filter(args.trade, state, args.edition), state)
-    {"clause": cmd_clause, "define": cmd_define, "search": cmd_search, "variations": cmd_variations}[args.cmd](args, blocks)
+    {"clause": cmd_clause, "define": cmd_define, "search": cmd_search, "variations": cmd_variations,
+     "guides": cmd_guides}[args.cmd](args, blocks)
 
 
 if __name__ == "__main__":

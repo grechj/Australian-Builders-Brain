@@ -45,6 +45,9 @@ FOLDERS = {
     "attesters": "Deterministic checks for computation receipts",
     "playbooks": "Step-by-step checklists: PC inspection, claim support pack, pre-construction, hold points, safety inspection",
     "handouts": "Plain-English handouts for clients",
+    "guides": "Plain-English how-to guides: what the NCC asks for on common jobs, and the materials trades use",
+    "code": "What the NCC asks for on common jobs, in plain words, with the clauses in NCC 2022 and 2025",
+    "materials": "Materials for trades: grades, treatments, types and where each one goes",
     "trades": "Trade profiles: each trade's NCC scope, skills, takeoff jobs, materials and suppliers (builder sees everything)",
     "2025": "NCC 2025 (v1.2), converted from the ABCB's CC BY 4.0 XML: every Part, clause, definition and state variation",
     "2022": "NCC 2022 as published (1 May 2023), converted from the ABCB's PDFs; read with Amendments 1 and 2",
@@ -134,6 +137,46 @@ def check_links(warnings: list[str]) -> None:
                 warnings.append(f"{p.relative_to(ROOT)}: broken link {target}")
 
 
+def _plain(text: str) -> str:
+    return re.sub(r"\s+", " ", text.replace("*", "").replace("\u2019", "'")).strip().lower()
+
+
+def check_anchors_and_quotes(errors: list[str]) -> None:
+    """Links into the NCC must land on a clause that exists, and every `checks`
+    entry (a page and a phrase) must still read that way on that page. Guides
+    use `checks` to pin each figure they state to the NCC text it came from."""
+    cache: dict[Path, str] = {}
+
+    def page(target: str, base: Path) -> Path:
+        return BRAIN / target.lstrip("/") if target.startswith("/") else base.parent / target
+
+    for p in sorted(BRAIN.rglob("*.md")):
+        if "/ncc/" in str(p):
+            continue
+        text = p.read_text()
+        # Generated state pages link variation clauses that the national text doesn't have; check guides and hand-written pages.
+        if "/states/" in str(p):
+            text = re.sub(r"<!-- NCC(2022)?:START.*?<!-- NCC(2022)?:END -->", "", text, flags=re.S)
+        for target in LINK.findall(text):
+            if "#" not in target or not target.startswith("/ncc/"):
+                continue
+            path, anchor = target.split("#", 1)
+            dest = page(path, p)
+            if dest.exists():
+                body = cache.setdefault(dest, dest.read_text())
+                if f'<a id="{anchor}"></a>' not in body:
+                    errors.append(f"{p.relative_to(BRAIN.parent)}: link {target} points to a clause that isn't on that page")
+        meta, _ = split_front(text)
+        for c in (meta or {}).get("checks") or []:
+            dest = page(str(c.get("page", "")), p)
+            if not dest.exists():
+                errors.append(f"{p.relative_to(BRAIN.parent)}: checks page {c.get('page')} not found")
+                continue
+            body = cache.setdefault(dest, dest.read_text())
+            if _plain(str(c.get("text", ""))) not in _plain(body):
+                errors.append(f"{p.relative_to(BRAIN.parent)}: checks text not found on {c.get('page')}: {c.get('text')!r}")
+
+
 def check_indexes(errors: list[str]) -> None:
     for p in BRAIN.rglob("index.md"):
         meta, _ = split_front(p.read_text())
@@ -175,7 +218,8 @@ def check_workbooks(errors: list[str]) -> None:
 
 
 def write_indexes() -> None:
-    dirs = sorted({p.parent for p in BRAIN.rglob("*.md")} | {BRAIN}, key=lambda d: len(d.parts), reverse=True)
+    dirs = sorted({a for p in BRAIN.rglob("*.md") for a in p.parents if a == BRAIN or BRAIN in a.parents} | {BRAIN},
+                  key=lambda d: len(d.parts), reverse=True)
     for d in dirs:
         lines = []
         subdirs = sorted(x for x in d.iterdir() if x.is_dir() and any(x.rglob("*.md")))
@@ -212,6 +256,7 @@ def main() -> None:
     check_concepts(errors, warnings)
     check_indexes(errors)
     check_links(warnings)
+    check_anchors_and_quotes(errors)
     check_placeholders(errors)
     check_workbooks(errors)
 

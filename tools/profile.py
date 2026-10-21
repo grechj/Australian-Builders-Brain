@@ -99,6 +99,18 @@ def _bullets(body: str, heading: str) -> list[str]:
     return [l[2:].strip() for l in m.group(1).splitlines()] if m else []
 
 
+def guides_for(tid: str) -> list[dict]:
+    """The plain-English guides (brain/guides/) written for this trade, or all of them for builder and all."""
+    out = []
+    for page in sorted((ROOT / "brain" / "guides").rglob("*.md")):
+        if page.name == "index.md":
+            continue
+        meta, _ = _front(page)
+        if tid in EVERYTHING or tid in (meta.get("trades") or []):
+            out.append({"title": meta.get("title", page.stem), "kind": page.parent.name, "page": str(page.relative_to(ROOT))})
+    return out
+
+
 def resolve_profile(trade: str | None = None, state: str | None = None, edition: str = "2025") -> dict:
     tid, code = find_trade(trade), find_state(state)
     edition = str(edition or "2025")
@@ -139,6 +151,7 @@ def resolve_profile(trade: str | None = None, state: str | None = None, edition:
         "typical_materials": _bullets(meta.get("_body", ""), "Typical materials:"),
         "suppliers": _bullets(meta.get("_body", ""), "Where to price them (beyond the Bunnings retail guide):"),
         "standards": _bullets(meta.get("_body", ""), "# Key standards and rules (referenced, not reproduced)"),
+        "guides": guides_for(tid),
         "trade_page": str(meta["_page"].relative_to(ROOT)) if meta.get("_page") else "",
         "state_page": f"brain/states/{code.lower()}.md" if code else "brain/states/overview.md",
     }
@@ -174,6 +187,8 @@ def main() -> None:
     print(f"Profile: {prof['trade_title']} in {prof['state'] or 'no state set (state-only Parts and variations hidden)'}, NCC {prof['ncc_edition']}")
     print(f"Trade page: {prof['trade_page']}   State page: {prof['state_page']}")
     print(f"\nSkills: {', '.join(prof['skills'])}")
+    if prof["guides"]:
+        print("Guides: " + "; ".join(f"{g['title']} ({g['page']})" for g in prof["guides"]))
     print(f"Takeoff jobs: {', '.join(prof['takeoff_jobs']) or 'none (use the typical materials as a checklist)'}")
     print(f"\nNCC pages in scope ({len(prof['ncc_scope'])}):")
     for p in prof["ncc_scope"][:60]:
