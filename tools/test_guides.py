@@ -48,6 +48,19 @@ def main() -> None:
         "minimum ceiling height bedroom": "room_heights",
         "vapour barrier under a slab": "footings_and_slabs",
         "how deep do deck stumps go": "footings_and_slabs",
+        # Material guides
+        "what treatment level for retaining wall posts": "timber_treatment_and_grades",
+        "MGP10 vs MGP12 framing grade": "timber_treatment_and_grades",
+        "which screws for treated pine near the coast": "fixings_and_corrosion",
+        "merbau or spotted gum decking boards": "decking",
+        "fire rated plasterboard garage wall": "plasterboard_and_linings",
+        "what grade concrete for a driveway": "concrete",
+        "how many premix bags": "concrete",
+        "silicone or polyurethane sealant": "membranes_and_sealants",
+        "liquid membrane bond breaker": "membranes_and_sealants",
+        "ceiling batts R value compressed": "insulation",
+        "vapour permeable wall wrap condensation": "sarking_and_wraps",
+        "primer for galvanised steel": "paint_systems",
     }
     for q, want in questions.items():
         expect(f"guide for '{q}'", top(q), want)
@@ -59,6 +72,7 @@ def main() -> None:
     code_guides = [p for p in guides if p.parent.name == "code"]
     missing = [p.name for p in code_guides if "checks:" not in p.read_text()]
     expect("every code guide pins its figures (checks:)", missing, [])
+    expect("nine material guides", len([p for p in guides if p.parent.name == "materials"]), 9)
     both = [p.name for p in code_guides if "/ncc/2022/" not in p.read_text() or "/ncc/2025/" not in p.read_text()]
     expect("every code guide cites both NCC 2022 and 2025", both, [])
     errors: list[str] = []

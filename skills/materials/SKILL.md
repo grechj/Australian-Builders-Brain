@@ -24,6 +24,7 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/materials_estimating.md` (read it first: price sources, Bunnings terms, qualifications)
 - Maths: `brain/computations/materials_takeoff.md`, `materials_rom.md`
+- Material guides: `brain/guides/materials/` (timber treatment and grades, fixings and corrosion, decking, plasterboard, concrete, membranes and sealants, insulation, sarking and wraps, paint). Find one with `tools/ncc_lookup.py guides "<question>" --trade <trade>`
 - Personal price list: `tools/price_list.py` (each user keeps their own, e.g. `my_prices.csv`)
 - Optional Bunnings API client: `tools/bunnings.py` (needs the user's own approved keys)
 - Template: `templates/excel/Materials_Estimate_TEMPLATE.xlsx`
@@ -66,6 +67,12 @@ check the assumptions with the user. For structural members (joists,
 bearers, posts, studs), ask for the sizes from the plans, the engineer or
 AS 1684 span tables. Never pick structural sizes yourself; if they're
 unknown, use the defaults and mark them **assumed: confirm before buying**.
+
+Use the material guides to get the specification right before taking
+off: the treatment level (H3 above ground, H5 for structural posts in the
+ground), fixings for the treatment and distance from the coast, the board
+type for each room, the concrete grade. Say in a line why you chose it
+("H5 because the posts are in the ground"), so the user can correct you.
 
 For a bigger job (an extension, say), break it into elements and run a
 takeoff for each: slab, wall framing, plasterboard, tiling, painting. Items
