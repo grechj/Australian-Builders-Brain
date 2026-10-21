@@ -88,7 +88,7 @@ council or authority fees.
 ## Subcontractor Agreement and Trade Scope Confirmation
 
 1. Get the subbie's details (name, ABN, licence, phone, email), the trade, their quote reference and price ex GST, and the dates.
-2. Check whether they are GST-registered (if not, there's no GST on their price), and get evidence of a current licence, public liability (the agreement asks for $10M) and workers compensation before they start. Record it in the Subbie Insurance and Licence Tracker.
+2. Check them on the public registers (`$ABB/brain/playbooks/checking_registers.md`): their ABN on ABN Lookup (active, the name matches, and whether they're GST-registered: if not, there's no GST on their price) and their licence on the state's register (current, the class covers their scope, in the name they're contracting under). Then get certificates of currency for public liability (the agreement asks for $10M) and workers compensation before they start. Record what the registers and certificates showed in the Subbie Insurance and Licence Tracker.
 3. Price: `python3 $ABB/tools/compute.py gst --param amount_ex_gst=<price>`.
 4. Fill the agreement (`examples/subcontract_spec.yaml`) and the trade scope confirmation (`examples/trade_scope_spec.yaml`). Set the supply rows to `☒|☐` (builder supplies) or `☐|☒` (subbie supplies). Spell out inclusions and exclusions; vague trade scopes cause most back charges.
 

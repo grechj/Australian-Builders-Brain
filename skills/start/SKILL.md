@@ -1,6 +1,6 @@
 ---
 name: start
-description: Start here. Sets up the Australian Builder's Brain for a new builder or tradie in a few minutes. Asks their trade, state and business details once, makes their jobs folder, runs a practice job so they see an invoice read and filed, and shows what they can ask for their trade. Use when someone says set me up, get started, start here, I'm new, first time, how does this work, what can you do, what can the builder's brain do, help, or show me around, or when there's no profile.yaml in their folder and they ask about a job.
+description: Start here. Sets up the Australian Builder's Brain for a new builder or tradie in a few minutes. Asks their trade, state and business details once, checks their ABN and licence on the public registers, keeps their insurance expiry dates, makes their jobs folder, runs a practice job so they see an invoice read and filed, and shows what they can ask for their trade. Use when someone says set me up, get started, start here, I'm new, first time, how does this work, what can you do, what can the builder's brain do, help, or show me around, update my profile, check my ABN or licence, my insurance has been renewed, or when there's no profile.yaml in their folder and they ask about a job.
 ---
 
 # Start here
@@ -67,7 +67,7 @@ than one trade, pick the main one and say they can change it.
 Ask in one message, and say it's what goes on their quotes, invoices and
 claims, and that they can skip anything and add it later:
 
-- business name, ABN, licence number
+- business name, ABN, licence number (or "don't need one": some trades in some states aren't licensed, such as carpenters in the ACT)
 - phone and email, and business address
 - bank details for invoices (account name, BSB, account number): optional; reassure them it stays in a file on their own computer
 - which accounting software they use (Xero, MYOB, QuickBooks, none)
@@ -80,9 +80,51 @@ python3 $ABB/tools/start.py setup --trade <trade> --state <STATE> --business-nam
     --account-name "..." --bsb "..." --account-number "..." --software xero
 ```
 
-Check the ABN has 11 digits; if it doesn't look right, ask once. Tell them
-in one line what was made: their profile, a jobs list, and an `inbox`
-folder for invoices, receipts and photos.
+If the result has a checksum warning for the ABN, ask once whether it's
+right. Tell them in one line what was made: their profile, a jobs list, and
+an `inbox` folder for invoices, receipts and photos.
+
+## 3a. Check them on the public registers
+
+> Want me to check your ABN and licence on the public registers? It takes a minute and catches typos before they go on an invoice.
+
+If yes, follow `$ABB/brain/playbooks/checking_registers.md`:
+
+- **ABN**: open `https://abr.business.gov.au/ABN/View?abn=<11 digits>` with your web tools and read the entity name, ABN status, GST registration and location.
+- **Licence**: open the register for their state (the playbook's table; their state page in `$ABB/brain/states/` has the link) and find their licence: holder, class, status and expiry. If the register is a search form you can't read, give them the link and ask what it shows.
+- **No licence**: if they said they don't need one, check the state's licensing page for their trade (the playbook says where) and tell them what you found.
+
+Record each result, then tell them in one line per check what the register
+showed and anything that doesn't match (a different name, not registered
+for GST while the profile says it is, a licence class that doesn't cover
+their work, an expiry coming up):
+
+```bash
+python3 $ABB/tools/start.py check --what abn --result match --entity-name "..." --abn-status active --gst-registered yes --register "https://abr.business.gov.au/ABN/View?abn=..."
+python3 $ABB/tools/start.py check --what licence --result match --licence-class "..." --licence-status current --expiry 30/06/2027 --register "<register link>"
+python3 $ABB/tools/start.py check --what licence --result not_required --notes "<what the state's page says>" --register "<that page>"
+```
+
+`--result` is `match`, `mismatch`, `not_found` or `not_required` (licence
+only). Never record a check you didn't do: if a page couldn't be read and
+the user can't say, leave it unchecked.
+
+## 3b. Insurance (optional)
+
+> Want me to keep an eye on your insurance? Tell me the insurer and expiry date for your public liability, and any home warranty, contract works or professional indemnity cover. I'll warn you a month before anything runs out.
+
+Skip it if they'd rather not. For each policy they give:
+
+```bash
+python3 $ABB/tools/start.py insurance --kind public_liability --insurer "..." --policy-number "..." --cover 20000000 --expiry 30/06/2027
+```
+
+`--kind` is `public_liability`, `home_warranty`, `contract_works` or
+`professional_indemnity`. Home warranty is usually issued per job (in the
+ACT, residential building work insurance or a fidelity certificate for
+each job): record their provider and eligibility or facility here, and each
+job's certificate with that job. Expiry warnings show on the home page and
+in the session briefing.
 
 ## 4. Show, don't tell: the practice job
 
@@ -143,7 +185,9 @@ in this folder the brain opens with a short briefing on its own.
 
 "Update my profile", "change my ABN", "I've moved to Victoria": run
 `start.py setup` again with only the changed details. It never wipes
-anything. Jobs already set up keep the details they were made with; offer
+anything. A new ABN or licence number shows as not checked until you check
+it again (step 3a). "My PL's renewed", "new insurer": run `start.py
+insurance` with the changed fields. "Check my ABN and licence": step 3a. Jobs already set up keep the details they were made with; offer
 to update a job's `project.yaml` too if it matters (for example new bank
 details before the next invoice).
 

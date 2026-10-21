@@ -3,6 +3,14 @@
 All notable changes to the Australian Builder's Brain. Versions follow the
 plugin version in `.claude-plugin/plugin.json`.
 
+## 0.14.0 (2026-10-21)
+
+- ABN and licence checks: setup offers to check the user's ABN on ABN Lookup and their licence on their state's public register, and records what they showed (`tools/start.py check`): entity name, ABN status, GST registration, licence class, status and expiry. A changed ABN or licence number shows as not checked again. Setup also flags an ABN that fails the checksum. A trade that doesn't need a licence in its state (carpenters in the ACT, for example) can be recorded as not required, and the brain stops asking for one.
+- Insurance in the profile: public liability, home warranty, contract works and professional indemnity, with insurer, policy number, cover and expiry (`tools/start.py insurance`). Anything expiring within 30 days or expired (worked out by the expiry status computation) shows on the home page and in the session briefing.
+- New brain page [checking ABNs, licences and insurance](brain/playbooks/checking_registers.md): ABN Lookup, each state's licence register, and certificates of currency. Every state page now links its licence register; the ACT page says which trades need a licence and the residential building work insurance rules.
+- The projects skill offers an ABN check for a supplier or subbie it hasn't seen before; the contracts and safety skills check a subbie on the registers before filling the Subbie Insurance and Licence Tracker.
+- PRIVACY.md and the README say when the brain looks up a public register.
+
 ## 0.13.3 (2026-10-17)
 
 - "Things you can say" examples are now written for each common trade (builder, carpenter, electrician, plumber, tiler, painter, roofer, concreter, landscaper), neutral for the rest, with no sample job names. The home page's suggested prompts follow the trade too (trades invoice, builders claim).

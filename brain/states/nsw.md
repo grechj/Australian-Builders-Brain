@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | NSW Fair Trading (Building Commission NSW) |
 | Home building law | Home Building Act 1989 |
 | Security of payment law | Building and Construction Industry Security of Payment Act 1999 |
+| Licence register | [Service NSW licence check](https://www.service.nsw.gov.au/transaction/check-builder-or-tradespersons-licence) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - **Energy efficiency: BASIX.** For houses, NSW replaces the NCC's energy-efficiency Part (H6) with BASIX. The BASIX certificate issued with the approval sets the insulation, glazing, water and energy commitments.
 - Approvals are a development application (DA) or complying development certificate (CDC), then a construction certificate. Home building compensation (HBCF) insurance is needed above the threshold.
 - Trade licences (builder, electrician, plumber, gasfitter and others) are issued by NSW Fair Trading.

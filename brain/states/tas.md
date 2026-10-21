@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | Consumer, Building and Occupational Services (CBOS) |
 | Home building law | Residential Building Work Contracts and Dispute Resolution Act 2016 |
 | Security of payment law | Building and Construction Industry Security of Payment Act 2009 |
+| Licence register | [Find a licensed tradesperson](https://cbos.tas.gov.au/find-a-licensed-tradesperson) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - Tasmania adds Parts to NCC Volume Three (on-site liquid trade waste, heating, cooling and ventilation, and stormwater drainage), and several special-use Parts to Volume One.
 - CBOS licenses builders and trades.
 

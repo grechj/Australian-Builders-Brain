@@ -49,6 +49,49 @@ def main() -> None:
         prof = yaml.safe_load((ws / "profile.yaml").read_text())
         expect("running again only adds", (r["updated"], r["created"], prof["business"]["business_name"]), (["phone"], [], "Bright Sparks"))
 
+        # Register checks and insurance, in a folder of their own
+        own = Path(tmp) / "Own"
+        _, r = run("start.py", "setup", own, "--trade", "carpenter", "--state", "ACT", "--business-name", "Chapman Carpentry",
+                   "--abn", "12 345 678 901")
+        expect("a mistyped ABN is flagged at setup", (len(r["warnings"]), r["alerts"][0]["status"]), (1, "Mismatch"))
+        _, r = run("start.py", "setup", own, "--abn", "53 004 085 616", "--licence-number", "2019123")
+        expect("a new ABN and licence start unchecked", [(a["item"], a["status"]) for a in r["alerts"]],
+               [("ABN", "Not Checked"), ("Licence", "Not Checked"), ("Public liability insurance", "Missing")])
+        _, r = run("start.py", "check", own, "--what", "abn", "--result", "match", "--entity-name", "Chapman Carpentry Pty Ltd",
+                   "--abn-status", "active", "--gst-registered", "no")
+        expect("ABN check recorded against that ABN", (r["recorded"]["abn"], r["recorded"]["result"]), ("53 004 085 616", "match"))
+        expect("not GST-registered on the register is flagged", any("GST" in w for w in r["warnings"]), True)
+        expect("a trading name containing the business name isn't flagged", any("differs" in w for w in r["warnings"]), False)
+        _, r = run("start.py", "check", own, "--what", "licence", "--result", "match", "--licence-class", "Class C builder",
+                   "--expiry", "2026-11-15")
+        _, r = run("start.py", "insurance", own, "--kind", "PL", "--insurer", "QBE", "--policy-number", "PL-1", "--cover", "$20M",
+                   "--expiry", "30/6/2027")
+        expect("insurance recorded with whole-dollar cover and a DD/MM/YYYY date", r["recorded"],
+               {"insurer": "QBE", "policy_number": "PL-1", "cover": "20000000", "expiry": "30/06/2027"})
+        expect("insurance alias resolves", r["insurance"], "public_liability")
+        _, r = run("start.py", "insurance", own, "--kind", "home warranty", "--insurer", "MBA Fidelity Fund", "--expiry", "01/11/2026")
+        _, r = run("start.py", "status", own, "--as-at", "21/10/2026")
+        expect("expiries sorted, soonest first", [(a["item"], a["status"]) for a in r["alerts"]],
+               [("Home warranty insurance", "Expiring Soon"), ("Licence", "Expiring Soon")])
+        _, r = run("start.py", "status", own, "--as-at", "10/11/2026")
+        expect("an expired policy comes first", (r["alerts"][0]["item"], r["alerts"][0]["status"]), ("Home warranty insurance", "Expired"))
+        _, r = run("start.py", "setup", own, "--licence-number", "2019999")
+        expect("a changed licence number is unchecked again", ("Licence", "Not Checked") in [(a["item"], a["status"]) for a in r["alerts"]], True)
+        _, r = run("start.py", "check", own, "--what", "licence", "--result", "not_required", "--notes", "ACT carpenters")
+        prof = yaml.safe_load((own / "profile.yaml").read_text())
+        prof["business"]["licence_number"] = ""
+        (own / "profile.yaml").write_text(yaml.safe_dump(prof))
+        _, r = run("start.py", "status", own, "--as-at", "21/10/2026")
+        expect("no licence needed: not asked for", "licence_number" in r["missing_profile_fields"], False)
+        p = subprocess.run([sys.executable, str(ROOT / "tools" / "start.py"), "brief", str(own)], capture_output=True, text=True)
+        expect("briefing mentions an expiring policy", "Home warranty insurance" in p.stdout, True)
+        code, _ = run("start.py", "check", own, "--what", "abn", "--result", "not_required")
+        expect("not_required is only for a licence", code != 0, True)
+        run("home.py", own / "projects.yaml", "--as-at", "21/10/2026")
+        data = json.loads((own / "home.html").read_text().split("const DATA = ", 1)[1].split(";\n", 1)[0])
+        expect("home page carries the alerts and insurance", (data["alerts"][0]["item"], "public_liability" in data["profile"]["insurance"]),
+               ("Home warranty insurance", True))
+
         _, r = run("start.py", "cards", ws)
         skills = [c["skill"] for c in r["cards"]]
         expect("electrician cards: no contracts or handover", ("contracts" in skills, "handover" in skills, skills[0]), (False, False, "projects"))

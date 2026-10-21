@@ -1,5 +1,6 @@
 # Concepts
 
+* [Checking ABNs, licences and insurance](checking_registers.md) - How to check an ABN on ABN Lookup, a licence on each state's public register, and insurance from a certificate of currency, for the user's own business and for subbies and suppliers.
 * [Claim support pack](claim_support_pack.md) - What to attach to a progress claim so it gets paid, from the template pack's claim support pack checklist.
 * [Practical completion inspection](practical_completion_inspection.md) - Room-by-room checklist to work through before issuing a practical completion notice, from the template pack's PC checklist.
 * [Pre-construction checklist](pre_construction.md) - Everything to have in place before breaking ground (contracts, approvals, insurance, documents, site set-up and safety), from the template pack's pre-construction checklist.

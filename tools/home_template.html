@@ -162,8 +162,22 @@ function init() {
                 ["Trade", DATA.cards.trade_title], ["State", set.state],
                 ["Accounts", ({ xero: "Xero", myob: "MYOB", quickbooks: "QuickBooks", none: "None" })[String(set.software || "").toLowerCase()] || set.software]];
   const dl = h("div", { class: "figs", style: "grid-template-columns:repeat(2,minmax(0,1fr))" });
+  const checks = DATA.profile.checks || {}, ins = DATA.profile.insurance || {};
+  if (!biz.licence_number && (checks.licence || {}).result === "not_required") rows[2][1] = "Not required";
+  Object.entries(DATA.insurance_labels || {}).forEach(([k, label]) => {
+    const i = ins[k];
+    if (i && (i.insurer || i.expiry)) rows.push([label, [i.insurer, i.expiry ? "to " + i.expiry : ""].filter(Boolean).join(" ")]);
+  });
   rows.forEach(([l, v]) => dl.append(h("div", { class: "fig" }, h("div", { class: "l", text: l }), h("div", { class: "v", style: "font-size:14px", text: v || "–" }))));
   pc.append(dl);
+  const alerts = DATA.alerts || [];
+  if (alerts.length) {
+    const al = h("div", { style: "margin-top:8px" });
+    alerts.forEach(a => al.append(h("div", { class: "warn" }, h("span", { class: "icon", "aria-hidden": "true", text: "!" }),
+      h("span", { text: a.item + ": " + a.detail }))));
+    const ask = alerts.some(a => a.status === "Not Checked" || a.status === "Mismatch") ? "Check my ABN and licence" : "Update my insurance";
+    pc.append(al, h("ul", { class: "say" }, sayItem(ask)));
+  }
   if (DATA.missing.length) pc.append(h("div", { class: "sub", text: "Still to add: " + DATA.missing.map(m => m.replace(/_/g, " ")).join(", ") }), h("ul", { class: "say" }, sayItem("Update my profile")));
 
   // Jobs

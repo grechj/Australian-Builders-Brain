@@ -1,5 +1,9 @@
 # Directory Update Log
 
+## 2026-10-21
+* **Creation**: Added [checking ABNs, licences and insurance](/playbooks/checking_registers.md): ABN Lookup, each state's licence register, and certificates of currency, for the user's own business and for subbies. Each [state page](/states/index.md) links its licence register; the [ACT page](/states/act.md) notes which trades need a licence and the residential building work insurance rules.
+* **Update**: The user's profile now holds their own insurances (public liability, home warranty, contract works, professional indemnity) and the results of their ABN and licence checks, and warns before anything expires (`tools/start.py insurance`, `check`).
+
 ## 2026-10-17
 * **Update**: Session-start welcome and briefing, `/` shortcuts (`commands/`), and the plugin directory submission prepared (PRIVACY.md, docs/directory_submission.md).
 * **Creation**: Added the start skill (profile, jobs folder, practice job, cards by trade) and the home page (`tools/home.py`).

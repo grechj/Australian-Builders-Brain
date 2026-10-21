@@ -19,9 +19,11 @@ stale_after: 2027-04-17T00:00:00Z
 | Residential building regulator | Building and Plumbing Commission (replaced the Victorian Building Authority in 2025) |
 | Home building law | Domestic Building Contracts Act 1995 |
 | Security of payment law | Building and Construction Industry Security of Payment Act 2002 |
+| Licence register | [BPC Find a practitioner](https://www.bpc.vic.gov.au/tools/find-practitioner) (electricians: Energy Safe Victoria) |
 
 # Rules and licensing
 
+- Check a licence on the register above, and an ABN on ABN Lookup: see [checking ABNs, licences and insurance](/playbooks/checking_registers.md).
 - Victoria's plumbing regulations add Parts to NCC Volume Three for HVAC, stormwater roof drainage, surface drainage and low-risk trade waste. They apply to plumbers, roofers (roof drainage) and HVAC installers.
 - Builders and plumbers are registered or licensed by the Building and Plumbing Commission; electricians are licensed by Energy Safe Victoria.
 - Domestic building insurance is needed above the threshold.

@@ -86,7 +86,7 @@ emergency details; `tick` the review triggers.
 ## Inspections and subbie compliance
 
 - Walk `brain/playbooks/site_safety_inspection.md` weekly. Unsafe items get fixed or isolated before work continues. Record the inspection in the site diary.
-- Subbie compliance: for each subbie, work out the status with `python3 $ABB/tools/compute.py expiry_status --param on_date=<today> --param 'items={"Licence": "...", "PL": "...", "WC": "..."}'`, then write the row and the computed status (`examples/subbie_compliance_spec.yaml`). Anyone Expired or Incomplete doesn't start until it's fixed.
+- Subbie compliance: check each subbie's ABN and licence on the public registers first (`$ABB/brain/playbooks/checking_registers.md`) and take the licence expiry from the register, not from memory; take insurance expiries from their certificates of currency. Then, for each subbie, work out the status with `python3 $ABB/tools/compute.py expiry_status --param on_date=<today> --param 'items={"Licence": "...", "PL": "...", "WC": "..."}'`, then write the row and the computed status (`examples/subbie_compliance_spec.yaml`). Anyone Expired or Incomplete doesn't start until it's fixed.
 
 ## Checks
 
