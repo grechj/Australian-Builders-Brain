@@ -1,10 +1,17 @@
 name: release
 
-# On every version tag (v0.13.0 ...), publish a GitHub release with the plugin
-# as a zip, for Customize > Plugins > Upload plugin in Claude.
+# Publish a GitHub release with the plugin as a zip, for Customize > Plugins >
+# Upload plugin in Claude, whenever the version in .claude-plugin/plugin.json
+# changes on main. The release and its v<version> tag are created here, so
+# nobody has to push a tag. A version that already has a release is skipped.
+# Pushing a v* tag by hand still works, and so does running it from the
+# Actions tab.
 on:
   push:
+    branches: [main]
+    paths: [".claude-plugin/plugin.json", ".github/workflows/release.yml"]
     tags: ["v*"]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,9 +21,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Work out the version
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(python3 -c "import json; print(json.load(open('.claude-plugin/plugin.json'))['version'])")
+          tag="v$version"
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "$tag" ]; then
+            echo "Tag $GITHUB_REF_NAME doesn't match plugin.json version $version" >&2
+            exit 1
+          fi
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag already exists: nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
       - name: Build the plugin zip
+        if: steps.version.outputs.skip == 'false'
         run: git archive --format=zip -o australian-builders-brain.zip HEAD
       - name: Write the release notes
+        if: steps.version.outputs.skip == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -33,6 +61,9 @@ jobs:
             fi
           } > notes.md
       - name: Publish the release
+        if: steps.version.outputs.skip == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" australian-builders-brain.zip --title "Australian Builder's Brain $GITHUB_REF_NAME" --notes-file notes.md
+        run: |
+          gh release create "${{ steps.version.outputs.tag }}" australian-builders-brain.zip --target "$GITHUB_SHA" \
+            --title "Australian Builder's Brain ${{ steps.version.outputs.tag }}" --notes-file notes.md
