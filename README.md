@@ -9,7 +9,11 @@
 - **Jobs and paperwork.** A folder for each job. Drop in invoices, receipts, dockets and photos, and it reads them, checks the numbers and files them.
 - **Documents in a sentence.** 64 ready-made templates: quotes, variations, progress claims, payment claims and schedules, delay and breach notices, SWMS, site diary, handover and more.
 - **Money.** Job profit and margin, cash in and out, costs against budget, and import files for Xero, MYOB or QuickBooks. BAS and TPAR figures too.
-- **The building code.** NCC 2025 and 2022 answers with the clause, filtered to your trade and state.
+- **The building code, in plain English.** Ask "how high does my deck balustrade need to be?" and get a straight answer with the clause, for NCC 2025 and 2022, filtered to your trade and state. Plain-English guides cover decks and stairs, wet areas, termites, bushfire, energy, smoke alarms, ceiling heights and footings, and every figure in them is checked against the code text itself.
+- **Know your materials.** Guides written for the trade: which treated pine goes where (H3, H4 or H5), screws that won't rust out near the coast, which plasterboard for which room, ordering concrete, membranes, insulation, wall wraps and paint.
+- **Materials lists and prices.** Tell it the job (deck, fence, slab, wall, cladding, retaining wall, pergola, roof, insulation and more) and it works out what to buy. It prices the list from your own price list or Bunnings product pages, reads pack sizes off the product, and buys the cheapest mix of tins or boxes.
+- **Licences, ABNs and insurance checked.** It checks your ABN and licence on the public registers when you set up, and a subbie's or supplier's when they start or their first invoice comes in. It warns you a month before your insurance runs out.
+- **Gets smarter as you use it.** It learns which products you actually use and spots when you switch, and you can choose to share an anonymous summary (no prices, jobs or clients) to help improve it for everyone.
 - **Made for your trade.** Builders see everything; a sparky, plumber or tiler sees what matters to them.
 
 ## Get started (5 minutes, no terminal)
@@ -32,6 +36,14 @@ A dashboard for every job: profit, margin, cash, costs against budget, time on s
 
 ![A job's dashboard](docs/images/dashboard.png)
 
+Things to try once you're set up:
+
+- *"What's the balustrade height on a deck 1.5 m off the ground in the ACT?"*
+- *"Which treated pine do I need for retaining wall posts?"*
+- *"Materials for a 6 m sleeper retaining wall, 800 mm high"*
+- *"Check this subbie's licence and ABN"*
+- *"What products have I been using most?"*
+
 Documents come out filled in from one sentence, with the money worked out and checked:
 
 <img src="docs/images/variation_notice.png" alt="A priced variation notice, filled in" width="520">
@@ -40,6 +52,8 @@ Documents come out filled in from one sentence, with the money worked out and ch
 
 - **Your files stay yours.** Everything lives in your own folder. No accounts, no keys, nothing stored by this project.
 - **Money is checked, not guessed.** GST, claims, variations, BAS and TPAR come from tested calculations, with a receipt you can verify.
+- **Code answers are pinned to the code.** Every figure in a plain-English guide is checked against the NCC sentence it came from, every time the brain is updated, and every link lands on the clause it names.
+- **Your prices stay private.** The brain records what products are sold as (sizes and pack sizes), never what anyone paid. Your price list and materials log live in your folder, and nothing is shared unless you post it yourself.
 - **You approve everything.** Nothing goes into your books or out the door until you say yes.
 - **Drafts, not legal advice.** Check documents against your contract, and get advice on disputes.
 

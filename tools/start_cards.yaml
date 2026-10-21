@@ -21,11 +21,11 @@ skills:
     - What margin am I making at this price?
   materials:
     title: Materials lists
-    does: Works out what to buy and roughly what it costs.
+    does: Works out what to buy, which product suits, and roughly what it costs. Learns what you use.
     say:
     - What materials do I need for this job?
-    - Rough materials cost for the Smith job
-    - Add today's supplier prices to my price list
+    - Which screws won't rust out near the coast?
+    - What products have I been using most?
   contracts:
     title: Contracts and setup
     does: 'Sets a job up after it''s signed: summary, scope, subcontracts, pre-start checklist.'
@@ -90,7 +90,7 @@ skills:
     - What's my GST for the September quarter?
   ncc:
     title: Building code (NCC)
-    does: Answers code questions with the clause, for your state.
+    does: Answers code questions in plain English, with the clause, for your state.
     say:
     - Minimum balustrade height on a deck?
 by_trade:

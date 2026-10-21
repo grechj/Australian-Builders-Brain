@@ -6,7 +6,7 @@ Everything the brain does, how it's built and how to contribute. For the quick s
 
 | Folder | What it is |
 |---|---|
-| [`brain/`](../brain/index.md) | The knowledge base: lifecycle stages, construction phases, contract topics, state rules, the NCC, the template catalogue and the money computations. Plain markdown in [Google's Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format), kept up by an agent using [Karpathy's LLM-wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). |
+| [`brain/`](../brain/index.md) | The knowledge base: lifecycle stages, construction phases, contract topics, state rules, the NCC, plain-English code and material guides, the template catalogue and the money computations. Plain markdown in [Google's Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format), kept up by an agent using [Karpathy's LLM-wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). |
 | [`skills/`](../skills/) | Claude skills that turn the brain plus your job details into finished documents. |
 | [`templates/`](../templates/) | 64 Word, Excel and PDF templates (variations, claims, security of payment, notices, WHS, handover...). |
 | [`tools/`](../tools/) | Python that fills templates, runs the money maths and lints the brain. |
@@ -24,6 +24,10 @@ python3 tools/fill_template.py templates/word/Priced_Variation_Notice_TEMPLATE.d
 
 ```bash
 python3 tools/ncc_lookup.py search "wet area waterproofing shower" --volume housing_provisions
+```
+
+```bash
+python3 tools/ncc_lookup.py guides "deck balustrade height" --trade carpenter
 ```
 
 Or ask Claude: *"What's the minimum balustrade height on a deck in Queensland?"* or *"Price a variation for rock in the footings: $1,200 labour,
@@ -44,6 +48,28 @@ python3 tools/profile.py trades
 ```bash
 python3 tools/profile.py show --trade sparky --state QLD
 ```
+
+## Plain-English guides
+
+[`brain/guides/`](../brain/guides/index.md) answers the questions trades
+actually ask, in their words, before sending them to the code:
+
+- **Code guides** ([`brain/guides/code/`](../brain/guides/code/index.md)): decks, balconies and stairs; wet area waterproofing; termite management; building in bushfire-prone areas; energy efficiency; smoke alarms; ceiling and room heights; footings and slabs. Each gives the figures, the clauses in **both NCC 2022 and 2025**, what changed between them, and the state variations that matter.
+- **Material guides** ([`brain/guides/materials/`](../brain/guides/materials/index.md)): timber treatment and grades, fixings and corrosion, decking, plasterboard and linings, concrete, membranes and sealants, insulation, sarking and wraps, paint systems. Standards are referenced, never copied.
+
+**Every figure is pinned to the code.** Each guide lists, in its
+frontmatter, the NCC sentence behind every number it states. `okf_lint.py`
+fails if that sentence is no longer on the page, and every link into the
+NCC must land on a real clause, so a guide can't quietly drift from the
+code.
+
+```bash
+python3 tools/ncc_lookup.py guides "how high do I waterproof a shower wall" --trade tiler
+```
+
+The `ncc` skill starts from a guide when one fits, the `materials` skill
+uses the material guides to set the spec before a takeoff, and
+`profile.py show` lists the guides for each trade.
 
 ## Using the templates
 
@@ -66,6 +92,46 @@ Each user prices their own job; no accounts or keys are needed:
 Bunnings prices are a retail guide only; specialist suppliers often price
 better. The brain never scrapes the Bunnings website (its terms allow
 personal use only) and never stores anyone's prices.
+
+**Takeoffs** cover timber decks, stud walls, plasterboard, concrete slabs,
+paling fences, tiling, painting, electrical and plumbing rough-in, roofing,
+cladding, insulation, sleeper retaining walls and pergolas. Every quantity
+shows its arithmetic, and the tests are worked out by hand.
+
+**The product catalogue** ([`tools/catalogue.yaml`](../tools/catalogue.yaml), page
+[product catalogue](../brain/references/product_catalogue.md)) records what
+materials are sold as: stock lengths, sheet sizes, pack sizes and coverage,
+with no prices. Matching uses it to:
+
+- read the pack size off the product's name (a 10 L tin, a 500 pack, a 1.35 x 30 m roll), so a box isn't priced as one screw;
+- turn a per-metre price (`--unit metre`) into the board length the takeoff counts;
+- buy the cheapest mix of pack sizes when your list has several (one 15 L and two 4 L tins for 23 L).
+
+```bash
+python3 tools/catalogue.py mix 23 --option 4:89 --option 10:199 --option 15:279
+```
+
+## Learning from use
+
+The brain gets better the more it's used, without collecting anything
+behind your back:
+
+- **Your materials log.** Every product you save or price, and every materials line on a supplier bill filed through the inbox, goes in `materials_log.csv` in your folder: the product, its type, the supplier and the job. Never the price.
+- **Your report.** `python3 tools/usage.py report` shows your most-used products by type, what's new to you in the last 90 days, what's taking over (stainless screws replacing class 4, say), and gaps in the catalogue.
+- **Sharing, only if you say yes.** Every few months the brain may offer an anonymous summary: product names and counts, your trade and state, and no prices, jobs, clients, addresses or store names. You read all of it first, and you post it yourself as a GitHub issue. Say "never" and it won't ask again.
+- **Back into the brain.** The maintainer collects shared summaries (`usage.py collect`), and `usage.py ingest` turns them into [what products trades are using](../brain/references/product_usage.md), the input for new catalogue sizes and guide updates.
+
+## Checking ABNs, licences and insurance
+
+At setup, the brain offers to check your ABN on ABN Lookup and your licence
+on your state's public register, and records what they showed. A trade that
+doesn't need a licence in its state (carpenters in the ACT, for example)
+can say so, and the brain stops asking. Your public liability, home
+warranty, contract works and professional indemnity cover go in your
+profile, and the home page and session briefing warn you 30 days before
+any of them expires. Subbies and new suppliers get the same ABN and
+licence checks before they start or when their first invoice arrives. See
+[checking ABNs, licences and insurance](../brain/playbooks/checking_registers.md).
 
 ## Projects and the inbox (projects skill)
 
@@ -155,8 +221,8 @@ python3 tools/dashboard.py examples/projects_example.yaml --as-at 31/10/2026 --o
 | `start` | first-run setup: profile, jobs folder, a practice job, and what to ask for your trade; builds the home page | **working** |
 | `projects` | project register, tags and folders; inbox for invoices, payment screenshots, dockets and photos, read, checked and filed per job | **working** |
 | `accounts` | job ledger, account mapping, Xero / MYOB / QuickBooks import files, drafts through the user's own connector, BAS GST labels, TPAR, CSV extracts and project dashboard | **working** (import formats: Xero checked against Xero's help, MYOB and QuickBooks draft) |
-| `materials` | materials list and rough order of magnitude price for common jobs, priced per user from their own price list and Bunnings lookups (official API optional) | **working** (optional API client untested against live) |
-| `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition | **working** |
+| `materials` | materials list and rough order of magnitude price for 14 kinds of job, priced per user from their own price list and Bunnings lookups (official API optional), with pack sizes and pack mixes from the product catalogue; material guides; learning from use | **working** (optional API client untested against live) |
+| `ncc` | NCC 2025 and NCC 2022 lookups with clause citations, filtered by trade, state and edition; plain-English code guides with every figure pinned to the code | **working** |
 
 Knowledge work still to do: verify and
 split the [state rules](../brain/states/overview.md), verify the
