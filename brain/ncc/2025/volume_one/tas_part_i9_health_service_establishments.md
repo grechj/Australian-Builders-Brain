@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for health service establishments.
 
+<a id="i9d1"></a>
+
 > **TAS variation**: TAS replaces I9D1 Application of Part.
 >
 > (1) This Part applies to health service establishments as defined in the Health Service Establishment Act 2006 including—
@@ -33,6 +35,8 @@ This Part contains additional requirements for health service establishments.
 >
 > (2) Health service establishments must be able to be easily cleaned and must have adequate space for patients.
 >
+
+<a id="i9d2"></a>
 
 > **TAS variation**: TAS replaces I9D2 Design and construction of health service establishments.
 >

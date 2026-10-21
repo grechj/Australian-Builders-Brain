@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for premises used for the production of processing of isocyanates.
 
+<a id="i13d1"></a>
+
 > **TAS variation**: TAS replaces I13D1 Application of Part.
 >
 > (1) This Part is applicable to every building in which isocyanate production or processing is undertaken.
@@ -32,6 +34,8 @@ This Part contains additional requirements for premises used for the production 
 > - (a) provide for the safety and comfort of workers; and
 > - (b) be constructed in a manner that will avoid the spread of fire within the building and to other buildings.
 >
+
+<a id="i13d2"></a>
 
 > **TAS variation**: TAS replaces I13D2 Areas of work places.
 >
@@ -46,6 +50,8 @@ This Part contains additional requirements for premises used for the production 
 > - (g) Manufacture.
 >
 
+<a id="i13d3"></a>
+
 > **TAS variation**: TAS replaces I13D3 Separation from other areas and buildings.
 >
 > (1) Each of the divisional areas *required* by [TAS I13D2](#i13d2) other than the administration and staff amenities building, must be—
@@ -56,15 +62,21 @@ This Part contains additional requirements for premises used for the production 
 > (2) Notwithstanding the distance requirements of (1), bulk stores of polyols and bulk stores of isocyanates must comply with the requirements of the Work Health and Safety Act.
 >
 
+<a id="i13d4"></a>
+
 > **TAS variation**: TAS replaces I13D4 Rise in storeys.
 >
 > The building must be of single *storey* construction.
 >
 
+<a id="i13d5"></a>
+
 > **TAS variation**: TAS replaces I13D5 Maximum floor areas.
 >
 > The *floor area* of any building or fire-separated section must not exceed the area shown in [Table TAS I12D4](/ncc/2025/volume_one/tas_part_i12_premises_for_manufacture_or_processing_of_glass_reinforced_plastics.md#table_f44a761c).
 >
+
+<a id="i13d6"></a>
 
 > **TAS variation**: TAS replaces I13D6 Required exits.
 >
@@ -74,6 +86,8 @@ This Part contains additional requirements for premises used for the production 
 >
 > (3) Only *exits* with vertically hinged swinging doors may be considered as *exits* for the purposes of this clause.
 >
+
+<a id="i13d7"></a>
 
 > **TAS variation**: TAS replaces I13D7 Bulk stores for polyols and isocyanates.
 >
@@ -86,6 +100,8 @@ This Part contains additional requirements for premises used for the production 
 >
 > (3) The area around both a polyol bulk store and an isocyanate bulk store must be bunded, the bund or bunds must ensure separation of the polyol and isocyanate areas and each bund must have a capacity of 10% more than the storage capacity of the largest tank it protects.
 >
+
+<a id="i13d8"></a>
 
 > **TAS variation**: TAS replaces I13D8 Curing room.
 >

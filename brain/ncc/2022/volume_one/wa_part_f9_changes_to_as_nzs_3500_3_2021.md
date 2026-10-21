@@ -28,7 +28,7 @@ This Part sets out changes for the application of AS/NZS 3500.3:2021 in Western 
 
 ## Deemed-to-Satisfy Provisions
 
-<a id="wa_f9d1"></a>
+<a id="f9d1"></a><a id="wa_f9d1"></a>
 
 ### WA F9D1 Eaves gutter overflow
 
@@ -44,7 +44,7 @@ Delete clause 3.5.1 of AS/NZS 3500.3:2021 and replace with the following:
 >
 > Both AS/NZS 3500.3:2021 and Part 7.4 of the ABCB Housing Provisions require that eaves gutters are designed for a 5-minute duration rainfall intensity determined for an annual exceedance probability of 5%; Part 7.4 of the ABCB Housing Provisions requiring that eaves gutter overflow provisions are determined for annual exceedance probability of 1%.
 
-<a id="wa_f9d2"></a>
+<a id="f9d2"></a><a id="wa_f9d2"></a>
 
 ### WA F9D2 Required size of vertical downpipes
 

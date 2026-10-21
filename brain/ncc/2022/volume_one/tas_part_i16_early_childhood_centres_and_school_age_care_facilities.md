@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i16o1"></a>
+<a id="i16o1"></a><a id="tas_i16o1"></a>
 
 ### TAS I16O1 Objective
 
@@ -31,7 +31,7 @@ The Objective of this Part is to regulate the physical specification of *early c
 
 Functional Statements
 
-<a id="tas_i16f1"></a>
+<a id="i16f1"></a><a id="tas_i16f1"></a>
 
 ### TAS I16F1 Early childhood centres and school age care facilities
 
@@ -39,7 +39,7 @@ An *early childhood centre* and *school age care facility* must be designed and 
 
 Performance Requirements
 
-<a id="tas_i16p1"></a>
+<a id="i16p1"></a><a id="tas_i16p1"></a>
 
 ### TAS I16P1 Design and construction
 
@@ -54,7 +54,7 @@ The design and construction of an *early childhood centre* and *school age care 
 > TAS I16P1 applies to *early childhood centres* and *school age care facilities* approved under the Education and Care Services National Law (Application) Act 2011 or licensed under the Child Care Act 2001.
 >
 
-<a id="tas_i16p2"></a>
+<a id="i16p2"></a><a id="tas_i16p2"></a>
 
 ### TAS I16P2 Health and amenity
 
@@ -78,7 +78,7 @@ An *early childhood centre* and *school age care facility*, must to the degree n
 > TAS I16P2 applies to *early childhood centres* and *school age care facilities* approved under the Education and Care Services National Law (Application) Act 2011 or licensed under the Child Care Act 2001.
 >
 
-<a id="tas_i16p3"></a>
+<a id="i16p3"></a><a id="tas_i16p3"></a>
 
 ### TAS I16P3 Perimeter fencing and barriers
 
@@ -91,13 +91,13 @@ An *early childhood centre* and *school age care facility* must to the degree ne
 
 Deemed-to-Satisfy Provisions
 
-<a id="tas_i16d1"></a>
+<a id="i16d1"></a><a id="tas_i16d1"></a>
 
 ### TAS I16D1 Application of Part
 
 This Part applies to *early childhood centres* and *school age care facilities* approved under the Education and Care Services National Law (Application) Act 2011 or licensed under the Child Care Act 2001.
 
-<a id="tas_i16d2"></a>
+<a id="i16d2"></a><a id="tas_i16d2"></a>
 
 ### TAS I16D2 Deemed-to-Satisfy Provisions
 

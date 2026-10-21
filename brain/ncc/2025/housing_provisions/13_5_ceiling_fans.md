@@ -50,6 +50,8 @@ This Part has been deliberately left blank. Section 13.5 of the ABCB Housing Pro
 > | 3 | 12.5% | 7.5% | 7.5% |
 >
 
+<a id="13_5_3"></a>
+
 > **NT variation**: NT adds 13.5.3 Ventilation openings.
 >
 > (1) The total *ventilation opening* area *required* by [Table NT 13.5.2](#table_38f75470) to a *habitable room* must—

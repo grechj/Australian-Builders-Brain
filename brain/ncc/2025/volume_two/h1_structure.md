@@ -233,6 +233,8 @@ The Objective is to—
 > H1P2 only applies to a Class 1 building.
 >
 
+<a id="h1p3"></a>
+
 > **QLD variation**: QLD adds H1P3 Termite management measures.
 >
 > (1) The risk of *primary building element* in a Class 1 or 10 building being damaged by subterranean termites must be adequately minimised by the use of a suitable termite management measure that—

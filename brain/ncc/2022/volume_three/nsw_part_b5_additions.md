@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="nsw_b5d7"></a>
+<a id="b5d7"></a><a id="nsw_b5d7"></a>
 
 ### NSW B5D7 Cooling tower water service
 

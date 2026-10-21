@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="vic_c4o1"></a>
+<a id="c4o1"></a><a id="vic_c4o1"></a>
 
 ### VIC C4O1 Objective
 
@@ -37,7 +37,7 @@ The Objective of this part is to—
 - (f) ensure that a low risk on-site liquid trade waste installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e).
 Functional Statements
 
-<a id="vic_c4f1"></a>
+<a id="c4f1"></a><a id="vic_c4f1"></a>
 
 ### VIC C4F1 Functional statement
 
@@ -47,7 +47,7 @@ Functional Statements
 
 Performance Requirements
 
-<a id="vic_c4p1"></a>
+<a id="c4p1"></a><a id="vic_c4p1"></a>
 
 ### VIC C4P1 Requirements for low risk on-site liquid trade waste management practices
 

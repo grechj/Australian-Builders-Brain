@@ -25,6 +25,8 @@ This Part sets out the requirements for a roof drainage system.
 
 ## Objectives
 
+<a id="e3o1"></a>
+
 > **TAS variation**: TAS replaces E3O1 Objective.
 >
 > The objective of this part is to—
@@ -39,12 +41,16 @@ This Part sets out the requirements for a roof drainage system.
 
 ## Functional Statements
 
+<a id="e3f1"></a>
+
 > **TAS variation**: TAS replaces E3F1 Functional statements.
 >
 > Buildings are to be provided with roof drainage to provide protection to people, property and the environment from adverse effects of stormwater.
 >
 
 ## Performance Requirements
+
+<a id="e3p1"></a>
 
 > **TAS variation**: TAS replaces E3P1 Roof drainage systems.
 >
@@ -59,15 +65,21 @@ This Part sets out the requirements for a roof drainage system.
 > - (c) The severity of *loss* of *amenity*, illness or injury that would result from the failure of the system.
 >
 
+<a id="e3p2"></a>
+
 > **TAS variation**: TAS replaces E3P2 Overflow.
 >
 > A roof drainage system must provide an overflow device suitable for a 1% *annual exceedance probability* rainfall event.
 >
 
+<a id="e3p3"></a>
+
 > **TAS variation**: TAS replaces E3P3 Watertightness.
 >
 > All internal roof drainage components must be *watertight*.
 >
+
+<a id="e3p4"></a>
 
 > **TAS variation**: TAS replaces E3P4 Design, construction and installation.
 >
@@ -84,10 +96,14 @@ This Part sets out the requirements for a roof drainage system.
 > (3) A roof drainage installation must avoid foul air and gasses accumulating in the roof drainage system.
 >
 
+<a id="e3d1"></a>
+
 > **TAS variation**: TAS replaces E3D1 Application.
 >
 > *Performance Requirements* E3P1 to E3P4 are satisfied by complying with E3D2 and E3D3.
 >
+
+<a id="e3d2"></a>
 
 > **TAS variation**: TAS replaces E3D2 General requirements.
 >
@@ -96,6 +112,8 @@ This Part sets out the requirements for a roof drainage system.
 > - (a) AS/NZS 3500.3; or
 > - (b) [Housing Provisions 7.4](/ncc/2025/housing_provisions/7_4_gutters_and_downpipes.md)
 >
+
+<a id="e3d3"></a>
 
 > **TAS variation**: TAS replaces E3D3 Roofing of liquid trade waste generation areas.
 >

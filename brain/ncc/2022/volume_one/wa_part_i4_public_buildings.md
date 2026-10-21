@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in WA, from the WA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="wa_i4d1"></a>
+<a id="i4d1"></a><a id="wa_i4d1"></a>
 
 ### WA I4D1 Deemed-to-Satisfy Provisions
 
@@ -33,19 +33,19 @@ Clauses that apply only in WA, from the WA schedule of **NCC 2022 Volume One**.[
 - (b) for additional requirements for *WA public buildings*, WA Part I4.
 (2) Where a *Performance Solution* is proposed, the relevant *Performance Requirements* must be determined in accordance with A2G2(3) and A2G4(3) as applicable.
 
-<a id="wa_i4d2"></a>
+<a id="i4d2"></a><a id="wa_i4d2"></a>
 
 ### WA I4D2 Application of Part
 
 The *Deemed-to-Satisfy Provisions* of this Part apply to a *WA public building* or part of a building.
 
-<a id="wa_i4d3"></a>
+<a id="i4d3"></a><a id="wa_i4d3"></a>
 
 ### WA I4D3 Additional exits
 
 In a *WA public buildings*, each *storey* that accommodates more than 50 persons must have more than one *exit* from that *storey*.
 
-<a id="wa_i4d4"></a>
+<a id="i4d4"></a><a id="wa_i4d4"></a>
 
 ### WA I4D4 Goings and risers
 
@@ -53,7 +53,7 @@ In a *WA public buildings*, each *storey* that accommodates more than 50 persons
 
 (2) The requirements of (1) do not apply to steps in a *fire-isolated stairway*.
 
-<a id="wa_i4d5"></a>
+<a id="i4d5"></a><a id="wa_i4d5"></a>
 
 ### WA I4D5 Handrails to ramps, flights and landings
 
@@ -65,7 +65,7 @@ In a *WA public buildings*, each *storey* that accommodates more than 50 persons
 
 - (a) handrails referred to in D3D23; or
 - (b) handrails located within a *fire-isolated stairway* or *fire-isolated ramp*.
-<a id="wa_i4d6"></a>
+<a id="i4d6"></a><a id="wa_i4d6"></a>
 
 ### WA I4D6 Artificial lighting
 
@@ -77,7 +77,7 @@ In a *WA public buildings*, each *storey* that accommodates more than 50 persons
 - (b) be connected to circuits separate from those supplying lighting for foyers, entry porches, emergency escape passages or areas provided entry or egress to the *WA public building*; and
 - (c) be connected over two circuits where two or more lights are required; and
 - (d) have switches that are not able to be operated by members of the public.
-<a id="wa_i4d7"></a>
+<a id="i4d7"></a><a id="wa_i4d7"></a>
 
 ### WA I4D7 Fixed seating
 

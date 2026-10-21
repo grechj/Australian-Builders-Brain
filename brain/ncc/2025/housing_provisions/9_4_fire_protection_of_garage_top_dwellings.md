@@ -48,6 +48,8 @@ From **NCC 2025 Housing Provisions**, Fire safety.[^abcb_ncc] Defined terms are 
 > (3) Where a service passes through a floor referred to in (1), the penetration must not reduce the performance of the floor or covering.
 >
 
+<a id="9_4_3"></a>
+
 > **NSW variation**: NSW adds 9.4.3 Construction of walls.
 >
 > (1) A wall *required* by [NSW 9.4.1(2)](#9_4_1) or [NSW 9.4.1(3)(a)](#9_4_1) must—

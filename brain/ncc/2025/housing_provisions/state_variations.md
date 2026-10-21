@@ -25,40 +25,40 @@ From the state and territory schedules of **NCC 2025 Housing Provisions**.[^abcb
 | NSW | replaces | [4.2.8](/ncc/2025/housing_provisions/4_2_footings_slabs_and_associated_elements.md#4_2_8) |
 | NSW | replaces | [8.4.1.2](/ncc/2025/housing_provisions/8_4_glazing_human_impact.md#8_4_1) |
 | NSW | replaces | [9.1.1.1](/ncc/2025/housing_provisions/9_1_scope_and_application_of_section_9.md#9_1_1) |
-| NSW | replaces | [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#part_ariation) |
+| NSW | replaces | [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md) |
 | NSW | replaces | [9.4.1](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_1) |
 | NSW | replaces | [9.4.2](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_2) |
 | NSW | replaces | [9.4.3](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_3) |
 | NSW | replaces | [9.5.1](/ncc/2025/housing_provisions/9_5_smoke_alarms_and_evacuation_lighting.md#9_5_1) |
-| NSW | deletes | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md#part_ariation) |
-| NSW | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
-| NSW | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
-| NSW | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
-| NSW | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
-| NSW | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
-| NSW | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| NSW | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| NSW | deletes | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md) |
+| NSW | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
+| NSW | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
+| NSW | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
+| NSW | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
+| NSW | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
+| NSW | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| NSW | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 | NT | replaces | [3.4.1.2](/ncc/2025/housing_provisions/3_4_termite_risk_management.md#3_4_1) |
 | NT | replaces | [3.4.2](/ncc/2025/housing_provisions/3_4_termite_risk_management.md#3_4_2) |
-| NT | replaces | [Part 10.7](/ncc/2025/housing_provisions/10_7_sound_insulation.md#part_ariation) |
+| NT | replaces | [Part 10.7](/ncc/2025/housing_provisions/10_7_sound_insulation.md) |
 | NT | replaces | [10.7.1](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_1) |
 | NT | replaces | [10.7.2](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_2) |
 | NT | replaces | [10.7.3](/ncc/2025/housing_provisions/10_7_sound_insulation.md#10_7_3) |
-| NT | replaces | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
+| NT | replaces | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
 | NT | replaces | [13.1.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#13_1_1) |
 | NT | replaces | [13.1.2](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#13_1_2) |
-| NT | replaces | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
+| NT | replaces | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
 | NT | replaces | [13.2.1](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_1) |
 | NT | replaces | [13.2.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_2) |
 | NT | replaces | [13.2.3](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_3) |
 | NT | replaces | [13.2.4](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_4) |
 | NT | replaces | [13.2.5](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_5) |
 | NT | replaces | [13.2.6](/ncc/2025/housing_provisions/13_2_building_fabric.md#13_2_6) |
-| NT | replaces | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
+| NT | replaces | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
 | NT | replaces | [13.3.1](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_1) |
 | NT | replaces | [13.3.2](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_2) |
 | NT | replaces | [13.3.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#13_3_3) |
-| NT | replaces | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
+| NT | replaces | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
 | NT | replaces | [13.4.1](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_1) |
 | NT | replaces | [13.4.2](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_2) |
 | NT | replaces | [13.4.3](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_3) |
@@ -66,12 +66,12 @@ From the state and territory schedules of **NCC 2025 Housing Provisions**.[^abcb
 | NT | replaces | [13.4.5](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_5) |
 | NT | replaces | [13.4.6](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_6) |
 | NT | replaces | [13.4.7](/ncc/2025/housing_provisions/13_4_building_sealing.md#13_4_7) |
-| NT | replaces | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
+| NT | replaces | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
 | NT | replaces | [13.5.1](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_1) |
 | NT | replaces | [13.5.2](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_2) |
 | NT | replaces | [13.5.3](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#13_5_3) |
-| NT | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| NT | replaces | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| NT | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| NT | replaces | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 | NT | replaces | [13.7.1](/ncc/2025/housing_provisions/13_7_services.md#13_7_1) |
 | NT | replaces | [13.7.2](/ncc/2025/housing_provisions/13_7_services.md#13_7_2) |
 | NT | replaces | [13.7.3](/ncc/2025/housing_provisions/13_7_services.md#13_7_3) |
@@ -95,14 +95,14 @@ From the state and territory schedules of **NCC 2025 Housing Provisions**.[^abcb
 | SA | adds | [10.2.33](/ncc/2025/housing_provisions/10_2_wet_area_waterproofing.md#10_2_33) |
 | SA | replaces | [13.1.2](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#13_1_2) |
 | TAS | adds | [10.4.3](/ncc/2025/housing_provisions/10_4_facilities.md#10_4_3) |
-| TAS | replaces | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md#part_ariation) |
-| TAS | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
-| TAS | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
-| TAS | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
-| TAS | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
-| TAS | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
-| TAS | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| TAS | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| TAS | replaces | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md) |
+| TAS | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
+| TAS | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
+| TAS | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
+| TAS | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
+| TAS | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
+| TAS | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| TAS | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 | WA | replaces | [7.4.3.1](/ncc/2025/housing_provisions/7_4_gutters_and_downpipes.md#7_4_3) |
 | WA | replaces | [7.4.4](/ncc/2025/housing_provisions/7_4_gutters_and_downpipes.md#7_4_4) |
 | WA | replaces | [7.4.5](/ncc/2025/housing_provisions/7_4_gutters_and_downpipes.md#7_4_5) |

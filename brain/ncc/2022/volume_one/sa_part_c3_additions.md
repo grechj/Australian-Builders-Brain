@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="sa_c3d16"></a>
+<a id="c3d16"></a><a id="sa_c3d16"></a>
 
 ### SA C3D16 Class 2 external walls exposed to brush fences
 
@@ -46,7 +46,7 @@ Where the distance between the *external wall* of a Class 2 building and a *brus
   - (v) pergolas, sun blinds or water tanks; and
   - (vi) unroofed terraces, landings, steps and ramps, not more than 1 m in height.
 - (e) The distance from any point on an *external wall* of a building to a *brush fence* is measured in any direction from the *external wall*.
-<a id="sa_c3d17"></a>
+<a id="c3d17"></a><a id="sa_c3d17"></a>
 
 ### SA C3D17 Bulk grain storage facilities
 

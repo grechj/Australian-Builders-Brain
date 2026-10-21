@@ -25,6 +25,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 
 ## Performance Requirements
 
+<a id="c4p1"></a>
+
 > **TAS variation**: TAS replaces C4P1 Health, environment and amenity protection.
 >
 > An on-site liquid trade waste system must ensure—
@@ -33,6 +35,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > - (b) *surface water* and ground water are not polluted; and
 > - (c) soil productivity is maintained or enhanced.
 >
+
+<a id="c4p2"></a>
 
 > **TAS variation**: TAS replaces C4P2 Transferal of liquid trade waste.
 >
@@ -46,6 +50,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > - (a) the safe and hygienic transferal of waste; and
 > - (b) safe access for clearing *blockages*.
 >
+
+<a id="c4p3"></a>
 
 > **TAS variation**: TAS replaces C4P3 Design, construction and installation.
 >
@@ -87,10 +93,14 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d1"></a>
+
 > **TAS variation**: TAS replaces C4D1 Application.
 >
 > *Performance Requirements* C4P1 to C4P3 are satisfied by complying with C4D2 to C4D19.
 >
+
+<a id="c4d2"></a>
 
 > **TAS variation**: TAS replaces C4D2 General requirements.
 >
@@ -114,6 +124,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d3"></a>
+
 > **TAS variation**: TAS replaces C4D3 Location.
 >
 > (1) Low-risk trade waste appliances must be located as close as practicable to the fixtures served, whether installed internally or externally and may be above or below ground.
@@ -132,15 +144,21 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > It is the role of the Permit Authority to determine whether trade waste discharge is high-risk or low-risk when installed in areas outside the jurisdiction of the *Network Utility Operator*.
 >
 
+<a id="c4d4"></a>
+
 > **TAS variation**: TAS replaces C4D4 Covers.
 >
 > Trade waste appliances must be fitted with covers which can withstand vehicular or pedestrian traffic or other loads likely to be imposed on them and be easily removable by one person.
 >
 
+<a id="c4d5"></a>
+
 > **TAS variation**: TAS replaces C4D5 Materials.
 >
 > Trade waste appliances must be constructed from materials suitable for the characteristics of the liquid wastes likely to be discharged.
 >
+
+<a id="c4d6"></a>
 
 > **TAS variation**: TAS replaces C4D6 Ventilation.
 >
@@ -162,6 +180,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d7"></a>
+
 > **TAS variation**: TAS replaces C4D7 Connections.
 >
 > (1) The *plumbing* and *drainage* installation upstream of a low-risk trade waste appliance must comply with AS/NZS 3500.2
@@ -180,6 +200,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d8"></a>
+
 > **TAS variation**: TAS replaces C4D8 Silt pits.
 >
 > (1) The silt pit must be connected and authorised by the Permit Authority.
@@ -196,6 +218,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_f7814432"></a>*Figure: Silt pits* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d9"></a>
 
 > **TAS variation**: TAS replaces C4D9 Silt traps.
 >
@@ -214,6 +238,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d10"></a>
+
 > **TAS variation**: TAS replaces C4D10 Straining pits.
 >
 > (1) The straining pit must be connected and authorised by the Permit Authority.
@@ -231,6 +257,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_99730727"></a>*Figure: Straining pits* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d11"></a>
 
 > **TAS variation**: TAS replaces C4D11 Straining traps.
 >
@@ -251,6 +279,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_f6b8f871"></a>*Figure: Straining traps* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d12"></a>
 
 > **TAS variation**: TAS replaces C4D12 Grease interceptors.
 >
@@ -295,6 +325,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d13"></a>
+
 > **TAS variation**: TAS replaces C4D13 Portable grease interceptor appliances.
 >
 > (1) The capacity of a portable grease interceptor must be authorised by the Permit Authority.
@@ -334,6 +366,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d14"></a>
+
 > **TAS variation**: TAS replaces C4D14 Venting of grease traps.
 >
 > (1) Grease trap chambers must provide adequate ventilation by providing—
@@ -356,6 +390,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d15"></a>
+
 > **TAS variation**: TAS replaces C4D15 Grease trap installation in multi-storey buildings.
 >
 > Grease traps in multi-storey buildings must have a reflux valve installed between the outlet and connection to the sanitary plumbing system.
@@ -367,6 +403,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_9d654596"></a>*Figure: Grease trap installation in multi-storey buildings* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d16"></a>
 
 > **TAS variation**: TAS replaces C4D16 Oil and petrol interceptors.
 >
@@ -408,6 +446,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_4da54870"></a>*Figure: Oil and petrol interceptors* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d17"></a>
 
 > **TAS variation**: TAS replaces C4D17 Acid neutralising tanks.
 >
@@ -461,6 +501,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > >
 >
 
+<a id="c4d18"></a>
+
 > **TAS variation**: TAS replaces C4D18 Mixing tanks.
 >
 > (1) The capacity of a mixing tank must be authorised by the Permit Authority.
@@ -509,6 +551,8 @@ This Part sets out the requirements for the on-site treatment and disposal of li
 > > <a id="figure_41a77bd3"></a>*Figure: Mixing tanks* (not reproduced here, see the figure on ncc.abcb.gov.au)
 > >
 >
+
+<a id="c4d19"></a>
 
 > **TAS variation**: TAS replaces C4D19 Settling tanks.
 >

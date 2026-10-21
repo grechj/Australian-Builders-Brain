@@ -60,6 +60,8 @@ unless there is a clear space of at least 1.2 m, measured in accordance with [Fi
 > 10.4.2 requires means of removing an unconscious occupant from a fully enclosed *sanitary compartment*. If the enclosure has gaps that are large enough to allow access for a person into the *sanitary compartment*, the compartment is not considered enclosed for the purpose of this clause.
 >
 
+<a id="10_4_3"></a>
+
 > **TAS variation**: TAS adds 10.4.3 Installation of closet fixtures.
 >
 > (1) If a sufficient sewerage system is not available, an authorised alternative means of disposal of sewage may be installed.

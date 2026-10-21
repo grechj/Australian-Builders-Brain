@@ -5,7 +5,8 @@ Usage:
 
 Each brain/states/<code>.md keeps its hand-written notes; this rewrites only
 the part between the NCC:START and NCC:END markers, from the NCC pages'
-state_variations tables and state-only Parts. Re-run after tools/ncc_ingest.py.
+state_variations tables and state-only Parts. Re-run after tools/ncc_ingest.py
+(which ends with tools/ncc_anchor_repair.py, so every link here has a target).
 """
 
 from __future__ import annotations

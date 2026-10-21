@@ -52,6 +52,8 @@ Test for strength: Metal roof cladding, its connections and immediate supporting
 > - (3) The single load cycle (sequence D) must be held for a minimum of 10 seconds.
 >
 
+<a id="s4c3"></a>
+
 > **NT variation**: NT adds S4C3 Strengthened area.
 >
 > (1) Where a residential building of Class 1b, 2, 3, 9a or 9c, in Region B2 or C as defined by AS/NZS 1170.2 and AS 4055, is designed to be used by the occupants with a disability and the vulnerable, it shall incorporate a “strengthened area” for use as shelter during cyclonic conditions and must comply with the following criteria:

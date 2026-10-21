@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for premises used for electro-plating, electro-polishing, anodising or etching.
 
+<a id="i14d1"></a>
+
 > **TAS variation**: TAS replaces I14D1 Application of Part.
 >
 > (1) This Part is applicable to every building where any of the processes of electro-plating, electro-polishing, anodising or etching are undertaken.
@@ -32,6 +34,8 @@ This Part contains additional requirements for premises used for electro-plating
 > - (a) provide for the safety and comfort of workers; and
 > - (b) be constructed in a manner that will prevent the escape of liquids and atmospheric contaminants to other areas of the building.
 >
+
+<a id="i14d2"></a>
 
 > **TAS variation**: TAS replaces I14D2 Floors.
 >
@@ -43,6 +47,8 @@ This Part contains additional requirements for premises used for electro-plating
 > - (b) chemically resistant to the solutions used in the process.
 >
 
+<a id="i14d3"></a>
+
 > **TAS variation**: TAS replaces I14D3 Height of plating area.
 >
 > Every part of a plating area must be not less than 2.7 m in height—
@@ -51,10 +57,14 @@ This Part contains additional requirements for premises used for electro-plating
 > - (b) measured from the floor to the lowest part of the roof if a ceiling is not provided.
 >
 
+<a id="i14d4"></a>
+
 > **TAS variation**: TAS replaces I14D4 Air space.
 >
 > In every plating area there must be not less than 14 m<sup>3</sup> of air space for each person employed and, in the calculation of such space, the height taken into account must not exceed 4.2 m.
 >
+
+<a id="i14d5"></a>
 
 > **TAS variation**: TAS replaces I14D5 Ceiling construction.
 >

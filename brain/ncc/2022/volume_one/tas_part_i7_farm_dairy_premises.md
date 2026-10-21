@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i7d1"></a>
+<a id="i7d1"></a><a id="tas_i7d1"></a>
 
 ### TAS I7D1 Application of Part
 
@@ -31,7 +31,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Dairies must be constructed in such a manner that contamination of milk can be avoided.
 
-<a id="tas_i7d2"></a>
+<a id="i7d2"></a><a id="tas_i7d2"></a>
 
 ### TAS I7D2 Milking sheds and holding yards
 
@@ -51,7 +51,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 - (b) the floors are constructed of well-compacted smooth finish concrete and are graded to a drain; and
 - (c) joints between wall sections and walls and walls and floors are sealed to prevent entry of water and pests; and
 - (d) artificial lighting is designed to comply with AS 1680.
-<a id="tas_i7d3"></a>
+<a id="i7d3"></a><a id="tas_i7d3"></a>
 
 ### TAS I7D3 Milk receiving area and milk storage room
 
@@ -72,7 +72,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 - (d) artificial lighting is designed to comply with AS 1680; and
 - (e) all openings are fitted with doors, *windows* or screens; and
 - (f) ventilation is provided in accordance with F6D6.
-<a id="tas_i7d4"></a>
+<a id="i7d4"></a><a id="tas_i7d4"></a>
 
 ### TAS I7D4 Water supply
 

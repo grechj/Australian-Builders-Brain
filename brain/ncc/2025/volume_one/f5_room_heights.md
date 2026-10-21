@@ -143,6 +143,8 @@ A *habitable room* or space must have sufficient height that does not unduly int
 - (c) above a stairway, ramp (other than a *threshold ramp*), landing or the like — 2 m measured vertically above the nosing line of stairway treads or the floor surface of the ramp, landing or the like; and
 - (d) for a *required* *accessible* adult change facility — 2.4 m.
 
+<a id="f5d3"></a>
+
 > **VIC variation**: VIC adds F5D3 Class 3, 9a and 9c residential aged care buildings – size of rooms.
 >
 > In a *residential aged care building* or *residential care building* —

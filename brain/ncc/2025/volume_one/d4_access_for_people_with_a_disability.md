@@ -427,6 +427,8 @@ On an *accessway* —
 
 On an *accessway*, where there is no chair rail, handrail or transom, all frameless or fully glazed doors, sidelights and any glazing capable of being mistaken for a doorway or opening, must be clearly marked in accordance with AS 1428.1.
 
+<a id="d4d14"></a>
+
 > **TAS variation**: TAS adds D4D14 Compliance with Premises Standards.
 >
 > (1) A building solution must comply with the Disability (Access to Premises - Buildings) Standards 2010.

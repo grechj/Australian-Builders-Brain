@@ -25,6 +25,8 @@ This Part sets out the requirements for a surface drainage system to a *Network 
 
 ## Objectives
 
+<a id="e4o1"></a>
+
 > **TAS variation**: TAS replaces E4O1 Objective.
 >
 > The Objective of this Part is to—
@@ -39,12 +41,16 @@ This Part sets out the requirements for a surface drainage system to a *Network 
 
 ## Functional Statements
 
+<a id="e4f1"></a>
+
 > **TAS variation**: TAS replaces E4F1 Functional statements.
 >
 > Buildings and their surroundings are to be provided with a surface drainage and subsurface drainage installation and be constructed in such a manner as to provide protection for people, property and the environment from the adverse effects of stormwater.
 >
 
 ## Performance Requirements
+
+<a id="e4p1"></a>
 
 > **TAS variation**: TAS replaces E4P1 Surface drainage systems.
 >
@@ -56,10 +62,14 @@ This Part sets out the requirements for a surface drainage system to a *Network 
 > - (b) severity of potential damage to property, *loss* of *amenity*, illness or injury that would result from the failure of the system.
 >
 
+<a id="e4p2"></a>
+
 > **TAS variation**: TAS replaces E4P2 Subsurface drainage.
 >
 > A subsoil drainage system must remove excess groundwater and reduce soil moisture levels to prevent loss by changing soil moisture conditions.
 >
+
+<a id="e4p3"></a>
 
 > **TAS variation**: TAS replaces E4P3 Design, construction and installation.
 >
@@ -79,10 +89,14 @@ This Part sets out the requirements for a surface drainage system to a *Network 
 > - (b) Stormwater is transferred to a *Network Utility Operator's* stormwater system or an *approved disposal system*.
 >
 
+<a id="e4d1"></a>
+
 > **TAS variation**: TAS replaces E4D1 Application.
 >
 > Performance requirements E4P1 to E4P3 are satisfied by complying with E4D2 and E4D3.
 >
+
+<a id="e4d2"></a>
 
 > **TAS variation**: TAS replaces E4D2 General requirements.
 >
@@ -91,6 +105,8 @@ This Part sets out the requirements for a surface drainage system to a *Network 
 > - (a) AS/NZS 3500.3; or
 > - (b) [Housing provisions 3.3](/ncc/2025/housing_provisions/3_3_drainage.md)
 >
+
+<a id="e4d3"></a>
 
 > **TAS variation**: TAS replaces E4D3 Protection from surface water.
 >

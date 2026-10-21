@@ -23,13 +23,13 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nsw_i4d1"></a>
+<a id="i4d1"></a><a id="nsw_i4d1"></a>
 
 ### NSW I4D1 Application of Part
 
 This Part applies to every *entertainment venue* as described in the Environmental Planning and Assessment Regulation 2021.
 
-<a id="nsw_i4d2"></a>
+<a id="i4d2"></a><a id="nsw_i4d2"></a>
 
 ### NSW I4D2 Fire separation
 
@@ -37,7 +37,7 @@ If an *entertainment venue* forms part only of a building, then—
 
 - (a) the whole of the *entertainment venue*; or
 - (b) the part containing the *stage*, *backstage* area and *auditorium*, must be separated from the other parts of the building by construction having an FRL of not less than 60/60/60.
-<a id="nsw_i4d3"></a>
+<a id="i4d3"></a><a id="nsw_i4d3"></a>
 
 ### NSW I4D3 Foyer space
 
@@ -45,7 +45,7 @@ Where an *entertainment venue* is used principally for the purpose of—
 
 - (a) exhibiting *films*; or
 - (b) conducting live *stage* productions, foyer space (excluding stairways and concession areas) must be provided on the basis of at least 0.25 m2 for each person that the *auditorium* accommodates.
-<a id="nsw_i4d4"></a>
+<a id="i4d4"></a><a id="nsw_i4d4"></a>
 
 ### NSW I4D4 Sprinkler systems for common foyers
 
@@ -55,25 +55,25 @@ In an *entertainment venue*, where multiple *auditoriums* have a foyer in common
 - (b) If the foyer serves more than 2 *auditoriums*, a sprinkler system (other than a FPAA101D or FPAA101H system) complying with Specification 17 must be installed—
   - (i) throughout the *storey* containing the foyer; and
   - (ii) throughout each *storey* in the building below that *storey*.
-<a id="nsw_i4d5"></a>
+<a id="i4d5"></a><a id="nsw_i4d5"></a>
 
 ### NSW I4D5 Conventional stages: application
 
 NSW I4D6 to NSW I4D9 apply to a conventional *stage*, that is, a *stage* which is separated from the *auditorium* by a proscenium wall incorporating a proscenium opening.
 
-<a id="nsw_i4d6"></a>
+<a id="i4d6"></a><a id="nsw_i4d6"></a>
 
 ### NSW I4D6 Conventional stages: extent of stage area
 
 If a room or area is not separated from the remainder of a conventional *stage* by construction having an FRL of not less than 60/60/60, the room or area is, for the purposes of this Part, to be taken to form part of the *stage*.
 
-<a id="nsw_i4d7"></a>
+<a id="i4d7"></a><a id="nsw_i4d7"></a>
 
 ### NSW I4D7 Conventional stages: small stages
 
 A *stage* which is more than 50 m2 but not more than 150 m2 in area must have 2 or more means of egress from the *stage* and *backstage* area provided otherwise than through the proscenium wall.
 
-<a id="nsw_i4d8"></a>
+<a id="i4d8"></a><a id="nsw_i4d8"></a>
 
 ### NSW I4D8 Conventional stages: large stages
 
@@ -83,31 +83,31 @@ A *stage* which is more than 150 m2 in area—
 - (b) must have the proscenium opening protected by a safety curtain that complies with NSW I4D15 and NSW I4D16;
 - (c) must have a line of open drenchers or open sprinklers provided above the proscenium opening on the *stage* side and in such a position as to be able to discharge over the inside face of the safety curtain; and
 - (d) must have 2 or more means of egress from the *stage* and *backstage* area provided otherwise than through the proscenium wall.
-<a id="nsw_i4d9"></a>
+<a id="i4d9"></a><a id="nsw_i4d9"></a>
 
 ### NSW I4D9 Conventional stages: fire separation of stages
 
 A *stage* which is more than 50 m2 in area, and all areas below such a *stage*, must (with the exception of the proscenium opening) be separated from the *backstage* and the remainder of the building by construction having an FRL of not less than 60/60/60.
 
-<a id="nsw_i4d10"></a>
+<a id="i4d10"></a><a id="nsw_i4d10"></a>
 
 ### NSW I4D10 Non-conventional stages: application
 
 NSW I4D11 and NSW I4D12 apply to a *stage* that is not a conventional *stage* within the meaning of NSW I4D5.
 
-<a id="nsw_i4d11"></a>
+<a id="i4d11"></a><a id="nsw_i4d11"></a>
 
 ### NSW I4D11 Non-conventional stages: small stages
 
 A *stage* which is more than 50 m2 but not more than 150 m2 in area must have at least 2 means of egress from the *backstage* area.
 
-<a id="nsw_i4d12"></a>
+<a id="i4d12"></a><a id="nsw_i4d12"></a>
 
 ### NSW I4D12 Non-conventional stages: large stages
 
 A *stage* which is more than 150 m2 in area must have at least 2 means of egress from the *backstage* area.
 
-<a id="nsw_i4d13"></a>
+<a id="i4d13"></a><a id="nsw_i4d13"></a>
 
 ### NSW I4D13 Flying scenery
 
@@ -127,7 +127,7 @@ A *stage* which is more than 150 m2 in area must have at least 2 means of egress
   - (i) have an FRL of not less than 120/120/120; and
   - (ii) have the proscenium opening protected by a rigid safety curtain in accordance with NSW I4D16.
 - (b) The walls forming the *stage* area, and the area beneath the *stage*, must be constructed of masonry or concrete and have an FRL of not less than 120/120/120.
-<a id="nsw_i4d14"></a>
+<a id="i4d14"></a><a id="nsw_i4d14"></a>
 
 ### NSW I4D14 Load notice
 
@@ -137,7 +137,7 @@ A *stage* which is more than 150 m2 in area must have at least 2 means of egress
 
 - (a) at least 50 mm high; and
 - (b) on a contrasting background.
-<a id="nsw_i4d15"></a>
+<a id="i4d15"></a><a id="nsw_i4d15"></a>
 
 ### NSW I4D15 Safety curtains
 
@@ -154,7 +154,7 @@ A safety curtain *required* by NSW I4D8 must—
 - (i) have a notice displayed adjacent to the operating controls, in clear and legible letters and symbols of adequate size, indicating its use and operation; and
 - (j) when operated, actuate a distinctive warning alarm audible to persons on the *stage* and must not be reliant for its operation solely on the primary electricity supply; and
 - (k) have the words “Safety Curtain” exhibited on the curtain in clear and legible letters of adequate size to enable them to be read from all parts of the *auditorium*.
-<a id="nsw_i4d16"></a>
+<a id="i4d16"></a><a id="nsw_i4d16"></a>
 
 ### NSW I4D16 Safety curtains — additional requirements
 
@@ -164,13 +164,13 @@ A rigid safety curtain *required* by NSW I4D13 must comply with the requirements
 - (b) be framed with structural steel that complies with AS 4100; and
 - (c) be sheeted and finished on both sides with sheet steel or other *non-combustible* material of such gauge, and so fastened to its frame, as to ensure that its frame is capable of withstanding distortion arising from heat; and
 - (d) when closed, overlap the proscenium opening by not less than 300 mm at each side and by not less than 600 mm at the top.
-<a id="nsw_i4d17"></a>
+<a id="i4d17"></a><a id="nsw_i4d17"></a>
 
 ### NSW I4D17 Seating in rows: application
 
 NSW I4D18 to NSW I4D25 do not apply to *continental seating* or seating at tables.
 
-<a id="nsw_i4d18"></a>
+<a id="i4d18"></a><a id="nsw_i4d18"></a>
 
 ### NSW I4D18 Seating in rows: number of seats
 
@@ -178,7 +178,7 @@ Subject to NSW I4D22, where seating is arranged in *rows*, the maximum number of
 
 - (a) 8 where there is an *aisle* at one end only of the *row*; or
 - (b) 16 where there are *aisles* on both ends of the *row*.
-<a id="nsw_i4d19"></a>
+<a id="i4d19"></a><a id="nsw_i4d19"></a>
 
 ### NSW I4D19 Seating in rows: chairs used for seating
 
@@ -190,7 +190,7 @@ Chairs used for seating must—
   - (i) the front of each chair and the back of the chair in front; or
   - (ii) if a guardrail is provided in front of the chairs, between the front of each chair and the guardrail; and
 - (d) have a distance of at least 950 mm between the back of the chair and the back of the chair in front.
-<a id="nsw_i4d20"></a>
+<a id="i4d20"></a><a id="nsw_i4d20"></a>
 
 ### NSW I4D20 Seating in rows: chairs in auditoriums — level floors
 
@@ -198,13 +198,13 @@ Chairs in an *auditorium* that has a level floor must be—
 
 - (a) securely fastened to the floor; or
 - (b) secured together in groups of not less than 4 and not more than 16.
-<a id="nsw_i4d21"></a>
+<a id="i4d21"></a><a id="nsw_i4d21"></a>
 
 ### NSW I4D21 Seating in rows: chairs in auditoriums — sloping floors
 
 Chairs in an *auditorium* having a sloping floor, or having stepped or inclined platforms, must be securely fastened to the floor or platform.
 
-<a id="nsw_i4d22"></a>
+<a id="i4d22"></a><a id="nsw_i4d22"></a>
 
 ### NSW I4D22 Seating in rows: radiating aisles in seating areas
 
@@ -215,7 +215,7 @@ Where seating is securely fastened to the floor and arranged in *rows* of concen
   - (i) have a *minimum lateral clearance* of at least 325 mm between the front of the seat and the back of the seat in front; and
   - (ii) have a distance of at least 975 mm between the back of the seat and the back of the seat in front; and
 - (c) the *rows* may be curved or straight.
-<a id="nsw_i4d23"></a>
+<a id="i4d23"></a><a id="nsw_i4d23"></a>
 
 ### NSW I4D23 Seating in rows: aisles and cross-overs
 
@@ -224,7 +224,7 @@ Where *aisles* and *cross-overs* are provided—
 - (a) each *aisle* must have a width of at least 1000 mm and each *cross-over* must have a width of at least 1500 mm;
 - (b) the floor of each *aisle* must not have a grade of more than 1 in 8 at any part; and
 - (c) if there is a step from a *row* to an *aisle* or from a landing to an *aisle*, the step must not project into the *aisle*.
-<a id="nsw_i4d24"></a>
+<a id="i4d24"></a><a id="nsw_i4d24"></a>
 
 ### NSW I4D24 Seating in rows: platforms and steps
 
@@ -239,7 +239,7 @@ Where an *aisle* contains platforms or steps—
 - (d) goings which are more than 450 mm deep at platform level must have a grade of not more than 1 in 50; and
 - (e) at the entrance from the *aisle* to each *row* there must be a clear level floor space, extending the full width of the *aisle*, of at least 300 mm, measured from the back of the *row* in front; and
 - (f) any going projecting in front of a seat adjacent to an *aisle* must be protected by a guardrail.
-<a id="nsw_i4d25"></a>
+<a id="i4d25"></a><a id="nsw_i4d25"></a>
 
 ### NSW I4D25 Seating in rows: stepped platforms
 
@@ -251,43 +251,43 @@ Where stepped platforms without chairs or stepped platforms with bench seats, ar
 - (d) at the entrance from the *aisle* to each *row* there must be a clear level floor space, extending the full width of the *aisle*, of at least 300 mm, measured from the back of the *row* in front; and
 - (e) any going projecting in front of a seat adjacent to an *aisle* must be protected by a guardrail; and
 - (f) in the case of stepped platforms with bench seats, there must be at least 300 mm between the back of each seat and the front of the platform behind, or the front of the bench seat behind, whichever is the closer.
-<a id="nsw_i4d26"></a>
+<a id="i4d26"></a><a id="nsw_i4d26"></a>
 
 ### NSW I4D26 Continental seating: application
 
 NSW I4D27 to NSW I4D35 apply to *continental seating*.
 
-<a id="nsw_i4d27"></a>
+<a id="i4d27"></a><a id="nsw_i4d27"></a>
 
 ### NSW I4D27 Continental seating: seating to be fastened
 
 Seating must be securely fastened to the floor.
 
-<a id="nsw_i4d28"></a>
+<a id="i4d28"></a><a id="nsw_i4d28"></a>
 
 ### NSW I4D28 Continental seating: maximum seats per row
 
 The number of seats in a *row* must not exceed 120.
 
-<a id="nsw_i4d29"></a>
+<a id="i4d29"></a><a id="nsw_i4d29"></a>
 
 ### NSW I4D29 Continental seating: depth of seating
 
 The depth of each *row* of seating (that is, the distance between the back of the *row* in front or, if there is a guardrail in front, between the back of the *row* and the guardrail) must, in respect of a *row* containing a number of seats specified in Column 1 of NSW Table I4D29, be not less than the distance specified in Column 2 of that Table in respect of that number of seats.
 
-<a id="nsw_i4d30"></a>
+<a id="i4d30"></a><a id="nsw_i4d30"></a>
 
 ### NSW I4D30 Continental seating: clearance between rows
 
 The *minimum lateral clearance* between each *row* of seating must, in respect of a *row* containing a number of seats specified in Column 1 of NSW Table I4D29 be not less than the clearance specified in Column 3 of that Table in respect of that number of seats.
 
-<a id="nsw_i4d31"></a>
+<a id="i4d31"></a><a id="nsw_i4d31"></a>
 
 ### NSW I4D31 Continental seating: chairs used for seating
 
 Chairs used for seating must comply with NSW I4D19(a) and (b).
 
-<a id="nsw_i4d32"></a>
+<a id="i4d32"></a><a id="nsw_i4d32"></a>
 
 ### NSW I4D32 Continental seating: egress doorways
 
@@ -299,7 +299,7 @@ Egress doorways through the walls of the *auditorium*—
   - (i) directly to a road or *open space*; or
   - (ii) into a foyer or other area giving access to a road or *open space*; and
 - (d) must be provided with *exit* signs if the egress doorways are not sufficiently conspicuous.
-<a id="nsw_i4d33"></a>
+<a id="i4d33"></a><a id="nsw_i4d33"></a>
 
 ### NSW I4D33 Continental seating: clear areas
 
@@ -310,19 +310,19 @@ A clear area—
   - (i) the sum of the clearances specified in Column 3 of NSW Table I4D29 for each *row*; or
   - (ii) 500 mm; and
 - (c) if it contains platforms or steps, must comply with NSW I4D24(a), (b), (c), (d) and (f).
-<a id="nsw_i4d34"></a>
+<a id="i4d34"></a><a id="nsw_i4d34"></a>
 
 ### NSW I4D34 Continental seating: minimum clear space
 
 At the entrance from a *row* to a clear area, there must be a clear level floor space having a width of at least the clearance specified for the *row* in Column 3 of NSW Table I4D29.
 
-<a id="nsw_i4d35"></a>
+<a id="i4d35"></a><a id="nsw_i4d35"></a>
 
 ### NSW I4D35 Continental seating: doors
 
 A door fitted to the egress doorway in the wall of an *auditorium* must comply with NSW D3D16 and NSW D3D24(2).
 
-<a id="nsw_i4d36"></a>
+<a id="i4d36"></a><a id="nsw_i4d36"></a>
 
 ### NSW I4D36 Provision of guardrails: location
 
@@ -331,7 +331,7 @@ Guardrails must be provided—
 - (a) along the fascia of each balcony or box; and
 - (b) if there is a stepped floor, along the front edge of each *cross-over*; and
 - (c) where NSW I4D37 and NSW I4D38 apply.
-<a id="nsw_i4d37"></a>
+<a id="i4d37"></a><a id="nsw_i4d37"></a>
 
 ### NSW I4D37 Provision of guardrails: fixed back seats
 
@@ -339,7 +339,7 @@ If seats with fixed backs are provided, guardrails that extend for the full widt
 
 - (a) fixed back seats of the next lower level project at least 500 mm above the level of the stepped platform; and
 - (b) there is only one riser between the platform and next lower *cross-over*.
-<a id="nsw_i4d38"></a>
+<a id="i4d38"></a><a id="nsw_i4d38"></a>
 
 ### NSW I4D38 Provision of guardrails: steps between platforms
 
@@ -350,13 +350,13 @@ If seats with fixed backs are provided, guardrails that extend for the full widt
   - (ii) at the back of the highest platform, extending the full width of the platform; and
 - (d) there is an inclined floor, the raised section of which is not bounded by walls at least 660 mm high, a guardrail must be provided that extends around the perimeter of the raised section at a height of at least 660 mm above the inclined floor level; and
 - (e) seating at tables is provided on a stepped platform, a guardrail at least 500 mm high must be provided along the front edge of the platform.
-<a id="nsw_i4d39"></a>
+<a id="i4d39"></a><a id="nsw_i4d39"></a>
 
 ### NSW I4D39 Guardrails for seating areas: application
 
 NSW I4D40 to NSW I4D42 apply to seating areas.
 
-<a id="nsw_i4d40"></a>
+<a id="i4d40"></a><a id="nsw_i4d40"></a>
 
 ### NSW I4D40 Guardrails for seating areas: continental seating
 
@@ -364,7 +364,7 @@ Where a guardrail is provided in front of a *row* of chairs—
 
 - (a) the distance between the back of each chair in that *row*, and the guardrail must be not less than the distance specified in Column 2 of NSW Table I4D29 for the number of chairs in that *row*; and
 - (b) the *minimum lateral clearance* between the front of each chair in that *row* and the guardrail must be not less than the clearance specified in Column 3 of NSW Table I4D29 for the number of chairs in that *row*.
-<a id="nsw_i4d41"></a>
+<a id="i4d41"></a><a id="nsw_i4d41"></a>
 
 ### NSW I4D41 Guardrails for seating areas: balconies and boxes
 
@@ -374,7 +374,7 @@ A guardrail provided along the fascia of a balcony or box—
 - (b) if it is not located at the foot of a stepped *aisle*, must have its top surface at least 750 mm above the floor; and
 - (c) if it has a ledge more than 70 mm wide, must have the top surface of the ledge sloping downwards towards the floor of the balcony or box at an angle of at least 30 degrees from the horizontal; and
 - (d) must have an unperforated kerb or toe guard extending for at least 300 mm above the floor.
-<a id="nsw_i4d42"></a>
+<a id="i4d42"></a><a id="nsw_i4d42"></a>
 
 ### NSW I4D42 Guardrails for seating areas: cross-overs
 
@@ -382,7 +382,7 @@ A guardrail provided along the front edge of a *cross-over* on a stepped floor�
 
 - (a) must be at least 750 mm high; and
 - (b) must extend the full distance between *aisles*, or between a wall and an *aisle*, or for such other distance as considered necessary.
-<a id="nsw_i4d43"></a>
+<a id="i4d43"></a><a id="nsw_i4d43"></a>
 
 ### NSW I4D43 Dressing rooms
 
@@ -392,13 +392,13 @@ A dressing room or two or more adjoining dressing rooms, having a total *floor a
 - (b) have at least 2 means of egress as remote from each other as possible, one of which must discharge—
   - (i) directly to a road or *open space*; or
   - (ii) through a fire-isolated *exit* to a road or *open space*.
-<a id="nsw_i4d44"></a>
+<a id="i4d44"></a><a id="nsw_i4d44"></a>
 
 ### NSW I4D44 Storerooms
 
 A storeroom must be separated from other parts of the building by construction having an FRL of not less than 60/60/60.
 
-<a id="nsw_i4d45"></a>
+<a id="i4d45"></a><a id="nsw_i4d45"></a>
 
 ### NSW I4D45 Projection suites: Application
 
@@ -406,7 +406,7 @@ A storeroom must be separated from other parts of the building by construction h
 
 (2) A *projection suite* must be provided in an *entertainment venue* intended to be used for the showing of *films*.
 
-<a id="nsw_i4d46"></a>
+<a id="i4d46"></a><a id="nsw_i4d46"></a>
 
 ### NSW I4D46 Projection suites: rooms to be provided
 
@@ -422,13 +422,13 @@ A *projection suite* in accordance with the staffing requirements of Schedule 72
     - (D) activate sufficient general lighting to provide a minimum of 40 lux measured at floor level in any *auditorium* affected; and
     - (E) operate a public address system to automatically announce a suitable message from the management of the premises; and
     - (F) activate an audible alarm to immediately indicate to management the presence of smoke in the projection room.
-<a id="nsw_i4d47"></a>
+<a id="i4d47"></a><a id="nsw_i4d47"></a>
 
 ### NSW I4D47 Projection suites: fire separation
 
 A *projection suite* must be separated from all other internal parts of the building in which it is located by construction having an FRL of not less than 60/60/60.
 
-<a id="nsw_i4d48"></a>
+<a id="i4d48"></a><a id="nsw_i4d48"></a>
 
 ### NSW I4D48 Projection suites: concession for protection of some openings
 
@@ -436,7 +436,7 @@ If a projection or observation port is not more than 0.1 m2 in area—
 
 - (a) a metal shutter not less than 1.5 mm thick may be fitted thereto instead of the protection *required* under NSW C4D12; and
 - (b) any metal shutter or protection system must be equipped with a device to permit the closing of the shutter or the protection system from easily accessible operating positions adjacent to each egress doorway from the projection room.
-<a id="nsw_i4d49"></a>
+<a id="i4d49"></a><a id="nsw_i4d49"></a>
 
 ### NSW I4D49 Basement storeys
 
@@ -444,7 +444,7 @@ Where an *entertainment venue* includes not more than 2 basement *storeys*—
 
 - (a) all *required exits* from the basement must be enclosed in *non-combustible* construction, with the exception of the main entry or *exit*; and
 - (b) any *auditorium* and other public areas in the basement must be equipped with an air-handling system that complies with AS 1668.2.
-<a id="nsw_i4d50"></a>
+<a id="i4d50"></a><a id="nsw_i4d50"></a>
 
 ### NSW I4D50 Basement storeys: more than two
 
@@ -453,7 +453,7 @@ If the *entertainment venue* includes more than 2 basement *storeys*—
 - (a) the construction must be of at least Type B; and
 - (b) all *required exits* from the basement must be enclosed in a *fire-resisting shaft* having an FRL as *required* by the relevant Type of construction; and
 - (c) the building must be equipped with a sprinkler system (other than a FPAA101D or FPAA101H system) complying with Specification 17.
-<a id="nsw_i4d51"></a>
+<a id="i4d51"></a><a id="nsw_i4d51"></a>
 
 ### NSW I4D51 Electric mains installation: main switchboard
 
@@ -461,13 +461,13 @@ The switchboard containing the main isolation switch must—
 
 - (a) be located in a position that is readily accessible to authorised persons, and to the *fire brigade* in the case of an emergency; and
 - (b) be enclosed by construction having an FRL of not less than 60/60/60.
-<a id="nsw_i4d52"></a>
+<a id="i4d52"></a><a id="nsw_i4d52"></a>
 
 ### NSW I4D52 Electric mains installation: circuit protection
 
 Protection of the final sub-circuit originating at a switchboard or distribution board must be by means of circuit breakers.
 
-<a id="nsw_i4d53"></a>
+<a id="i4d53"></a><a id="nsw_i4d53"></a>
 
 ### NSW I4D53 Electric mains installation: separate sub-mains
 
@@ -478,7 +478,7 @@ Where an *entertainment venue* has its mains supply in common with that of anoth
   - (i) mineral-insulated metal-sheathed cables or other cables that provide at least 2 hours’ fire protection; or
   - (ii) heavy-duty PVC conduit or metallic pipe, concrete encased in walls or slabs with a minimum of 50 mm cover; or
   - (iii) heavy-duty PVC conduit or metallic pipe, buried at least 500 mm below ground level, for underground cabling.
-<a id="nsw_i4d54"></a>
+<a id="i4d54"></a><a id="nsw_i4d54"></a>
 
 ### NSW I4D54 Lighting: lighting switches
 
@@ -486,7 +486,7 @@ Where an *entertainment venue* has its mains supply in common with that of anoth
 
 (2) Where, during normal use, general lighting may be dimmed or switched off, an override switch to switch on all of the general lighting instantaneously must be installed in the *auditorium* in a position accessible to management.
 
-<a id="nsw_i4d55"></a>
+<a id="i4d55"></a><a id="nsw_i4d55"></a>
 
 ### NSW I4D55 Lighting: lighting levels
 
@@ -496,19 +496,19 @@ Where the lamps utilised in the general lighting are of a type that will not rel
 - (b) lamps of a type that will provide immediate lighting must be installed and—
   - (i) arranged in such a manner as to ensure visual conditions not inferior to those *required* to be provided by the emergency lighting; and
   - (ii) capable of being switched in common with the general lighting and of being controlled also by the override switch *required* by NSW I4D54(2).
-<a id="nsw_i4d56"></a>
+<a id="i4d56"></a><a id="nsw_i4d56"></a>
 
 ### NSW I4D56 Lighting: provision of aisle lighting
 
 Where general lighting is to be either dimmed or extinguished when the public is in attendance and where the floor is stepped or at an inclination greater than 1 in 12, *aisle* lights must be provided to illuminate the length of each *aisle* and the tread of each step therein.
 
-<a id="nsw_i4d57"></a>
+<a id="i4d57"></a><a id="nsw_i4d57"></a>
 
 ### NSW I4D57 Lighting: aisle lighting power supply
 
 Where an *aisle* light is installed in a seat frame, it must be supplied at a voltage of not more than 32 volts AC or 115 volts
 
-<a id="nsw_i4d58"></a>
+<a id="i4d58"></a><a id="nsw_i4d58"></a>
 
 ### NSW I4D58 Lighting: aisle lighting alternative lighting supply
 
@@ -516,7 +516,7 @@ Where an *aisle* light is installed in a seat frame, it must be supplied at a vo
 
 - (a) is capable of being *automatically* energised in the event of failure of the primary lighting electricity supply; and
 - (b) complies with the provisions applying to emergency lighting.
-<a id="nsw_i4d59"></a>
+<a id="i4d59"></a><a id="nsw_i4d59"></a>
 
 ### NSW I4D59 Automatic smoke-and-heat vents for stages
 
@@ -526,7 +526,7 @@ An *automatic smoke-and-heat vent* system *required* by NSW E2D16(c) for *stages
 - (b) be capable of being released manually from positions at either side of the *stage* and of being fully activated from either position; and
 - (c) have a notice, prominently displayed at each position referred to in (b), clearly indicating the method of activation;
 - (d) have an openable area of not less than 10 percent of the total area of the *stage*.
-<a id="nsw_i4d60"></a>
+<a id="i4d60"></a><a id="nsw_i4d60"></a>
 
 ### NSW I4D60 Solid fuel burning stoves and open fire places
 
@@ -534,7 +534,7 @@ Solid fuel burning stoves and open fire places must not be installed in premises
 
 - (a) exhibiting *films*; or
 - (b) conducting live theatre productions.
-<a id="nsw_i4d61"></a>
+<a id="i4d61"></a><a id="nsw_i4d61"></a>
 
 ### NSW I4D61 Fuel gas cylinders: general
 
@@ -542,7 +542,7 @@ Fuel gas cylinders must—
 
 - (a) be housed in an enclosure that is located outside the building; and
 - (b) comply with the ventilation requirements of AS/NZS 1596.
-<a id="nsw_i4d62"></a>
+<a id="i4d62"></a><a id="nsw_i4d62"></a>
 
 ### NSW I4D62 Fuel gas cylinders: enclosures
 

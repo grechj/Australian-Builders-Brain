@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nsw_j1p5"></a>
+<a id="j1p5"></a><a id="nsw_j1p5"></a>
 
 ### NSW J1P5 Building fabric—Class 2 building and Class 4 parts of a building
 
@@ -40,7 +40,7 @@ Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume One**
 > (3) NSW J1P5(2) only applies to a metal framed roof and metal framed wall.
 >
 
-<a id="nsw_j1p6"></a>
+<a id="j1p6"></a><a id="nsw_j1p6"></a>
 
 ### NSW J1P6 Building sealing—Class 2 building and Class 4 parts of a building
 
@@ -61,7 +61,7 @@ A building must have, to the degree necessary, a level of building sealing again
 > (c) parts that cannot be fully enclosed.
 >
 
-<a id="nsw_j1p7"></a>
+<a id="j1p7"></a><a id="nsw_j1p7"></a>
 
 ### NSW J1P7 Services—Class 2 building and Class 4 parts of a building
 

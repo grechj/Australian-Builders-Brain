@@ -25,6 +25,8 @@ This Part sets out the requirements for the design, construction, installation, 
 
 ## Objectives
 
+<a id="e4o1"></a>
+
 > **VIC variation**: VIC replaces E4O1 Objective.
 >
 > The Objective of this Part is to—
@@ -39,12 +41,16 @@ This Part sets out the requirements for the design, construction, installation, 
 
 ## Functional Statements
 
+<a id="e4f1"></a>
+
 > **VIC variation**: VIC replaces E4F1 Functional statement.
 >
 > Buildings and their surroundings are to be provided with a surface drainage installation and be constructed in such a manner as to provide protection for people, property and the environment from the adverse effects of stormwater.
 >
 
 ## Performance Requirements
+
+<a id="e4p1"></a>
 
 > **VIC variation**: VIC replaces E4P1 Surface drainage systems.
 >
@@ -53,6 +59,8 @@ This Part sets out the requirements for the design, construction, installation, 
 > - (a) The importance of the building.
 > - (b) The severity of potential damage to property, *loss* of *amenity*, illness or injury that would result from the failure of the system.
 >
+
+<a id="e4p2"></a>
 
 > **VIC variation**: VIC replaces E4P2 Design, construction and installation.
 >
@@ -72,10 +80,14 @@ This Part sets out the requirements for the design, construction, installation, 
 > - (b) Stormwater is transferred to a *point of connection*.
 >
 
+<a id="e4d1"></a>
+
 > **VIC variation**: VIC replaces E4D1 Application.
 >
 > *Performance Requirements* E4P1 to E4P2 are satisfied by complying with E4D2.
 >
+
+<a id="e4d2"></a>
 
 > **VIC variation**: VIC replaces E4D2 General requirements.
 >

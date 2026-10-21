@@ -144,30 +144,26 @@ def _plain(text: str) -> str:
 
 
 def check_anchors_and_quotes(errors: list[str]) -> None:
-    """Links into the NCC must land on a clause that exists, and every `checks`
-    entry (a page and a phrase) must still read that way on that page. Guides
-    use `checks` to pin each figure they state to the NCC text it came from."""
+    """Every link with an anchor, anywhere in the brain (the NCC pages included), must land on an anchor that
+    exists, and every `checks` entry (a page and a phrase) must still read that way on that page. Guides use
+    `checks` to pin each figure they state to the NCC text it came from."""
     cache: dict[Path, str] = {}
 
     def page(target: str, base: Path) -> Path:
         return BRAIN / target.lstrip("/") if target.startswith("/") else base.parent / target
 
     for p in sorted(BRAIN.rglob("*.md")):
-        if "/ncc/" in str(p):
-            continue
         text = p.read_text()
-        # Generated state pages link variation clauses that the national text doesn't have; check guides and hand-written pages.
-        if "/states/" in str(p):
-            text = re.sub(r"<!-- NCC(2022)?:START.*?<!-- NCC(2022)?:END -->", "", text, flags=re.S)
         for target in LINK.findall(text):
-            if "#" not in target or not target.startswith("/ncc/"):
+            if "#" not in target or re.match(r"^[a-z]+:", target):
                 continue
             path, anchor = target.split("#", 1)
-            dest = page(path, p)
+            dest = page(path, p) if path else p
             if dest.exists():
                 body = cache.setdefault(dest, dest.read_text())
                 if f'<a id="{anchor}"></a>' not in body:
-                    errors.append(f"{p.relative_to(BRAIN.parent)}: link {target} points to a clause that isn't on that page")
+                    errors.append(f"{p.relative_to(BRAIN.parent)}: link {target} points to an anchor that isn't on that page"
+                                  + (" (re-run tools/ncc_anchor_repair.py)" if "/ncc/" in str(dest) else ""))
         meta, _ = split_front(text)
         for c in (meta or {}).get("checks") or []:
             dest = page(str(c.get("page", "")), p)

@@ -384,6 +384,8 @@ A stairway and lift must not be in the same *shaft* if either the stairway or th
 
 In a Class 2 or 3 building, a *public corridor*, if more than 40 m in length, must be divided at intervals of not more than 40 m with smoke-proof walls complying with [S11C2](/ncc/2025/volume_one/specification_11_smoke_proof_walls_in_health_care_and_residential_care_buildings.md#s11c2).
 
+<a id="c3d16"></a>
+
 > **SA variation**: SA adds C3D16 Class 2 external walls exposed to brush fences.
 >
 > Where the distance between the *external wall* of a Class 2 building and a *brush fence* is less than 3 m, the Class 2 building must comply with the following:

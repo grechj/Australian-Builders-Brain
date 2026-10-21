@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in QLD, from the QLD schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
-<a id="qld_h1p3"></a>
+<a id="h1p3"></a><a id="qld_h1p3"></a>
 
 ### QLD H1P3 Termite management measures
 

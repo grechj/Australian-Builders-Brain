@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
-<a id="sa_h9o1"></a>
+<a id="h9o1"></a><a id="sa_h9o1"></a>
 
 ### SA H9O1 Objective
 
@@ -31,7 +31,7 @@ The Objective of this Part is to efficiently use all available water supplies.
 
 Functional Statements
 
-<a id="sa_h9f1"></a>
+<a id="h9f1"></a><a id="sa_h9f1"></a>
 
 ### SA H9F1 Water efficiency
 
@@ -39,7 +39,7 @@ A building is to be constructed in a way that efficiently uses all available wat
 
 Performance Requirements
 
-<a id="sa_h9p1"></a>
+<a id="h9p1"></a><a id="sa_h9p1"></a>
 
 ### SA H9P1 Water efficiency
 
@@ -47,13 +47,13 @@ A building must provide an additional water supply (other than the mains reticul
 
 Deemed-to-Satisfy Provisions
 
-<a id="sa_h9d1"></a>
+<a id="h9d1"></a><a id="sa_h9d1"></a>
 
 ### SA H9D1 Deemed-to-Satisfy Provisions
 
 Compliance with SA H9D2 to SA H9D6 for water efficiency satisfies *Performance Requirement* SA H9P1.
 
-<a id="sa_h9d2"></a>
+<a id="h9d2"></a><a id="sa_h9d2"></a>
 
 ### SA H9D2 Application of Part
 
@@ -64,7 +64,7 @@ Compliance with SA H9D2 to SA H9D6 for water efficiency satisfies *Performance R
 - (c) for an extension, where it incorporates a water closet or a water heater or laundry cold water outlet.
 (2) For the purposes of this Part, Council means: A Municipal or District Council as constituted under the Local Government Act 1999.
 
-<a id="sa_h9d3"></a>
+<a id="h9d3"></a><a id="sa_h9d3"></a>
 
 ### SA H9D3 Rainwater tank capacity
 
@@ -80,7 +80,7 @@ Compliance with SA H9D2 to SA H9D6 for water efficiency satisfies *Performance R
 > SA H9D3 requires the *rainwater tank* to be plumbed to a water closet, water heater or all laundry cold water outlets. The Office of the Technical Regulator regulates plumbing work in South Australia under the Water Industry Act 2012, including plumbing the *rainwater tank* to the water closet, water heater or laundry cold water outlets. Stormwater connections, including from the roof to the *rainwater tank*, and from *rainwater tank* overflow, are regulated by the local council or relevant authority under the Planning, Development and Infrastructure Act 2016.
 >
 
-<a id="sa_h9d4"></a>
+<a id="h9d4"></a><a id="sa_h9d4"></a>
 
 ### SA H9D4 Rainwater tank overflow
 
@@ -88,7 +88,7 @@ The *rainwater tank* must be fitted with an overflow device that disposes of ove
 
 - (a) any specific requirements of the relevant authority; and
 - (b) Part 3.3 of the ABCB Housing Provisions.
-<a id="sa_h9d5"></a>
+<a id="h9d5"></a><a id="sa_h9d5"></a>
 
 ### SA H9D5 Rainwater tank water quality
 
@@ -99,7 +99,7 @@ The inlet and overflow of the *rainwater tank* must be fitted with mosquito proo
 > SA H9D5 requires the fitting of mosquito proof, non-degradable screens to the *rainwater tank*. The quality of the water stored in the *rainwater tank* should be managed in accordance with the Department of Health publication ‘Guidance on the use of rainwater tanks’.
 >
 
-<a id="sa_h9d6"></a>
+<a id="h9d6"></a><a id="sa_h9d6"></a>
 
 ### SA H9D6 Rainwater tank stands
 

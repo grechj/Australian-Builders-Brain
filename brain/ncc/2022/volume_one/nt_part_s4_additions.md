@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NT, from the NT schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nt_s4c3"></a>
+<a id="s4c3"></a><a id="nt_s4c3"></a>
 
 ### NT S4C3 Strengthened area
 

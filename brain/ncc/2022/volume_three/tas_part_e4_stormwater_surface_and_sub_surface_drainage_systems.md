@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="tas_e4o1"></a>
+<a id="e4o1"></a><a id="tas_e4o1"></a>
 
 ### TAS E4O1 Objective
 
@@ -37,7 +37,7 @@ The Objective of this Part is to—
 - (f) ensure that a storm water drainage installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e).
 Functional Statements
 
-<a id="tas_e4f1"></a>
+<a id="e4f1"></a><a id="tas_e4f1"></a>
 
 ### TAS E4F1 Functional statements
 
@@ -45,7 +45,7 @@ Buildings and their surroundings are to be provided with a surface drainage and 
 
 Performance Requirements
 
-<a id="tas_e4p1"></a>
+<a id="e4p1"></a><a id="tas_e4p1"></a>
 
 ### TAS E4P1 Surface drainage systems
 
@@ -55,13 +55,13 @@ Performance Requirements
 
 - (a) importance of the building; and
 - (b) severity of potential damage to property, *loss* of *amenity*, illness or injury that would result from the failure of the system.
-<a id="tas_e4p2"></a>
+<a id="e4p2"></a><a id="tas_e4p2"></a>
 
 ### TAS E4P2 Subsurface drainage
 
 A subsoil drainage system must remove excess groundwater and reduce soil moisture levels to prevent loss by changing soil moisture conditions.
 
-<a id="tas_e4p3"></a>
+<a id="e4p3"></a><a id="tas_e4p3"></a>
 
 ### TAS E4P3 Design, construction and installation
 
@@ -80,13 +80,13 @@ A subsoil drainage system must remove excess groundwater and reduce soil moistur
 - (b) Stormwater is transferred to a *Network Utility Operator’s* stormwater system or an *approved disposal system*.
 Deemed-to-Satisfy Provisions
 
-<a id="tas_e4d1"></a>
+<a id="e4d1"></a><a id="tas_e4d1"></a>
 
 ### TAS E4D1 Application
 
 Performance requirements E4P1 to E4P3 are satisfied by complying with E4D2 and E4D3.
 
-<a id="tas_e4d2"></a>
+<a id="e4d2"></a><a id="tas_e4d2"></a>
 
 ### TAS E4D2 General requirements
 
@@ -94,7 +94,7 @@ A surface and subsurface drainage system must comply with—
 
 - (a) AS/NZS 3500.3; or
 - (b) Housing provisions 3.3
-<a id="tas_e4d3"></a>
+<a id="e4d3"></a><a id="tas_e4d3"></a>
 
 ### TAS E4D3 Protection from surface water
 

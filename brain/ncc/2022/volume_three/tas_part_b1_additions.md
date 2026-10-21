@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="tas_b1d7"></a>
+<a id="b1d7"></a><a id="tas_b1d7"></a>
 
 ### TAS B1D7 Cold water storage tanks
 

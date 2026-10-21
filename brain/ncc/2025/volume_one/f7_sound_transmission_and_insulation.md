@@ -163,6 +163,8 @@ This Part is intended to reduce the likelihood of illness or loss of amenity as 
 > A flexible coupling must be used at the point of connection between the service pipes in a building and any circulating or other pump.
 >
 
+<a id="f7d9"></a>
+
 > **NT variation**: NT adds F7D9 Walls between a bedroom and kitchen or laundry in a Class 9c building.
 >
 > In addition to [NT F7D5](#f7d5), a wall separating a *sole-occupancy unit* in a Class 9c building from a kitchen or laundry must—

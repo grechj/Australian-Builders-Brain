@@ -605,6 +605,8 @@ In a *designated bushfire prone area* the following must comply with AS 3959:
 
 (2) In a *designated bushfire prone area*, a Class 10a building or deck immediately adjacent or connected to a building of a type listed in (1) must comply with [S43C2](/ncc/2025/volume_one/specification_43_bushfire_protection_for_certain_class_9_buildings.md#s43c2) and [S43C13](/ncc/2025/volume_one/specification_43_bushfire_protection_for_certain_class_9_buildings.md#s43c13).
 
+<a id="g5d5"></a>
+
 > **SA variation**: SA adds G5D5 Bushfire attack levels.
 >
 > Where a site is located in a *designated bushfire prone area*, the bushfire attack level that applies to the site is—

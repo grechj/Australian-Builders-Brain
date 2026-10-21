@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="vic_b7d4"></a>
+<a id="b7d4"></a><a id="vic_b7d4"></a>
 
 ### VIC B7D4 General requirements
 

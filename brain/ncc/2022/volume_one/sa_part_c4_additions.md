@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="sa_c4d18"></a>
+<a id="c4d18"></a><a id="sa_c4d18"></a>
 
 ### SA C4D18 Protection of openings – bulk grain storage facilities
 

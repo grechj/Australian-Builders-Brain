@@ -23,12 +23,16 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for foundries.
 
+<a id="i11d1"></a>
+
 > **TAS variation**: TAS replaces I11D1 Application of Part.
 >
 > (1) This Part is applicable to every building or premises on which foundry operations are undertaken.
 >
 > (2) Foundries must provide for the comfort and safety of workers on the premises.
 >
+
+<a id="i11d2"></a>
 
 > **TAS variation**: TAS replaces I11D2 General.
 >
@@ -39,6 +43,8 @@ This Part contains additional requirements for foundries.
 > - (a) where a ceiling is provided, measured from the floor to the ceiling; or
 > - (b) where a ceiling is not provided, measured from the floor to the lowest part of the roof.
 >
+
+<a id="i11d3"></a>
 
 > **TAS variation**: TAS replaces I11D3 Cupola charging platform.
 >
@@ -58,6 +64,8 @@ This Part contains additional requirements for foundries.
 > (4) A properly constructed access stair or ramp must be provide to give access to every cupola charging platform and must comply with AS 1657.
 >
 
+<a id="i11d4"></a>
+
 > **TAS variation**: TAS replaces I11D4 Deep moulds and pits.
 >
 > Deep moulds or pits, for permanent use—
@@ -65,6 +73,8 @@ This Part contains additional requirements for foundries.
 > - (a) must be lined with bricks, concrete, or other suitable material in such a manner as to provide adequate reinforcement and to keep the pit or mould in a dry condition; and
 > - (b) must be securely fenced by means of a wall of adequate construction, railings or chains and stanchions raised, in each case, to a height not less than 1 m above the surface of the surrounding floor.
 >
+
+<a id="i11d5"></a>
 
 > **TAS variation**: TAS replaces I11D5 Pot furnaces.
 >

@@ -747,6 +747,10 @@ def main() -> None:
         # Merge Amendments 1 and 2 (tools/ncc2022_amendments.yaml).
         import apply_ncc_amendments
         apply_ncc_amendments.main()
+        # Last step: state-only clauses answer to their plain code too, and links without a target point at their page.
+        import ncc_anchor_repair
+        print(f"anchors: {ncc_anchor_repair.repair('2022', folder=args.out)}")
+        print("Now run tools/build_state_pages.py, then tools/okf_lint.py.")
 
 
 if __name__ == "__main__":

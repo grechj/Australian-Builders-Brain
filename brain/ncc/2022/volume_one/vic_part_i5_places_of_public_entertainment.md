@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="vic_i5p1"></a>
+<a id="i5p1"></a><a id="vic_i5p1"></a>
 
 ### VIC I5P1 Temporary tiered seating, concourses and embankments
 
@@ -34,7 +34,7 @@ Temporary tiered seating stands and embankments must be designed using engineeri
 > VIC I5P1 applies to all places or public entertainment as defined in the Building Act 1993 and prescribed in regulation 206 of the Building Regulations 2018.
 >
 
-<a id="vic_i5p2"></a>
+<a id="i5p2"></a><a id="vic_i5p2"></a>
 
 ### VIC I5P2 Motor vehicle racing
 
@@ -45,7 +45,7 @@ Every place of public entertainment where motor vehicle racing takes place must 
 > VIC I5P2 applies to all places of public entertainment as defined in the Building Act 1993 and prescribed in regulation 206 of the Building Regulations 2018.
 >
 
-<a id="vic_i5p3"></a>
+<a id="i5p3"></a><a id="vic_i5p3"></a>
 
 ### VIC I5P3 Sanitary and amenity facilities
 
@@ -58,19 +58,19 @@ Sufficient sanitary and amenity facilities must be provided at places of public 
 
 Deemed-to-Satisfy Provisions
 
-<a id="vic_i5d1"></a>
+<a id="i5d1"></a><a id="vic_i5d1"></a>
 
 ### VIC I5D1 Deemed-to-Satisfy Provisions
 
 *Performance Requirements* VIC I5P1 to VIC I5P3 are satisfied by complying with VIC I5D2 to VIC I5D5.
 
-<a id="vic_i5d2"></a>
+<a id="i5d2"></a><a id="vic_i5d2"></a>
 
 ### VIC I5D2 Application of Part
 
 The *Deemed-to-Satisfy Provisions* of this Part apply to all places of public entertainment.
 
-<a id="vic_i5d3"></a>
+<a id="i5d3"></a><a id="vic_i5d3"></a>
 
 ### VIC I5D3 Temporary tiered seating, concourses and embankments
 
@@ -93,7 +93,7 @@ Temporary tiered seating, concourse and embankments must be designed and constru
   - (i) where the rear slope exceeds 1 in 5, a guard rail must be installed with no openings except at the heads of steps or ramps; and
   - (ii) where the forward or front slope exceeds 1 in 8, the embankment must be stepped with plats not less than 500 mm wide and risers not greater than 230 mm high.
 - (h) Guard rails must be installed to protect any fence, balustrade or railing associated with stepped or ramped standing spaces where excess pressure is expected from spectators.
-<a id="vic_i5d4"></a>
+<a id="i5d4"></a><a id="vic_i5d4"></a>
 
 ### VIC I5D4 Motor vehicle racing
 
@@ -104,7 +104,7 @@ Motor vehicle racing barriers and guard rails must be provided so as to comply w
   - (i) on the outer margin of the track: a continuous concrete, close boarding or long guard barrier having a minimum height of not less than 900 mm; and
   - (ii) on all curved sections of the track within 3 m of a barrier described in (i): a stout welded or woven wire mesh fence adequately supported having a height of not less than 1.8 m above adjacent spectators viewing areas; and
   - (iii) between the public viewing area and the fence described in (ii): a suitable crowd barrier that will prevent spectators entering within 1.2 m of that fence.
-<a id="vic_i5d5"></a>
+<a id="i5d5"></a><a id="vic_i5d5"></a>
 
 ### VIC I5D5 Sanitary and amenity facilities
 

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i8d1"></a>
+<a id="i8d1"></a><a id="tas_i8d1"></a>
 
 ### TAS I8D1 Application of Part
 
@@ -31,13 +31,13 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 (2) Pharmacies must be able to be secured against entry and the interior must be able to be supervised by a pharmacist.
 
-<a id="tas_i8d2"></a>
+<a id="i8d2"></a><a id="tas_i8d2"></a>
 
 ### TAS I8D2 Definition
 
 In this Part the term “dispensary” means the room or area within a pharmacy or other premises which a registered pharmaceutical chemist uses for the compounding or dispensing of prescriptions, medicines or drugs.
 
-<a id="tas_i8d3"></a>
+<a id="i8d3"></a><a id="tas_i8d3"></a>
 
 ### TAS I8D3 Pharmacy premises
 
@@ -49,7 +49,7 @@ In this Part the term “dispensary” means the room or area within a pharmacy 
 - (d) a room for storing merchandise not used in dispensing.
 (2) A pharmacy may have one area set aside for retailing merchandise that is not compounded or dispensed.
 
-<a id="tas_i8d4"></a>
+<a id="i8d4"></a><a id="tas_i8d4"></a>
 
 ### TAS I8D4 Dispensary
 
@@ -62,7 +62,7 @@ In this Part the term “dispensary” means the room or area within a pharmacy 
 - (a) a sink and drainage board of impervious material moulded or manufactured in one piece; and
 - (b) a reticulated supply of hot and cold water capable of providing to the sink adequate quantities of water for dispensing purposes; and
 - (c) space for a dispensing bench with a working area not less than 1.4 m2.
-<a id="tas_i8d5"></a>
+<a id="i8d5"></a><a id="tas_i8d5"></a>
 
 ### TAS I8D5 Security of dispensary
 

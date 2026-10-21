@@ -56,19 +56,19 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [4.2.8](/ncc/2025/housing_provisions/4_2_footings_slabs_and_associated_elements.md#4_2_8) |
 | NSW | replaces | [8.4.1.2](/ncc/2025/housing_provisions/8_4_glazing_human_impact.md#8_4_1) |
 | NSW | replaces | [9.1.1.1](/ncc/2025/housing_provisions/9_1_scope_and_application_of_section_9.md#9_1_1) |
-| NSW | replaces | [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#part_ariation) |
+| NSW | replaces | [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md) |
 | NSW | replaces | [9.4.1](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_1) |
 | NSW | replaces | [9.4.2](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_2) |
 | NSW | replaces | [9.4.3](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#9_4_3) |
 | NSW | replaces | [9.5.1](/ncc/2025/housing_provisions/9_5_smoke_alarms_and_evacuation_lighting.md#9_5_1) |
-| NSW | deletes | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md#part_ariation) |
-| NSW | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
-| NSW | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
-| NSW | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
-| NSW | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
-| NSW | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
-| NSW | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| NSW | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| NSW | deletes | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md) |
+| NSW | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
+| NSW | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
+| NSW | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
+| NSW | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
+| NSW | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
+| NSW | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| NSW | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 
 ## Volume One (192)
 
@@ -125,7 +125,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | adds | [Part F4D4d](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#table_d161c3d2) |
 | NSW | deletes | [F4D10](/ncc/2025/volume_one/f4_sanitary_and_other_facilities.md#f4d10) |
 | NSW | replaces | [F6D6](/ncc/2025/volume_one/f6_light_and_ventilation.md#f6d6) |
-| NSW | deletes | [Part F8](/ncc/2025/volume_one/f8_condensation_management.md#part_ariation) |
+| NSW | deletes | [Part F8](/ncc/2025/volume_one/f8_condensation_management.md) |
 | NSW | replaces | [G1O1](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1o1) |
 | NSW | adds | [G1F5](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1f5) |
 | NSW | replaces | [G1P2](/ncc/2025/volume_one/g1_minor_structures_and_components.md#g1p2) |
@@ -142,7 +142,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [G5D2](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d2) |
 | NSW | replaces | [G5D3](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d3) |
 | NSW | replaces | [G5D4](/ncc/2025/volume_one/g5_construction_in_bushfire_prone_areas.md#g5d4) |
-| NSW | deletes | [Part G7](/ncc/2025/volume_one/g7_livable_housing_design.md#part_ariation) |
+| NSW | deletes | [Part G7](/ncc/2025/volume_one/g7_livable_housing_design.md) |
 | NSW | replaces | [I1D1](/ncc/2025/volume_one/i1_class_9b_buildings.md#i1d1) |
 | NSW | adds | [Part I4](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md) |
 | NSW | replaces | [I4D1](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d1) |
@@ -234,7 +234,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [I6D4](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d4) |
 | NSW | replaces | [I6D5](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d5) |
 | NSW | replaces | [I6D6](/ncc/2025/volume_one/nsw_part_i6_drive_in_theatres.md#i6d6) |
-| NSW | replaces | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#part_ariation) |
+| NSW | replaces | [Part J1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md) |
 | NSW | replaces | [J1O1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1o1) |
 | NSW | replaces | [J1F1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1f1) |
 | NSW | replaces | [J1P1](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1p1) |
@@ -247,7 +247,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [J1V4](/ncc/2025/volume_one/j1_energy_efficiency_performance_requirements.md#j1v4) |
 | NSW | replaces | [J2D1.1](/ncc/2025/volume_one/j2_energy_efficiency.md#j2d1) |
 | NSW | replaces | [J2D2](/ncc/2025/volume_one/j2_energy_efficiency.md#j2d2) |
-| NSW | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
+| NSW | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
 | NSW | replaces | [J4D1.1](/ncc/2025/volume_one/j4_building_fabric.md#j4d1) |
 | NSW | replaces | [J4D2](/ncc/2025/volume_one/j4_building_fabric.md#j4d2) |
 | NSW | replaces | [J5D1.1](/ncc/2025/volume_one/j5_building_sealing.md#j5d1) |
@@ -288,7 +288,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [B3P8](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3p8) |
 | NSW | replaces | [B3D3](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3d3) |
 | NSW | replaces | [B3D5](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3d5) |
-| NSW | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md#part_ariation) |
+| NSW | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md) |
 | NSW | replaces | [B5D2](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d2) |
 | NSW | replaces | [B5D3](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d3) |
 | NSW | replaces | [B5D6](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d6) |
@@ -297,7 +297,7 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [B6D4](/ncc/2025/volume_three/b6_rainwater_services.md#b6d4) |
 | NSW | replaces | [C2P7](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2p7) |
 | NSW | replaces | [C2D4](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2d4) |
-| NSW | replaces | [Part C3](/ncc/2025/volume_three/c3_on_site_wastewater_management.md#part_ariation) |
+| NSW | replaces | [Part C3](/ncc/2025/volume_three/c3_on_site_wastewater_management.md) |
 
 ## Volume Two (26)
 
@@ -322,13 +322,13 @@ Where New South Wales changes the national code. A variation can replace, add to
 | NSW | replaces | [H3D5](/ncc/2025/volume_two/h3_fire_safety.md#h3d5) |
 | NSW | replaces | [H4D9](/ncc/2025/volume_two/h4_health_and_amenity.md#h4d9) |
 | NSW | deletes | [H6V2](/ncc/2025/volume_two/h6_energy_efficiency.md#h6v2) |
-| NSW | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| NSW | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | NSW | replaces | [H7P1](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p1) |
 | NSW | replaces | [H7P5](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p5) |
 | NSW | replaces | [H7D1.1](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d1) |
 | NSW | replaces | [H7D2](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d2) |
 | NSW | replaces | [H7D4](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d4) |
-| NSW | deletes | [Part H8](/ncc/2025/volume_two/h8_livable_housing_design.md#part_ariation) |
+| NSW | deletes | [Part H8](/ncc/2025/volume_two/h8_livable_housing_design.md) |
 
 ## Parts that apply only in NSW
 

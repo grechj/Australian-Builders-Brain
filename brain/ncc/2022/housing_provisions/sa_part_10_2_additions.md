@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Housing Provisions**.[^abcb_ncc]
 
-<a id="sa_10_2_33"></a>
+<a id="10_2_33"></a><a id="sa_10_2_33"></a>
 
 ### SA 10.2.33 Provision of floor wastes
 

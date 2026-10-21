@@ -145,10 +145,10 @@ This Part is intended to improve the efficient use of energy in building design 
 >
 > (5) The *reference building* must comply with the *Deemed-to-Satisfy Provisions* in the following parts of the ABCB Housing Provisions—
 >
-> - (a) [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) for the building *fabric*; and
-> - (b) [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) for the external *glazing* and shading; and
-> - (c) [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) for building sealing; and
-> - (d) [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) for air movement.
+> - (a) [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) for the building *fabric*; and
+> - (b) [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) for the external *glazing* and shading; and
+> - (c) [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) for building sealing; and
+> - (d) [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) for air movement.
 >
 
 > **NT variation**: NT adds H6D1 Deemed-to-Satisfy Provisions.
@@ -164,15 +164,15 @@ This Part is intended to improve the efficient use of energy in building design 
 >
 > - (a) a building must achieve an energy rating, using *house energy rating software*, of greater than or equal to 5 stars; or
 > - (b) complying with the following parts of the ABCB Housing Provisions—
->   - (1) [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) for the building *fabric*; and
->   - (2) [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) for the external *glazing* and shading; and
->   - (3) [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) for building sealing; and
->   - (4) [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) for air movement.
+>   - (1) [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) for the building *fabric*; and
+>   - (2) [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) for the external *glazing* and shading; and
+>   - (3) [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) for building sealing; and
+>   - (4) [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) for air movement.
 >
 > (2) *Performance Requirement* [NT H6P2](#h6p2) for the energy usage of a building is satisfied by –
 >
 > - (a) a building must achieve an energy rating, using *house energy rating software*, of greater than or equal to 5 stars; or
-> - (b) complying with [NT Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) of the ABCB Housing Provisions for services.
+> - (b) complying with [NT Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) of the ABCB Housing Provisions for services.
 >
 > > **Explanatory**
 > >

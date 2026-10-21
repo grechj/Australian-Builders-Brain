@@ -117,6 +117,8 @@ Suitable facilities must be provided to the degree necessary in a building to co
 - (b) the *floor area* of the building; and
 - (c) the height of the building.
 
+<a id="e1p7"></a>
+
 > **TAS variation**: TAS adds E1P7 Automatic fire detection system.
 >
 > An *automatic* fire detection system must be installed to the degree necessary to alert the *fire brigade* of fire so that fire fighting operations may be undertaken at the earliest possible time to limit property and environmental damage appropriate to—

@@ -521,6 +521,8 @@ Where the bottom of a door jamb does not finish above the floor tiling, the port
 > A self-draining sub-sill is considered to be part of the *shower screen*.
 >
 
+<a id="10_2_33"></a>
+
 > **SA variation**: SA adds 10.2.33 Provision of floor wastes.
 >
 > (1) The floor of a *wet area* containing a *vessel* must be graded to a *floor waste* to permit drainage of water.
