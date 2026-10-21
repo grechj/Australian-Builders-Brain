@@ -1,0 +1,10 @@
+# Concepts
+
+* [Building in bushfire-prone areas](bushfire_construction.md) - When a house, garage or deck must be built for bushfire, how the site's bushfire attack level (BAL) drives the construction, and the NSW, QLD and SA variations, in plain words with the clauses.
+* [Ceiling and room heights](room_heights.md) - Minimum ceiling heights for living rooms, bedrooms, kitchens, bathrooms, attics, stairs and sloping ceilings under the NCC, in plain words with the clauses.
+* [Decks, balconies and stairs](decks_balconies_and_stairs.md) - What the NCC asks for on a house deck, balcony or stair (barrier heights, gaps, handrails, riser and going, landings, slip resistance, and attaching a deck to the house), in plain words with the clauses.
+* [Energy efficiency for houses](energy_efficiency.md) - What the NCC asks for on house energy efficiency (the 7-star thermal rating, the whole-of-home energy budget, the deemed-to-satisfy fabric, glazing, sealing, fan and lighting rules) and which states do it differently, in plain words with the clauses.
+* [Footings and slabs for houses](footings_and_slabs.md) - The NCC's deemed-to-satisfy rules for house footings and slabs (site classification, excavation, fill, bearing, vapour barrier, concrete grade, reinforcement cover, and stump footings for decks and suspended floors), in plain words with the clauses.
+* [Smoke alarms in houses](smoke_alarms.md) - Where smoke alarms go in a house under the NCC, how they're powered and interconnected, and how far from corners and ceiling apexes, with the NSW heat alarm variation, in plain words with the clauses.
+* [Termite management](termite_management.md) - When a house or shed needs a termite management system under the NCC, which materials count as not susceptible, the system options for slabs, suspended floors and attachments like decks, and the durable notice.
+* [Wet area waterproofing](wet_area_waterproofing.md) - What the NCC asks for in bathrooms, showers, laundries and WCs (what must be waterproof and what only water resistant, how high, falls to the waste, and which materials count), in plain words with the clauses.

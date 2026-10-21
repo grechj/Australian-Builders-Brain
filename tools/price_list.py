@@ -12,12 +12,16 @@ Usage:
     python tools/price_list.py match out/takeoff_deck.json --prices my_prices.csv --out out/materials_lines.json
     python tools/price_list.py stale my_prices.csv --days 60
 
+`add` and `match` also note which product was saved or used (never the
+price) in materials_log.csv next to the price list, so the brain learns
+what the user buys (tools/usage.py). Pass --no-log to skip it.
+
 `match` writes a lines file ready for the materials_rom computation. Lines
 with no good match, or whose price is older than --max-age days, are left
 unpriced and listed in `to_look_up`, with a suggested search, for the user
 to price (and add to their list).
 
-Standard library only.
+Needs PyYAML for the product catalogue (tools/catalogue.yaml).
 """
 
 from __future__ import annotations
@@ -28,7 +32,12 @@ import json
 import re
 import sys
 from datetime import date, datetime
+from decimal import Decimal
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import catalogue  # noqa: E402
+import usage  # noqa: E402
 
 COLUMNS = ["product", "item_number", "unit", "pack_size", "price_inc_gst", "supplier", "url", "checked_on", "notes"]
 # Tokens that must agree for a match to count: sizes, lengths, grades, treatment classes.
@@ -92,6 +101,30 @@ def cmd_add(args) -> None:
         w.writeheader()
         w.writerows(rows)
     print(f"Saved {row['product']} at ${row['price_inc_gst']} ({row['supplier']}, {row['checked_on']})")
+    if not args.no_log:
+        usage.record(usage.log_path_for(path), "saved", args.for_item or "", row["product"], row["supplier"], args.job or "")
+
+
+PER_METRE = {"metre", "metres", "m", "lineal metre", "lineal metres", "per metre", "lm"}
+
+
+def effective(row: dict, takeoff_unit: str) -> dict:
+    """What one priced row costs per takeoff pack: its pack size (recorded, or read off the
+    name), and a per-metre price turned into the stock length the takeoff counts."""
+    price = Decimal(str(row["price_inc_gst"]))
+    pack = Decimal(str(row.get("pack_size") or "1") or "1")
+    notes = []
+    if (row.get("unit") or "").strip().lower() in PER_METRE:
+        length = catalogue.length_of(takeoff_unit)
+        if length:
+            price = (price * length).quantize(Decimal("0.01"))
+            notes.append(f"priced per metre: x {length} m length")
+    elif pack == 1:
+        inferred = catalogue.infer_pack(row["product"], takeoff_unit)
+        if inferred:
+            pack = inferred[0]
+            notes.append(f"pack size {inferred[0]} ({inferred[1]})")
+    return {"row": row, "price": price, "pack": pack, "notes": notes}
 
 
 def cmd_match(args) -> None:
@@ -103,21 +136,41 @@ def cmd_match(args) -> None:
         want = f"{it.get('search', '')} {it.get('spec', '')}" if args.use_spec else it.get("search", "")
         ranked = sorted(((score(want, r["product"]), r) for r in prices), key=lambda x: -x[0])
         best_score, best = ranked[0] if ranked else (0.0, None)
-        line = {"item": it["item"], "quantity": it["quantity"], "takeoff_unit": it["unit"], "search": it.get("search", "")}
-        age = age_days(best["checked_on"]) if best else None
-        if best and best_score >= args.min_score and (age is None or age <= args.max_age):
-            line.update({"pack_size": best.get("pack_size") or "1", "unit_price_inc_gst": best["price_inc_gst"],
-                         "product": f"{best['product']}" + (f" ({best['item_number']})" if best.get("item_number") else ""),
-                         "source": best["supplier"], "priced_on": best["checked_on"], "match_score": round(best_score, 2),
-                         "check": "confirm the product and pack size match the spec"})
-        else:
+        base = {"item": it["item"], "quantity": it["quantity"], "takeoff_unit": it["unit"], "search": it.get("search", "")}
+        fresh = [(s, r) for s, r in ranked if s >= args.min_score and (age_days(r["checked_on"]) is None or age_days(r["checked_on"]) <= args.max_age)]
+        if not fresh:
+            age = age_days(best["checked_on"]) if best else None
             reason = "no matching product in the price list" if not best or best_score < args.min_score else f"price is {age} days old"
-            line.update({"product": "", "source": "not priced", "reason": reason})
+            lines.append({**base, "product": "", "source": "not priced", "reason": reason})
             to_look_up.append({"item": it["item"], "spec": it.get("spec", ""), "quantity": it["quantity"], "unit": it["unit"],
-                               "reason": reason, "suggested_search": f"site:bunnings.com.au {it.get('search', '')}"})
-        lines.append(line)
+                               "reason": reason, "suggested_search": f"site:bunnings.com.au {it.get('search', '')}",
+                               "family": catalogue.family_of(f"{it['item']} {it.get('search', '')}")})
+            continue
+        top_score, top = fresh[0]
+        # The same product in other pack sizes (a 4 L and a 10 L tin, from the same supplier): buy the cheapest mix.
+        same = [effective(r, it["unit"]) for s, r in fresh
+                if catalogue.base_name(r["product"]) == catalogue.base_name(top["product"]) and r["supplier"] == top["supplier"]]
+        sizes = {e["pack"] for e in same}
+        qty = Decimal(str(it["quantity"]))
+        if len(sizes) > 1 and qty > 0:
+            by_size = {}
+            for e in same:
+                if e["pack"] not in by_size or e["price"] < by_size[e["pack"]]["price"]:
+                    by_size[e["pack"]] = e
+            mix = catalogue.cheapest_mix(qty, [(s, e["price"]) for s, e in by_size.items()])
+            for size, count in mix:
+                e = by_size[size]
+                lines.append(priced({**base, "quantity": str(size * count), "item": f"{it['item']} ({fmt(size)} {it['unit']} each)"}, e, top_score,
+                                    f"cheapest mix of pack sizes for {it['quantity']}: " + ", ".join(f"{c} x {fmt(s)}" for s, c in mix)))
+            continue
+        lines.append(priced(base, effective(top, it["unit"]), top_score))
+    if not args.no_log:
+        log = usage.log_path_for(Path(args.prices))
+        for l in lines:
+            if l.get("unit_price_inc_gst"):
+                usage.record(log, "used", re.sub(r" \(.*each\)$", "", l["item"]), l["product"], l["source"], args.job or "")
     out = {"lines": lines, "to_look_up": to_look_up,
-           "summary": f"{len(lines) - len(to_look_up)} of {len(lines)} lines priced from {args.prices}"}
+           "summary": f"{sum(1 for l in lines if l.get('unit_price_inc_gst'))} of {len(lines)} lines priced from {args.prices}"}
     text = json.dumps(out, indent=2)
     if args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
@@ -125,6 +178,19 @@ def cmd_match(args) -> None:
         print(json.dumps({"summary": out["summary"], "to_look_up": to_look_up, "lines_written_to": args.out}, indent=2))
     else:
         print(text)
+
+
+def fmt(d: Decimal) -> str:
+    return format(d.normalize(), "f")
+
+
+def priced(line: dict, e: dict, match_score: float, why: str = "") -> dict:
+    r = e["row"]
+    notes = e["notes"] + ([why] if why else [])
+    return {**line, "pack_size": fmt(e["pack"]), "unit_price_inc_gst": f"{e['price']:.2f}",
+            "product": r["product"] + (f" ({r['item_number']})" if r.get("item_number") else ""),
+            "source": r["supplier"], "priced_on": r["checked_on"], "match_score": round(match_score, 2),
+            "check": "confirm the product and pack size match the spec" + (": " + "; ".join(notes) if notes else "")}
 
 
 def cmd_stale(args) -> None:
@@ -139,14 +205,18 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("new"); p.add_argument("path")
     p = sub.add_parser("add"); p.add_argument("path")
-    p.add_argument("--product", required=True); p.add_argument("--unit", required=True, help="what one price buys: length, sheet, bag, box, tin, each")
+    p.add_argument("--product", required=True); p.add_argument("--unit", required=True, help="what one price buys: length, sheet, bag, box, tin, each, or metre for a per-metre price")
     p.add_argument("--price", required=True, help="inc GST"); p.add_argument("--supplier", required=True)
-    p.add_argument("--pack-size", default="1", help="takeoff units per priced item, e.g. 500 screws per box")
+    p.add_argument("--pack-size", default="1", help="takeoff units per priced item, e.g. 500 screws per box (read off the product name when left at 1)")
     p.add_argument("--item-number"); p.add_argument("--url"); p.add_argument("--checked-on"); p.add_argument("--notes")
+    p.add_argument("--for-item", help="the takeoff item this product is for (for the materials log)")
     p = sub.add_parser("match"); p.add_argument("takeoff"); p.add_argument("--prices", required=True)
     p.add_argument("--out"); p.add_argument("--min-score", type=float, default=0.6)
     p.add_argument("--max-age", type=int, default=90, help="days before a price needs re-checking")
     p.add_argument("--use-spec", action="store_true", help="match on the spec as well as the search phrase")
+    for name in ("add", "match"):
+        sub.choices[name].add_argument("--job", help="job number, kept in the user's own materials log")
+        sub.choices[name].add_argument("--no-log", action="store_true", help="don't write to materials_log.csv")
     p = sub.add_parser("stale"); p.add_argument("path"); p.add_argument("--days", type=int, default=60)
     args = parser.parse_args()
     {"new": cmd_new, "add": cmd_add, "match": cmd_match, "stale": cmd_stale}[args.cmd](args)

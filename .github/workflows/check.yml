@@ -15,6 +15,10 @@ jobs:
         run: python tools/test_examples.py
       - name: Price list matching
         run: python tools/test_price_list.py
+      - name: Product catalogue (families, pack sizes, pack mixes, page current)
+        run: python tools/test_catalogue.py
+      - name: Learning from use (report, opt-in sharing, nothing private in the summary)
+        run: python tools/test_usage.py
       - name: Trade and location profiles
         run: python tools/test_profile.py
       - name: Materials takeoff (hand-checked)
@@ -25,3 +29,5 @@ jobs:
         run: python tools/test_projects.py
       - name: First-run setup and home page
         run: python tools/test_start.py
+      - name: Plain-English guides (found, and every figure pinned to the NCC)
+        run: python tools/test_guides.py

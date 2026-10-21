@@ -1,0 +1,11 @@
+# Concepts
+
+* [Concrete](concrete.md) - Ordering concrete for house jobs (strength grades like N20 and N32, slump, aggregate, how much to order), premix bags for small pours, reinforcement and vapour barrier basics, curing, and the NCC's minimum for footings and slabs.
+* [Decking](decking.md) - Choosing decking boards (hardwood species, treated pine, composite), board sizes and gaps, fixings, finishes, slip resistance on stairs, and what changes in bushfire-prone areas.
+* [Fixings and corrosion](fixings_and_corrosion.md) - Choosing nails, screws, bolts and brackets that won't rust out (galvanised coating classes, 304 vs 316 stainless, treated pine, distance from the coast) and the NCC's corrosion rules for steel and deck attachments.
+* [Insulation](insulation.md) - Bulk and reflective insulation (R-values, batts and rolls, glasswool, polyester, rockwool), what the NCC's installation rules say, and the common mistakes that cost a house its energy rating.
+* [Membranes and sealants](membranes_and_sealants.md) - Wet area and external waterproofing membranes (liquid and sheet, AS/NZS 4858 for wet areas), priming, bond breakers, coats and curing, and choosing silicone, polyurethane or hybrid sealants.
+* [Paint systems](paint_systems.md) - Choosing a paint system (sealer, primer or undercoat, and topcoats) for plasterboard, timber, masonry, metal and wet areas, sheen levels, coverage per litre, and stains and oils for decks.
+* [Plasterboard and lining boards](plasterboard_and_linings.md) - Which plasterboard or fibre-cement board goes where (standard, ceiling, wet area, fire-rated, impact, acoustic), common sizes, fixing and setting, and what the NCC accepts in wet areas.
+* [Sarking and wall wraps](sarking_and_wraps.md) - Roof sarking and wall wraps (pliable building membranes), vapour permeable versus vapour barrier, the NCC's condensation rules for external walls, drained and ventilated cavities, and roof space ventilation in cold climates.
+* [Timber treatment and grades](timber_treatment_and_grades.md) - Which treated pine hazard level (H1 to H6) goes where, what stress grades like MGP10 and F17 mean, engineered timber (LVL, glulam, I-joists), reading the brand, and sealing cut ends.

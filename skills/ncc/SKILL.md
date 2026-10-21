@@ -33,6 +33,7 @@ plugin's setup hook creates it). Otherwise, if
 - `brain/ncc/2025/<volume>/state_variations.md`: every state and territory variation
 - `brain/ncc/2025/clause_index.md`: every clause code and its page
 - `tools/ncc_lookup.py`: search and lookup (standard library only)
+- `brain/guides/code/`: plain-English guides to what the code asks for on common jobs (decks and stairs, wet areas, termites, bushfire, energy, smoke alarms, room heights, footings), each figure pinned to the clause it came from
 
 
 ## Profile: trade and location
@@ -61,7 +62,20 @@ Before answering a code question, know (or ask, in one message):
 
 If the user only says "a house", assume Class 1a and say you have assumed it.
 
-### 2. Find the clauses
+### 2. Start with a guide, if there is one
+
+```bash
+python3 $ABB/tools/ncc_lookup.py guides "deck balustrade height" --trade carpenter
+```
+
+If a guide matches, read it first: it gives the plain answer, the figures
+and the clauses for both editions, and what else to check. Answer in its
+words, but still open the clause it cites (step 3) for the user's edition
+and state before you quote a figure, because a state variation can change
+it. If no guide fits, go straight to the clauses. `search` also lists any
+guide that matches at the end of its results.
+
+### 3. Find the clauses
 
 Always pass the profile, so results stay within the trade's NCC scope and
 show only the user's state's variations:
@@ -87,14 +101,14 @@ If a needed clause is outside the trade's scope (the lookup says so),
 widen it with `--trade builder` and tell the user the clause is outside
 their usual scope.
 
-### 3. Check the state
+### 4. Check the state
 
 Run `variations --state <STATE>` for the volume, and check whether any clause
 you are citing appears. Variations are also quoted inline under the clause
 they change ("> **NSW variation**"). If one applies, the varied text wins;
 say so.
 
-### 4. Answer
+### 5. Answer
 
 - Lead with the plain answer, in builder's language.
 - Then the requirement, quoting the key words briefly and citing each one: **NCC 2025 Vol Two, H5D2(1)(a)** or **ABCB Housing Provisions 2025, 11.3.4**. Include the repo path from the lookup output, so the user can open the page.
@@ -103,7 +117,7 @@ say so.
 - If a requirement depends on a figure, say the figure isn't reproduced here and give its number so the user can find it on ncc.abcb.gov.au.
 - Distinguish **Deemed-to-Satisfy** (follow the recipe) from a **Performance Solution** (engineer or certifier-approved alternative).
 
-### 5. Know the limits
+### 6. Know the limits
 
 Say plainly when:
 

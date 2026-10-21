@@ -24,6 +24,7 @@ brain's folder: an installed plugin's folder is replaced on every update.
 
 - Knowledge: `brain/contracts/materials_estimating.md` (read it first: price sources, Bunnings terms, qualifications)
 - Maths: `brain/computations/materials_takeoff.md`, `materials_rom.md`
+- Material guides: `brain/guides/materials/` (timber treatment and grades, fixings and corrosion, decking, plasterboard, concrete, membranes and sealants, insulation, sarking and wraps, paint). Find one with `tools/ncc_lookup.py guides "<question>" --trade <trade>`
 - Personal price list: `tools/price_list.py` (each user keeps their own, e.g. `my_prices.csv`)
 - Optional Bunnings API client: `tools/bunnings.py` (needs the user's own approved keys)
 - Template: `templates/excel/Materials_Estimate_TEMPLATE.xlsx`
@@ -67,6 +68,12 @@ bearers, posts, studs), ask for the sizes from the plans, the engineer or
 AS 1684 span tables. Never pick structural sizes yourself; if they're
 unknown, use the defaults and mark them **assumed: confirm before buying**.
 
+Use the material guides to get the specification right before taking
+off: the treatment level (H3 above ground, H5 for structural posts in the
+ground), fixings for the treatment and distance from the coast, the board
+type for each room, the concrete grade. Say in a line why you chose it
+("H5 because the posts are in the ground"), so the user can correct you.
+
 For a bigger job (an extension, say), break it into elements and run a
 takeoff for each: slab, wall framing, plasterboard, tiling, painting. Items
 the computation doesn't cover (windows, roofing, joinery) go on the list by
@@ -101,7 +108,16 @@ python3 $ABB/tools/price_list.py match out/takeoff_<element>.json --prices my_pr
 
 A product only matches if every size, length, grade and treatment token
 agrees (140x45 vs 140x45, 3.6m vs 3.6m, H4 vs H4). Prices older than 90 days
-aren't used. Everything else is listed in `to_look_up`.
+aren't used. Everything else is listed in `to_look_up`, with the product
+`family` from the catalogue (`tools/catalogue.py classify` shows what that
+family is sold as).
+
+Matching uses the product catalogue (`brain/references/product_catalogue.md`):
+it reads pack sizes off product names when the list doesn't record one,
+converts per-metre prices (saved with `--unit metre`) to the takeoff's stock
+length, and when the list has the same product in several pack sizes, buys
+the cheapest mix. Each priced line's `check` says what it assumed: read it
+out to the user.
 
 **3b. Look up the rest, for this user's job.** For each `to_look_up` line,
 ask the user how they want to price it:
@@ -117,7 +133,7 @@ leave the line unpriced and say why.
 Then save every price to **their** list, so the next job needs fewer lookups:
 
 ```bash
-python3 $ABB/tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each> \
+python3 $ABB/tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each|metre> \
     --pack-size <takeoff units per item> --price <inc GST> --supplier "Bunnings <store>" \
     --item-number <I/N if shown> --url <page> --checked-on <DD/MM/YYYY>
 ```
@@ -168,6 +184,37 @@ Lead with the list, then the numbers, then the qualifications. Always give:
 
 If the user is pricing the job for a client, point them to the estimating
 skill once they have trade prices.
+
+## 6. Learning from use
+
+`price_list.py` notes each product saved or used in `materials_log.csv` next
+to the price list (never the price). Pass `--job <job number>` to `add` and
+`match` so the log knows which job it was for. To see what the user buys,
+what's new to them and where the catalogue falls short:
+
+```bash
+python3 $ABB/tools/usage.py report --log materials_log.csv
+```
+
+Mention anything useful in a line (for example, "you've switched to 316
+stainless screws on your last three decks"). If the report lists catalogue
+gaps (an item with no family, a size the catalogue doesn't list), say so:
+the user may want to tell the brain's maintainer.
+
+**Offering to share.** After finishing a materials estimate, check:
+
+```bash
+python3 $ABB/tools/usage.py status --log materials_log.csv
+```
+
+Only if `offer` is true, ask once, in one line: "Want to share an anonymous
+summary of the products you use (no prices, jobs or clients) to help
+improve the brain?" If yes, run `usage.py share`, show them the whole
+summary file, and give them the `issue_link`: they post it themselves from
+their own GitHub account. Never post it for them. After they say they've
+posted it, run `usage.py share --shared`. If no, run `usage.py decline`
+(asks again in 90 days), or `decline --never` if they don't want to be
+asked. Never offer more than once in a session.
 
 ## Your own format
 

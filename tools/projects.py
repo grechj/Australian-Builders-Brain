@@ -415,6 +415,16 @@ def add(reg_path: Path, code: str, raw: dict, src: Path | None, yes: bool) -> di
     write_ledger(lp, ledger)
     report["written"] = True
     report["ledger"] = str(lp)
+    if entry["type"] == "bill":
+        try:  # the materials log is a convenience: it must never stop a bill going in
+            import usage
+            who = (entry.get("contact") or {}).get("name", "")
+            for line in entry.get("lines") or []:
+                if line.get("account") == "materials" and line.get("description"):
+                    usage.record(reg_path.parent / "materials_log.csv", "bought", line["description"], line["description"], who, code,
+                                 when=entry.get("date"))
+        except Exception:
+            pass
     return report
 
 

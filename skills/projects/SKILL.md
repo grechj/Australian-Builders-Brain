@@ -113,7 +113,7 @@ python3 $ABB/tools/projects.py add projects.yaml SB-2027-014 --entry out/inbox/C
 - **Warnings go to the user**: no ABN (check ABN Lookup; without one they may have to withhold 47%), not a tax invoice (no GST credit without one), $1,000+ without their business named, possible duplicate, odd dates.
 - **A supplier or subbie you haven't seen before** (no earlier bill from that ABN in any ledger): offer to check their ABN on ABN Lookup (`$ABB/brain/playbooks/checking_registers.md`), and for a subbie whose trade is licensed in that state, their licence too. Say what it showed in the same one line: active or cancelled, the registered name, and whether they're registered for GST. GST charged by a business that isn't registered for it can't be claimed back: tell the user before they add it.
 
-When they say yes, run it again with `--yes`. The bill goes into the job's
+When they say yes, run it again with `--yes`. Materials lines on a bill are also noted in `materials_log.csv` (the product, supplier and job, never the price), which the materials skill uses to learn what the user buys. The bill goes into the job's
 ledger and the file moves to `processed/` as `BILL_<supplier>_<number>`,
 linked from the ledger entry and the dashboard.
 

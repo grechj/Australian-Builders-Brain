@@ -1,7 +1,7 @@
 {
   "name": "australian-builders-brain",
   "displayName": "Australian Builder's Brain",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Knowledge and document skills for Australian builders and tradies. Say 'set me up' to start: projects and an inbox for invoices and receipts, quotes, variations, claims, security of payment, notices, safety, handover, the NCC, Xero/MYOB/QuickBooks exports, a home page and a project dashboard.",
   "author": {
     "name": "Joshua Grech"

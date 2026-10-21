@@ -453,9 +453,152 @@ def _roofing(t: Takeoff) -> None:
     t.add("gutter_fittings", "Stop ends, outlets and corners", "to match", (2 * runs if kind != "hip" else 4) + dps, "each", "2 stop ends per run (corners on hips) + 1 outlet per downpipe", "gutter stop end")
     t.notes.append("Fixing densities, batten spacing and product ratings depend on the site's wind classification (AS 4055) and the manufacturer. Cyclonic regions need cyclone-rated systems. Valleys, box gutters, flashings to walls and penetrations are measured from the drawings and added separately.")
 
+def _cladding(t: Takeoff) -> None:
+    if "area_m2" in t.job:
+        gross = t.get("area_m2")
+        L = t.get("length_m", "0", "only needed to count corners and studs; give it for a better count")
+        H = gross / L if L else Decimal("0")
+    else:
+        L, H = t.get("length_m"), t.get("height_m", "2.7")
+        gross = L * H
+    openings = t.get("openings_m2", "0", "windows and doors to deduct")
+    kind = t.text("cladding_type", "board")
+    if kind not in ("board", "sheet"):
+        raise ValueError("cladding: cladding_type must be board or sheet")
+    waste = t.get("waste_pct", "10")
+    stud_sp = t.get("stud_spacing_mm", "600")
+    corners = int(t.get("external_corners", "0"))
+    area = gross - openings
+    f = 1 + waste / 100
+    studs = _ceil(L * 1000 / stud_sp) + 1 if L else 0
+    if kind == "board":
+        cover = t.get("board_cover_mm", "150", "effective cover per board after the lap; check the profile")
+        stock = t.get("board_length_m", "4.2", "common for fibre-cement and timber weatherboards")
+        board = t.text("board", "weatherboard to suit (timber or fibre-cement)")
+        lineal = area * 1000 / cover * f
+        t.add("boards", "Weatherboards", f"{board}, {stock} m lengths", _ceil(lineal / stock), f"lengths of {stock} m",
+              f"({_money(gross)} - {openings}) m² / {cover} mm cover = {_money(area * 1000 / cover)} lineal m + {waste}% / {stock} m",
+              f"{board} {stock}m")
+        if studs:
+            rows = _ceil(H * 1000 / cover)
+            t.add("fixings", "Cladding nails or screws", "to the maker's spec (stainless near the coast)", _ceil(rows * studs * f), "each",
+                  f"{rows} rows x {studs} studs ({stud_sp} mm) x 1 per crossing + {waste}%", "cladding nails")
+    else:
+        sw, sl = t.get("sheet_width_m", "1.2"), t.get("sheet_length_m", "2.7", "choose the length that covers the wall height")
+        board = t.text("board", "fibre-cement cladding sheet")
+        sheets = _ceil(area / (sw * sl) * f)
+        t.add("sheets", "Cladding sheets", f"{board}, {sw} x {sl} m", sheets, "sheets",
+              f"({_money(gross)} - {openings}) m² / {_money(sw * sl)} m² per sheet + {waste}%", f"{board} {sw}x{sl}")
+        screws_m2 = t.get("fixings_per_m2", "12", "check the sheet maker's fixing schedule and wind region")
+        t.add("fixings", "Sheet fixings", "to the maker's spec", _ceil(area * screws_m2 * f), "each", f"{_money(area)} m² x {screws_m2} per m² + {waste}%", "cladding screws")
+    wrap = _money(gross * Decimal("1.1"))
+    t.add("wrap", "Wall wrap", "vapour permeable, to AS 4200.1", wrap, "m²", f"{_money(gross)} m² + 10% laps (openings wrapped into, not deducted)", "wall wrap vapour permeable")
+    if str(t.job.get("cavity", "false")).lower() in ("true", "yes", "1"):
+        batten_stock = Decimal("2.4")
+        per = _ceil(H / batten_stock) if H else 1
+        t.add("cavity_battens", "Cavity battens", "to the cladding maker's system, at least 12 mm", studs * per, f"lengths of {batten_stock} m",
+              f"{studs} studs x {per} length(s) per stud for a {_money(H)} m wall", "cavity batten")
+    if corners:
+        t.add("corners", "External corner moulds or flashings", "to suit the cladding", _ceil(corners * H * f / Decimal("3")), "lengths of 3 m",
+              f"{corners} corners x {_money(H)} m + {waste}%", "external corner cladding")
+    t.add("flashing_tape", "Window and door flashing tape", "to the wrap maker's system", 1, "roll", "allowance; size by the openings", "flashing tape")
+    t.notes.append("Follow the cladding maker's installation guide for stud spacing, fixings and joints, and the NCC's condensation rules (Housing Provisions 10.8): a vapour-permeable wrap, or a drained and ventilated cavity. See brain/guides/materials/sarking_and_wraps.md.")
+
+
+def _insulation(t: Takeoff) -> None:
+    if "area_m2" in t.job:
+        area = t.get("area_m2")
+    else:
+        area = t.get("length_m") * t.get("width_m")
+    where = t.text("location", "ceiling")
+    r = t.text("r_value", "R-value from the energy report")
+    waste = t.get("waste_pct", "5", "offcuts around framing")
+    need = _money(area * (1 + waste / 100))
+    pack = t.job.get("pack_m2")
+    if pack not in (None, ""):
+        pack = _d(pack)
+        t.add("batts", "Insulation batts", f"{r} {where} batts", _ceil(need / pack), "packs",
+              f"{_money(area)} m² + {waste}% = {need} m² / {pack} m² per pack", f"{where} batts {r}")
+    else:
+        t.add("batts", "Insulation batts", f"{r} {where} batts", need, "m²",
+              f"{_money(area)} m² + {waste}% (give pack_m2 from the pack label to count packs)", f"{where} batts {r}")
+        t.notes.append("Packs cover different areas by product and R-value: read the m² per pack off the label and pass it as pack_m2.")
+    t.notes.append("Install without gaps or compression and keep clearances to downlights and flues (NCC Housing Provisions 13.2.2). See brain/guides/materials/insulation.md.")
+
+
+def _retaining_wall(t: Takeoff) -> None:
+    L, H = t.get("length_m"), t.get("height_m")
+    sh = t.get("sleeper_height_mm", "200")
+    sl = t.get("sleeper_length_m", "2.4")
+    sp = t.get("post_spacing_m", "1.2", "check the post and sleeper maker's tables or the engineer")
+    embed = t.get("post_embed_m", str(max(H, Decimal("0.6"))), "rule of thumb: as deep as the wall is high, at least 600 mm; the engineer's design wins")
+    hole = t.get("hole_mm", "300", "square hole, side length")
+    bag_yield = t.get("concrete_bag_yield_m3", "0.0095", "typical 20 kg premix bag")
+    drain_w = t.get("drainage_width_m", "0.3", "free-draining gravel behind the wall")
+    sleeper = t.text("sleeper", "200x75 H4 treated pine sleeper")
+    post = t.text("post", "H5 treated pine or steel post to suit")
+    rows = _ceil(H * 1000 / sh)
+    per_row = _ceil(L / sl)
+    t.add("sleepers", "Sleepers", f"{sleeper}, {sl} m", rows * per_row, f"lengths of {sl} m",
+          f"{H} m / {sh} mm = {rows} rows x ceil({L} / {sl}) = {per_row} per row", f"{sleeper} {sl}m")
+    posts = _ceil(L / sp) + 1
+    post_len = H + embed
+    t.timber("posts", "Posts", post, posts, post_len, f"{L} m / {sp} m + 1 = {posts} posts at {_money(post_len)} m ({H} m + {_money(embed)} m in the ground)")
+    vol = (hole / 1000) ** 2 * embed * posts
+    bags = _ceil(vol / bag_yield)
+    t.add("concrete", "Concrete premix", "20 kg bags", bags, "bags", f"{posts} holes x {hole} x {hole} mm x {_money(embed)} m = {_money(vol)} m³ / {bag_yield} m³ per bag", "concrete mix 20kg")
+    if vol > Decimal("0.5"):
+        t.notes.append(f"Post holes need {_money(vol)} m³ of concrete: ready-mix is usually cheaper above about 0.5 m³.")
+    t.add("fixings", "Sleeper fixings", "galvanised or stainless screws or bolts to suit the post", rows * posts * 2, "each",
+          f"{rows} rows x {posts} posts x 2", "batten screws galvanised")
+    t.add("ag_pipe", "Slotted drainage pipe with sock", "100 mm", _money(L * Decimal("1.1")), "lineal metres", f"{L} m + 10%, to a legal discharge point", "ag pipe 100mm sock")
+    t.add("gravel", "Drainage gravel", "20 mm", _money(L * H * drain_w), "m³", f"{L} x {H} x {drain_w} m", "drainage gravel 20mm")
+    t.add("geofabric", "Geotextile fabric", "between gravel and soil", _money(L * (H + Decimal("0.6")) * Decimal("1.1")), "m²",
+          f"{L} m x ({H} + 0.6) m + 10%", "geofabric")
+    t.notes.append("Retaining walls above a modest height (often 0.6 to 1 m, set by the state and council), near boundaries, or holding up a building, driveway or slope usually need an engineer's design and approval. Posts in the ground for a retaining wall are H5. Check Before You Dig Australia before digging. See brain/guides/materials/timber_treatment_and_grades.md.")
+
+
+def _pergola(t: Takeoff) -> None:
+    L, W = t.get("length_m"), t.get("width_m")
+    H = t.get("height_m", "2.4", "post height above the footing")
+    psp = t.get("post_spacing_m", "3.0", "check the beam span in AS 1684 or the supplier's tables")
+    rsp = t.get("rafter_spacing_mm", "900", "check the rafter span and the roofing maker's spacing")
+    fd = t.get("footing_mm", "300", "square hole, side length")
+    fdepth = t.get("footing_depth_mm", "600", "check soil and engineer's details")
+    bag_yield = t.get("concrete_bag_yield_m3", "0.0095", "typical 20 kg premix bag")
+    post = t.text("post_size", "90x90 H3 treated pine post on stirrups")
+    beam = t.text("beam_size", "beam size per AS 1684 (for example 2/190x45 H3 treated pine)")
+    rafter = t.text("rafter_size", "rafter size per AS 1684 (for example 140x45 H3 treated pine)")
+    roof = t.text("roof", "none")
+    if roof not in ("none", "sheet"):
+        raise ValueError("pergola: roof must be none or sheet")
+    per_side = _ceil(L / psp) + 1
+    posts = 2 * per_side
+    t.timber("posts", "Posts", post, posts, H, f"2 sides x (ceil({L} m / {psp} m) + 1) = {posts} posts at {H} m")
+    t.timber("beams", "Beams", beam, 2, L, "a beam along each long side")
+    rafters = _ceil(L * 1000 / rsp) + 1
+    t.timber("rafters", "Rafters", rafter, rafters, W, f"{L} m / {rsp} mm + 1 = {rafters} rafters spanning {W} m")
+    t.add("rafter_brackets", "Rafter-to-beam brackets", "galvanised framing anchors or triple grips", rafters * 2, "each", f"{rafters} rafters x 2 ends", "triple grip galvanised")
+    t.add("post_anchors", "Post stirrups", "galvanised, to suit the post", posts, "each", "1 per post", "post stirrup galvanised")
+    t.add("bolts", "Cup head bolts with nuts and washers", "M12 galvanised, post to beam", posts * 2, "each", "2 per post", "cup head bolt M12 galvanised")
+    vol = (fd / 1000) ** 2 * (fdepth / 1000) * posts
+    t.add("concrete", "Concrete premix", "20 kg bags", _ceil(vol / bag_yield), "bags", f"{posts} holes x {fd} x {fd} x {fdepth} mm = {_money(vol)} m³ / {bag_yield} m³ per bag", "concrete mix 20kg")
+    if roof == "sheet":
+        cover = t.get("sheet_cover_m", "0.762", "corrugated; check the profile")
+        overhang = t.get("roof_overhang_m", "0.2")
+        sheet_len = W + 2 * overhang
+        sheets = _ceil(L / cover)
+        t.add("roof_sheets", "Roof sheets", t.text("sheet", "polycarbonate or steel sheet to suit"), sheets, "sheets",
+              f"ceil({L} m / {cover} m cover) = {sheets} sheets at {_money(sheet_len)} m", "roof sheet")
+        t.add("roof_sheet_length", "Roof sheet length (for reference)", "cut to length when ordering", _money(sheet_len), "m", f"{W} m + 2 x {overhang} m overhang", "")
+        t.add("roof_screws", "Roof sheet screws", "to the sheet maker's spec", _ceil(Decimal(sheets) * rafters * 3 * Decimal("1.1")), "each", f"{sheets} sheets x {rafters} rafters x 3 + 10%", "roofing screws")
+    t.notes.append("Member sizes, spans, bracing and tie-down must come from AS 1684, the supplier's span tables or an engineer. A roofed pergola attached to the house may need approval, and in bushfire-prone areas it's built to AS 3959.")
+
+
 JOBS = {"timber_deck": _deck, "stud_wall": _stud_wall, "plasterboard": _plasterboard, "concrete_slab": _slab,
         "paling_fence": _fence, "tiling": _tiling, "painting": _painting,
-        "electrical_rough_in": _electrical, "plumbing_rough_in": _plumbing, "roofing": _roofing}
+        "electrical_rough_in": _electrical, "plumbing_rough_in": _plumbing, "roofing": _roofing,
+        "cladding": _cladding, "insulation": _insulation, "retaining_wall": _retaining_wall, "pergola": _pergola}
 
 
 def materials_takeoff(job: dict) -> dict:
