@@ -87,6 +87,8 @@ def concepts() -> list[Path]:
 
 def check_names(errors: list[str]) -> None:
     for p in list(BRAIN.rglob("*")) + list((ROOT / "templates").rglob("*")) + list((ROOT / "skills").rglob("*")):
+        if "__pycache__" in p.parts:  # Python's own cache, git-ignored
+            continue
         if " " in p.name or ("-" in p.name and p.suffix != ".py"):
             errors.append(f"{p.relative_to(ROOT)}: use _ in names, not spaces or hyphens")
 

@@ -32,6 +32,26 @@ CASES = [
     ({"type": "roofing", "building_length_m": 10, "building_width_m": 6, "roof_type": "hip", "material": "tile"},
      # ridge 3.1 m + 4 hips of 5.084 m = 23.44 m x 3 x 1.1 -> 78 ridge tiles; gutter 2 x (10 + 6.9) = 33.8 m x 1.1
      {"roof_area": "74.69", "tiles": "863", "ridge_tiles": "78", "gutter": "37.18", "downpipes": "4"}),
+    ({"type": "cladding", "length_m": 10, "height_m": 2.7, "openings_m2": 4, "external_corners": 2, "cavity": True},
+     # (27 - 4) m2 x 1000 / 150 mm = 153.33 m x 1.1 / 4.2 m -> 41 boards; 18 rows x 18 studs x 1.1 -> 357;
+     # wrap 27 x 1.1; battens 18 studs x 2 lengths; corners 2 x 2.7 x 1.1 / 3 -> 2
+     {"boards": "41", "fixings": "357", "wrap": "29.70", "cavity_battens": "36", "corners": "2"}),
+    ({"type": "cladding", "length_m": 10, "height_m": 2.7, "cladding_type": "sheet"},
+     # 27 m2 / 3.24 m2 x 1.1 -> 10 sheets; 27 x 12 x 1.1 -> 357 fixings
+     {"sheets": "10", "fixings": "357"}),
+    ({"type": "insulation", "area_m2": 100, "pack_m2": 8.4, "r_value": "R6.0"},
+     # 100 x 1.05 = 105 m2 / 8.4 -> 13 packs
+     {"batts": "13"}),
+    ({"type": "insulation", "length_m": 10, "width_m": 8},
+     {"batts": "84.00"}),
+    ({"type": "retaining_wall", "length_m": 6, "height_m": 0.8},
+     # 0.8 / 0.2 = 4 rows x ceil(6 / 2.4) = 3 -> 12; 6 / 1.2 + 1 = 6 posts at 1.6 m;
+     # 6 x 0.3 x 0.3 x 0.8 = 0.432 m3 / 0.0095 -> 46 bags; gravel 6 x 0.8 x 0.3; fabric 6 x 1.4 x 1.1
+     {"sleepers": "12", "posts": "6", "concrete": "46", "fixings": "48", "ag_pipe": "6.60", "gravel": "1.44", "geofabric": "9.24"}),
+    ({"type": "pergola", "length_m": 6, "width_m": 4, "roof": "sheet"},
+     # 2 x (6 / 3 + 1) = 6 posts; 6000 / 900 -> 7 + 1 = 8 rafters; 6 x 0.3 x 0.3 x 0.6 / 0.0095 -> 35 bags;
+     # ceil(6 / 0.762) = 8 sheets; 8 x 8 x 3 x 1.1 -> 212 screws
+     {"posts": "6", "beams": "2", "rafters": "8", "rafter_brackets": "16", "concrete": "35", "roof_sheets": "8", "roof_screws": "212"}),
 ]
 
 
@@ -45,7 +65,8 @@ def main() -> None:
             if not ok:
                 print(f"FAIL {job['type']} {key}: expected {want}, got {items.get(key)}")
         print(("OK   " if all(items.get(k) == v for k, v in expected.items()) else "FAIL ") + f"{job['type']} {job.get('roof_type', '')}".strip())
-    for bad in ({"type": "electrical_rough_in"}, {"type": "plumbing_rough_in"}, {"type": "roofing", "building_length_m": 5, "building_width_m": 4, "roof_type": "dome"}):
+    for bad in ({"type": "cladding", "length_m": 5, "cladding_type": "brick"}, {"type": "pergola", "length_m": 3, "width_m": 3, "roof": "tile"},
+                {"type": "retaining_wall", "length_m": 5}, {"type": "electrical_rough_in"}, {"type": "plumbing_rough_in"}, {"type": "roofing", "building_length_m": 5, "building_width_m": 4, "roof_type": "dome"}):
         try:
             m.materials_takeoff(bad)
             print(f"FAIL {bad} should be refused"); failures += 1

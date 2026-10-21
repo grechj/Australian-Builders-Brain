@@ -46,6 +46,8 @@ takeoff_jobs:
 - timber_deck
 - stud_wall
 - paling_fence
+- cladding
+- pergola
 generated:
   by: claude/opus-5.5
   at: '2026-10-17T00:00:00Z'
@@ -90,7 +92,7 @@ State and territory variations to these parts are shown for the user's state onl
 
 # Materials
 
-Takeoff jobs: `timber_deck`, `stud_wall`, `paling_fence` ([materials takeoff](/computations/materials_takeoff.md)).
+Takeoff jobs: `timber_deck`, `stud_wall`, `paling_fence`, `cladding`, `pergola` ([materials takeoff](/computations/materials_takeoff.md)).
 
 Typical materials:
 

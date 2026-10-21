@@ -62,9 +62,15 @@ ground outdoors, H4 in-ground posts), grade (MGP10), length and pack size.
 If nothing matches, say so and leave the line unpriced rather than
 substituting a different spec.
 
-Convert the takeoff quantity to what's sold: set `pack_size` to how many
+Convert the takeoff quantity to what's sold: `pack_size` is how many
 takeoff units one priced item holds (a box of 500 screws: 500; a 10 L
-tin: 10; a length priced each: 1). Ready-mix concrete (m³) isn't a Bunnings
+tin: 10; a length priced each: 1). The [product catalogue](/references/product_catalogue.md)
+does most of this: when a price has no pack size recorded, matching reads
+it off the product's name (a 10 L tin, a 500 pack, a 1.35 x 30 m roll),
+turns a per-metre price into the stock length the takeoff counts, and buys
+the cheapest mix of pack sizes when the user has prices for several (a 15 L
+and two 4 L tins rather than three 10 L). Every line says what it assumed,
+so check it. Ready-mix concrete (m³) isn't a Bunnings
 product: leave it unpriced, or price premix bags for small pours only.
 
 # 3. The estimate

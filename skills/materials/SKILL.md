@@ -108,7 +108,16 @@ python3 $ABB/tools/price_list.py match out/takeoff_<element>.json --prices my_pr
 
 A product only matches if every size, length, grade and treatment token
 agrees (140x45 vs 140x45, 3.6m vs 3.6m, H4 vs H4). Prices older than 90 days
-aren't used. Everything else is listed in `to_look_up`.
+aren't used. Everything else is listed in `to_look_up`, with the product
+`family` from the catalogue (`tools/catalogue.py classify` shows what that
+family is sold as).
+
+Matching uses the product catalogue (`brain/references/product_catalogue.md`):
+it reads pack sizes off product names when the list doesn't record one,
+converts per-metre prices (saved with `--unit metre`) to the takeoff's stock
+length, and when the list has the same product in several pack sizes, buys
+the cheapest mix. Each priced line's `check` says what it assumed: read it
+out to the user.
 
 **3b. Look up the rest, for this user's job.** For each `to_look_up` line,
 ask the user how they want to price it:
@@ -124,7 +133,7 @@ leave the line unpriced and say why.
 Then save every price to **their** list, so the next job needs fewer lookups:
 
 ```bash
-python3 $ABB/tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each> \
+python3 $ABB/tools/price_list.py add my_prices.csv --product "<product name as shown>" --unit <length|sheet|bag|box|tin|each|metre> \
     --pack-size <takeoff units per item> --price <inc GST> --supplier "Bunnings <store>" \
     --item-number <I/N if shown> --url <page> --checked-on <DD/MM/YYYY>
 ```
