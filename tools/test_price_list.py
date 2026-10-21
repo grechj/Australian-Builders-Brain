@@ -43,7 +43,7 @@ def main() -> None:
         takeoff.write_text(subprocess.run([sys.executable, str(ROOT / "tools/compute.py"), "materials_takeoff", "--param", "job=" + json.dumps(job)],
                                           capture_output=True, text=True, check=True).stdout)
         out = subprocess.run([sys.executable, str(ROOT / "tools/price_list.py"), "match", str(takeoff),
-                              "--prices", str(ROOT / "examples/price_list_example.csv")], capture_output=True, text=True, check=True)
+                              "--prices", str(ROOT / "examples/price_list_example.csv"), "--no-log"], capture_output=True, text=True, check=True)
         result = json.loads(out.stdout)
         missing = [x["item"] for x in result["to_look_up"]]
         ok = missing == ["Concrete premix"]
@@ -81,6 +81,11 @@ def main() -> None:
             print(("OK   " if ok else "FAIL ") + name)
         if not all(checks.values()):
             print(json.dumps(out["lines"], indent=2))
+        log = Path(tmp) / "materials_log.csv"
+        logged = log.read_text() if log.exists() else ""
+        ok = "Decking screws" in logged and "51.30" not in logged and "9.50" not in logged and "120.00" not in logged
+        failures += not ok
+        print(("OK   " if ok else "FAIL ") + "products used are logged next to the price list, without prices")
     sys.exit(1 if failures else 0)
 
 

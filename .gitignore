@@ -12,3 +12,5 @@ my_project*.yaml
 out/
 my_prices*.csv
 .claude/
+materials_log*.csv
+usage_share*

@@ -47,7 +47,7 @@ Documents come out filled in from one sentence, with the money worked out and ch
 
 - **On your computer:** at the start of a session it sets up a private Python environment (four open-source packages from PyPI, pinned in `hooks/requirements_runtime.txt`) and reads your jobs folder to brief Claude on what's waiting. When you ask for a document or figures, its Python tools read and write files in your folder.
 - **Nothing to this project:** no accounts, servers, tracking or data collection.
-- **Only when you ask:** drafts to your own Xero, MYOB or QuickBooks (after you approve each one), Bunnings price lookups with your own API keys or public product pages, and checks of an ABN or licence on the public ABN Lookup and state licence registers.
+- **Only when you ask:** drafts to your own Xero, MYOB or QuickBooks (after you approve each one), Bunnings price lookups with your own API keys or public product pages, checks of an ABN or licence on the public ABN Lookup and state licence registers, and an anonymous summary of the products you use, which you can choose to post to the brain's GitHub if it offers.
 
 The details are in [PRIVACY.md](PRIVACY.md).
 

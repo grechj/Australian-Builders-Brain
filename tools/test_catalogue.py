@@ -39,6 +39,8 @@ def main() -> None:
         "Paint low sheen acrylic": "paint",
         "Waterproofing membrane liquid": "membrane",
         "Slotted drainage pipe with sock": "ag_pipe",
+        "140x45 H3 treated pine 4.8m": "framing_timber",   # no keyword: the section size tells
+        "Delivery": None,
     }.items():
         expect(f"'{text}' is {fam}", catalogue.family_of(text), fam)
 

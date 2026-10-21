@@ -12,6 +12,10 @@ Usage:
     python tools/price_list.py match out/takeoff_deck.json --prices my_prices.csv --out out/materials_lines.json
     python tools/price_list.py stale my_prices.csv --days 60
 
+`add` and `match` also note which product was saved or used (never the
+price) in materials_log.csv next to the price list, so the brain learns
+what the user buys (tools/usage.py). Pass --no-log to skip it.
+
 `match` writes a lines file ready for the materials_rom computation. Lines
 with no good match, or whose price is older than --max-age days, are left
 unpriced and listed in `to_look_up`, with a suggested search, for the user
@@ -33,6 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogue  # noqa: E402
+import usage  # noqa: E402
 
 COLUMNS = ["product", "item_number", "unit", "pack_size", "price_inc_gst", "supplier", "url", "checked_on", "notes"]
 # Tokens that must agree for a match to count: sizes, lengths, grades, treatment classes.
@@ -96,6 +101,8 @@ def cmd_add(args) -> None:
         w.writeheader()
         w.writerows(rows)
     print(f"Saved {row['product']} at ${row['price_inc_gst']} ({row['supplier']}, {row['checked_on']})")
+    if not args.no_log:
+        usage.record(usage.log_path_for(path), "saved", args.for_item or "", row["product"], row["supplier"], args.job or "")
 
 
 PER_METRE = {"metre", "metres", "m", "lineal metre", "lineal metres", "per metre", "lm"}
@@ -157,6 +164,11 @@ def cmd_match(args) -> None:
                                     f"cheapest mix of pack sizes for {it['quantity']}: " + ", ".join(f"{c} x {fmt(s)}" for s, c in mix)))
             continue
         lines.append(priced(base, effective(top, it["unit"]), top_score))
+    if not args.no_log:
+        log = usage.log_path_for(Path(args.prices))
+        for l in lines:
+            if l.get("unit_price_inc_gst"):
+                usage.record(log, "used", re.sub(r" \(.*each\)$", "", l["item"]), l["product"], l["source"], args.job or "")
     out = {"lines": lines, "to_look_up": to_look_up,
            "summary": f"{sum(1 for l in lines if l.get('unit_price_inc_gst'))} of {len(lines)} lines priced from {args.prices}"}
     text = json.dumps(out, indent=2)
@@ -197,10 +209,14 @@ def main() -> None:
     p.add_argument("--price", required=True, help="inc GST"); p.add_argument("--supplier", required=True)
     p.add_argument("--pack-size", default="1", help="takeoff units per priced item, e.g. 500 screws per box (read off the product name when left at 1)")
     p.add_argument("--item-number"); p.add_argument("--url"); p.add_argument("--checked-on"); p.add_argument("--notes")
+    p.add_argument("--for-item", help="the takeoff item this product is for (for the materials log)")
     p = sub.add_parser("match"); p.add_argument("takeoff"); p.add_argument("--prices", required=True)
     p.add_argument("--out"); p.add_argument("--min-score", type=float, default=0.6)
     p.add_argument("--max-age", type=int, default=90, help="days before a price needs re-checking")
     p.add_argument("--use-spec", action="store_true", help="match on the spec as well as the search phrase")
+    for name in ("add", "match"):
+        sub.choices[name].add_argument("--job", help="job number, kept in the user's own materials log")
+        sub.choices[name].add_argument("--no-log", action="store_true", help="don't write to materials_log.csv")
     p = sub.add_parser("stale"); p.add_argument("path"); p.add_argument("--days", type=int, default=60)
     args = parser.parse_args()
     {"new": cmd_new, "add": cmd_add, "match": cmd_match, "stale": cmd_stale}[args.cmd](args)

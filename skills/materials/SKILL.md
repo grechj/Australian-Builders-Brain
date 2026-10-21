@@ -185,6 +185,37 @@ Lead with the list, then the numbers, then the qualifications. Always give:
 If the user is pricing the job for a client, point them to the estimating
 skill once they have trade prices.
 
+## 6. Learning from use
+
+`price_list.py` notes each product saved or used in `materials_log.csv` next
+to the price list (never the price). Pass `--job <job number>` to `add` and
+`match` so the log knows which job it was for. To see what the user buys,
+what's new to them and where the catalogue falls short:
+
+```bash
+python3 $ABB/tools/usage.py report --log materials_log.csv
+```
+
+Mention anything useful in a line (for example, "you've switched to 316
+stainless screws on your last three decks"). If the report lists catalogue
+gaps (an item with no family, a size the catalogue doesn't list), say so:
+the user may want to tell the brain's maintainer.
+
+**Offering to share.** After finishing a materials estimate, check:
+
+```bash
+python3 $ABB/tools/usage.py status --log materials_log.csv
+```
+
+Only if `offer` is true, ask once, in one line: "Want to share an anonymous
+summary of the products you use (no prices, jobs or clients) to help
+improve the brain?" If yes, run `usage.py share`, show them the whole
+summary file, and give them the `issue_link`: they post it themselves from
+their own GitHub account. Never post it for them. After they say they've
+posted it, run `usage.py share --shared`. If no, run `usage.py decline`
+(asks again in 90 days), or `decline --never` if they don't want to be
+asked. Never offer more than once in a session.
+
 ## Your own format
 
 If the user can't run Python, or wants the list somewhere else (an email,

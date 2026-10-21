@@ -38,12 +38,20 @@ def family_of(text: str) -> str | None:
     """The family whose keyword best matches the text (the longest matching keyword wins)."""
     t = " " + re.sub(r"[^a-z0-9.]+", " ", text.lower()) + " "
     best, best_len = None, 0
-    for name, fam in load().items():
+    fams = load()
+    for name, fam in fams.items():
         for kw in fam.get("keywords", []):
             k = " " + re.sub(r"[^a-z0-9.]+", " ", kw.lower()) + " "
             if k in t and len(k) > best_len:
                 best, best_len = name, len(k)
-    return best
+    if best:
+        return best
+    # No keyword: a section size the catalogue lists (140x45 is framing timber) is the next best clue.
+    sizes = set(re.findall(r"\b\d+x\d+\b", text.lower().replace(" x ", "x")))
+    for name, fam in fams.items():
+        if sizes & {str(s).lower() for s in fam.get("sizes", [])}:
+            return name
+    return None
 
 
 def unit_kind(takeoff_unit: str) -> str:
