@@ -31,11 +31,11 @@ This Part has been deliberately left blank. Section 13.1 of the ABCB Housing Pro
 >
 > This Section sets out the following *Deemed-to-Satisfy Provisions* for energy efficiency:
 >
-> - (a) Building fabric (see [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation)).
-> - (b) External glazing (see [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation)).
-> - (c) Building sealing (see [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation)).
-> - (d) Air movement (see [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation)).
-> - (e) Services (see [NT Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation)).
+> - (a) Building fabric (see [NT Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md)).
+> - (b) External glazing (see [NT Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md)).
+> - (c) Building sealing (see [NT Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md)).
+> - (d) Air movement (see [NT Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md)).
+> - (e) Services (see [NT Part 13.7](/ncc/2025/housing_provisions/13_7_services.md)).
 >
 
 > **NT variation**: NT adds 13.1.2 Application.

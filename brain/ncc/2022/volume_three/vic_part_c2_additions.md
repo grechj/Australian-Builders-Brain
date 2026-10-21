@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="vic_c2p8"></a>
+<a id="c2p8"></a><a id="vic_c2p8"></a>
 
 ### VIC C2P8 No point of connection
 

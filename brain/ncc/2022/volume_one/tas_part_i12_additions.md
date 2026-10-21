@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i12d1"></a>
+<a id="i12d1"></a><a id="tas_i12d1"></a>
 
 ### TAS I12D1 Application of Part
 
@@ -33,7 +33,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 - (a) provide for the safety and comfort or workers; and
 - (b) be constructed in a manner that will avoid the spread of fire within the building and to other buildings.
-<a id="tas_i12d2"></a>
+<a id="i12d2"></a><a id="tas_i12d2"></a>
 
 ### TAS I12D2 Separation from other buildings
 
@@ -41,19 +41,19 @@ A building for the manufacture or processing of glass reinforced plastics must b
 
 - (a) separated from other buildings or parts of an occupancy by means of impervious walls with FRL at least 120/120/120; or
 - (b) separated from all other buildings by a clear space of not less than 6 m.
-<a id="tas_i12d3"></a>
+<a id="i12d3"></a><a id="tas_i12d3"></a>
 
 ### TAS I12D3 Rise in storeys
 
 The building must be of single *storey* construction.
 
-<a id="tas_i12d4"></a>
+<a id="i12d4"></a><a id="tas_i12d4"></a>
 
 ### TAS I12D4 Maximum floor areas
 
 The *floor area* of any building or fire-separated section must not exceed the relevant maximum *floor area* set out in Table TAS I12D4.
 
-<a id="tas_i12d5"></a>
+<a id="i12d5"></a><a id="tas_i12d5"></a>
 
 ### TAS I12D5 Required exits
 
@@ -61,7 +61,7 @@ The *floor area* of any building or fire-separated section must not exceed the r
 
 (2) Only *exits* with vertically hinged swinging doors may be considered as *exits* for the purposes of this clause.
 
-<a id="tas_i12d7"></a>
+<a id="i12d7"></a><a id="tas_i12d7"></a>
 
 ### TAS I12D7 Ventilation
 
@@ -73,7 +73,7 @@ The *floor area* of any building or fire-separated section must not exceed the r
 
 - (a) produce a negative pressure within any exhaust ducting within the work place so that a leak in the ducting will not vent exhaust air back in to the work place; and
 - (b) vent the exhaust air to the atmosphere so as to prevent recirculation of that exhaust air.
-<a id="tas_i12d8"></a>
+<a id="i12d8"></a><a id="tas_i12d8"></a>
 
 ### TAS I12D8 Smoke and heat roof vents
 

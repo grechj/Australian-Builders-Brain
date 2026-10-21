@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildings which are *bulk grain storage facilities*.
 
+<a id="i4d1"></a>
+
 > **SA variation**: SA replaces I4D1 Application of Part.
 >
 > (1) The Deemed-to-Satisfy Provisions of this Part apply to bulk grain storage facilities in South Australia.
@@ -35,6 +37,8 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 > >
 >
 
+<a id="i4d2"></a>
+
 > **SA variation**: SA replaces I4D2 Type of construction required.
 >
 > The external walls of a *bulk grain storage facility* need not be of fire-resisting construction in accordance with [Table C2D2](/ncc/2025/volume_one/c2_fire_resistance_and_stability.md#table_7bde479d) if—
@@ -46,10 +50,14 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 >   - (2) Type C construction.
 >
 
+<a id="i4d3"></a>
+
 > **SA variation**: SA replaces I4D3 Compartmentation.
 >
 > Underground passageways in a *bulk grain storage facility* must be separated from other parts of the building by smoke proof walls and smoke-proof doors complying with [Specification 11](/ncc/2025/volume_one/specification_11_smoke_proof_walls_in_health_care_and_residential_care_buildings.md).
 >
+
+<a id="i4d4"></a>
 
 > **SA variation**: SA replaces I4D4 Protection of openings.
 >
@@ -58,6 +66,8 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 > - (a) any window or door opening within 6 m of the stairway or ladder must be protected in accordance with [C4D5](/ncc/2025/volume_one/c4_protection_of_openings.md#c4d5); or
 > - (b) the stairway, ramp or ladder must be enclosed for its full height above the lowest level of the window or door opening with non-combustible construction having an FRL of not less than 60/60/60.
 >
+
+<a id="i4d5"></a>
 
 > **SA variation**: SA replaces I4D5 Provision for escape.
 >
@@ -74,6 +84,8 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 >
 > (5) A stair or ladder complying with AS 1657 may be used in a *bulk grain storage facility* as an alternative means of egress from a *cell type silo*.
 >
+
+<a id="i4d6"></a>
 
 > **SA variation**: SA replaces I4D6 Fire hydrants and water supplies.
 >
@@ -94,10 +106,14 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 > <a id="figure_27d60cfe"></a>*Figure: Location of hydrants, tanks, booster connections and dry risers* (not reproduced here, see the figure on ncc.abcb.gov.au)
 >
 
+<a id="i4d7"></a>
+
 > **SA variation**: SA replaces I4D7 Fire hose reels.
 >
 > [E1D3](/ncc/2025/volume_one/e1_fire_fighting_equipment.md#e1d3) does not apply to a *bulk grain storage facility*.
 >
+
+<a id="i4d8"></a>
 
 > **SA variation**: SA replaces I4D8 Smoke venting.
 >
@@ -105,6 +121,8 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 >
 > (2) Smoke venting is not required in a *storage shed* of a *bulk grain storage facility*.
 >
+
+<a id="i4d9"></a>
 
 > **SA variation**: SA replaces I4D9 Emergency lighting requirements.
 >
@@ -115,6 +133,8 @@ This Part provides additional *Deemed-to-Satisfy Provisions* for Class 7b buildi
 >
 > (2) An emergency lighting system complying with [E4D2](/ncc/2025/volume_one/e4_visibility_in_an_emergency_exit_signs_and_warning_systems.md#e4d2) must be installed in an underground passage in a *bulk grain storage facility*.
 >
+
+<a id="i4d10"></a>
 
 > **SA variation**: SA replaces I4D10 Ventilation.
 >

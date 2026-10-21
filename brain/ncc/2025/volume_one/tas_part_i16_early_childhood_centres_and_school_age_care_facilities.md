@@ -25,6 +25,8 @@ This Part contains additional requirements for *early childhood centres* and *sc
 
 ## Objectives
 
+<a id="i16o1"></a>
+
 > **TAS variation**: TAS replaces I16O1 Objective.
 >
 > The Objective of this Part is to regulate the physical specification of *early childhood centres* and *school age care facilities* at which education and care is provided.
@@ -32,12 +34,16 @@ This Part contains additional requirements for *early childhood centres* and *sc
 
 ## Functional Statements
 
+<a id="i16f1"></a>
+
 > **TAS variation**: TAS replaces I16F1 Early childhood centres and school age care facilities.
 >
 > An *early childhood centre* and *school age care facility* must be designed and constructed to provide a safe environment and provide for the health, safety and well-being of the children, parents and staff using the centre.
 >
 
 ## Performance Requirements
+
+<a id="i16p1"></a>
 
 > **TAS variation**: TAS replaces I16P1 Design and construction.
 >
@@ -52,6 +58,8 @@ This Part contains additional requirements for *early childhood centres* and *sc
 > > TAS I16P1 applies to *early childhood centres* and *school age care facilities* approved under the Education and Care Services National Law (Application) Act 2011 or licensed under the Child Care Act 2001.
 > >
 >
+
+<a id="i16p2"></a>
 
 > **TAS variation**: TAS replaces I16P2 Health and amenity.
 >
@@ -76,6 +84,8 @@ This Part contains additional requirements for *early childhood centres* and *sc
 > >
 >
 
+<a id="i16p3"></a>
+
 > **TAS variation**: TAS replaces I16P3 Perimeter fencing and barriers.
 >
 > An *early childhood centre* and *school age care facility* must to the degree necessary, have fencing around the perimeter of any outdoor play space, and any identified hazard isolated by fences, barriers and gates.
@@ -86,10 +96,14 @@ This Part contains additional requirements for *early childhood centres* and *sc
 > >
 >
 
+<a id="i16d1"></a>
+
 > **TAS variation**: TAS replaces I16D1 Application of Part.
 >
 > This Part applies to *early childhood centres* and *school age care facilities* approved under the Education and Care Services National Law (Application) Act 2011 or licensed under the Child Care Act 2001.
 >
+
+<a id="i16d2"></a>
 
 > **TAS variation**: TAS replaces I16D2 Deemed-to-Satisfy Provisions.
 >

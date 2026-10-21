@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i18p1"></a>
+<a id="i18p1"></a><a id="tas_i18p1"></a>
 
 ### TAS I18P1 Application of Part
 
@@ -31,19 +31,19 @@ TAS I18P2 to TAS I18P16 only apply to a *temporary structure* that—
 
 - (a) is used by the public as a place of assembly as described in the Public Health Act 1997; and
 - (b) is a temporary structure as described in the Building Act 2016.
-<a id="tas_i18p2"></a>
+<a id="i18p2"></a><a id="tas_i18p2"></a>
 
 ### TAS I18P2 Safety and serviceability
 
 A *temporary structure* must, to the degree necessary, be capable of sustaining at an acceptable level of safety and serviceability the most adverse combination of loads and other actions to which it may reasonably be expected to be subjected.
 
-<a id="tas_i18p3"></a>
+<a id="i18p3"></a><a id="tas_i18p3"></a>
 
 ### TAS I18P3 Resistance to the spread of fire
 
 The material used in a *temporary structure* must, to the degree necessary, be capable of resisting the spread of fire to limit the generation of smoke and heat, and any toxic gases likely to be produced.
 
-<a id="tas_i18p4"></a>
+<a id="i18p4"></a><a id="tas_i18p4"></a>
 
 ### TAS I18P4 Access
 
@@ -58,7 +58,7 @@ The material used in a *temporary structure* must, to the degree necessary, be c
 
 (4) If fixed seating is provided in a *temporary structure*, an appropriate number of wheelchair spaces must be provided.
 
-<a id="tas_i18p5"></a>
+<a id="i18p5"></a><a id="tas_i18p5"></a>
 
 ### TAS I18P5 Exits
 
@@ -71,7 +71,7 @@ The material used in a *temporary structure* must, to the degree necessary, be c
 
 - (a) number, mobility and other characteristics of the occupants; and
 - (b) function or use of the structure.
-<a id="tas_i18p6"></a>
+<a id="i18p6"></a><a id="tas_i18p6"></a>
 
 ### TAS I18P6 Fall prevention
 
@@ -82,7 +82,7 @@ Where a person could fall 1 m or more, due to a sudden change of level within or
 - (c) constructed to prevent people falling through the barrier; and
 - (d) capable of restricting the passage of children; and
 - (e) of a strength and rigidity to withstand the foreseeable impact of people and where appropriate, the static pressure or people pressing against it.
-<a id="tas_i18p7"></a>
+<a id="i18p7"></a><a id="tas_i18p7"></a>
 
 ### TAS I18P7 Lighting
 
@@ -91,7 +91,7 @@ A level of illumination for safe evacuation from a *temporary structure* in an e
 - (a) function or use of the structure; and
 - (b) size of the structure; and
 - (c) distance of travel to an *exit*.
-<a id="tas_i18p8"></a>
+<a id="i18p8"></a><a id="tas_i18p8"></a>
 
 ### TAS I18P8 Identification of exits
 
@@ -101,7 +101,7 @@ To facilitate evacuation from a *temporary structure* suitable signs or other me
 - (b) guide the occupants to the *exits*; and
 - (c) be clearly visible to the occupants; and
 - (d) operate in the event of power failure for a sufficient time for occupants to safely evacuate.
-<a id="tas_i18p9"></a>
+<a id="i18p9"></a><a id="tas_i18p9"></a>
 
 ### TAS I18P9 Fire-fighting equipment
 
@@ -109,7 +109,7 @@ Fire equipment must be installed in a *temporary structure* to the degree necess
 
 - (a) function or use of the structure; and
 - (b) fire hazard.
-<a id="tas_i18p10"></a>
+<a id="i18p10"></a><a id="tas_i18p10"></a>
 
 ### TAS I18P10 Sanitary facilities
 
@@ -118,7 +118,7 @@ Sanitary facilities for personal hygiene must be provided in a convenient locati
 - (a) function or use of the structure; and
 - (b) number and gender of the occupants; and
 - (c) disability or other particular needs of the occupants.
-<a id="tas_i18p11"></a>
+<a id="i18p11"></a><a id="tas_i18p11"></a>
 
 ### TAS I18P11 Artificial lighting
 
@@ -126,7 +126,7 @@ Sanitary facilities for personal hygiene must be provided in a convenient locati
 
 (2) Lighting must be installed to the degree necessary, to provide a level of illumination appropriate to the function or use of a *temporary structure* to enable safe use and movement by the occupants.
 
-<a id="tas_i18p12"></a>
+<a id="i18p12"></a><a id="tas_i18p12"></a>
 
 ### TAS I18P12 Ventilation
 
@@ -134,13 +134,13 @@ Sanitary facilities for personal hygiene must be provided in a convenient locati
 
 (2) Ventilation must be provided to the degree necessary, to a level appropriate to the function or use of a *temporary* *structure*.
 
-<a id="tas_i18p13"></a>
+<a id="i18p13"></a><a id="tas_i18p13"></a>
 
 ### TAS I18P13 Electrical services
 
 Electrical services must be installed to the degree necessary, to provide a level of safety appropriate to the environment and function or use of a *temporary structure* by the occupants.
 
-<a id="tas_i18p14"></a>
+<a id="i18p14"></a><a id="tas_i18p14"></a>
 
 ### TAS I18P14 Heating appliances
 
@@ -152,13 +152,13 @@ Where provided for a *temporary structure*, a heating appliance and its associat
   - (i) escape through the walls of the associated components; and
   - (ii) discharge to a position that will cause fire to spread to nearby combustible materials or allow smoke to penetrate the *temporary structure*; and
 - (d) to reduce the likelihood of fire and harmful emissions spreading beyond the appliance.
-<a id="tas_i18p15"></a>
+<a id="i18p15"></a><a id="tas_i18p15"></a>
 
 ### TAS I18P15 Tiered seating
 
 A *temporary structure* of tiered seating must be designed and constructed to the degree necessary, to provide for the safety of occupants and orderly means of evacuation in an emergency.
 
-<a id="tas_i18p16"></a>
+<a id="i18p16"></a><a id="tas_i18p16"></a>
 
 ### TAS I18P16 Safe environment
 
@@ -166,7 +166,7 @@ A *temporary structure* must, to the degree necessary, be a safe and hazard free
 
 Deemed-to-Satisfy Provisions
 
-<a id="tas_i18d1"></a>
+<a id="i18d1"></a><a id="tas_i18d1"></a>
 
 ### TAS I18D1 Application of Part
 
@@ -174,7 +174,7 @@ This Part only applies to a *temporary structure* that—
 
 - (a) is used by the *public* as a place of assembly as described in the Public Health Act 1997; and
 - (b) is a *temporary structure* as described in the Building Act 2016.
-<a id="tas_i18d2"></a>
+<a id="i18d2"></a><a id="tas_i18d2"></a>
 
 ### TAS I18D2 Deemed-to-Satisfy Provisions
 
@@ -185,7 +185,7 @@ This Part only applies to a *temporary structure* that—
 - (c) Ventilation requirements, which are included in TAS I18D5.
 - (d) Electrical requirements, which are included in TAS I18D6.
 - (e) Heating appliance requirements, which are included in TAS I18D7.
-<a id="tas_i18d3"></a>
+<a id="i18d3"></a><a id="tas_i18d3"></a>
 
 ### TAS I18D3 Access
 
@@ -202,7 +202,7 @@ This Part only applies to a *temporary structure* that—
 - (c) an additional wheelchair space for each additional 200 seats or part thereof.
 (4) Parts of a *temporary structure* required to be accessible must comply with AS 1428.1.
 
-<a id="tas_i18d4"></a>
+<a id="i18d4"></a><a id="tas_i18d4"></a>
 
 ### TAS I18D4 Lighting
 
@@ -212,7 +212,7 @@ This Part only applies to a *temporary structure* that—
 
 (3) The artificial lighting system must as far as practicable comply with the relevant provisions of AS 1680 Parts 1, 2.0, 2.1, 2.2 and 2.3.
 
-<a id="tas_i18d5"></a>
+<a id="i18d5"></a><a id="tas_i18d5"></a>
 
 ### TAS I18D5 Ventilation
 
@@ -222,13 +222,13 @@ This Part only applies to a *temporary structure* that—
 
 (3) Mechanical ventilation must as far as practicable comply with the relevant provisions of AS 1668.2.
 
-<a id="tas_i18d6"></a>
+<a id="i18d6"></a><a id="tas_i18d6"></a>
 
 ### TAS I18D6 Electrical
 
 All electrical installations in a *temporary structure* must be installed in accordance with AS/NZS 3000.
 
-<a id="tas_i18d7"></a>
+<a id="i18d7"></a><a id="tas_i18d7"></a>
 
 ### TAS I18D7 Heating appliances
 

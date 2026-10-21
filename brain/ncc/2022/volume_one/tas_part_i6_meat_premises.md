@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i6d1"></a>
+<a id="i6d1"></a><a id="tas_i6d1"></a>
 
 ### TAS I6D1 Application of Part
 
@@ -36,7 +36,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 - (a) does not jeopardise animal welfare; and
 - (b) provides for hygienic processing of animals; and
 - (c) ensures the wholesomeness of meat and meat products.
-<a id="tas_i6d2"></a>
+<a id="i6d2"></a><a id="tas_i6d2"></a>
 
 ### TAS I6D2 Premises processing animals and meat
 

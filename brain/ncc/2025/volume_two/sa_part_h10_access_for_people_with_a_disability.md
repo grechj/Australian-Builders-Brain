@@ -25,6 +25,8 @@ This Part contains additional requirements for access for people with a disabili
 
 ## Objectives
 
+<a id="h10o1"></a>
+
 > **SA variation**: SA replaces H10O1 Objective.
 >
 > Provide, as far as is reasonable, people with safe, equitable and dignified access to a degree necessary to—
@@ -40,6 +42,8 @@ This Part contains additional requirements for access for people with a disabili
 
 ## Functional Statements
 
+<a id="h10f1"></a>
+
 > **SA variation**: SA replaces H10F1 Equitable and dignified access.
 >
 > A building to the degree necessary is, as far as is reasonable, to provide safe, equitable and dignified access for people to the services and facilities within.
@@ -51,6 +55,8 @@ This Part contains additional requirements for access for people with a disabili
 >
 
 ## Performance Requirements
+
+<a id="h10p1"></a>
 
 > **SA variation**: SA replaces H10P1 Access for people with a disability.
 >
@@ -65,20 +71,28 @@ This Part contains additional requirements for access for people with a disabili
 > >
 >
 
+<a id="h10d1"></a>
+
 > **SA variation**: SA replaces H10D1 Deemed-to-Satisfy Provisions.
 >
 > Compliance with [SA H10D2](#h10d2) to [SA H10D4](#h10d4) for access for people with a disability satisfies *Performance Requirement* [SA H10P1](#h10p1).
 >
+
+<a id="h10d2"></a>
 
 > **SA variation**: SA replaces H10D2 Application of Part.
 >
 > This Part applies to certain Class 1 buildings where access is *required* under [SA H10D3](#h10d3).
 >
 
+<a id="h10d3"></a>
+
 > **SA variation**: SA replaces H10D3 Access to buildings.
 >
 > In developments consisting of 20 or more dwellings, access must be provide to and within one dwelling or 5% of the total number of dwellings, whichever is the greater.
 >
+
+<a id="h10d4"></a>
 
 > **SA variation**: SA replaces H10D4 Parts of buildings to be accessible.
 >

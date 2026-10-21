@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in VIC, from the VIC schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="vic_e4o1"></a>
+<a id="e4o1"></a><a id="vic_e4o1"></a>
 
 ### VIC E4O1 Objective
 
@@ -35,13 +35,13 @@ The Objective of this Part is to—
 - (c) safeguard the environment; and
 - (d) safeguard public and private infrastructure; and
 - (e) ensure that a stormwater drainage installation is designed and is capable of being maintained so that throughout its serviceable life it will continue to satisfy Objectives (a) to (e). Functional Statements
-<a id="vic_e4f1"></a>
+<a id="e4f1"></a><a id="vic_e4f1"></a>
 
 ### VIC E4F1 Functional statement
 
 Buildings and their surroundings are to be provided with a surface drainage and subsurface drainage installation and be constructed in such a manner as to provide protection for people, property and the environment from the adverse effects of stormwater. Performance Requirements
 
-<a id="vic_e4p1"></a>
+<a id="e4p1"></a><a id="vic_e4p1"></a>
 
 ### VIC E4P1 Surface drainage systems
 
@@ -49,7 +49,7 @@ A surface drainage system must dispose of stormwater flows from rainfall events 
 
 - (a) The importance of the building.
 - (b) The severity of potential damage to property, *loss* of *amenity*, illness or injury that would result from the failure of the system.
-<a id="vic_e4p2"></a>
+<a id="e4p2"></a><a id="vic_e4p2"></a>
 
 ### VIC E4P2 Design, construction and installation
 
@@ -68,13 +68,13 @@ A surface drainage system must dispose of stormwater flows from rainfall events 
 - (b) Stormwater is transferred to a *point of connection*.
 Deemed-to-Satisfy Provisions
 
-<a id="vic_e4d1"></a>
+<a id="e4d1"></a><a id="vic_e4d1"></a>
 
 ### VIC E4D1 Application
 
 *Performance Requirements* E4P1 to E4P2 are satisfied by complying with E4D2.
 
-<a id="vic_e4d2"></a>
+<a id="e4d2"></a><a id="vic_e4d2"></a>
 
 ### VIC E4D2 General requirements
 

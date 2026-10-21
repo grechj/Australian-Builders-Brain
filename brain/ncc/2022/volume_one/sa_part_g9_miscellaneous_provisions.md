@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="sa_g9p1"></a>
+<a id="g9p1"></a><a id="sa_g9p1"></a>
 
 ### SA G9P1 Attachments to buildings
 
@@ -35,19 +35,19 @@ An attachment to a building must incorporate features that will—
 - (d) provide resistance to the spread of fire if it overhangs a street boundary, to the degree necessary to avoid creating hazardous conditions that may cause injury to people passing below or driving past.
 Deemed-to-Satisfy Provisions
 
-<a id="sa_g9d1"></a>
+<a id="g9d1"></a><a id="sa_g9d1"></a>
 
 ### SA G9D1 Deemed-to-Satisfy Provisions
 
 *Performance Requirement* SA G9P1 is satisfied by complying with SA G9D2 and SA G9D3.
 
-<a id="sa_g9d2"></a>
+<a id="g9d2"></a><a id="sa_g9d2"></a>
 
 ### SA G9D2 Application of Part
 
 SA G9D3 applies to Class 2 to 9 buildings.
 
-<a id="sa_g9d3"></a>
+<a id="g9d3"></a><a id="sa_g9d3"></a>
 
 ### SA G9D3 Attachments to buildings
 

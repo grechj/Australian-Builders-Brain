@@ -23,6 +23,8 @@ From **NCC 2025 Volume Two**, Class 1 and 10 buildings.[^abcb_ncc] Defined terms
 
 This part sets out the changes for the application of AS/NZS 3500.3:2021 in Western Australia.
 
+<a id="h10d1"></a>
+
 > **WA variation**: WA replaces H10D1 Eaves gutter overflow.
 >
 > Delete clause 3.5.1 of AS/NZS 3500.3:2021 and replace with the following:
@@ -45,6 +47,8 @@ This part sets out the changes for the application of AS/NZS 3500.3:2021 in West
 > > Both AS/NZS 3500.3:2021 and Part 7.4 of the ABCB Housing Provisions require that eaves gutters are designed for a 5-minute duration rainfall intensity determined for an *annual exceedance probability* 5%, Part 7.4 of the ABCB Housing Provisions requiring that eaves gutter overflow provisions are determined for *annual exceedance probability* 1%.
 > >
 >
+
+<a id="h10d2"></a>
 
 > **WA variation**: WA replaces H10D2 Required size of vertical downpipes.
 >

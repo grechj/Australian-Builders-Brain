@@ -23,20 +23,28 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* used as an *entertainment venue*.
 
+<a id="i5d1"></a>
+
 > **NSW variation**: NSW replaces I5D1 Application of Part.
 >
 > This Part applies to *temporary structures* used as *entertainment venues*.
 >
+
+<a id="i5d2"></a>
 
 > **NSW variation**: NSW replaces I5D2 Exits — exclusions.
 >
 > In this Part, a reference to an entrance or *exit* does not include a reference to an entrance or *exit* provided for persons or animals performing in a *temporary structure*.
 >
 
+<a id="i5d3"></a>
+
 > **NSW variation**: NSW replaces I5D3 Location of exits.
 >
 > *Exits* must be so provided and arranged as to afford a ready means of egress from all parts of a *temporary structure*.
 >
+
+<a id="i5d4"></a>
 
 > **NSW variation**: NSW replaces I5D4 Exits to be provided.
 >
@@ -65,20 +73,28 @@ NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* u
 > >
 >
 
+<a id="i5d5"></a>
+
 > **NSW variation**: NSW replaces I5D5 Vertical clearance for exits.
 >
 > Every part of an entrance or *exit* must provide a minimum unobstructed height of 2000 mm and, where the entrance or *exit* is beneath a stepped seating platform, infilled risers or other approved overhead protection must be provided above the entrance or *exit*.
 >
+
+<a id="i5d6"></a>
 
 > **NSW variation**: NSW replaces I5D6 Curtains across exits.
 >
 > A flap or curtain used to cover an *exit* must be so designed that, when it is secured, it will not obstruct or impede egress.
 >
 
+<a id="i5d7"></a>
+
 > **NSW variation**: NSW replaces I5D7 Curtains and blinds.
 >
 > Curtains and blinds for use in a *temporary structure* must comply with [NSW Table S7C7](/ncc/2025/volume_one/specification_7_fire_hazard_properties.md#table_91a68b28).
 >
+
+<a id="i5d8"></a>
 
 > **NSW variation**: NSW replaces I5D8 Fabrics.
 >
@@ -89,6 +105,8 @@ NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* u
 >   - (2) in an air-supported *temporary structure* without other supporting framework; and
 > - (b) a *Flammability Index* of not more than 25 in any other case.
 >
+
+<a id="i5d9"></a>
 
 > **NSW variation**: NSW replaces I5D9 Guardrails.
 >
@@ -102,25 +120,35 @@ NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* u
 > (2) A rigid guardrail must not obstruct any *aisle*, *cross-over* or *exit*.
 >
 
+<a id="i5d10"></a>
+
 > **NSW variation**: NSW replaces I5D10 Seating.
 >
 > Seating must be provided in accordance with [NSW I4D18](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d18), [NSW I4D19](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d19), [NSW I4D20(b)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d20), [NSW I4D22(a) and (c)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d22), [NSW I4D23(a)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d23) and [NSW I4D25(a), (b), (c) and (d)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d25).
 >
+
+<a id="i5d11"></a>
 
 > **NSW variation**: NSW replaces I5D11 Sanitary accommodation.
 >
 > Suitable sanitary accommodation must be provided at a location convenient to the *temporary structure*.
 >
 
+<a id="i5d12"></a>
+
 > **NSW variation**: NSW replaces I5D12 Projection suites.
 >
 > Any *projection suite* must comply with [NSW I4D47](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d47) and [NSW I4D48](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d48).
 >
 
+<a id="i5d13"></a>
+
 > **NSW variation**: NSW replaces I5D13 Fireplaces and heating.
 >
 > No fireplace or other form of heating equipment may be installed in a *temporary structure*, without the consent of the approval authority.
 >
+
+<a id="i5d14"></a>
 
 > **NSW variation**: NSW replaces I5D14 Electrical services.
 >
@@ -132,15 +160,21 @@ NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* u
 > - (d) [NSW I4D51(a)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d51) and [NSW I4D53(a)](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d53).
 >
 
+<a id="i5d15"></a>
+
 > **NSW variation**: NSW replaces I5D15 Artificial lighting: general.
 >
 > Artificial lighting must be provided, and must comply with [NSW I4D54](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d54) and [NSW I4D55](/ncc/2025/volume_one/nsw_part_i4_entertainment_venues_other_than_temporary_structures_and_drive_in_theatres.md#i4d55).
 >
 
+<a id="i5d16"></a>
+
 > **NSW variation**: NSW replaces I5D16 Emergency lighting.
 >
 > Emergency lighting must be provided to the areas provided with artificial lighting under [NSW I5D15](#i5d15) and must include a sufficient number of lamps to give a minimum illumination of 0.2 lux at floor level.
 >
+
+<a id="i5d17"></a>
 
 > **NSW variation**: NSW replaces I5D17 Emergency lighting power supply.
 >
@@ -150,10 +184,14 @@ NSW Part I5 contains *Deemed-to-Satisfy Provisions* for *temporary structures* u
 > - (b) 60 minutes, in respect of a *temporary structure* designed to accommodate more than 1000 persons.
 >
 
+<a id="i5d18"></a>
+
 > **NSW variation**: NSW replaces I5D18 Exit signs.
 >
 > *Exit* signs must be provided above all *exits* and in such other locations as may be *required* by [NSW E4D6](/ncc/2025/volume_one/e4_visibility_in_an_emergency_exit_signs_and_warning_systems.md#e4d6) and must comply with [E4D5](/ncc/2025/volume_one/e4_visibility_in_an_emergency_exit_signs_and_warning_systems.md#e4d5) and [E4D8](/ncc/2025/volume_one/e4_visibility_in_an_emergency_exit_signs_and_warning_systems.md#e4d8).
 >
+
+<a id="i5d19"></a>
 
 > **NSW variation**: NSW replaces I5D19 Fire-fighting services.
 >

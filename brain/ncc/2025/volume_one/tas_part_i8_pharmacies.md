@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for pharmacies.
 
+<a id="i8d1"></a>
+
 > **TAS variation**: TAS replaces I8D1 Application of Part.
 >
 > (1) This Part applies to all pharmacy business premises registered under the Pharmacy Control Act.
@@ -30,10 +32,14 @@ This Part contains additional requirements for pharmacies.
 > (2) Pharmacies must be able to be secured against entry and the interior must be able to be supervised by a pharmacist.
 >
 
+<a id="i8d2"></a>
+
 > **TAS variation**: TAS replaces I8D2 Definition.
 >
 > In this Part the term “dispensary” means the room or area within a pharmacy or other premises which a registered pharmaceutical chemist uses for the compounding or dispensing of prescriptions, medicines or drugs.
 >
+
+<a id="i8d3"></a>
 
 > **TAS variation**: TAS replaces I8D3 Pharmacy premises.
 >
@@ -46,6 +52,8 @@ This Part contains additional requirements for pharmacies.
 >
 > (2) A pharmacy may have one area set aside for retailing merchandise that is not compounded or dispensed.
 >
+
+<a id="i8d4"></a>
 
 > **TAS variation**: TAS replaces I8D4 Dispensary.
 >
@@ -60,6 +68,8 @@ This Part contains additional requirements for pharmacies.
 > - (b) a reticulated supply of hot and cold water capable of providing to the sink adequate quantities of water for dispensing purposes; and
 > - (c) space for a dispensing bench with a working area not less than 1.4 m<sup>2</sup>.
 >
+
+<a id="i8d5"></a>
 
 > **TAS variation**: TAS replaces I8D5 Security of dispensary.
 >

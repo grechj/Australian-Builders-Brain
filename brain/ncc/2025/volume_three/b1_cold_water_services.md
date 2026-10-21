@@ -560,6 +560,8 @@ A cold water service used for fire-fighting must be in accordance with—
 
 A cold water service used to top up a rainwater tank must be in accordance with AS/NZS 3500.1.
 
+<a id="b1d7"></a>
+
 > **TAS variation**: TAS adds B1D7 Cold water storage tanks.
 >
 > (1) B1D7 applies to tanks — including rainwater tanks — connected to the roof *plumbing* system, or a tank supplied from a nearby stream, bore or well used in *drinking water* services, or a *drinking water* supply in reticulated or non-reticulated areas.

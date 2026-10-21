@@ -31,6 +31,8 @@ This Part is intended to reduce the likelihood of people being injured when acce
 
 The Objective is to provide people with safe access to and within a building.
 
+<a id="h5o2"></a>
+
 > **SA variation**: SA adds H5O2 Objective.
 >
 > The Objective is to safeguard people from injury and illness resulting from the creation of hazardous spaces between buildings.
@@ -43,6 +45,8 @@ The Objective is to provide people with safe access to and within a building.
 ### H5F1 Safety from falling
 
 A building is to provide safe access for people to the services and facilities within.
+
+<a id="h5f2"></a>
 
 > **SA variation**: SA adds H5F2 Space between buildings.
 >
@@ -85,6 +89,8 @@ So that people can move safely to and within a building—
 - (e) of strength and rigidity to withstand—
   - (1) the foreseeable impact of people; and
   - (2) where appropriate, the static pressure of people pressing against it.
+
+<a id="h5p3"></a>
 
 > **SA variation**: SA adds H5P3 Access for inspection and maintenance.
 >
@@ -174,6 +180,8 @@ Compliance with [Part 11.2](/ncc/2025/housing_provisions/11_2_stairway_and_ramp_
 ### H5D3 Barriers and handrails
 
 Compliance with [Part 11.3](/ncc/2025/housing_provisions/11_3_barriers_and_handrails.md) of the ABCB Housing Provisions satisfies *Performance Requirement* [H5P2](#h5p2) for barriers and [H5P1(b)(i)](#h5p1) for handrails.
+
+<a id="h5d4"></a>
 
 > **SA variation**: SA adds H5D4 Minimum space between buildings.
 >

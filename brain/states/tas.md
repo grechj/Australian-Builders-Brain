@@ -51,14 +51,14 @@ Where Tasmania changes the national code. A variation can replace, add to or del
 | State | Variation | Clause or Part |
 |---|---|---|
 | TAS | adds | [10.4.3](/ncc/2025/housing_provisions/10_4_facilities.md#10_4_3) |
-| TAS | replaces | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md#part_ariation) |
-| TAS | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md#part_ariation) |
-| TAS | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md#part_ariation) |
-| TAS | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md#part_ariation) |
-| TAS | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md#part_ariation) |
-| TAS | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md#part_ariation) |
-| TAS | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md#part_ariation) |
-| TAS | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md#part_ariation) |
+| TAS | replaces | [Part 10.8](/ncc/2025/housing_provisions/10_8_condensation_management.md) |
+| TAS | deletes | [Part 13.1](/ncc/2025/housing_provisions/13_1_scope_and_application_of_section_13.md) |
+| TAS | deletes | [Part 13.2](/ncc/2025/housing_provisions/13_2_building_fabric.md) |
+| TAS | deletes | [Part 13.3](/ncc/2025/housing_provisions/13_3_external_glazing.md) |
+| TAS | deletes | [Part 13.4](/ncc/2025/housing_provisions/13_4_building_sealing.md) |
+| TAS | deletes | [Part 13.5](/ncc/2025/housing_provisions/13_5_ceiling_fans.md) |
+| TAS | deletes | [Part 13.6](/ncc/2025/housing_provisions/13_6_whole_of_home_energy_usage.md) |
+| TAS | deletes | [Part 13.7](/ncc/2025/housing_provisions/13_7_services.md) |
 
 ## Volume One (163)
 
@@ -226,7 +226,7 @@ Where Tasmania changes the national code. A variation can replace, add to or del
 | TAS | replaces | [I18D5](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d5) |
 | TAS | replaces | [I18D6](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d6) |
 | TAS | replaces | [I18D7](/ncc/2025/volume_one/tas_part_i18_temporary_structures.md#i18d7) |
-| TAS | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md#part_ariation) |
+| TAS | deletes | [Part J3](/ncc/2025/volume_one/j3_elemental_provisions_for_a_class_4_part_of_a_building.md) |
 
 ## Volume Three (74)
 
@@ -318,7 +318,7 @@ Where Tasmania changes the national code. A variation can replace, add to or del
 | TAS | adds | [A5G4.9](/ncc/2025/volume_two/a5_documentation_of_design_and_construction.md#a5g4) |
 | TAS | adds | [A5G4.10](/ncc/2025/volume_two/a5_documentation_of_design_and_construction.md#a5g4) |
 | TAS | replaces | [H4D9](/ncc/2025/volume_two/h4_health_and_amenity.md#h4d9) |
-| TAS | deletes | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| TAS | deletes | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | TAS | replaces | [H7P2](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p2) |
 | TAS | replaces | [H7P3](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p3) |
 | TAS | replaces | [H7P5](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p5) |

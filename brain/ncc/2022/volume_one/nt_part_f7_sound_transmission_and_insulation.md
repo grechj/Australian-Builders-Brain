@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NT, from the NT schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nt_f7d9"></a>
+<a id="f7d9"></a><a id="nt_f7d9"></a>
 
 ### NT F7D9 Walls between a bedroom and kitchen or laundry in a Class 9c building
 

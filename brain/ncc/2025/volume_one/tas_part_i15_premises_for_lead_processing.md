@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for premises used for lead processing.
 
+<a id="i15d1"></a>
+
 > **TAS variation**: TAS replaces I15D1 Application of Part.
 >
 > (1) This Part is applicable to every building in which lead processes are used.
@@ -32,6 +34,8 @@ This Part contains additional requirements for premises used for lead processing
 > - (a) provide for the safety and comfort of workers; and
 > - (b) be constructed in a manner that will minimise the lodgement of dust and must be capable of being flushed with water.
 >
+
+<a id="i15d2"></a>
 
 > **TAS variation**: TAS replaces I15D2 Floors.
 >
@@ -43,6 +47,8 @@ This Part contains additional requirements for premises used for lead processing
 > (2) The mater of which the floor is constructed must be applied to the walls to a height of not less than 75 mm in such a fashion that the angle between the walls and the floor is coved for easy cleaning.
 >
 
+<a id="i15d3"></a>
+
 > **TAS variation**: TAS replaces I15D3 Height of lead processing areas.
 >
 > Every part of a lead processing area must be not less than 2.7 m in height—
@@ -51,12 +57,16 @@ This Part contains additional requirements for premises used for lead processing
 > - (b) where a ceiling is not provided, measured from the floor to the lowest part of the roof.
 >
 
+<a id="i15d4"></a>
+
 > **TAS variation**: TAS replaces I15D4 Air space and floor space.
 >
 > (1) In every lead processing area there must be not less than 14 m<sup>3</sup> of air space for each person employed therein, and in the calculation of such space the maximum height taken must be not greater than 4.2 m.
 >
 > (2) The total floor space for the persons employed in such area, exclusive of space used for storage, must be not less than 3.3 m<sup>2</sup> for each person so employed.
 >
+
+<a id="i15d5"></a>
 
 > **TAS variation**: TAS replaces I15D5 Interior of lead processing areas.
 >
@@ -65,10 +75,14 @@ This Part contains additional requirements for premises used for lead processing
 > (2) The interior construction of the ceiling or roof must, so far as is practicable, be such that dust will not settle on it.
 >
 
+<a id="i15d6"></a>
+
 > **TAS variation**: TAS replaces I15D6 Dust collection.
 >
 > Any areas in which dust-forming lead particles are manipulated, moved or treated must be served by a mechanical exhaust ventilation system capable of safely and effectively collecting all dust.
 >
+
+<a id="i15d7"></a>
 
 > **TAS variation**: TAS replaces I15D7 Isolation of certain processes.
 >
@@ -78,10 +92,14 @@ This Part contains additional requirements for premises used for lead processing
 > - (b) by some other suitable method.
 >
 
+<a id="i15d8"></a>
+
 > **TAS variation**: TAS replaces I15D8 Drying room shelves.
 >
 > The racks or shelves provided in any drying room must be not more than 2.6 m from the floor nor more than 650 mm in width except that, in the case of racks or shelves set or drawn from both sides, the total width must not exceed 1.3 m.
 >
+
+<a id="i15d9"></a>
 
 > **TAS variation**: TAS replaces I15D9 Washing facilities.
 >
@@ -90,6 +108,8 @@ This Part contains additional requirements for premises used for lead processing
 > - (a) one washbasin for each 5 employees, or part thereof; and
 > - (b) one shower bath for each 8 employees, or part thereof.
 >
+
+<a id="i15d10"></a>
 
 > **TAS variation**: TAS replaces I15D10 Change rooms.
 >

@@ -746,6 +746,8 @@ Access to lift pits must—
 > D2D23(1) recognises the difficulties associated with evacuation of primary *schools*. Should a primary *school* be proposed within a *storey* that does not meet the requirements of D2D23, a *Performance Solution* is to be used to demonstrate compliance with the relevant *Performance Requirements*.
 >
 
+<a id="d2d24"></a>
+
 > **VIC variation**: VIC adds D2D24 Doorways to a children’s room.
 >
 > In an *early childhood centre*, a *children’s room* must—

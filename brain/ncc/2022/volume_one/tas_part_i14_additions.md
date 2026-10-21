@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="tas_i14d1"></a>
+<a id="i14d1"></a><a id="tas_i14d1"></a>
 
 ### TAS I14D1 Application of Part
 
@@ -33,7 +33,7 @@ Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume One**
 
 - (a) provide for the safety and comfort of workers; and
 - (b) be constructed in a manner that will prevent the escape of liquids and atmospheric contaminants to other areas of the building.
-<a id="tas_i14d2"></a>
+<a id="i14d2"></a><a id="tas_i14d2"></a>
 
 ### TAS I14D2 Floors
 
@@ -43,7 +43,7 @@ The floor of every plating area must be—
   - (i) permit easy flushing with water; and
   - (ii) prevent liquids from flowing from the area into other parts or the work place; and
 - (b) chemically resistant to the solutions used in the process.
-<a id="tas_i14d3"></a>
+<a id="i14d3"></a><a id="tas_i14d3"></a>
 
 ### TAS I14D3 Height of plating area
 
@@ -51,13 +51,13 @@ Every part of a plating area must be not less than 2.7 m in height—
 
 - (a) measured from the floor to the ceiling if a ceiling is provided; or
 - (b) measured from the floor to the lowest part of the roof if a ceiling is not provided.
-<a id="tas_i14d4"></a>
+<a id="i14d4"></a><a id="tas_i14d4"></a>
 
 ### TAS I14D4 Air space
 
 In every plating area there must be not less than 14 m3 of air space for each person employed and, in the calculation of such space, the height taken into account must not exceed 4.2 m.
 
-<a id="tas_i14d5"></a>
+<a id="i14d5"></a><a id="tas_i14d5"></a>
 
 ### TAS I14D5 Ceiling construction
 

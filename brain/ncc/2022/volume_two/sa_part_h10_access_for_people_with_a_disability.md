@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
-<a id="sa_h10o1"></a>
+<a id="h10o1"></a><a id="sa_h10o1"></a>
 
 ### SA H10O1 Objective
 
@@ -39,7 +39,7 @@ Provide, as far as is reasonable, people with safe, equitable and dignified acce
 
 Functional Statements
 
-<a id="sa_h10f1"></a>
+<a id="h10f1"></a><a id="sa_h10f1"></a>
 
 ### SA H10F1 Equitable and dignified access
 
@@ -52,7 +52,7 @@ A building to the degree necessary is, as far as is reasonable, to provide safe,
 
 Performance Requirements
 
-<a id="sa_h10p1"></a>
+<a id="h10p1"></a><a id="sa_h10p1"></a>
 
 ### SA H10P1 Access for people with a disability
 
@@ -68,25 +68,25 @@ Buildings and immediate surrounds must have appropriate features to a degree nec
 
 Deemed-to-Satisfy Provisions
 
-<a id="sa_h10d1"></a>
+<a id="h10d1"></a><a id="sa_h10d1"></a>
 
 ### SA H10D1 Deemed-to-Satisfy Provisions
 
 Compliance with SA H10D2 to SA H10D4 for access for people with a disability satisfies *Performance Requirement* SA H10P1.
 
-<a id="sa_h10d2"></a>
+<a id="h10d2"></a><a id="sa_h10d2"></a>
 
 ### SA H10D2 Application of Part
 
 This Part applies to certain Class 1 buildings where access is *required* under SA H10D3.
 
-<a id="sa_h10d3"></a>
+<a id="h10d3"></a><a id="sa_h10d3"></a>
 
 ### SA H10D3 Access to buildings
 
 In developments consisting of 20 or more dwellings, access must be provide to and within one dwelling or 5% of the total number of dwellings, whichever is the greater.
 
-<a id="sa_h10d4"></a>
+<a id="h10d4"></a><a id="sa_h10d4"></a>
 
 ### SA H10D4 Parts of buildings to be accessible
 

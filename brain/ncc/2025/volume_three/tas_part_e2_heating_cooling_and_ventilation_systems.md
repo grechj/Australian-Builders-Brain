@@ -25,6 +25,8 @@ This Part sets out the requirements for mechanical heating, cooling and ventilat
 
 ## Objectives
 
+<a id="e2o1"></a>
+
 > **TAS variation**: TAS replaces E2O1 Objective.
 >
 > The Objective of this Part is to—
@@ -39,10 +41,14 @@ This Part sets out the requirements for mechanical heating, cooling and ventilat
 
 ## Functional Statements
 
+<a id="e2f1"></a>
+
 > **TAS variation**: TAS replaces E2F1 Functional statement 1.
 >
 > Mechanical services, plant and equipment used for heating, cooling and/or ventilation of a building must be adequate for their intended purpose.
 >
+
+<a id="e2f2"></a>
 
 > **TAS variation**: TAS replaces E2F2 Functional statement 2.
 >
@@ -50,6 +56,8 @@ This Part sets out the requirements for mechanical heating, cooling and ventilat
 >
 
 ## Performance Requirements
+
+<a id="e2p1"></a>
 
 > **TAS variation**: TAS replaces E2P1 Design, construction, installation and maintenance.
 >
@@ -64,20 +72,28 @@ This Part sets out the requirements for mechanical heating, cooling and ventilat
 > - (b) Access for maintenance.
 >
 
+<a id="e2p2"></a>
+
 > **TAS variation**: TAS replaces E2P2 Pressure equipment.
 >
 > Pressure equipment used in mechanical heating, cooling and ventilation systems must avoid the likelihood of explosion, rupture or leakage.
 >
+
+<a id="e2p3"></a>
 
 > **TAS variation**: TAS replaces E2P3 Microbial control.
 >
 > Mechanical air-handling and cooling water systems installed in a building must control the accumulation of microbial growth.
 >
 
+<a id="e2d1"></a>
+
 > **TAS variation**: TAS replaces E2D1 Application.
 >
 > *Performance Requirement* E2P1 to E2P3 are satisfied by complying with E2D2.
 >
+
+<a id="e2d2"></a>
 
 > **TAS variation**: TAS replaces E2D2 General requirements.
 >

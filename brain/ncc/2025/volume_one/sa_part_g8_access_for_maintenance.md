@@ -25,6 +25,8 @@ This Part sets out miscellaneous additional requirements.
 
 ## Objectives
 
+<a id="g8o1"></a>
+
 > **SA variation**: SA replaces G8O1 Objective.
 >
 > The Objectives of this Part are—
@@ -35,10 +37,14 @@ This Part sets out miscellaneous additional requirements.
 
 ## Functional Statements
 
+<a id="g8f1"></a>
+
 > **SA variation**: SA replaces G8F1 Window cleaning.
 >
 > A building is to provide people with safe conditions for carrying out *window* cleaning operations.
 >
+
+<a id="g8f2"></a>
 
 > **SA variation**: SA replaces G8F2 Hazardous conditions.
 >
@@ -47,10 +53,14 @@ This Part sets out miscellaneous additional requirements.
 
 ## Performance Requirements
 
+<a id="g8p1"></a>
+
 > **SA variation**: SA replaces G8P1 Window cleaning.
 >
 > Where any part of a *window* in a building is more than 5.5 m above ground level, provision must be made for safe access to the external surface of the *window* for minor maintenance and cleaning.
 >
+
+<a id="g8p2"></a>
 
 > **SA variation**: SA replaces G8P2 Hazardous conditions.
 >
@@ -61,15 +71,21 @@ This Part sets out miscellaneous additional requirements.
 > - (c) create a *fire hazard*.
 >
 
+<a id="g8d1"></a>
+
 > **SA variation**: SA replaces G8D1 Deemed-to-Satisfy Provisions.
 >
 > *Performance Requirements* [SA G8P1](#g8p1) and [SA G8P2](#g8p2) are satisfied by complying with [SA G8D2](#g8d2) to [SA G8D4](#g8d4).
 >
 
+<a id="g8d2"></a>
+
 > **SA variation**: SA replaces G8D2 Application of Part.
 >
 > [SA G8D3](#g8d3) and [SA G8D4](#g8d4) apply to Class 2 to 9 buildings.
 >
+
+<a id="g8d3"></a>
 
 > **SA variation**: SA replaces G8D3 Access for window cleaning.
 >
@@ -84,6 +100,8 @@ This Part sets out miscellaneous additional requirements.
 >   - (2) constructed of approved corrosion resistant material; or
 > - (d) by means of opening sashes, in which the maximum reach to the farthest part of the *window* must not exceed 500 mm upwards or 1 m sideways or downwards and provided that where the *window* sill is less than 900 mm above floor level, safety anchorages are provided.
 >
+
+<a id="g8d4"></a>
 
 > **SA variation**: SA replaces G8D4 Access for inspection and maintenance between buildings.
 >

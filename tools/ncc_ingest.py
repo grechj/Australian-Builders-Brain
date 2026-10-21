@@ -701,6 +701,10 @@ def main() -> None:
         lines.append(f"| {code} | {vol_title} | {part} | [open]({page}#{anc}) |")
     (out / "clause_index.md").write_text(front(meta) + "\n".join(lines) + "\n\n" + attribution(args.edition) + "\n")
     print(f"{len(index)} clauses indexed in {out.relative_to(ROOT)}/clause_index.md")
+    # Last step: give state-added clauses their anchors and point any link without a target at its page.
+    import ncc_anchor_repair
+    print(f"anchors: {ncc_anchor_repair.repair(args.edition, folder=out)}")
+    print("Now run tools/build_state_pages.py, then tools/okf_lint.py.")
 
 
 if __name__ == "__main__":

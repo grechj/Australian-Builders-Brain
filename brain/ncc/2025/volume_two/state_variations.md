@@ -39,17 +39,17 @@ From the state and territory schedules of **NCC 2025 Volume Two**.[^abcb_ncc] Al
 | NSW | replaces | [H3D5](/ncc/2025/volume_two/h3_fire_safety.md#h3d5) |
 | NSW | replaces | [H4D9](/ncc/2025/volume_two/h4_health_and_amenity.md#h4d9) |
 | NSW | deletes | [H6V2](/ncc/2025/volume_two/h6_energy_efficiency.md#h6v2) |
-| NSW | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| NSW | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | NSW | replaces | [H7P1](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p1) |
 | NSW | replaces | [H7P5](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p5) |
 | NSW | replaces | [H7D1.1](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d1) |
 | NSW | replaces | [H7D2](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d2) |
 | NSW | replaces | [H7D4](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7d4) |
-| NSW | deletes | [Part H8](/ncc/2025/volume_two/h8_livable_housing_design.md#part_ariation) |
+| NSW | deletes | [Part H8](/ncc/2025/volume_two/h8_livable_housing_design.md) |
 | NT | deletes | [H2P4](/ncc/2025/volume_two/h2_damp_and_weatherproofing.md#h2p4) |
 | NT | replaces | [H4P6](/ncc/2025/volume_two/h4_health_and_amenity.md#h4p6) |
 | NT | deletes | [H4V4](/ncc/2025/volume_two/h4_health_and_amenity.md#h4v4) |
-| NT | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| NT | replaces | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | NT | replaces | [H6O1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6o1) |
 | NT | replaces | [H6F1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6f1) |
 | NT | replaces | [H6P1](/ncc/2025/volume_two/h6_energy_efficiency.md#h6p1) |
@@ -104,7 +104,7 @@ From the state and territory schedules of **NCC 2025 Volume Two**.[^abcb_ncc] Al
 | TAS | adds | [A5G4.9](/ncc/2025/volume_two/a5_documentation_of_design_and_construction.md#a5g4) |
 | TAS | adds | [A5G4.10](/ncc/2025/volume_two/a5_documentation_of_design_and_construction.md#a5g4) |
 | TAS | replaces | [H4D9](/ncc/2025/volume_two/h4_health_and_amenity.md#h4d9) |
-| TAS | deletes | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md#part_ariation) |
+| TAS | deletes | [Part H6](/ncc/2025/volume_two/h6_energy_efficiency.md) |
 | TAS | replaces | [H7P2](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p2) |
 | TAS | replaces | [H7P3](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p3) |
 | TAS | replaces | [H7P5](/ncc/2025/volume_two/h7_ancillary_provisions_and_additional_construction_requirements.md#h7p5) |

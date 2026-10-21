@@ -37,7 +37,7 @@ From the state and territory schedules of **NCC 2025 Volume Three**.[^abcb_ncc] 
 | NSW | replaces | [B3P8](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3p8) |
 | NSW | replaces | [B3D3](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3d3) |
 | NSW | replaces | [B3D5](/ncc/2025/volume_three/b3_non_drinking_water_services.md#b3d5) |
-| NSW | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md#part_ariation) |
+| NSW | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md) |
 | NSW | replaces | [B5D2](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d2) |
 | NSW | replaces | [B5D3](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d3) |
 | NSW | replaces | [B5D6](/ncc/2025/volume_three/b5_cross_connection_control.md#b5d6) |
@@ -46,7 +46,7 @@ From the state and territory schedules of **NCC 2025 Volume Three**.[^abcb_ncc] 
 | NSW | replaces | [B6D4](/ncc/2025/volume_three/b6_rainwater_services.md#b6d4) |
 | NSW | replaces | [C2P7](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2p7) |
 | NSW | replaces | [C2D4](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2d4) |
-| NSW | replaces | [Part C3](/ncc/2025/volume_three/c3_on_site_wastewater_management.md#part_ariation) |
+| NSW | replaces | [Part C3](/ncc/2025/volume_three/c3_on_site_wastewater_management.md) |
 | NT | deletes | [C2P2](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2p2) |
 | NT | replaces | [C2D3.1](/ncc/2025/volume_three/c2_sanitary_drainage_systems.md#c2d3) |
 | NT | replaces | [D1D1.1](/ncc/2025/volume_three/d1_excessive_noise.md#d1d1) |
@@ -56,7 +56,7 @@ From the state and territory schedules of **NCC 2025 Volume Three**.[^abcb_ncc] 
 | QLD | adds | [B1D3.4](/ncc/2025/volume_three/b1_cold_water_services.md#b1d3) |
 | QLD | deletes | [B2P8](/ncc/2025/volume_three/b2_heated_water_services.md#b2p8) |
 | QLD | deletes | [B2D2](/ncc/2025/volume_three/b2_heated_water_services.md#b2d2) |
-| QLD | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md#part_ariation) |
+| QLD | replaces | [Part B4](/ncc/2025/volume_three/b4_fire_fighting_water_services.md) |
 | SA | replaces | [A6G7](/ncc/2025/volume_two/a6_building_classification.md#a6g7) |
 | SA | replaces | [B2D2](/ncc/2025/volume_three/b2_heated_water_services.md#b2d2) |
 | SA | replaces | [B2D5](/ncc/2025/volume_three/b2_heated_water_services.md#b2d5) |

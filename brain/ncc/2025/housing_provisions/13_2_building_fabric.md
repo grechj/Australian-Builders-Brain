@@ -38,7 +38,7 @@ In Tasmania, Section 13 is replaced with BCA 2019 Part 3.12.
 >
 > (2) The provisions of [NT 13.2.6](#13_2_6) apply to a Class 1 building with an attached Class 10a building.
 >
-> (3) [NT Part 13.2](#part_ariation) must be applied as directed in [NT H6D2(1)(a)](/ncc/2025/volume_two/h6_energy_efficiency.md#h6d2) or [(b)](/ncc/2025/volume_two/h6_energy_efficiency.md#h6d2).
+> (3) NT Part 13.2 must be applied as directed in [NT H6D2(1)(a)](/ncc/2025/volume_two/h6_energy_efficiency.md#h6d2) or [(b)](/ncc/2025/volume_two/h6_energy_efficiency.md#h6d2).
 >
 
 > **NT variation**: NT adds 13.2.2 Building fabric thermal insulation.

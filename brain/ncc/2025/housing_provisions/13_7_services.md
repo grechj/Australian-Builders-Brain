@@ -60,7 +60,7 @@ From **NCC 2025 Housing Provisions**, Energy efficiency.[^abcb_ncc] Defined term
 >
 > > **Explanatory**
 > >
-> > - The insulation levels in [NT Explanatory Table 13.7.3](#table_b03b60c1) are typical examples of materials that can be used to insulate central heating water *R-Value*. Other methods are available for meeting the *Total R-Values* *required*.
+> > - The insulation levels in NT Explanatory Table 13.7.3 are typical examples of materials that can be used to insulate central heating water *R-Value*. Other methods are available for meeting the *Total R-Values* *required*.
 > > - *Piping* within a timber member, such as that passing through a wall stud, is considered to have sufficient insulation.R-Value of the insulation used for smaller diameter piping Insulation R-Value 9 mm of closed cell polymer 0.4 13 mm of closed cell polymer 0.6 19 mm of closed cell polymer 0.9 25 mm of closed cell polymer 1.3 25 mm of glasswool 1.3
 > >
 >
@@ -98,9 +98,9 @@ From **NCC 2025 Housing Provisions**, Energy efficiency.[^abcb_ncc] Defined term
 > > **Explanatory**
 > >
 > > - Insulation for refrigerated cooling ductwork should have a vapour barrier to prevent possible damage by condensation.
-> > - The insulation levels in [NT Explanatory Tables 13.7.4a](#table_c09c32e2), [13.7.4b](#table_23d74cf3) and [13.7.4c](#table_a7f9a240) are typical examples of materials that can be used to insulate ductwork and fittings and the *R-Values* they contribute.
+> > - The insulation levels in NT Explanatory Tables 13.7.4a, 13.7.4b and 13.7.4c are typical examples of materials that can be used to insulate ductwork and fittings and the *R-Values* they contribute.
 > > - For fittings, 11mm polyurethane typically provides an *R-Value* of 0.4.
-> > - [NT Explanatory Tables 13.7.4a](#table_c09c32e2), [13.7.4b](#table_23d74cf3) and provides *R-Values* for typical ductwork insulation materials:Flexible ductwork Insulating material and thickness R-Value 3 1.0 3 1.0 3 1.5 3 1.5 3 2.0 Sheetwork ductwork – external insulation Insulating material and thickness R-Value 3 1.0 3 1.1 3 1.5 3 1.7 Sheetmetal ductwork – internal insulation Insulting material and thickness R-Value 3 1.0 3 1.3 3 1.5
+> > - NT Explanatory Tables 13.7.4a, 13.7.4b and provides *R-Values* for typical ductwork insulation materials:Flexible ductwork Insulating material and thickness R-Value 3 1.0 3 1.0 3 1.5 3 1.5 3 2.0 Sheetwork ductwork – external insulation Insulating material and thickness R-Value 3 1.0 3 1.1 3 1.5 3 1.7 Sheetmetal ductwork – internal insulation Insulting material and thickness R-Value 3 1.0 3 1.3 3 1.5
 > >
 >
 

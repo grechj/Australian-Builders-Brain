@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume Two**.[^abcb_ncc]
 
-<a id="sa_h5o2"></a>
+<a id="h5o2"></a><a id="sa_h5o2"></a>
 
 ### SA H5O2 Objective
 
@@ -31,7 +31,7 @@ Clauses that apply only in SA, from the SA schedule of **NCC 2022 Volume Two**.[
 
 The Objective is to safeguard people from injury and illness resulting from the creation of hazardous spaces between buildings.
 
-<a id="sa_h5f2"></a>
+<a id="h5f2"></a><a id="sa_h5f2"></a>
 
 ### SA H5F2 Space between buildings
 
@@ -39,7 +39,7 @@ The Objective is to safeguard people from injury and illness resulting from the 
 
 The space between buildings must not allow hazardous conditions to arise due to accumulation of rubbish that cannot be easily removed.
 
-<a id="sa_h5p3"></a>
+<a id="h5p3"></a><a id="sa_h5p3"></a>
 
 ### SA H5P3 Access for inspection and maintenance
 
@@ -50,7 +50,7 @@ The space between buildings must be sufficient to allow access for inspection an
 - (a) bridge termite barriers; or
 - (b) harbour vermin; or
 - (c) create a fire hazard.
-<a id="sa_h5d4"></a>
+<a id="h5d4"></a><a id="sa_h5d4"></a>
 
 ### SA H5D4 Minimum space between buildings
 

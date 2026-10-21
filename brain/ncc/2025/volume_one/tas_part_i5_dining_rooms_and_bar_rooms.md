@@ -23,6 +23,8 @@ From **NCC 2025 Volume One**, Special use buildings.[^abcb_ncc] Defined terms ar
 
 This Part contains additional requirements for dining rooms and bar rooms.
 
+<a id="i5d1"></a>
+
 > **TAS variation**: TAS replaces I5D1 Application of Part.
 >
 > (1) This Part applies to all dining rooms and bar rooms (excluding bar service areas) on licensed premises covered by the Liquor Licensing Act 1990.
@@ -30,12 +32,16 @@ This Part contains additional requirements for dining rooms and bar rooms.
 > (2) Dining rooms and bar rooms must provide for the comfort, convenience and health of customers.
 >
 
+<a id="i5d2"></a>
+
 > **TAS variation**: TAS replaces I5D2 Sanitary facilities.
 >
 > (1) Separate sanitary facilities for male sand females must be provided in close proximity to each dining room and bar room in licensed premises.
 >
 > (2) Where the sanitary facilities are not accessed from within the dining room or bar room, reasonable fixed protection from the elements must be provided.
 >
+
+<a id="i5d3"></a>
 
 > **TAS variation**: TAS replaces I5D3 Separation from other areas.
 >

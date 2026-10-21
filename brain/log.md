@@ -1,6 +1,7 @@
 # Directory Update Log
 
 ## 2026-10-21
+* **Update**: Every link into the [NCC](/ncc/index.md) and on the [state pages](/states/index.md) now lands on its clause: state-added clauses got anchors, NCC 2022 state clauses answer to their plain code, and links to Part variations point at the page (`tools/ncc_anchor_repair.py`, run by both ingests).
 * **Creation**: Added [plain-English guides](/guides/index.md): eight [code guides](/guides/code/index.md) with every figure pinned to the NCC text, and nine [material guides](/guides/materials/index.md).
 * **Creation**: Added the [product catalogue](/references/product_catalogue.md) (generated from `tools/catalogue.yaml`) and [what products trades are using](/references/product_usage.md) (from summaries users choose to share).
 * **Update**: [Materials takeoff](/computations/materials_takeoff.md) adds cladding, insulation, retaining wall and pergola.

@@ -23,7 +23,7 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in TAS, from the TAS schedule of **NCC 2022 Volume Three**.[^abcb_ncc]
 
-<a id="tas_c2d6"></a>
+<a id="c2d6"></a><a id="tas_c2d6"></a>
 
 ### TAS C2D6 Venting requirements
 

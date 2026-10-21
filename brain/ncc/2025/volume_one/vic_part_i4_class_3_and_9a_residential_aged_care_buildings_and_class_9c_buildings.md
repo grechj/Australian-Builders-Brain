@@ -25,6 +25,8 @@ VIC Part I4 — Class 3 and 9a *residential aged care buildings* and Class 9c bu
 
 ## Performance Requirements
 
+<a id="i4p1"></a>
+
 > **VIC variation**: VIC replaces I4P1 Communication systems.
 >
 > An electronic communication system must be provided to enable residents and staff to summon assistance in *habitable rooms* (other than kitchens), water closets, shower rooms and bathrooms.
@@ -35,10 +37,14 @@ VIC Part I4 — Class 3 and 9a *residential aged care buildings* and Class 9c bu
 > >
 >
 
+<a id="i4d1"></a>
+
 > **VIC variation**: VIC replaces I4D1 Deemed-to-Satisfy Provisions.
 >
 > *Performance Requirement* [VIC I4P1](#i4p1) is satisfied by complying with [VIC I4D2](#i4d2).
 >
+
+<a id="i4d2"></a>
 
 > **VIC variation**: VIC replaces I4D2 Electronic communication system.
 >

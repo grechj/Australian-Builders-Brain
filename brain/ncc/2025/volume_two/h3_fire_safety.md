@@ -228,7 +228,7 @@ Compliance with [Part 9.3](/ncc/2025/housing_provisions/9_3_fire_protection_of_s
 
 > **NSW variation**: NSW replaces H3D5 Fire separation of garage top dwellings.
 >
-> Compliance with [NSW Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md#part_ariation) of the ABCB Housing Provisions satisfies *Performance Requirement* [H3P1](#h3p1) for fire separation of *garage top dwellings*.
+> Compliance with [NSW Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md) of the ABCB Housing Provisions satisfies *Performance Requirement* [H3P1](#h3p1) for fire separation of *garage top dwellings*.
 >
 
 Compliance with [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_garage_top_dwellings.md) of the ABCB Housing Provisions satisfies *Performance Requirement* [H3P1](#h3p1) for fire separation of garage-top dwellings.
@@ -293,6 +293,8 @@ Compliance with [Part 9.4](/ncc/2025/housing_provisions/9_4_fire_protection_of_g
 >
 > The options described in the ABCB Housing Provisions are not the only means available for complying with this Part. The performance-based nature of the NCC provides flexibility to develop alternative methods if it is preferred to meet the *Performance Requirement* in some other way. This added flexibility may be utilised when considering the location of smoke alarms.
 >
+
+<a id="h3d7"></a>
 
 > **WA variation**: WA adds H3D7 Fire separation of roofed outdoor areas.
 >

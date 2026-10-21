@@ -25,6 +25,8 @@ This Part contains requirements for reducing water use.
 
 ## Objectives
 
+<a id="h9o1"></a>
+
 > **WA variation**: WA replaces H9O1 Efficient use of water.
 >
 > The Objective is to reduce water demand by using water efficiently and minimising water wastage.
@@ -32,12 +34,16 @@ This Part contains requirements for reducing water use.
 
 ## Functional Statements
 
+<a id="h9f1"></a>
+
 > **WA variation**: WA replaces H9F1 Drinking water demand.
 >
 > To reduce *drinking water* demand, a building is to be capable of using *drinking water* efficiently and preventing excessive loss of *drinking water*.
 >
 
 ## Performance Requirements
+
+<a id="h9p1"></a>
 
 > **WA variation**: WA replaces H9P1 Water use efficiency.
 >
@@ -52,6 +58,8 @@ This Part contains requirements for reducing water use.
 > > WA H9P1 only applies to Class 1 buildings, associated Class 10a buildings and *swimming pools* associated with a Class 1 building.
 > >
 >
+
+<a id="h9p2"></a>
 
 > **WA variation**: WA replaces H9P2 Water loss prevention.
 >
@@ -68,6 +76,8 @@ This Part contains requirements for reducing water use.
 > >
 >
 
+<a id="h9p3"></a>
+
 > **WA variation**: WA replaces H9P3 Heated water use efficiency.
 >
 > A building must have features that, to the degree necessary, facilitate the efficient use of heated water appropriate to—
@@ -82,6 +92,8 @@ This Part contains requirements for reducing water use.
 > >
 >
 
+<a id="h9d1"></a>
+
 > **WA variation**: WA replaces H9D1 Deemed-to-Satisfy Provisions.
 >
 > (1) *Performance Requirement* [WA H9P1](#h9p1) is satisfied for a building’s water use efficiency by complying with [WA H9D2](#h9d2).
@@ -90,6 +102,8 @@ This Part contains requirements for reducing water use.
 >
 > (3) *Performance Requirement* [WA H9P3](#h9p3) is satisfied for a building’s heated water use efficiency by complying with [WA H9D4](#h9d4).
 >
+
+<a id="h9d2"></a>
 
 > **WA variation**: WA replaces H9D2 Water use efficiency.
 >
@@ -100,6 +114,8 @@ This Part contains requirements for reducing water use.
 > (3) All sanitary flushing systems must be a minimum of 4 star *WELS* rated dual flush.
 >
 
+<a id="h9d3"></a>
+
 > **WA variation**: WA replaces H9D3 Swimming pool covers and blankets.
 >
 > An outdoor private *swimming pool* or spa associated with a Class 1 building must be supplied with a cover, blanket or the like that—
@@ -107,6 +123,8 @@ This Part contains requirements for reducing water use.
 > - (a) is designed to reduce water evaporation; and
 > - (b) is compliant with Australian Standard AS 5348:2022 Pool Covers.
 >
+
+<a id="h9d4"></a>
 
 > **WA variation**: WA replaces H9D4 Heated water use efficiency.
 >

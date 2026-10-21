@@ -171,6 +171,8 @@ Pipes and pipe outlets that form part of a *rainwater service* must be clearly i
 
 The likelihood of failure of, or *uncontrolled discharge* from, a *rainwater service* must be avoided.
 
+<a id="b6p8"></a>
+
 > **VIC variation**: VIC adds B6P8 Rainwater service.
 >
 > A *rainwater service* must—
@@ -333,6 +335,8 @@ A means of isolation for the *rainwater service*, appliances and devices for tes
 ### B6D7 Bushfire prone areas
 
 A rainwater service in a *designated bushfire prone area* must be in accordance with AS 3959.
+
+<a id="b6d8"></a>
 
 > **VIC variation**: VIC adds B6D8 Automatic or manual interchange device.
 >

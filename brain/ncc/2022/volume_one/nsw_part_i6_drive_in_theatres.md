@@ -23,13 +23,13 @@ generated: { by: process:ncc_pdf_ingest/0.1, at: 2026-10-16T22:24:57Z }
 
 Clauses that apply only in NSW, from the NSW schedule of **NCC 2022 Volume One**.[^abcb_ncc]
 
-<a id="nsw_i6d1"></a>
+<a id="i6d1"></a><a id="nsw_i6d1"></a>
 
 ### NSW I6D1 Application of Part
 
 This Part applies to drive-in theatres.
 
-<a id="nsw_i6d2"></a>
+<a id="i6d2"></a><a id="nsw_i6d2"></a>
 
 ### NSW I6D2 Speaker standards
 
@@ -37,13 +37,13 @@ Speaker standards must—
 
 - (a) be placed at a minimum of 5.5 m centres in a line along each parking ramp; and
 - (b) be capable of being illuminated throughout any performance so as to be easily distinguishable at all times.
-<a id="nsw_i6d3"></a>
+<a id="i6d3"></a><a id="nsw_i6d3"></a>
 
 ### NSW I6D3 Lines of speaker standards
 
 Lines of speaker standards along parking ramps must be placed at a distance of not less than 12.2 m apart.
 
-<a id="nsw_i6d4"></a>
+<a id="i6d4"></a><a id="nsw_i6d4"></a>
 
 ### NSW I6D4 Electrical services
 
@@ -52,13 +52,13 @@ The following electrical services must be installed underground—
 - (a) the supply authority’s conductors within the site and the consumer’s mains, unless otherwise approved; and
 - (b) electrical wiring external to any building on the site; and
 - (c) all wiring to the speaker standards.
-<a id="nsw_i6d5"></a>
+<a id="i6d5"></a><a id="nsw_i6d5"></a>
 
 ### NSW I6D5 Vehicular entrances
 
 Each public vehicular entrance to or exit from the drive-in theatre must be capable of being fully illuminated by flood lights that are so placed and so focussed as not to interfere with the vision of the driver of any motor vehicle.
 
-<a id="nsw_i6d6"></a>
+<a id="i6d6"></a><a id="nsw_i6d6"></a>
 
 ### NSW I6D6 Lighting
 
