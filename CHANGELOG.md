@@ -7,6 +7,7 @@ plugin version in `.claude-plugin/plugin.json`.
 
 - Every link into the NCC now lands. 2,305 links pointed at anchors that didn't exist: clauses a state adds or replaces in NCC 2025 had no anchor (369 added), NCC 2022 state-only clauses were anchored `nsw_9_4_3` while links used `9_4_3` (396 now answer to both), and 70 links pointed at Part variations or tables the conversion can't anchor (they now point at the page). `tools/ncc_anchor_repair.py` does this as the last step of both ingests; the state pages are regenerated.
 - The lint now checks every anchored link in the brain, NCC pages and state pages included. `tools/test_ncc_anchors.py` in CI.
+- Releases publish themselves: when the version in `.claude-plugin/plugin.json` changes on main, the release workflow builds the zip, creates the `v<version>` tag and release, and writes notes covering every version since the last release.
 
 ## 0.15.0 (2026-10-21)
 
